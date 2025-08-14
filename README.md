@@ -13,6 +13,10 @@ hugo server
 
 The site will be served at `http://localhost:1313`.
 
+## Linting
+
+[Vale](https://vale.sh) checks the docs for style issues. Run `vale .` before committing. The workflow runs on each push and pull request.
+
 ## Deployment
 
 Commits to `main` deploy to GitHub Pages via the included workflow.
