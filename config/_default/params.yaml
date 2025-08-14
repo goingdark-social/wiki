@@ -5,7 +5,7 @@
 
 # Appearance
 appearance:
-  mode: light
+  mode: auto
   color: blue
 
 # SEO
@@ -14,8 +14,8 @@ marketing:
     site_type: Project
     local_business_type: ''
     org_name: ''
-    description: 'A highly-customizable Hugo documentation theme powered by Hugo Blox website builder.'
-    twitter: 'GetResearchDev'
+    description: 'Community wiki for goingdark.social - rules, onboarding, federation policy, FAQ, and ops notes.'
+    twitter: ''
   analytics:
     google_analytics: ''
     google_tag_manager: ''
@@ -36,13 +36,10 @@ header:
     align: "center"
     fixed_to_top: true
     logo:
-      text: ""
-      # Logo filename in `assets/media/` folder
+      text: "goingdark.social"
       filename: "logo.svg"
     button:
-      enable: true
-      text: "Get Started"
-      url: "https://hugoblox.com/templates/details/docs/"
+      enable: false
     show_search: true
     show_theme_chooser: true
 
@@ -66,15 +63,15 @@ features:
   math:
     enable: false
   privacy_pack:
-    enable: false
+    enable: true
   repository:
-    url: 'https://github.com/HugoBlox/hugo-blox-builder/'
-    content_dir: 'starters/documentation/content'
+    url: 'https://github.com/goingdark-social/wiki'
+    content_dir: 'content'
     branch: 'main'
   feedback:
     responses:
-      positive: 'Glad to hear it! [Any ideas for improvements?](https://github.com/<USERNAME>/<REPO>/issues/new).'
-      negative: 'Sorry to hear that. [Please tell us how we can improve](https://github.com/<USERNAME>/<REPO>/issues/new).'
+      positive: 'Useful? Open an issue or PR.'
+      negative: 'Missing or wrong? Open an issue with details.'
   comment:
     provider: ''
     giscus:
