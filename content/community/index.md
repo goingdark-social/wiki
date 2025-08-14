@@ -9,8 +9,7 @@ pager: false
 Home: https://goingdark.social/
 
 ## Get help
-- Open an issue or PR: https://github.com/goingdark-social/wiki
-- Email: contact@goingdark.social
+- Start a discussion: https://github.com/goingdark-social/wiki/discussions
 
 ## What to contribute
 - Onboarding tips for new users
