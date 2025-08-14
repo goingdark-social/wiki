@@ -1,5 +1,6 @@
 ---
 title: Moderation Guidelines
+weight: 30
 toc: true
 reading_time: false
 pager: false

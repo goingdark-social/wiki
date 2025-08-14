@@ -1,6 +1,7 @@
 ---
 linkTitle: Documentation
 title: Introduction
+weight: 10
 ---
 
 Welcome to the goingdark.social wiki.
