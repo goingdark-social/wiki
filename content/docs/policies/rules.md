@@ -1,5 +1,6 @@
 ---
 title: Rules
+weight: 40
 toc: true
 reading_time: false
 pager: false
