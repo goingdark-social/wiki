@@ -16,7 +16,7 @@ The site will be served at `http://localhost:1313`.
 
 ## Linting
 
-[Vale](https://vale.sh) checks the docs for style issues. Run `vale .` before committing. The workflow runs on each push and pull request.
+[Vale](https://vale.sh) checks the docs for style issues using the Write Good guidelines. Run `vale sync` once to download the Write Good, Microsoft, and Google packages, then `vale .` before committing. The workflow runs on each push and pull request.
 
 ## Deployment
 
