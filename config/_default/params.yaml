@@ -72,8 +72,8 @@ features:
     branch: 'main'
   feedback:
     responses:
-      positive: 'Useful? Open an issue or PR.'
-      negative: 'Missing or wrong? Open an issue with details.'
+      positive: 'Useful? Start a discussion.'
+      negative: 'Missing or wrong? Start a discussion with details.'
   comment:
     provider: ''
     giscus:
