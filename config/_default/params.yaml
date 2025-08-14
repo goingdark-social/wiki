@@ -3,6 +3,8 @@
 # Documentation: https://docs.hugoblox.com/
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
+i_am_a_sponsor: true
+
 # Appearance
 appearance:
   mode: dark
