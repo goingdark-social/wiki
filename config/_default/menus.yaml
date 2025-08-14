@@ -5,22 +5,16 @@ main:
   - name: Home
     url: /
     weight: 10
-  - name: Documentation
-    url: docs/
+  - name: Docs
+    url: /docs/
     weight: 20
-  - name: Blog
-    url: blog/
-    weight: 30
-  - name: Showcase
-    url: showcase/
-    weight: 40
   - name: Community
     url: community/
-    weight: 50
+    weight: 30
 
 sidebar:
   - identifier: more
-    name: Still need help?
+    name: Need help?
     params:
       type: separator
     weight: 1
@@ -28,7 +22,3 @@ sidebar:
     name: "Community"
     pageRef: "/community"
     weight: 2
-  - identifier: hugoDocs
-    name: "Hugo Docs ↗"
-    url: "https://docs.hugoblox.com"
-    weight: 3
