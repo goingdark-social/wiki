@@ -22,3 +22,7 @@ The site will be served at `http://localhost:1313`.
 
 Commits to `main` deploy to GitHub Pages via the included workflow.
 
+## Funding
+
+The server runs at home and the costs come out of pocket. Help keep it running at <https://ko-fi.com/goingdark>.
+
