@@ -1,5 +1,6 @@
 ---
 title: Goals
+weight: 20
 toc: true
 reading_time: false
 pager: false
