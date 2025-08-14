@@ -2,6 +2,7 @@
 
 Community wiki for [goingdark.social](https://goingdark.social).
 Built with [Hugo](https://gohugo.io) and the Hugo Blox documentation theme.
+The site now loads in dark mode by default, and you can switch themes from the header.
 
 ## Local development
 
