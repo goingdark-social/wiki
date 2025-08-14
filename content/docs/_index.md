@@ -10,11 +10,11 @@ This space contains rules, onboarding, federation policy, moderation notes, and 
 ## Sections
 
 {{< cards >}}
-  {{< card url="overview/" title="Overview" >}}
-  {{< card url="policies/" title="Policies" >}}
-  {{< card url="operations/" title="Operations" >}}
-  {{< card url="transparency/" title="Transparency" >}}
-  {{< card url="user/" title="User guides" >}}
-  {{< card url="legal/" title="Legal" >}}
+  {{< card url="overview/" title="Overview" icon="information-circle" subtitle="What goingdark.social is about" >}}
+  {{< card url="policies/" title="Policies" icon="shield-check" subtitle="Rules and moderation approach" >}}
+  {{< card url="operations/" title="Operations" icon="cog" subtitle="Behind-the-scenes infrastructure" >}}
+  {{< card url="transparency/" title="Transparency" icon="eye" subtitle="Reports and decision logs" >}}
+  {{< card url="user/" title="User guides" icon="book-open" subtitle="How to get started" >}}
+  {{< card url="legal/" title="Legal" icon="scale" subtitle="Terms and compliance" >}}
   {{< card url="../community" title="Community" icon="users" subtitle="Contact and contribution" >}}
 {{< /cards >}}
