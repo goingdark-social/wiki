@@ -1,5 +1,5 @@
 extends: occurrence
-message: "High frequency of 'the' ({{count}} uses). Consider splitting for brevity."
+message: "High frequency of 'the' ({{count}} uses). Consider rewriting for brevity."
 level: warning
 scope: raw
 token: '\\bthe\\b'

@@ -1,5 +1,5 @@
 extends: occurrence
-message: "This file may be too long ({{count}} sentences). Consider splitting."
+message: "This page may be too long ({{count}} sentences). Consider splitting into smaller sections."
 level: warning
 scope: raw
 token: '\\.'

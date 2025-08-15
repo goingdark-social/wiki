@@ -5,6 +5,5 @@
 resources/
 public/
 jsconfig.json
-.vale/**
 !.vale/Project/
 !.vale/Project/**
