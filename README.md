@@ -16,7 +16,13 @@ The site runs at `http://localhost:1313`.
 
 ## Linting
 
-[Vale](https://vale.sh) checks the docs with project-specific rules in `.vale/Project` along with the Write Good, Microsoft, and Google packages. These rules cover Fediverse terms, require alt text, and prefer code formatting for handles. Run `vale sync` once to download the external packages, then `vale .` before committing. The workflow runs on each push and pull request, linting all Markdown files in `content/` and the root README.
+[Vale](https://vale.sh) checks the docs with project-specific rules in `.vale/Project` along with the Write Good, Microsoft, and Google packages. These rules cover Fediverse terms, require alt text, and prefer code formatting for handles.
+
+1. Run `vale sync` once to download the external packages.
+2. Install the `pre-commit` tool with `pre-commit install`.
+3. It runs `vale` on staged Markdown files.
+
+Use `pre-commit run --files path/to/file.md` to lint a file manually. The workflow still lints all Markdown files in `content/` and the root README on each push and pull request.
 
 ## Deployment
 
