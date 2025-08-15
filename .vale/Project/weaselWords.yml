@@ -1,0 +1,16 @@
+extends: existence
+message: "Avoid vague word “%s”. Be precise."
+level: warning
+ignorecase: true
+tokens:
+  - may
+  - might
+  - could
+  - seems
+  - appears
+exceptions:
+  - 'policy'
+  - 'guidelines'
+  - 'moderation'
+  - 'safety'
+  - 'code of conduct'

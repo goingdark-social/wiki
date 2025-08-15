@@ -1,0 +1,16 @@
+extends: existence
+message: "Use relative links to reference files in the repository ('%s'). Avoid absolute URLs to your own repo."
+level: suggestion
+ignorecase: true
+tokens:
+  # GitHub URLs to own repo that should be relative
+  - 'https://github\.com/goingdark-social/wiki/blob/[^)]*'
+  - 'https://github\.com/goingdark-social/wiki/tree/[^)]*'
+  - 'https://raw\.githubusercontent\.com/goingdark-social/wiki/[^)]*'
+
+exceptions:
+  # Allow external references
+  - 'External'
+  - 'external'
+  - 'See also'
+  - 'Reference'

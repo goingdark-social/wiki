@@ -1,0 +1,6 @@
+extends: occurrence
+message: "High frequency of 'the' ({{count}} uses). Consider splitting for brevity."
+level: warning
+scope: raw
+token: '\\bthe\\b'
+max: 50

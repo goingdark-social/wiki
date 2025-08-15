@@ -1,0 +1,6 @@
+extends: occurrence
+message: "This file has {{count}} headings. Consider splitting sections."
+level: warning
+scope: raw
+token: '^#{2,6} '
+max: 15
