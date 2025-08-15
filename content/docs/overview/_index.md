@@ -2,7 +2,8 @@
 title: Overview
 weight: 10
 ---
-
-- [About](about/)
-- [Goals](goals/)
+{{< cards >}}
+  {{< card url="about/" title="About" icon="information-circle" subtitle="What goingdark.social is and who's behind it" >}}
+  {{< card url="goals/" title="Goals" icon="flag" subtitle="Why the project exists and who it's for" >}}
+{{< /cards >}}
 
