@@ -13,12 +13,24 @@ main:
     weight: 30
 
 sidebar:
+  - identifier: overview
+    name: Overview
+    pageRef: "/docs/overview"
+    weight: 1
+  - identifier: policies
+    name: Policies
+    pageRef: "/docs/policies"
+    weight: 2
+  - identifier: operations
+    name: Operations
+    pageRef: "/docs/operations"
+    weight: 3
   - identifier: more
     name: Need help?
     params:
       type: separator
-    weight: 1
+    weight: 90
   - identifier: community
     name: "Community"
     pageRef: "/community"
-    weight: 2
+    weight: 100
