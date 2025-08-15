@@ -3,7 +3,7 @@ title: Rules
 weight: 40
 toc: true
 reading_time: false
-pager: false
+pager: true
 ---
 
 - Treat people well.

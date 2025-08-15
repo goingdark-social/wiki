@@ -3,7 +3,7 @@ title: About
 weight: 10
 toc: true
 reading_time: false
-pager: false
+pager: true
 ---
 
 goingdark.social is a privacy-focused Mastodon server for friendly tech conversations.

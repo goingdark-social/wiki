@@ -3,7 +3,7 @@ title: Bots and Automation
 weight: 10
 toc: true
 reading_time: false
-pager: false
+pager: true
 ---
 
 Bots must clearly identify as automated in their profile and bio.

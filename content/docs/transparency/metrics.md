@@ -3,7 +3,7 @@ title: Metrics
 weight: 10
 toc: true
 reading_time: false
-pager: false
+pager: true
 ---
 
 We publish monthly counts for:

@@ -3,7 +3,7 @@ title: Hosting Architecture
 weight: 20
 toc: true
 reading_time: false
-pager: false
+pager: true
 ---
 
 goingdark.social runs on Talos-managed Kubernetes.
