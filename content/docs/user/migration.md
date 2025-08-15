@@ -3,7 +3,7 @@ title: Migration
 weight: 10
 toc: true
 reading_time: false
-pager: false
+pager: true
 ---
 
 You can move to or from goingdark.social at any time.
