@@ -8,5 +8,5 @@ pager: false
 
 ## Policies
 
-- [Automated and Bot Accounts Policy](./automated-bot-accounts/)
+- [Automated and Bot Accounts Policy](automated-bot-accounts/)
 
