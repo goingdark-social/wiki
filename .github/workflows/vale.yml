@@ -12,3 +12,4 @@ jobs:
       - uses: errata-ai/vale-action@v2
         with:
           config: .vale.ini
+          files: .
