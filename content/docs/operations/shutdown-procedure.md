@@ -6,7 +6,7 @@ reading_time: false
 pager: true
 ---
 
-If we ever shut down:
+If the service ever shuts down:
 
 ### Communication timeline
 
@@ -14,7 +14,7 @@ If we ever shut down:
 - One month: reminder.
 - Three weeks: instructions reposted.
 - Two weeks: final warning.
-- Final week: daily reminders.
+- Final week: reminders every day.
 
 ### Member steps
 
@@ -24,7 +24,7 @@ If we ever shut down:
 
 ### Technical plan
 
-1. Close new signups.
+1. Close new registrations.
 2. Enter read-only mode.
 3. Run `tootctl self-destruct`.
 4. Wait for federated deletes.

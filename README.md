@@ -1,4 +1,4 @@
-# Going Dark Wiki
+# Going dark wiki
 
 Community wiki for [goingdark.social](https://goingdark.social).
 Built with [Hugo](https://gohugo.io) and the Hugo Blox documentation theme.
@@ -24,5 +24,5 @@ Commits to `main` deploy to GitHub Pages via the included workflow.
 
 ## Funding
 
-The server runs at home, and we cover the costs personally. Help keep it running at <https://ko-fi.com/goingdark>.
+The server runs at home, and personal funds pay the hosting costs. Help keep it running at <https://ko-fi.com/goingdark>.
 

@@ -6,7 +6,7 @@ reading_time: false
 pager: true
 ---
 
-We keep the minimum necessary data.
+The service keeps the minimum necessary data.
 
 ### Logs
 
@@ -18,5 +18,5 @@ Only administrators can access logs.
 
 ### Data rights
 
-You may request, correct, or delete your data by emailing privacy@goingdark.social. We respond within 30 days.
+Request, correct, or delete your data by emailing privacy@goingdark.social. Responses arrive in 30 days.
 

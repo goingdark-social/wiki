@@ -54,6 +54,7 @@ Meilisearch
 BabyBuddy
 Pedrobot
 KaraKeep
+Ko-fi
 AdGuard
 Omada
 IT-Tools

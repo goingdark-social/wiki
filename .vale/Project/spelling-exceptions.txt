@@ -64,3 +64,13 @@ v2
 OpenTofu
 goingdark.social
 project-specific
+Talos-managed
+BGP
+Cloudflared
+R2
+PgBouncer
+@admin@goingdark.social
+contact@goingdark.social
+abuse@goingdark.social
+privacy@goingdark.social
+LLC
