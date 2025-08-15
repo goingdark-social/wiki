@@ -1,0 +1,6 @@
+extends: occurrence
+message: "This file may be too long ({{count}} sentences). Consider splitting."
+level: warning
+scope: raw
+token: '\\.'
+max: 60

@@ -1,0 +1,6 @@
+extends: existence
+message: "Images must have alt text. Write a short description."
+level: warning
+scope: raw
+tokens:
+  - '!\[\s*\]\('

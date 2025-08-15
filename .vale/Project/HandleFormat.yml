@@ -1,0 +1,9 @@
+extends: existence
+message: "Format Fediverse handles as code in docs: `@user@server`."
+level: suggestion
+scope: raw
+tokens:
+  - '(?<!`)\B@[a-zA-Z0-9_\.]+@[a-zA-Z0-9\.-]+\.[a-zA-Z]{2,}\b(?!`)'
+exceptions:
+  - 'mailto:'
+  - '@example\.com'
