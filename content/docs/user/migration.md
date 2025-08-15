@@ -12,7 +12,7 @@ You can move to or from goingdark.social at any time.
 
 1. Create an account on goingdark.social.
 2. In your old account's settings, set this server as your new home.
-3. Confirm the move; followers will transfer.
+3. Confirm the move; followers transfer.
 
 ### Moving away
 
@@ -26,10 +26,10 @@ You can move to or from goingdark.social at any time.
 - Block and mute lists.
 - Profile fields.
 
-### What does not
+### What doesn't migrate
 
 - Posts and media.
 - Direct messages.
 
-Transfers usually complete within a few minutes, but large accounts may take up to a day.
+Transfers typically finish in minutes, but large accounts can take up to a day.
 

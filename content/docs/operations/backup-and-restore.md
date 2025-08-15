@@ -6,7 +6,7 @@ reading_time: false
 pager: true
 ---
 
-### What is backed up
+### What's backed up
 
 - PostgreSQL databases.
 - Redis snapshots.
@@ -15,13 +15,13 @@ pager: true
 
 ### Schedule and retention
 
-Daily encrypted backups retained for 30 days. Weekly backups kept for 6 months.
+Encrypted backups run each day and remain for 30 days. Backups run each week and stay for 6 months.
 
 ### Restore
 
-Test restores run quarterly. Our target is to restore service within 4 hours of a failure.
+Test restores run quarterly. The target is to restore service in 4 hours after a failure.
 
 ### Offsite copies
 
-Backups replicate to a separate R2 bucket and a physical drive held by the admin team. Credentials are stored in a hardware password vault.
+A separate R2 bucket and a physical drive held by the administrators store backups. A hardware password vault stores the credentials.
 

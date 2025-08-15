@@ -6,7 +6,7 @@ reading_time: false
 pager: true
 ---
 
-Bots must clearly identify as automated in their profile and bio.
+Bots must identify as automated in their profile and bio.
 
 Guidelines:
 
@@ -16,5 +16,5 @@ Guidelines:
 - Keep media under 8 MB per file.
 - Contact contact@goingdark.social before operating heavy bots.
 
-Violations may trigger rate limits or moderation actions such as silencing or suspension.
+Violations trigger rate limits or moderation actions such as silencing or suspension.
 

@@ -6,7 +6,7 @@ weight: 10
 
 Welcome to the goingdark.social wiki.
 
-This space contains rules, onboarding, federation policy, moderation notes, and FAQs for our community.
+This space collects rules, getting started guides, federation policy, moderation notes, and FAQs for the community.
 
 ## Sections
 

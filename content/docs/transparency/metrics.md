@@ -6,10 +6,10 @@ reading_time: false
 pager: true
 ---
 
-We publish monthly counts for:
+Counts for each month include:
 
-- Active users.
-- New signups.
+- Active accounts.
+- New registrations.
 - Reports handled.
 - Moderation actions.
 - Federation changes.

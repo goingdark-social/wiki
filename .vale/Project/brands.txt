@@ -54,6 +54,7 @@ Meilisearch
 BabyBuddy
 Pedrobot
 KaraKeep
+Ko-fi
 AdGuard
 Omada
 IT-Tools
@@ -73,3 +74,6 @@ Glitch-soc
 Glitch
 Relays
 Firefish
+Cloudflare
+Hugo
+tootctl

@@ -6,13 +6,13 @@ reading_time: false
 pager: true
 ---
 
-We monitor services and respond to outages as quickly as possible.
+Administrators watch services and respond to outages.
 
 ### Communication
 
 - Status updates: https://status.goingdark.social/
-- Fallback: posts from @admin@goingdark.social
-- Email: contact@goingdark.social
+- Fallback: posts from the administrator account (`@admin@goingdark.social`)
+- Send email to contact@goingdark.social
 
 ### Postmortem template
 
