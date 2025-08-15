@@ -14,9 +14,9 @@ pager: true
 
 ### From apps
 
-Most apps offer a **Report** button in the post menu. Include as much context as possible.
+Most apps include a **Report** option in the post menu. Include as much context as possible.
 
-### Helpful info
+### Helpful information
 
 - Links to offending posts.
 - Screenshots for disappearing content.
@@ -24,7 +24,7 @@ Most apps offer a **Report** button in the post menu. Include as much context as
 
 ### After you report
 
-Moderators review reports within 48 hours and may contact you for details. You will receive a notification when the case is closed.
+Moderators review reports in 48 hours and can contact you for details. You receive a notification when the case closes.
 
 Abuse inbox: abuse@goingdark.social.
 

@@ -6,11 +6,11 @@ reading_time: false
 pager: true
 ---
 
-Our mission is to provide a friendly, privacy-first space for people who enjoy technology.
+goingdark.social provides a friendly, privacy focused space for people who enjoy technology.
 
-Who it's for: developers, admins, and curious folks who value respectful conversation.
+It's for developers, administrators, and curious folks who value respectful conversation.
 
-What it's not: a marketing platform, a data-mining service, or a free pass for harassment.
+It's not a marketing platform, a data mining service, or a free pass for harassment.
 
-Long term, we aim to keep the server small, sustainable, and community-funded. It's running at home and funded out of pocket today. Covering the costs through [Ko-fi](https://ko-fi.com/goingdark) lets everyone trust the instance will stick around.
+Long term, the goal is to keep the server small, sustainable, and community funded. The server runs at home and personal resources fund it today. Covering the costs through [Ko-fi](https://ko-fi.com/goingdark) helps ensure the instance stays online.
 
