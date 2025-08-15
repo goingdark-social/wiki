@@ -1,5 +1,5 @@
 extends: existence
-message: "Pin Docker image tags; never use :latest."
-level: error
+message: "Always credit the source or creator of images used."
+level: warning
 tokens:
-  - ':[Ll]atest\b'
+  - '!\[.*\]\(.*\)'

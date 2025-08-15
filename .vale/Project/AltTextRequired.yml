@@ -1,5 +1,5 @@
 extends: existence
-message: "Images must have alt text. Write a short description."
+message: "Images must have descriptive alt text so all members can understand the content."
 level: warning
 scope: raw
 tokens:
