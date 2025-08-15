@@ -1,5 +1,5 @@
 extends: existence
-message: "Format Fediverse handles as code in docs: `@user@server`."
+message: "Format Fediverse handles as code: `@user@server`."
 level: suggestion
 scope: raw
 tokens:

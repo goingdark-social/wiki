@@ -1,5 +1,5 @@
 extends: occurrence
-message: "This file has {{count}} headings. Consider splitting sections."
+message: "This page has {{count}} headings. Consider splitting long pages for easier reading."
 level: warning
 scope: raw
 token: '^#{2,6} '

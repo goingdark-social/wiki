@@ -7,6 +7,7 @@ tokens:
   - 'https://github\.com/goingdark-social/wiki/blob/[^)]*'
   - 'https://github\.com/goingdark-social/wiki/tree/[^)]*'
   - 'https://raw\.githubusercontent\.com/goingdark-social/wiki/[^)]*'
+  - 'https://wiki.goingdark.social/[^)]*'
 
 exceptions:
   # Allow external references
