@@ -1,0 +1,9 @@
+---
+extends: existence
+message: "Avoid using em dashes (—). Use conversational language instead."
+level: error
+nonword: true
+tokens:
+  - '—'
+  - '–'
+  - '---'

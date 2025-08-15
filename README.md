@@ -2,7 +2,7 @@
 
 Community wiki for [goingdark.social](https://goingdark.social).
 Built with [Hugo](https://gohugo.io) and the Hugo Blox documentation theme.
-The site now loads in dark mode by default, and you can switch themes from the header.
+The site loads in dark mode by default, and you can switch themes from the header.
 
 ## Local development
 
@@ -16,7 +16,7 @@ The site will be served at `http://localhost:1313`.
 
 ## Linting
 
-[Vale](https://vale.sh) checks the docs for style issues using the Write Good guidelines. Run `vale sync` once to download the Write Good, Microsoft, and Google packages, then `vale .` before committing. The workflow runs on each push and pull request.
+[Vale](https://vale.sh) checks the docs with project-specific rules in `.vale/Project` along with the Write Good, Microsoft, and Google packages. Run `vale sync` once to download the external packages, then `vale .` before committing. The workflow runs on each push and pull request.
 
 ## Deployment
 
