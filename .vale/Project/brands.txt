@@ -74,3 +74,6 @@ Glitch-soc
 Glitch
 Relays
 Firefish
+Cloudflare
+Hugo
+tootctl

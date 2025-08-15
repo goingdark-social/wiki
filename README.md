@@ -1,4 +1,4 @@
-# Going dark wiki
+# Going Dark Wiki
 
 Community wiki for [goingdark.social](https://goingdark.social).
 Built with [Hugo](https://gohugo.io) and the Hugo Blox documentation theme.
