@@ -3,7 +3,7 @@ title: Moderation Guidelines
 weight: 30
 toc: true
 reading_time: false
-pager: false
+pager: true
 ---
 
 These guidelines cover moderation on goingdark.social. They apply to local accounts and content hosted here.

@@ -3,7 +3,7 @@ title: Shutdown Procedure
 weight: 40
 toc: true
 reading_time: false
-pager: false
+pager: true
 ---
 
 If we ever shut down:

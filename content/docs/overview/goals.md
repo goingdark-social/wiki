@@ -3,7 +3,7 @@ title: Goals
 weight: 20
 toc: true
 reading_time: false
-pager: false
+pager: true
 ---
 
 Our mission is to provide a friendly, privacy-first space for people who enjoy technology.

@@ -3,7 +3,7 @@ title: Incidents
 weight: 30
 toc: true
 reading_time: false
-pager: false
+pager: true
 ---
 
 We monitor services and respond to outages as quickly as possible.
