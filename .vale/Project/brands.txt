@@ -59,3 +59,17 @@ Omada
 IT-Tools
 OpenAI
 Longhorn
+Mastodon
+Fediverse
+ActivityPub
+Misskey
+Akkoma
+Pleroma
+Pixelfed
+PeerTube
+Lemmy
+Hometown
+Glitch-soc
+Glitch
+Relays
+Firefish

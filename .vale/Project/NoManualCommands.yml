@@ -28,3 +28,13 @@ exceptions:
   - 'getting-started'
   - 'setup'
   - 'initial'
+
+  # Allow on admin and policy pages
+  - 'admin'
+  - 'administrator'
+  - 'administration'
+  - 'moderation'
+  - 'policy'
+  - 'guidelines'
+  - 'safety'
+  - 'code of conduct'

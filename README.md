@@ -16,7 +16,7 @@ The site will be served at `http://localhost:1313`.
 
 ## Linting
 
-[Vale](https://vale.sh) checks the docs with project-specific rules in `.vale/Project` along with the Write Good, Microsoft, and Google packages. Run `vale sync` once to download the external packages, then `vale .` before committing. The workflow runs on each push and pull request.
+[Vale](https://vale.sh) checks the docs with project-specific rules in `.vale/Project` along with the Write Good, Microsoft, and Google packages. These rules cover Fediverse terms, require alt text, and prefer code formatting for handles. Run `vale sync` once to download the external packages, then `vale .` before committing. The workflow runs on each push and pull request.
 
 ## Deployment
 

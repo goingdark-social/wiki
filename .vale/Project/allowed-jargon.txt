@@ -118,3 +118,21 @@ info
 Git
 Docusaurus
 PodSecurity
+handle
+@user@host
+CW
+Content Warning
+alt-text
+alt text
+boost
+boosts
+unlisted
+federate
+defederate
+defederation
+instance
+relay
+toot
+DM
+profile link
+rel=me

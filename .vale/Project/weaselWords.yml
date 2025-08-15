@@ -1,6 +1,6 @@
 extends: existence
 message: "Avoid vague word “%s”. Be precise."
-level: error
+level: warning
 ignorecase: true
 tokens:
   - may
@@ -8,3 +8,9 @@ tokens:
   - could
   - seems
   - appears
+exceptions:
+  - 'policy'
+  - 'guidelines'
+  - 'moderation'
+  - 'safety'
+  - 'code of conduct'

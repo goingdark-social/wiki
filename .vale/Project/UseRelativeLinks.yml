@@ -4,9 +4,9 @@ level: suggestion
 ignorecase: true
 tokens:
   # GitHub URLs to own repo that should be relative
-  - 'https://github\.com/theepicsaxguy/wiki/blob/[^)]*'
-  - 'https://github\.com/theepicsaxguy/wiki/tree/[^)]*'
-  - 'https://raw\.githubusercontent\.com/theepicsaxguy/wiki/[^)]*'
+  - 'https://github\.com/goingdark-social/wiki/blob/[^)]*'
+  - 'https://github\.com/goingdark-social/wiki/tree/[^)]*'
+  - 'https://raw\.githubusercontent\.com/goingdark-social/wiki/[^)]*'
 
 exceptions:
   # Allow external references
