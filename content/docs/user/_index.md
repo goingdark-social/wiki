@@ -2,7 +2,8 @@
 title: User guides
 weight: 50
 ---
-
-- [Migration](migration/)
-- [Reporting](reporting/)
+{{< cards >}}
+  {{< card url="migration/" title="Migration" icon="arrow-right-on-rectangle" subtitle="How to move your account between servers" >}}
+  {{< card url="reporting/" title="Reporting" icon="flag" subtitle="How to report problems to moderators" >}}
+{{< /cards >}}
 
