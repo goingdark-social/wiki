@@ -9,7 +9,7 @@ main:
     url: /docs/
     weight: 20
   - name: Community
-    url: community/
+    url: /community/
     weight: 30
 
 sidebar:
