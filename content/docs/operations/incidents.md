@@ -11,7 +11,7 @@ Administrators watch services and respond to outages.
 ### Communication
 
 - Status updates: https://status.goingdark.social/
-- Fallback: posts from the administrator account (`@admin@goingdark.social`)
+- Fallback: posts from the administrator account (`@fanfare@goingdark.social`)
 - Send email to contact@goingdark.social
 
 ### Postmortem template
