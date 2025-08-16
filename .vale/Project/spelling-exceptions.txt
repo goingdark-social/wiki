@@ -69,7 +69,7 @@ BGP
 Cloudflared
 R2
 PgBouncer
-@admin@goingdark.social
+@fanfare@goingdark.social
 contact@goingdark.social
 abuse@goingdark.social
 privacy@goingdark.social
