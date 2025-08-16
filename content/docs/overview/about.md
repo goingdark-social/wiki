@@ -9,7 +9,7 @@ pager: true
 goingdark.social is a privacy focused Mastodon server for friendly tech conversations.
 
 
-The service is run by Going Dark LLC, a small company based in the US. The administrators work primarily in the UTC time zone.
+The service is run by Going Dark, a small community based in the EU. 
 
 Right now the server runs at home and personal funds cover the costs. Help keep it running at [Ko-fi](https://ko-fi.com/goingdark).
 
