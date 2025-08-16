@@ -28,6 +28,14 @@ This privacy policy explains how **goingdark.social** ("Going Dark", "we", "us")
 
 ---
 
+# Related documents and canonical source
+
+This Privacy Policy explains how goingdark.social processes personal data. The canonical copy of this Policy is the version linked from **goingdark.social**. Any copy on **wiki.goingdark.social** is a mirror for convenience.
+
+The **Terms of Service** govern use of the service. The **Community Guidelines** and **Moderation & Appeals** set user behavior and redress. Our **Federation Policy**, public block list, and other administrative materials on **wiki.goingdark.social** are informational only. They may change at our discretion and are not part of this Policy. If there is any discrepancy between versions, the copy linked from **goingdark.social** controls.
+
+---
+
 # What information do we collect?
 
 * **Basic account information**: username, email, password hash. Optional profile fields such as display name, biography, avatar, and header image. Your username, display name, biography, avatar, and header image are public.

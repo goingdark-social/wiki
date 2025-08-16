@@ -14,7 +14,14 @@ We operate standard Mastodon software and store only the limited information Mas
 
 ## Other documents that apply
 
-The following documents form part of these Terms and may be updated from time to time: **Community Guidelines**, **Federation Policy**, and **Privacy Policy**. If there is a conflict, these Terms control. Links are available on the site.
+The following are binding for users of the service:
+
+* **Privacy Policy**: published on **goingdark.social** and **wiki.goingdark.social**. If there is any discrepancy, the version linked from **goingdark.social** controls.
+* **Community Guidelines** and **Moderation & Appeals**: published on **wiki.goingdark.social**. These set user-facing rules and how we apply them.
+
+The following materials are informational and do not form part of the contract with users: **Federation Policy**, public block list, and other internal or administrative procedures on **wiki.goingdark.social**. We may act under them at our discretion to protect the service.
+
+Links to all documents are available on the site and the wiki.
 
 ## Who may use the service
 
