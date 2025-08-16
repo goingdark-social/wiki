@@ -1,4 +1,4 @@
-Based on [alex](https://github.com/get-alex/alex).
+Based on [Alex](https://github.com/get-alex/alex).
 
 > Catch insensitive, inconsiderate writing
 

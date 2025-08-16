@@ -1,4 +1,4 @@
-# Going Dark Wiki
+# Going dark wiki
 
 Community wiki for [goingdark.social](https://goingdark.social).
 Built with [Hugo](https://gohugo.io) and the Hugo Blox documentation theme.
@@ -8,11 +8,11 @@ The site loads in dark mode by default, and you can switch themes from the heade
 
 Install the extended version of Hugo and run:
 
-```bash
+```shell
 hugo server
 ```
 
-The site will be served at `http://localhost:1313`.
+Hugo serves the site at `http://localhost:1313`.
 
 ## Linting
 
@@ -24,5 +24,5 @@ Commits to `main` deploy to GitHub Pages via the included workflow.
 
 ## Funding
 
-The server runs at home and the costs come out of pocket. Help keep it running at <https://ko-fi.com/goingdark>.
+The server runs at home, and its owner covers the costs. Help keep it running at <https://ko-fi.com/goingdark>.
 
