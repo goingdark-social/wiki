@@ -9,9 +9,8 @@ pager: true
 ### What's backed up
 
 - PostgreSQL databases.
-- Redis snapshots.
 - Media stored in R2.
-- Configuration files.
+- Configuration files is running from git.
 
 ### Schedule and retention
 

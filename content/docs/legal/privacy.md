@@ -13,10 +13,6 @@ The service keeps the minimum necessary data.
 - Access logs with IP addresses kept for 14 days.
 - Moderation logs retained for one year.
 - Backups encrypted at rest.
+- Outside of your IP adress and your posts no personal information is stored on our servers.
 
 Only administrators can access logs.
-
-### Data rights
-
-Request, correct, or delete your data by emailing privacy@goingdark.social. Responses arrive in 30 days.
-
