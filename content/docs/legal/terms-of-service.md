@@ -63,7 +63,7 @@ We enforce our rules using a mix of automated anti-spam and abuse filters, block
 
 ## Appeals
 
-If your content or account is restricted, you may ask for a review by emailing **[support@goingdark.social](mailto:support@goingdark.social)** from your account email. We handle appeals in a timely, objective, and non-discriminatory way. During review, temporary safeguards may remain in place if needed to protect the service.
+If your content or account is restricted, you may ask for a review through the website at goingdark.social. We handle appeals in a timely, objective, and non-discriminatory way. During review, temporary safeguards may remain in place if needed to protect the service.
 
 ## Automated access and research
 
