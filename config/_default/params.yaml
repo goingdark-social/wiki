@@ -73,6 +73,8 @@ features:
     url: 'https://github.com/goingdark-social/wiki'
     content_dir: 'content'
     branch: 'main'
+  edit_page:
+    enable: true
   feedback:
     responses:
       positive: 'Useful? Start a discussion.'
