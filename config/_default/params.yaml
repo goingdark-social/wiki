@@ -39,7 +39,6 @@ header:
     fixed_to_top: true
     logo:
       text: "goingdark.social"
-      filename: "logo.svg"
     button:
       enable: false
     show_search: true
