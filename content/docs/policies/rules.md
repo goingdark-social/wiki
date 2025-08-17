@@ -1,9 +1,6 @@
 ---
 title: Rules - moved
-aliases:
-  - /docs/policies/rules/index/
-  - /docs/policies/rules/index.html
-  - /docs/policies/rules/
+draft: true
 weight: 40
 toc: false
 reading_time: false
