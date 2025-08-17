@@ -35,7 +35,7 @@ The following are not allowed, and may lead to moderation actions:
 - **Misinformation that causes harm.** False or misleading claims that may endanger health, safety, or public trust.  
 - **Pornography and sex work promotion.** Explicit sexual content and solicitation are not permitted here.  
 - **Untagged sensitive media.** Nudity, gore, or graphic violence must always be behind a content warning.  
-- **Automated posting without approval.** Bots must follow the [Bot Policy](/docs/policies/bots-and-automation/). Unapproved bots are suspended.  
+- **Automated posting without approval.** Bots must follow the [Bot Policy](/docs/policies/rules/bots/). Unapproved bots are suspended.  
 - **Illegal content.** Anything illegal under EU or Swedish law, including CSAM, extremist propaganda, and incitement to violence.  
 - **Disruptive use.** Flooding timelines, excessive posting, mass unsolicited mentions, or degrading server performance.  
 
