@@ -16,7 +16,7 @@ The site runs at `http://localhost:1313`.
 
 ## Linting
 
-[Vale](https://vale.sh) checks the docs with project-specific rules in `.vale/Project` along with the Write Good, Microsoft, and Google packages. These rules cover Fediverse terms, require alt text, and prefer code formatting for handles.
+[Vale](https://vale.sh) checks the docs with project-specific rules in `.vale/Project` along with the Write Good, Microsoft, and Google packages. These rules cover Fediverse terms, require alt text, and prefer code formatting for handles. Docs in `content/docs/legal/` are excluded.
 
 1. Run `vale sync` once to download the external packages.
 2. Install the `pre-commit` tool with `pre-commit install`.
