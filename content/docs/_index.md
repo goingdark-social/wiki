@@ -8,6 +8,8 @@ Welcome to the goingdark.social wiki.
 
 This space collects rules, getting started guides, federation policy, moderation notes, and FAQs for the community.
 
+Spot a mistake? Click Edit this page to suggest a change on GitHub.
+
 ## Sections
 
 {{< cards >}}
