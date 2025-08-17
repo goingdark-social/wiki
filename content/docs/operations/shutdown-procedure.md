@@ -6,7 +6,7 @@ reading_time: false
 pager: true
 ---
 
-While we dont plan to shutdown we want to be transparent that things might change. Therefore we are looking to ensure that we are not the single point of failure. 
+The team doesn't plan to shut down, but things might change. The goal is to avoid a single point of failure.
 
 If the service ever shuts down:
 
