@@ -8,7 +8,7 @@ pager: true
 
 > Canonical source: the rules shown on the instance about page control. This wiki explains context. If there is any mismatch, the instance copy takes precedence.
 
-## The Rules
+## The rules
 
 1. **Treat people well**  
    [Read more](/docs/policies/rules/01_treat-people-well/)
@@ -22,7 +22,7 @@ pager: true
    [Read more](/docs/policies/rules/05_no-spam/)
 6. **No hate or threats**  
    [Read more](/docs/policies/rules/06_no-hate-or-threats/)
-7. **Do not look for loopholes**  
+7. **Don't look for loopholes**  
    [Read more](/docs/policies/rules/07_no-loopholes/)
 8. **Breaking rules has consequences**  
    [Read more](/docs/policies/rules/08_consequences/)
@@ -30,7 +30,7 @@ pager: true
    [Read more](/docs/policies/rules/09_honest-identity/)
 10. **Respect the server and its users**  
     [Read more](/docs/policies/rules/10_respect-server/)
-11. **No doxing**  
+11. **No sharing personal information**  
     [Read more](/docs/policies/rules/11_no-doxing/)
 12. **Stop means stop**  
     [Read more](/docs/policies/rules/12_stop-means-stop/)
