@@ -17,64 +17,104 @@ The service keeps the minimum necessary data.
 
 Only administrators can access logs.
 
-# Privacy Policy
-```
-What information do we collect?
--------------------------------
 
-*   **Basic account information**: If you register on this server, you may be asked to enter a username, an e-mail address and a password. You may also enter additional profile information such as a display name and biography, and upload a profile picture and header image. The username, display name, biography, profile picture and header image are always listed publicly.
-*   **Posts, following and other public information**: The list of people you follow is listed publicly, the same is true for your followers. When you submit a message, the date and time is stored as well as the application you submitted the message from. Messages may contain media attachments, such as pictures and videos. Public and unlisted posts are available publicly. When you feature a post on your profile, that is also publicly available information. Your posts are delivered to your followers, in some cases it means they are delivered to different servers and copies are stored there. When you delete posts, this is likewise delivered to your followers. The action of reblogging or favouriting another post is always public.
-*   **Direct and followers-only posts**: All posts are stored and processed on the server. Followers-only posts are delivered to your followers and users who are mentioned in them, and direct posts are delivered only to users mentioned in them. In some cases it means they are delivered to different servers and copies are stored there. We make a good faith effort to limit the access to those posts only to authorized persons, but other servers may fail to do so. Therefore it's important to review servers your followers belong to. You may toggle an option to approve and reject new followers manually in the settings. **Please keep in mind that the operators of the server and any receiving server may view such messages**, and that recipients may screenshot, copy or otherwise re-share them. **Do not share any sensitive information over Mastodon.**
-*   **IPs and other metadata**: When you log in, we record the IP address you log in from, as well as the name of your browser application. All the logged in sessions are available for your review and revocation in the settings. The latest IP address used is stored for up to 12 months. We also may retain server logs which include the IP address of every request to our server.
+### Privacy Policy
 
-What do we use your information for?
-------------------------------------
+This privacy policy explains how **goingdark.social** ("Going Dark", "we", "us") processes personal data when you use our Mastodon service. We are an EU-based, privacy-first community. We do not use analytics, advertising, or unnecessary cookies. Access to the service is restricted to adults aged 18 and over.
 
-Any of the information we collect from you may be used in the following ways:
+**Controller**: Administrators of goingdark.social
+**Privacy contact**: [admin@goingdark.social](mailto:admin@goingdark.social)
+**Supervisory authority**: You can lodge a complaint with your local authority. In Sweden this is Integritetsskyddsmyndigheten (IMY) at [https://www.imy.se](https://www.imy.se).
 
-*   To provide the core functionality of Mastodon. You can only interact with other people's content and post your own content when you are logged in. For example, you may follow other people to view their combined posts in your own personalized home timeline.
-*   To aid moderation of the community, for example comparing your IP address with other known ones to determine ban evasion or other violations.
-*   The email address you provide may be used to send you information, notifications about other people interacting with your content or sending you messages, and to respond to inquiries, and/or other requests or questions.
+---
 
-How do we protect your information?
------------------------------------
+# Related documents and canonical source
 
-We implement a variety of security measures to maintain the safety of your personal information when you enter, submit, or access your personal information. Among other things, your browser session, as well as the traffic between your applications and the API, are secured with SSL, and your password is hashed using a strong one-way algorithm. You may enable two-factor authentication to further secure access to your account.
+This Privacy Policy explains how goingdark.social processes personal data. The canonical copy of this Policy is the version linked from **goingdark.social**. Any copy on **wiki.goingdark.social** is a mirror for convenience.
 
-What is our data retention policy?
-----------------------------------
+The **Terms of Service** govern use of the service. The **Community Guidelines** and **Moderation & Appeals** set user behavior and redress. Our **Federation Policy**, public block list, and other administrative materials on **wiki.goingdark.social** are informational only. They may change at our discretion and are not part of this Policy. If there is any discrepancy between versions, the copy linked from **goingdark.social** controls.
 
-We will make a good faith effort to:
+---
 
-*   Retain server logs containing the IP address of all requests to this server, in so far as such logs are kept, no more than 90 days.
-*   Retain the IP addresses associated with registered users no more than 12 months.
+# What information do we collect?
 
-You can request and download an archive of your content, including your posts, media attachments, profile picture, and header image.
+* **Basic account information**: username, email, password hash. Optional profile fields such as display name, biography, avatar, and header image. Your username, display name, biography, avatar, and header image are public.
+* **Content and social graph**: posts, media, polls, lists, bookmarks, boosts, favourites, follows and followers, mutes and blocks. Public and unlisted posts are public. Featuring a post on your profile makes it public.
+* **Direct and followers-only posts**: stored and processed to deliver messages to intended recipients. They may be delivered to other servers where copies are stored. Operators of this server and administrators of receiving servers can technically access such messages. Recipients can screenshot or reshare. Do not share sensitive information over Mastodon.
+* **Session and security data**: IP addresses and timestamps when you log in or perform key actions, session tokens, and login history. We do not track you across sites and we do not perform device fingerprinting.
+* **Server logs**: minimal HTTP access and error logs needed for reliability and security.
 
-You may irreversibly delete your account at any time.
+You can export your data and media via Settings - Export. You can irreversibly delete your account in Settings - Delete account.
 
-Do we use cookies?
-------------------
+# What do we use your information for?
 
-Yes. Cookies are small files that a site or its service provider transfers to your computer's hard drive through your Web browser (if you allow). These cookies enable the site to recognize your browser and, if you have a registered account, associate it with your registered account.
+We process only what is necessary to run a Mastodon server. Each purpose has a lawful basis under EU law:
 
-We use cookies to understand and save your preferences for future visits.
+* **Operate your account and deliver the service**: account creation, timelines, delivery of posts and direct messages, necessary service emails such as verification and password resets.
+  **Legal basis**: contract necessity, Article 6(1)(b) GDPR.
+* **Community safety, moderation, and network security**: prevent spam and ban evasion, investigate abuse reports, protect accounts, maintain service integrity. This includes limited IP logging and review of server logs when needed.
+  **Legal basis**: legitimate interests, Article 6(1)(f) GDPR, supported by Recital 49 on network and information security. You may object to this processing as described in **Your rights**.
+* **Optional communications**: non-essential announcements by email if you opt in.
+  **Legal basis**: consent, Article 6(1)(a) GDPR. You can withdraw consent at any time.
 
-Do we disclose any information to outside parties?
---------------------------------------------------
+# How do we protect your information?
 
-We do not sell, trade, or otherwise transfer to outside parties your personally identifiable information. This does not include trusted third parties who assist us in operating our site, conducting our business, or servicing you, so long as those parties agree to keep this information confidential. We may also release your information when we believe release is appropriate to comply with the law, enforce our site policies, or protect ours or others rights, property, or safety.
+We apply appropriate technical and organisational measures, including encryption in transit, strong password hashing, optional two-factor authentication, least-privilege access, audit logging for administrative actions, secure encrypted backups with rotation, and regular security updates. Access to personal data is restricted to administrators with a need to know.
 
-Your public content may be downloaded by other servers in the network. Your public and followers-only posts are delivered to the servers where your followers reside, and direct messages are delivered to the servers of the recipients, in so far as those followers or recipients reside on a different server than this.
+If a personal data breach is likely to result in a risk to your rights and freedoms, we will notify the competent supervisory authority and affected users when required by law.
 
-When you authorize an application to use your account, depending on the scope of permissions you approve, it may access your public profile information, your following list, your followers, your lists, all your posts, and your favourites. Applications can never access your e-mail address or password.
+# What is our data retention policy?
 
-Site usage by children
-----------------------
+We keep data only as long as needed for the stated purposes and then delete or anonymise it.
 
-If this server is in the EU or the EEA: Our site, products and services are all directed to people who are at least 16 years old. If you are under the age of 16, per the requirements of the GDPR (General Data Protection Regulation) do not use this site.
+* **Account and profile**: retained while the account is active. Deleted when you delete your account, subject to backup rotation and limited moderation records as noted below.
+* **Posts and media**: retained until you delete them or delete your account. Copies on remote servers are outside our control.
+* **IP addresses and login history**: retained up to 90 days by default for security and anti-abuse. We keep entries longer only for active investigations or where required by law, and we review extended entries regularly.
+* **Server logs**: retained up to 90 days by default, shorter where feasible.
+* **Backups**: encrypted backups retained up to 30 days before rotation. Used only for disaster recovery.
 
-If this server is in the USA: Our site, products and services are all directed to people who are at least 13 years old. If you are under the age of 13, per the requirements of COPPA (Children's Online Privacy Protection Act) do not use this site.
+# Do we use cookies?
 
-Law requirements can be different if this server is in another jurisdiction.
-```
+We only use strictly necessary session cookies required for login and to keep you authenticated. We do not use analytics, advertising, or other non-essential cookies.
+
+# Do we disclose any information to outside parties?
+
+We do not sell or trade personal data. We disclose data only to:
+
+* **Our service providers** that act as processors under our instructions to host or deliver the service. We use EU providers where possible. If processing requires transfers outside the EU, we apply appropriate safeguards such as Standard Contractual Clauses or rely on an adequacy decision.
+* **Other Mastodon servers** that receive your content so your followers and recipients can see it. These servers are independent controllers and apply their own rules.
+* **Law enforcement or authorities** when required by EU or Member State law. We do not disclose personal data directly to non-EU authorities unless required under an international agreement or another lawful transfer mechanism under Chapter V GDPR. Where permitted, we will notify affected users.
+
+# Federation and recipients
+
+Mastodon is federated. When you post or interact with accounts on other servers, your content and profile data are delivered to those servers so that people there can see it.
+
+* **Independent controllers**: remote servers determine their own purposes and means of processing. We cannot force them to delete or modify data they store.
+* **International transfers**: federation can deliver content to servers outside the EU. This is inherent to ActivityPub. You can manage federation through your own posting choices and follower approvals.
+
+# Deletions and limits in a federated network
+
+* When you delete a post or your account, we promptly send delete requests to known recipients using ActivityPub.
+* We cannot guarantee that every remote server or user will comply with a delete request or remove cached copies, screenshots, or downloads. This is a technical and legal limitation of a federated network.
+
+# Your rights
+
+Subject to conditions in the GDPR, you have the right to access, rectification, erasure, restriction, data portability, and to object to processing based on legitimate interests. You can withdraw consent at any time for processing that relies on consent. You also have the right to lodge a complaint with a supervisory authority. In Sweden this is IMY at [https://www.imy.se](https://www.imy.se).
+
+To exercise your rights, contact [admin@goingdark.social](mailto:admin@goingdark.social). We will respond within one month or explain if an extension is needed for complex requests.
+
+# Site usage by children
+
+The service is for adults only. You must be at least 18 years old to create an account and use goingdark.social. We do not knowingly process data from users under 18. If we become aware that someone under 18 is using the service, we will close the account and remove the data.
+
+# Necessity of providing data
+
+Providing basic account data is necessary to enter into and perform the service contract. If you do not provide a username, email, and password, you cannot create an account. Providing other profile fields is optional.
+
+# Automated decision making
+
+We use automated tools to detect spam, malware links, mass-registration, and ban evasion. These tools may temporarily limit actions or visibility to protect the service. Any meaningful moderation outcome or lasting restriction is reviewed and decided by a human. We therefore do not make solely automated decisions that produce legal effects concerning you or similarly significantly affect you under Article 22 GDPR. You can appeal any moderation action as described in our Community Guidelines. Processing for these tools relies on our legitimate interests in service security and abuse prevention under Article 6 GDPR.
+
+# Changes to this policy
+
+We will post changes to this page with a new Last updated date. If changes are material, we will also publish an in-service notice. Continued use of the service after the effective date means you accept the updated policy.
