@@ -1,6 +1,6 @@
 ---
 title: User guides
-weight: 10
+weight: 20
 ---
 {{< cards >}}
   {{< card url="migration/" title="Migration" icon="arrow-right-on-rectangle" subtitle="How to move your account between servers" >}}
@@ -11,7 +11,7 @@ weight: 10
 
 ## See Also
 
-- [Community Guidelines](../community/community-guidelines.md) - Learn about our community culture
+- [Community Guidelines](/docs/community/) - Learn about our community culture
 - [Rules](../policies/rules/) - Review the official server rules
 - [Legal](../legal/) - Terms of service and privacy policy
 

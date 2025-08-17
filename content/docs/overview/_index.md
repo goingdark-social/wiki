@@ -1,6 +1,6 @@
 ---
 title: Overview
-weight: 40
+weight: 10
 ---
 {{< cards >}}
   {{< card url="about/" title="About" icon="information-circle" subtitle="What goingdark.social is and who's behind it" >}}
@@ -9,7 +9,7 @@ weight: 40
 
 ## See Also
 
-- [Getting Started](../user/getting-started.md) - New to goingdark.social? Start here
+- [Getting Started](../user/getting-started/) - New to goingdark.social? Start here
 - [Rules](../policies/rules/) - Community guidelines and policies
 - [Community](../community/) - Get involved and contribute
 

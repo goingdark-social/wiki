@@ -1,6 +1,6 @@
 ---
 title: Operations
-weight: 50
+weight: 40
 ---
 {{< cards >}}
   {{< card url="backup-and-restore/" title="Backup and restore" icon="arrow-path" subtitle="How we back up and recover systems" >}}
