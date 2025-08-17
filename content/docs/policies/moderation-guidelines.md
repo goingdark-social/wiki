@@ -29,5 +29,5 @@ Email notifications are sent for each action.
 
 ### Appeals
 
-An appeal can be filed in 14 days by emailing contact@goingdark.social. Responses arrive in 14 days. Decisions after the appeal are final.
+An appeal can be filed in 14 days through the website at goingdark.social. Responses arrive in 14 days. Decisions after the appeal are final.
 
