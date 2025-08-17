@@ -7,3 +7,9 @@ weight: 10
   {{< card url="goals/" title="Goals" icon="flag" subtitle="Why the project exists and who it's for" >}}
 {{< /cards >}}
 
+## See Also
+
+- [Getting Started](../user/getting-started/) - New to goingdark.social? Start here
+- [Rules](../policies/rules/) - Community guidelines and policies
+- [Community](../community/) - Get involved and contribute
+

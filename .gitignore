@@ -7,3 +7,7 @@ public/
 jsconfig.json
 !.vale/Project/
 !.vale/Project/**
+hugo_stats.json
+go.sum
+go.mod
+.hugo_build.lock

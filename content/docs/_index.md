@@ -17,5 +17,5 @@ This space collects rules, getting started guides, federation policy, moderation
   {{< card url="transparency/" title="Transparency" icon="eye" subtitle="Reports and decision logs" >}}
   {{< card url="user/" title="User guides" icon="book-open" subtitle="How to get started" >}}
   {{< card url="legal/" title="Legal" icon="scale" subtitle="Terms and compliance" >}}
-  {{< card url="/community/" title="Community" icon="users" subtitle="Contact and contribution" >}}
+  {{< card url="community/" title="Community" icon="users" subtitle="Contact and contribution" >}}
 {{< /cards >}}

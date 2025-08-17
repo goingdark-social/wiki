@@ -38,9 +38,13 @@ header:
     align: "center"
     fixed_to_top: true
     logo:
-      text: "goingdark.social"
+      filename: "banner.png"
     button:
-      enable: false
+      enable: true
+      text: "💖 Sponsor"
+      url: "https://ko-fi.com/goingdark"
+      target: "_blank"
+      style: "outline"
     show_search: true
     show_theme_chooser: true
 
