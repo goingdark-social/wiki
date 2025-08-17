@@ -50,6 +50,7 @@ header:
 
 # Site footer
 footer:
+  text: '[Status](https://status.goingdark.social/)'
   copyright:
     notice: '© {year} goingdark.social'
     license:
