@@ -1,6 +1,6 @@
 ---
 title: Operations
-weight: 30
+weight: 50
 ---
 {{< cards >}}
   {{< card url="backup-and-restore/" title="Backup and restore" icon="arrow-path" subtitle="How we back up and recover systems" >}}
@@ -8,4 +8,3 @@ weight: 30
   {{< card url="incidents/" title="Incidents" icon="bolt" subtitle="How we handle outages and status updates" >}}
   {{< card url="shutdown-procedure/" title="Shutdown procedure" icon="power" subtitle="Steps if the service shuts down" >}}
 {{< /cards >}}
-
