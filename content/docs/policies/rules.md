@@ -1,19 +1,14 @@
 ---
-title: Rules
+title: Rules - moved
+draft: true
 weight: 40
-toc: true
+toc: false
 reading_time: false
-pager: true
+pager: false
 ---
 
-- Treat people well.
-- Use content warnings when a post might upset or surprise others.
-- Keep public areas safe for work.
-- No illegal content or solicitations.
-- No spam or automated promotion.
-- No hate, threats, or harassment.
-- Don't game the rules or look for loopholes.
-- Be honest about who you are.
+This page moved to a dedicated section with per-rule pages and links.
 
-Breaking rules may lead to moderation action. Appeals are handled as described in our [Moderation Guidelines](/docs/policies/moderation-guidelines/#appeals).
+Go to **[Rules](/docs/policies/rules/index/)**.
 
+For bots and automation, see **[Bot Policy](/docs/policies/rules/bots/)**.
