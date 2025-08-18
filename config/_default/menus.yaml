@@ -46,3 +46,7 @@ sidebar:
     params:
       type: separator
     weight: 90
+  - identifier: help
+    name: Help
+    pageRef: "/docs/user/help"
+    weight: 91
