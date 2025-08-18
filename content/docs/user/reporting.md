@@ -26,5 +26,5 @@ Most apps include a **Report** option in the post menu. Include as much context 
 
 Moderators review reports in 48 hours and can contact you for details. You receive a notification when the case closes.
 
-Abuse inbox: abuse@goingdark.social.
+For urgent issues, send a direct message on Mastodon to `@fanfare@goingdark.social`.
 

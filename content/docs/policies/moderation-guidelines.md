@@ -17,7 +17,7 @@ These guidelines cover moderation on goingdark.social. They apply to local accou
 - **Domain block**: remote server hidden.
 - **Account deletion**: data removed after self destruct.
 
-Email notifications are sent for each action.
+In-app notifications are sent for each action.
 
 ### Behavior mapping
 

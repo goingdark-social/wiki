@@ -55,7 +55,7 @@ We enforce our rules using a mix of automated anti-spam and abuse filters, block
 
 ## Notice and action for illegal content or rights complaints
 
-* **User and authority contact**: [support@goingdark.social](mailto:support@goingdark.social)
+* **User and authority contact**: message `@fanfare@goingdark.social` on Mastodon
 * **Web form**: use the notice form linked on our legal page to submit reports. Include the URL or ActivityPub ID, a description, your legal basis or proof of rights, and your contact details.
 * We review notices diligently and may restrict content or accounts where appropriate. When we restrict content or an account, we provide a **Statement of Reasons** identifying the decision, the basis, and the available redress routes.
 * We comply with valid orders to act against illegal content or provide information where required by law.
@@ -95,7 +95,7 @@ We do not exclude or limit liability where the law does not allow it. In particu
 
 ## Governing law and venue; informal resolution
 
-These Terms are governed by the laws of **Sweden** and applicable EU law. Before bringing a claim, both sides will try to resolve the matter informally by email within 30 days. If unresolved, disputes may be brought before the competent Swedish courts, except that mandatory consumer rights to bring proceedings in your local competent court are preserved.
+These Terms are governed by the laws of **Sweden** and applicable EU law. Before bringing a claim, both sides will try to resolve the matter informally via Mastodon direct message or the wiki discussions tab within 30 days. If unresolved, disputes may be brought before the competent Swedish courts, except that mandatory consumer rights to bring proceedings in your local competent court are preserved.
 
 ## Changes to these Terms
 
@@ -103,4 +103,4 @@ We may update these Terms. Material changes will be announced on the site. Conti
 
 ## Contact
 
-User and legal contact: **[support@goingdark.social](mailto:support@goingdark.social)**. We accept notices in English or Swedish.
+User and legal contact: message `@fanfare@goingdark.social` on Mastodon. We accept notices in English or Swedish.

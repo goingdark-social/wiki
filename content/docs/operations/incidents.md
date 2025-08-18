@@ -12,7 +12,7 @@ Administrators watch services and respond to outages.
 
 - Status updates: https://status.goingdark.social/ (linked in the site footer)
 - Fallback: posts from the administrator account (`@fanfare@goingdark.social`)
-- Send email to contact@goingdark.social
+- For urgent help, send a direct message to `@fanfare@goingdark.social` on Mastodon.
 
 ### Postmortem template
 

@@ -8,7 +8,7 @@ pager: true
 
 # Appeals Handling
 
-- **Intake**: via `support@goingdark.social` or form.
+- **Intake**: via Mastodon message to `@fanfare@goingdark.social` or form.
 - **SLA**:
   - Acknowledge within 7 days
   - Decide within 14 days

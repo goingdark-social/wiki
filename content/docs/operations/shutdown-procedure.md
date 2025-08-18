@@ -22,7 +22,6 @@ If the service ever shuts down:
 
 - Export data.
 - Migrate account.
-- Set email forwarding.
 
 ### Technical plan
 
