@@ -11,7 +11,7 @@ goingdark.social is a privacy focused Mastodon server for friendly tech conversa
 
 The service is run by Going Dark, a small community based in the EU. 
 
-Right now the server runs at home and personal funds cover the costs. Help keep it running at [Ko-fi](https://ko-fi.com/goingdark).
+Right now the server runs at home and personal funds cover the costs. Learn how to help at [Support Us](/docs/user/support-us/)
 
 Contact: contact@goingdark.social
 Abuse reports: abuse@goingdark.social  
@@ -23,6 +23,7 @@ See also:
 - [Rules](/docs/policies/rules/)
 - [Moderation Guidelines](/docs/policies/moderation-guidelines/)
 - [Federation Policy](/docs/policies/federation-policy/)
+- [Support Us](/docs/user/support-us/)
 - [Funding](/docs/overview/funding/)
 - [Migration Guide](/docs/user/migration/)
 
