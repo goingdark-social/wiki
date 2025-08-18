@@ -23,7 +23,7 @@ Only administrators can access logs.
 This privacy policy explains how **goingdark.social** ("Going Dark", "we", "us") processes personal data when you use our Mastodon service. We are an EU-based, privacy-first community. We do not use analytics, advertising, or unnecessary cookies. Access to the service is restricted to adults aged 18 and over.
 
 **Controller**: Administrators of goingdark.social
-**Privacy contact**: [admin@goingdark.social](mailto:admin@goingdark.social)
+**Privacy contact**: message `@fanfare@goingdark.social` on Mastodon
 **Supervisory authority**: You can lodge a complaint with your local authority. In Sweden this is Integritetsskyddsmyndigheten (IMY) at [https://www.imy.se](https://www.imy.se).
 
 ---
@@ -54,8 +54,6 @@ We process only what is necessary to run a Mastodon server. Each purpose has a l
   **Legal basis**: contract necessity, Article 6(1)(b) GDPR.
 * **Community safety, moderation, and network security**: prevent spam and ban evasion, investigate abuse reports, protect accounts, maintain service integrity. This includes limited IP logging and review of server logs when needed.
   **Legal basis**: legitimate interests, Article 6(1)(f) GDPR, supported by Recital 49 on network and information security. You may object to this processing as described in **Your rights**.
-* **Optional communications**: non-essential announcements by email if you opt in.
-  **Legal basis**: consent, Article 6(1)(a) GDPR. You can withdraw consent at any time.
 
 # How do we protect your information?
 
@@ -101,7 +99,7 @@ Mastodon is federated. When you post or interact with accounts on other servers,
 
 Subject to conditions in the GDPR, you have the right to access, rectification, erasure, restriction, data portability, and to object to processing based on legitimate interests. You can withdraw consent at any time for processing that relies on consent. You also have the right to lodge a complaint with a supervisory authority. In Sweden this is IMY at [https://www.imy.se](https://www.imy.se).
 
-To exercise your rights, contact [admin@goingdark.social](mailto:admin@goingdark.social). We will respond within one month or explain if an extension is needed for complex requests.
+To exercise your rights, message `@fanfare@goingdark.social` on Mastodon. We will respond within one month or explain if an extension is needed for complex requests.
 
 # Site usage by children
 

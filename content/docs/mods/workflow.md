@@ -8,9 +8,9 @@ pager: true
 
 # Standard Workflow
 
-1. **Intake**  
-   - Receive report via in app tool or email.  
-   - Check if the issue falls under a playbook category.  
+1. **Intake**
+   - Receive report via in app tool or Mastodon message.
+   - Check if the issue falls under a playbook category.
 
 2. **Evidence capture**  
    - Record account ID, post ID, screenshot if ephemeral.  

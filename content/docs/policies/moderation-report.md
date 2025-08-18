@@ -10,4 +10,4 @@ We publish a periodic summary of moderation activity (reports, actions, and fede
 
 The figures are included in our [Transparency Metrics](/docs/transparency/metrics/). This page exists to avoid broken links from older documents and to provide a stable reference.
 
-If you need more detail, contact **support@goingdark.social**.
+If you need more detail, send a direct message on Mastodon to `@fanfare@goingdark.social`.

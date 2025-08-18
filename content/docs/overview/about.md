@@ -13,8 +13,8 @@ The service is run by Going Dark, a small community based in the EU.
 
 Right now the server runs at home and personal funds cover the costs. Learn how to help at [Support Us](/docs/user/support-us/)
 
-Contact: contact@goingdark.social
-Abuse reports: abuse@goingdark.social  
+Contact: `@fanfare@goingdark.social` on Mastodon
+Abuse reports: direct message `@fanfare@goingdark.social`
 Support requests receive answers in 72 hours.
 
 See also:
