@@ -6,7 +6,7 @@ reading_time: false
 pager: true
 ---
 
-**Plain rule:** Put sensitive or potentially upsetting material behind a Content Warning.
+**Plain rule:** put sensitive or upsetting material behind a content warning.
 
 **Examples that often need a CW:** nudity, gore, graphic violence, politics, electioneering, major news spoilers, disturbing imagery, common phobias.
 
@@ -14,6 +14,6 @@ pager: true
 - Keep the CW headline short and descriptive.
 - If unsure, add a CW. People can opt in to view.
 
-**Do not:** use CWs to hide abuse or evade moderation.
+**don't:** use Content Warnings (CWs) to hide abuse or evade moderation.
 
 **Enforcement:** Posts may be limited or removed. Repeated issues can lead to account actions per the [Moderation Guidelines](/docs/policies/moderation-guidelines/). Report concerns via the report tool or by messaging `@fanfare@goingdark.social` on Mastodon.

@@ -14,5 +14,6 @@ ignore:
   - Project/spelling-exceptions.txt
   - Project/brands.txt
   - Project/allowed-jargon.txt
+  - Project/project-words.txt
 filters:
   - \/.*  # allow URLs

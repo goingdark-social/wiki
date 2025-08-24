@@ -8,9 +8,8 @@ pager: true
 
 ### From the web
 
-1. Open the post or profile.
-2. Use the **Report** option.
-3. Add notes or attach posts.
+1. Use the **Report** option on the post or profile.
+2. Add notes or attach posts.
 
 ### From apps
 

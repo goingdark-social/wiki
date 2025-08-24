@@ -16,5 +16,5 @@ pager: true
 - **Logs**: note actions taken and reasoning.
 - **Retention**:
   - Standard: 90 days
-  - Illegal or critical cases: 1 year max, per [privacy](/docs/legal/privacy/)
+  - Illegal or critical cases: 1 year max, per [Privacy Policy](/docs/legal/privacy/).
 - **Access**: restricted to moderators and administrators only.

@@ -8,106 +8,95 @@ pager: true
 
 ## Purpose
 
-goingdark.social is a privacy-focused Mastodon server for people who enjoy technology, open source, and respectful conversation.  
-We are small on purpose. We value being a space where newcomers get noticed, introductions get boosted, and discussion stays human-sized.  
+goingdark.social is a privacy focused Mastodon server for people who enjoy technology, open source, and respectful conversation.  
+This server is intentionally small. It’s a space where newcomers get noticed, introductions get boosted, and discussions remain manageable.  
 
-These guidelines set out what behavior is expected, what is disallowed, and how moderation works. They exist to protect people, not restrict them unnecessarily.  
-
----
-
-## Expected Behavior
-
-- **Be respectful.** Disagree without hostility. Listen before responding.  
-- **Be inclusive.** Encourage diverse voices, respect pronouns, welcome newcomers.  
-- **Be mindful.** Tag sensitive media, avoid flooding timelines, remember others read differently.  
-- **Be constructive.** Share ideas, tools, and feedback in a way that helps others learn.  
-- **Be responsible.** Respect privacy, do not share others’ personal info without consent.  
+These guidelines outline expected behavior, prohibited actions, and moderation processes. They exist to protect people, not to impose unnecessary restrictions.  
 
 ---
 
-## Disallowed Content & Activity
+## Disallowed content and activity
 
-The following are not allowed, and may lead to moderation actions:
+The following actions violate the rules and can lead to moderation:
 
 - **Spam and scams.** Unsolicited promotions, engagement farming, phishing, malware, or harmful links.  
-- **Harassment.** Stalking, doxxing, impersonation, brigading, or targeted abuse.  
-- **Hate and discrimination.** Racism, sexism, homophobia, transphobia, ableism, religious bigotry, xenophobia, casteism, or any form of demeaning identity-based content.  
-- **Misinformation that causes harm.** False or misleading claims that may endanger health, safety, or public trust.  
-- **Pornography and sex work promotion.** Explicit sexual content and solicitation are not permitted here.  
-- **Untagged sensitive media.** Nudity, gore, or graphic violence must always be behind a content warning.  
-- **Automated posting without approval.** Bots must follow the [Bot Policy](/docs/policies/rules/bots/). Unapproved bots are suspended.  
-- **Illegal content.** Anything illegal under EU or Swedish law, including CSAM, extremist propaganda, and incitement to violence.  
+- **Harassment.** Stalking, doxing, impersonation, coordinated harassment, or targeted threats.  
+- **Hate and discrimination.** Racism, sexism, homophobia, transphobia, ableism, religious bigotry, xenophobia, casteism, or any form of demeaning identity based content.  
+- **Misinformation that causes harm.** False or misleading claims that endanger health, safety, or public trust.  
+- **Explicit content.** Nudity, gore, or graphic material must always be behind a content warning. Content involving explicit themes remains prohibited in public timelines per [Rule 3](/docs/policies/rules/03_keep-it-clean/).  
+- **Automated posting without approval.** Bots must follow the [Bot Policy](/docs/policies/rules/bots/). Moderators remove unapproved bots.  
+- **Unlawful content.** Anything prohibited under EU or Swedish law, including CSAM, extremist materials, and incitement to harm.  
 - **Disruptive use.** Flooding timelines, excessive posting, mass unsolicited mentions, or degrading server performance.  
 
 ---
 
-## Moderator Actions
+## Moderator actions
 
-Moderation exists to protect members and the community. Actions may include:
+Moderation exists to protect members and the community. Actions include:
 
 - **Warning.** A private message explaining the issue.  
-- **Silencing.** Posts visible only to followers, not in public timelines.  
+- **Restricting visibility.** Posts visible only to followers, not in public timelines.  
 - **Suspension.** Temporary or permanent account removal.  
-- **Content removal.** Posts, media, or accounts deleted if harmful or illegal.  
-- **Escalation.** Reports may be forwarded to hosting providers or authorities where required by law.  
+- **Content removal.** Posts, media, or accounts deleted if harmful or unlawful.  
+- **Escalation.** Reports forwarded to hosting providers or authorities where required by law.  
 
-For serious violations (harassment, illegal content, explicit hate), suspension may be immediate.  
-
----
-
-## Appeals & Transparency
-
-- Members may appeal moderation decisions through [Appeals](/docs/legal/appeals/).  
-- Appeals are reviewed by at least two moderators or admins.  
-- Decisions are final unless new evidence is presented.  
-- An annual [Moderation Report](/docs/policies/moderation-report/) summarises numbers of reports, actions, and blocks.  
+For serious violations (harassment, unlawful content, explicit hate), suspension happens without delay.  
 
 ---
 
-## Language & Content Rules
+## Appeals and transparency
+
+- Members can appeal moderation decisions through the **Appeal** option on the warning page (one appeal in 20 days).  
+- Moderators review appeals and provide decisions.  
+- Decisions are final unless new evidence emerges.  
+- An annual [Moderation Report](/docs/policies/moderation-report/) summarizes numbers of reports, actions, and blocks.  
+
+---
+
+## Language and content rules
 
 - Posts in any European language are welcome. English and Swedish are most common.  
-- Content in unsupported languages may be reviewed if moderation is not possible.  
-- Sensitive media (nudity, violence, political imagery likely to disturb) must be tagged with a Content Warning.  
-- Illegal material under EU law is strictly forbidden.  
+- Moderators review content in unsupported languages if necessary.  
+- Sensitive media (nudity, graphic content, or political imagery that disturbs) must include a Content Warning.  
+- Content prohibited under EU law isn't permitted.  
 
 ---
 
 ## Participation
 
-This is not just a server, it’s a community:  
+This isn’t just a server, it’s a community:  
 
 - Boost newcomers’ #introduction posts to help them connect.  
 - Share self-hosting setups, open source tools, and privacy tips.  
-- Join in discussions without gatekeeping — beginners welcome.  
+- Join in discussions without gatekeeping (excluding or discouraging newcomers). Beginners are welcome.  
 - Volunteer to help with moderation, translation, or documentation if you want to contribute more.  
 
 ---
 
-## Off-Platform Conduct
+## Off platform behavior
 
-Harassment or abusive activity that happens off-platform but impacts our members (e.g. brigading, stalking, organized harassment campaigns) may still lead to moderation action here.  
+Harassment or abusive activity that happens off platform but impacts members (for example, organized harassment campaigns) can still lead to moderation action here.  
 
 ---
 
 ## Reporting
 
-- Use the **Report** button on any post or profile.
-- Reports go directly to the admin/moderator team.
+- Use the **Report** option on any post or profile.
+- Reports go directly to the administrator/moderator team.
 - For urgent or complex issues, send a direct message on Mastodon to `@fanfare@goingdark.social`.
-- Reports are reviewed promptly. Outcomes may be communicated if appropriate.
+- Moderators review reports and share outcomes when appropriate.
 
 ---
 
 ## Attribution
 
-These guidelines are adapted with modifications from Mozilla’s Community Participation Guidelines, the Rust Code of Conduct, and the Tŵt Cymru / Toot Wales guidelines.  
-Distributed under a Creative Commons Attribution-ShareAlike license.  
+These guidelines draw from Mozilla’s Community Participation Guidelines, the Rust Code of Conduct, and the Tŵt Cymru / Toot Wales guidelines.  
+Distributed under a Creative Commons Attribution-ShareAlike 4.0 International license.  
 
 ---
 
-## Final Note
+## Final note
 
-Community health depends on all of us.  
+Community health depends on everyone.  
 If in doubt: ask, tag sensitive content, and respect each other.  
-goingdark.social is small on purpose — let’s keep it safe and welcoming.  
+goingdark.social is small on purpose. Let’s keep it safe and welcoming.

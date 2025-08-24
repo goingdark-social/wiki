@@ -10,7 +10,7 @@ Need a hand? Reach the team through the channels below.
 
 ## Contact
 
-- **Mastodon:** `@fanfare@goingdark.social` - send a direct message for support or reports.
+- **Mastodon:** Use the **Report** option on the post or profile to report issues. For other support, send a direct message to `@fanfare@goingdark.social`.
 - **Wiki discussions:** <https://github.com/goingdark-social/wiki/discussions> - feedback and questions.
 
 ## More resources

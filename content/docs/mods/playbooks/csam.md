@@ -32,7 +32,7 @@ Block or silence remote instances sharing child sexual abuse material.
 Record in moderation log with category = child sexual abuse material.
 
 ## Appeals
-No appeals allowed for child sexual abuse material.
+Appeals are only allowed for mistaken identification or account restoration. Unlawful material is never restored.
 
 ## Retention
 Evidence retained for 1 year.

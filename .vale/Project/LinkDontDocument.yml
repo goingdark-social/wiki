@@ -3,7 +3,6 @@ message: "Don't duplicate full policies in multiple places. Link to the main pol
 level: warning
 ignorecase: true
 tokens:
-  - 'Code of Conduct'
   - 'Moderation Policy'
   - 'Server Rules'
 exceptions:

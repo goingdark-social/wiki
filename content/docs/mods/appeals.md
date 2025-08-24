@@ -6,12 +6,13 @@ reading_time: false
 pager: true
 ---
 
-# Appeals Handling
+# Appeals handling
 
-- **Intake**: via Mastodon message to `@fanfare@goingdark.social` or form.
+- **Intake**: Appeals arrive via the Mastodon **Appeal** page; mods shouldn’t accept new appeals over DM.
+- **Eligibility**: one appeal in 20 days from decision (Mastodon default).
 - **SLA**:
-  - Acknowledge within 7 days
-  - Decide within 14 days
+  - Acknowledge in 7 days
+  - Decide in 14 days
 - **Reviewers**: at least 2 moderators or administrators.
 - **Criteria**: overturn only if clear error or new evidence.
 - **Finality**: decisions after appeal are final unless legally required otherwise.
