@@ -6,16 +6,4 @@ reading_time: false
 pager: true
 ---
 
-**Plain rule:** Talk to others the way you would want to be talked to. Disagree without hostility.
-
-**Why:** This server is small on purpose. We keep it human sized, so tone matters.
-
-**Do:**
-- Assume good faith. Ask before judging.
-- Use CWs when a topic might upset or surprise others.
-
-**Do not:**
-- Insult, belittle, or bait people.
-- Pile on or brigade.
-
-**Enforcement:** Breaches may lead to a warning, limit, or suspension per the [Moderation Guidelines](/docs/policies/moderation-guidelines/). Report issues via the **Report** button. See [Reporting](/docs/user/reporting/).
+Speak to others the way you’d like others to speak to you. The community stays intentionally small, so tone shapes the vibe for everyone. Ask questions before judging, and add a content warning when a topic upsets or surprises folks. Insults, baiting, or piling on aren’t welcome. If a conversation turns sour, use the in-app reporting tool. The [Moderation Guidelines](/docs/policies/moderation-guidelines/) explain how warnings, limits, or suspensions work. See [Reporting](/docs/user/reporting/).

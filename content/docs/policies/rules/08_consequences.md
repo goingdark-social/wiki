@@ -6,6 +6,4 @@ reading_time: false
 pager: true
 ---
 
-**Plain Rule:** Violations can lead to a warning, limit, or permanent suspension. Severe cases may skip steps.
-
-**Appeals:** You can appeal as described in the [Moderation Guidelines](/docs/policies/moderation-guidelines/). Use the in-app **Report** button.
+Moderators respond in proportion to the issue. A small misstep earns a warning, while repeated or serious problems lead to limits or even permanent suspension. Severe situations skip straight to stronger actions. Appeals happen through the app, following the [Moderation Guidelines](/docs/policies/moderation-guidelines/).

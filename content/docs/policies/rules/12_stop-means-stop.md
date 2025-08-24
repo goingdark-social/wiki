@@ -6,8 +6,4 @@ reading_time: false
 pager: true
 ---
 
-**Plain Rule:** If someone asks you to stop engaging with them, stop.
-
-**Examples:** stop replying, stop mentioning, stop tagging. Respect blocks and mutes.
-
-**Enforcement:** Warnings or limits. Repeated behavior may lead to suspension. See [Moderation Guidelines](/docs/policies/moderation-guidelines/).
+If someone tells you to back off (through a block, mute, or a direct request), take the hint and move on. Keep replying, mentioning, or tagging after that and you’re harassing them. Moderators issue warnings or limits, and repeated behavior leads to suspension under the [Moderation Guidelines](/docs/policies/moderation-guidelines/).

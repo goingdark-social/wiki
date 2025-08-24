@@ -6,6 +6,4 @@ reading_time: false
 pager: true
 ---
 
-**Plain Rule:** Do not share private information about someone without their consent. This includes real names if not public, addresses, phone numbers, emails, and other identifying data.
-
-**Enforcement:** Removal and account action per the [Moderation Guidelines](/docs/policies/moderation-guidelines/).
+Respect everyone’s privacy. Don’t share personal details such as real names, addresses, phone numbers, emails, or other identifying data without consent. Moderators remove posts that expose private information, and accounts can face further action under the [Moderation Guidelines](/docs/policies/moderation-guidelines/).

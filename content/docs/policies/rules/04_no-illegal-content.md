@@ -6,6 +6,4 @@ reading_time: false
 pager: true
 ---
 
-**Plain Rule:** Do not post anything illegal under EU or Swedish law. This includes CSAM, extremist propaganda, and incitement to violence.
-
-**Enforcement:** Immediate removal and suspension. We comply with valid legal orders. See [Moderation Guidelines](/docs/policies/moderation-guidelines/).
+The server follows EU and Swedish law. If a post goes against those laws (such as CSAM, extremist material, or calls for harm), it isn’t allowed here. Moderators remove such material at once and suspend the account at once. The team honors valid legal orders. Details sit in the [Moderation Guidelines](/docs/policies/moderation-guidelines/).

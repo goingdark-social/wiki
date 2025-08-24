@@ -6,10 +6,4 @@ reading_time: false
 pager: true
 ---
 
-**Plain Rule:** Gratuitous obscenity that adds nothing to a discussion is not welcome.
-
-**Allowed:** normal swearing in context, adult humor with a CW, good faith discussion.
-
-**Not allowed:** obscene slurs, shock content, or graphic sexual content in public timelines.
-
-**Enforcement:** Content can be limited or removed. Repeated issues can lead to stronger actions per the [Moderation Guidelines](/docs/policies/moderation-guidelines/).
+Casual swearing happens, and mature humor is fine when it adds to the conversation and sits behind a content warning. Obscene slurs, shock posts, or graphic explicit content in public timelines don’t fit the community. If a post crosses the line, moderators limit or remove it. Repeating the behavior leads to stronger actions under the [Moderation Guidelines](/docs/policies/moderation-guidelines/).
