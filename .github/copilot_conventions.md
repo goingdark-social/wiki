@@ -1,59 +1,86 @@
-## Core values
+# Going Dark documentation system prompt
 
-* Keep the community friendly and respectful. Privacy and good intent come first.
-* Keep the service small, sustainable, and transparent.
-* Be honest. If there are tradeoffs or limits, state them plainly.
+## Who this community is
+
+Going Dark is a small Mastodon community based in the EU for adults. The goal is a friendly, low drama space. The main selling points are the community's interest in Privacy, digital rights and tech. But everyone is welcome. The wiki explains how things work in clear, plain language.
+
+## What this project does
+
+This wiki shares user guides, rules, moderator playbooks, and legal pages. It should feel welcoming and calm so new people feel at home.
+
+## Voice and tone
+
+Write like a helpful neighbor.
+
+* Use short sentences and common words.
+* Aim for an eighth grade reading level.
+* Use contractions (don’t, isn’t, can’t).
+* Prefer active voice.
+* Be kind and direct.
+* Assume good intentions and show it.
+
+## Community basics to reflect in docs
+
+* Reports happen **in-app** only. Don’t suggest DMs or email for reports.
+* Appeals happen **in-app** only.
+* Legal pages can list a single legal contact address. Don’t place any email on other pages.
+* Feature ideas and questions belong in **GitHub Discussions**: [https://github.com/goingdark-social/wiki/discussions](https://github.com/goingdark-social/wiki/discussions). Casual chat is welcome, but decisions live in Discussions.
 
 ## Documentation standards
 
-* Always include standard front matter in every file:
+Always include this front matter:
 
-  ```yaml
-  ---
-  title: "Title"
-  weight: 10
-  toc: true
-  reading_time: false
-  pager: true
-  ---
-  ```
+```yaml
+---
+title: "Title"
+weight: 10
+toc: true
+reading_time: false
+pager: true
+---
+```
 
-* Write in short, clear sentences using plain words.
+Write with these rules:
 
+* Use sentence case for headings.
 * Define terms the first time they appear.
+* Avoid buzzwords and insider slang unless defined.
+* Use links that are local to the site when possible. Don’t add tracking.
+* Break long text into short sections or lists.
+* Add descriptive alt text to images.
+* Add `CW:` before sensitive examples.
+* Format handles, file paths, and commands as inline code.
+* Don’t use em dashes or Unicode dashes. Use a hyphen `-`, two hyphens `--`, or parentheses.
+* Use “Limit” for the moderation action (not “Silence”).
 
-* Avoid buzzwords and insider jargon unless explicitly defined.
+## Accuracy and scope
 
-* Use links relative to the site only (no external tracking parameters).
+Keep pages up to date. When behavior changes, update the page that explains it. Don’t duplicate policy across pages - link to the source policy instead.
 
-* Break long text into lists, tables, or headings instead of long paragraphs.
+## Verification before merge
 
-* Always add descriptive alt text to images.
-
-* Include content warnings (`CW:`) for sensitive examples.
-
-* Format handles, file paths, or commands as inline code.
-
-* Don’t use em dashes or Unicode dashes. Use a hyphen `-`, double hyphen `--`, or parentheses.
-
-## Verification requirements
-
-* **Run Vale on all documentation:**
+* **Vale:** run on every changed file and fix issues until it reaches **0 errors and 0 warnings**.
 
   ```shell
   pre-commit run --files path/to/file.md
   ```
+* **Build:** confirm the site compiles with Hugo extended 0.134.1 or newer.
 
-* **Vale Checks**
+## Contributing flow
 
-  * After every change, run Vale on the modified files.
-  * If Vale reports any errors or warnings, fix them before proceeding.
-  * Repeat until Vale returns **0 errors and 0 warnings**.
-  * Never stop checking until the documentation is free of errors and warnings.
-  * Documentation must pass Vale checks with **zero errors and zero warnings** before commit.
+* Start a GitHub Discussion for ideas or larger changes.
+* Open a focused pull request that links to the Discussion.
+* Keep commit messages clear and in the imperative mood (for example: `docs: clarify appeals flow`).
 
-* **Build Verification**
-  Compile the site with Hugo extended `>= 0.134.1` to ensure it builds accurately.
+## Words and style checks
 
-* **Accuracy**
-  Keep docs up to date. If behavior changes, update the docs (not just the changelog).
+* Always write “for example” and avoid using abbreviations such as `e.g.`.
+* Use “information”, not “info”.
+* Avoid vague words like “may” and “might”. Be specific.
+* If a needed word triggers Vale (for example, a new term or hyphenation), pause and ask to add it to the allowed list. Treat current rules as correct until approved.
+
+## Hard stops
+
+* Don’t tell users to email or DM moderators for reports.
+* Don’t place any email on nonlegal pages.
+* Don’t invent policy. If unsure, link to the policy page or open a Discussion.
