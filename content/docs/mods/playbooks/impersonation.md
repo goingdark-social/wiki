@@ -10,30 +10,19 @@ pager: true
 
 ## Scope
 Covers accounts pretending to be someone else.  
-Linked rule: [Rule 9 - Honest identity](/docs/policies/rules/09_honest-identity/).
+This connects to [Rule 9 - Honest identity](/docs/policies/rules/09_honest-identity/).
 
-## Immediate actions
-- Warn or suspend depending on intent.
-- Require clear labeling for parody accounts.
+## Why this matters
+Impersonation confuses people and undermines trust. Whether it's a fake celebrity account or someone pretending to be your friend, it can mislead our community. We want folks to know who they're talking to.
 
-## Evidence to collect
-- Account ID, profile screenshots, complaints.
+## How we handle this
+We look at intent. Parody accounts are fine as long as the profile makes it clear they're joking. Accounts that try to deceive others get suspended. We document account IDs, profile screenshots, and reports so we can compare cases.
 
-## Decision matrix
-- Parody with label → allow.
-- Deceptive impersonation → suspend.
+## What people can expect
+Our notice says: "Impersonation without clear parody labels isn't allowed. We've suspended the account until it's corrected."
 
-## User notice template
-"Impersonation without clear parody labels isn't allowed. Your account was suspended."
+## Protecting the wider community
+If another server hosts a network of impersonators, we may limit or block that server to keep our members from being misled.
 
-## Federation actions
-Limit or block servers that host impersonation networks.
-
-## Logging
-Record in moderation log with category = Impersonation.
-
-## Appeals
-Appeals require proof of authorization.
-
-## Retention
-Evidence retained for 90 days.
+## If you disagree
+Appeals should include proof you're authorized to run the account or details we missed. We keep records for 90 days to review these situations fairly.

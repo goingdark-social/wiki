@@ -10,30 +10,21 @@ pager: true
 
 ## Scope
 Covers unsolicited bulk messages or repetitive content.  
-Linked rule: [Rule 5 - No spam](/docs/policies/rules/05_no-spam/).
+This connects to [Rule 5 - No spam](/docs/policies/rules/05_no-spam/).
 
-## Immediate actions
-- Delete spam posts.  
-- Suspend accounts for persistent spam.
+## Why this matters
+Nobody joined this community to see their timeline flooded with ads or repetitive content. Spam drowns out real conversations and makes it harder for people to connect with each other. We keep timelines clean so everyone can focus on the discussions that matter to them.
 
-## Evidence to collect
-- Account ID, post URLs, sample messages.
+## How we handle this
+When we spot spam, we remove the posts right away. For a first offense, we usually warn the person and explain why their content was problematic. If someone keeps posting spam after being warned, or if an account is only here to advertise, we'll limit its reach or suspend it entirely.
 
-## Decision matrix
-- First offense -> warn -> limit.  
-- Persistent spam -> suspend.
+We keep track of account details, problem posts, and examples of the spam content to make sure our decisions are consistent and fair.
 
-## User notice template
-"Spam isn't allowed. Your account is now limited."
+## What people can expect
+When we take action against spam, the message is straightforward: "Repetitive promotional content makes timelines harder to use for everyone. We've limited your account to preserve the community experience."
 
-## Federation actions
-Limit or block servers that frequently send spam. Use 'limit' for domain-wide blocks only.
+## Protecting the wider community
+Servers that regularly send spam our way get limited or blocked to keep our timelines clean. When we limit an entire domain, we call the action a limit.
 
-## Logging
-Record in moderation log with category = Spam.
-
-## Appeals
-Appeals require proof messages were solicited.
-
-## Retention
-Evidence retained for 90 days.
+## If you disagree
+Appeals are welcome if someone can show their messages were actually requested or if there was a misunderstanding. We hold onto evidence for 90 days to handle these situations properly.

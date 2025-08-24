@@ -8,7 +8,11 @@ The wiki provides user guides, community rules, moderator playbooks, and legal i
 
 ## Voice and tone guidelines
 
-Write like a helpful neighbor. Keep sentences short, use everyday language, and aim for an eighth grade reading level. Use contractions, favor active voice, and communicate with kindness and clarity. Assume everyone means well. Reports and appeals happen **in-app**; don’t suggest DMs or email. Legal pages list a single contact address. Feature ideas belong in **GitHub Discussions**: [https://github.com/goingdark-social/wiki/discussions](https://github.com/goingdark-social/wiki/discussions). Casual chat is fine elsewhere, but decisions live in Discussions.
+Write like a community member talking to another community member. Explain the "why" behind rules and processes: how they help the community thrive. Use "we" and "us" to show shared ownership. Avoid procedural language like "Evidence to collect" or "Decision matrix." Instead, explain what happens and why it matters to everyone.
+
+Keep sentences short, use everyday language, and aim for an eighth grade reading level. Use contractions, favor active voice, and communicate with kindness and clarity. Assume everyone means well. 
+
+Reports and appeals happen **in-app**; don’t suggest DMs or email. Legal pages list a single contact address. Feature ideas belong in **GitHub Discussions**: [https://github.com/goingdark-social/wiki/discussions](https://github.com/goingdark-social/wiki/discussions). Casual chat is fine elsewhere, but decisions live in Discussions.
 
 ## Documentation standards
 
@@ -24,7 +28,11 @@ pager: true
 ---
 ```
 
-Use sentence case for headings and define terms the first time they appear. Avoid jargon or slang unless you explain it. Prefer internal links over external tracking links. Break long stretches into shorter segments, and add descriptive alt text to images. Precede sensitive examples with `CW:`. Format usernames, file paths, and commands as inline code. Use a hyphen `-`, two hyphens `--`, or parentheses instead of em dashes or Unicode dashes. Refer to the moderation action as “Limit” instead of “Silence”.
+Use sentence case for headings and define terms the first time they appear. Write headings that sound conversational: "How we handle this" instead of "Decision matrix," or "What to expect" instead of "Enforcement procedures."
+
+Avoid jargon or slang unless you explain it. Prefer internal links over external tracking links. Break long stretches into shorter segments, and add descriptive alt text to images. Precede sensitive examples with `CW:`. Format usernames, file paths, and commands as inline code. Use a hyphen `-`, two hyphens `--`, or parentheses instead of em dashes or Unicode dashes. Refer to the moderation action as “Limit” instead of “Silence.”
+
+Frame rules and policies as community agreements rather than restrictions. Focus on the positive outcomes for everyone rather than just listing what's prohibited.
 
 ## Accuracy and scope maintenance
 

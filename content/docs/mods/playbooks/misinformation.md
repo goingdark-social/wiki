@@ -10,29 +10,19 @@ pager: true
 
 ## Scope
 Covers false or misleading information that could cause harm.  
-Linked rule: [Rule 1 - Treat people well](/docs/policies/rules/01_treat-people-well/).
+This connects to [Rule 1 - Treat people well](/docs/policies/rules/01_treat-people-well/).
 
-## Immediate actions
-- Label or remove harmful misinformation.
-- Limit reach for repeat offenders.
+## Why this matters
+Bad information spreads fast and can hurt people. We want our community to be a place where folks can trust what they read, so we tackle harmful misinformation quickly.
 
-## Evidence to collect
-- Account ID, post URLs, source references.
+## How we handle this
+We label or remove posts that spread dangerous misinformation. First-time offenders get a warning and might see their post labeled instead of removed. If someone keeps sharing harmful rumors after we've reached out, we limit their reach or suspend the account. We track account IDs, post links, and any cited sources to keep our actions grounded in evidence.
 
-## Decision matrix
-- Harmful misinformation → label → delete → suspend for repeats.
+## What people can expect
+Our message might say: "Spreading false information that harms others isn't allowed. We've removed the post to keep discussions accurate."
 
-## User notice template
-"Spreading false information that harms others isn't allowed. Your post was removed."
+## Protecting the wider community
+If a server or network regularly spreads coordinated misinformation, we may limit or block it to keep our members from being misled.
 
-## Federation actions
-Limit or block sources of coordinated misinformation.
-
-## Logging
-Record in moderation log with category = Misinformation.
-
-## Appeals
-Users may appeal with credible sources.
-
-## Retention
-Evidence retained for 90 days.
+## If you disagree
+You can appeal with credible sources or context. We keep evidence for 90 days so we can review appeals fairly.

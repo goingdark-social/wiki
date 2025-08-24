@@ -10,30 +10,19 @@ pager: true
 
 ## Scope
 Covers content encouraging self harm or suicide.  
-Linked rule: [Rule 1 - Treat people well](/docs/policies/rules/01_treat-people-well/).
+This connects to [Rule 1 - Treat people well](/docs/policies/rules/01_treat-people-well/).
 
-## Immediate actions
-- Reach out with resources if possible.
-- Remove content and suspend if actively encouraging harm.
+## Why this matters
+We want our community to be a supportive space. Posts that encourage self harm or suicide can trigger others and put people at risk. We approach these situations with care and compassion.
 
-## Evidence to collect
-- Account ID, post URLs, context about intent.
+## How we handle this
+If someone appears to be in crisis, we try to offer resources and support first. Posts that actively encourage harm get removed, and the account may be limited or suspended depending on intent. We note account IDs, links, and context so we can respond consistently.
 
-## Decision matrix
-- Cry for help → refer to support → limit.
-- Encouraging self harm → delete → suspend.
+## What people can expect
+Our message might say: "Posts encouraging self harm aren't allowed. We've removed the content and included resources that may help." We focus on care, not punishment.
 
-## User notice template
-"Posts encouraging self harm aren't allowed. The content was removed and help resources were provided."
+## Protecting the wider community
+Servers that promote self harm content are limited or blocked so our members aren't exposed to it unexpectedly.
 
-## Federation actions
-Limit or block servers that promote self harm.
-
-## Logging
-Record in moderation log with category = Self harm.
-
-## Appeals
-Appeals considered if content was support seeking.
-
-## Retention
-Evidence retained for 90 days.
+## If you disagree
+Appeals are considered if the content was a genuine plea for help or taken out of context. We keep evidence for 90 days to review these cases.

@@ -10,30 +10,19 @@ pager: true
 
 ## Scope
 Covers promotion of terrorism or criminal activity.  
-Linked rule: [Rule 4 - No illegal content](/docs/policies/rules/04_no-illegal-content/).
+This connects to [Rule 4 - No illegal content](/docs/policies/rules/04_no-illegal-content/).
 
-## Immediate actions
-- Remove content and suspend accounts.
-- Notify administrators; report to authorities if needed.
+## Why this matters
+Encouraging crime or extremist acts puts people at risk and violates laws. We want a space where folks can discuss tough topics without fear that someone is trying to recruit or incite harm. Removing this content quickly keeps the community safe and keeps us in good standing legally.
 
-## Evidence to collect
-- Account ID, post URLs, any provided materials.
+## How we handle this
+Content that promotes crime or extremism gets deleted, and the account is suspended right away. We flag serious cases for the site administrators and, when required, report them to the proper authorities. We track account details, links, and any materials shared so we can document the issue.
 
-## Decision matrix
-- Direct promotion → delete → suspend → escalate to administrator.
-- Historical or news context → limit if misleading.
+## What people can expect
+When we act, the person hears: "Content promoting crime or extremism isn't allowed. We've suspended your account and notified the administrators."
 
-## User notice template
-"Content promoting crime or extremism isn't allowed. Your account was suspended."
+## Protecting the wider community
+Servers that regularly spread extremist material get blocked or limited so their posts don't reach our members.
 
-## Federation actions
-Block or limit servers spreading extremist material.
-
-## Logging
-Record in moderation log with category = Extremism.
-
-## Appeals
-Appeals require clear context or error.
-
-## Retention
-Evidence retained for 1 year.
+## If you disagree
+Appeals are only considered if we misread context or made a mistake. We keep evidence for one year in case law enforcement needs it or an appeal arises.

@@ -10,29 +10,19 @@ pager: true
 
 ## Scope
 Covers images or posts exploiting minors.  
-Linked rule: [Rule 4 - No illegal content](/docs/policies/rules/04_no-illegal-content/).
+This connects to [Rule 4 - No illegal content](/docs/policies/rules/04_no-illegal-content/).
 
-## Immediate actions
-- Suspend account and remove content.
-- Report to administrators and law enforcement when required.
+## Why this matters
+Material that exploits minors is illegal and deeply harmful. We don't tolerate it. Protecting children and keeping this content off our server is essential.
 
-## Evidence to collect
-- Account ID, post URLs, hashes if known.
+## How we handle this
+Any post or account sharing child sexual abuse material is removed and suspended immediately. We alert the site administrators and, when required, report the incident to the appropriate authorities. We log account details, links, and known hashes to aid investigations.
 
-## Decision matrix
-- Any child sexual abuse material → delete → suspend → escalate to administrator.
+## What people can expect
+If we suspend an account for this reason, the message states: "Content involving minors is illegal and has been reported. Your account is suspended."
 
-## User notice template
-"Content involving minors is illegal. Your account was suspended and reported."
+## Protecting the wider community
+Instances that distribute this material are blocked or limited so it never reaches our members.
 
-## Federation actions
-Block or limit remote instances sharing child sexual abuse material.
-
-## Logging
-Record in moderation log with category = child sexual abuse material.
-
-## Appeals
-Appeals are only allowed for mistaken identification or account restoration. Unlawful material is never restored.
-
-## Retention
-Evidence retained for 1 year.
+## If you disagree
+Appeals are only considered for mistaken identification or account restoration. Illegal material is never reinstated. We keep evidence for one year in case law enforcement or appeals require it.
