@@ -23,7 +23,7 @@ Only administrators can access logs.
 This privacy policy explains how **goingdark.social** ("Going Dark," "we," "us") processes personal data when you use our Mastodon service. we're an EU based, privacy first community. We don't use analytics, advertising, or unnecessary cookies. Access to the service is restricted to adults aged 18 and over.
 
 **Controller**: Administrators of goingdark.social
-**Privacy contact:** `dsa-contact@goingdark.social`
+**Privacy contact:** `legal@goingdark.social`
 **Supervisory authority**: You can lodge a complaint with your local authority. In Sweden this is Integritetsskyddsmyndigheten (IMY) at [https://www.imy.se](https://www.imy.se).
 
 ---
@@ -99,7 +99,7 @@ Mastodon is federated. When you post or interact with accounts on other servers,
 
 Subject to conditions in the GDPR, you have the right to access, rectification, erasure, restriction, data portability, and to object to processing based on legitimate interests. You can withdraw consent at any time for processing that relies on consent. You also have the right to lodge a complaint with a supervisory authority. In Sweden, this is IMY (Integritetsskyddsmyndigheten) at [https://www.imy.se](https://www.imy.se).
 
-To exercise your rights, email `dsa-contact@goingdark.social`. We will respond within one month or explain if an extension is needed for complex requests.
+To exercise your rights, email `legal@goingdark.social`. We will respond within one month or explain if an extension is needed for complex requests.
 
 # Site usage by children
 

@@ -104,6 +104,4 @@ These Terms are governed by the laws of **Sweden** and applicable EU law. Before
 
 We may update these Terms. Material changes will be announced on the site. Continued use after the effective date constitutes acceptance. In urgent cases involving legal or security risks, changes may take effect immediately.
 
-## Contact
 
-User and legal contact: message `@fanfare@goingdark.social` on Mastodon. We accept notices in English or Swedish.

@@ -18,9 +18,9 @@ Please provide the following information in your notice:
 
 Submit your notice to our designated point of contact.
 
-## Single Point of Contact (DSA)
+## Single point of contact (DSA)
 
-*   **Email:** `dsa-contact@goingdark.social`
+*   **Email:** `legal@goingdark.social`
 *   **Supported Languages:** English
 
 This contact point is for users and authorities to communicate with us in accordance with the Digital Services Act.

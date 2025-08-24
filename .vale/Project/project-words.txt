@@ -20,7 +20,7 @@ Two-factor
 Mastodon gGmbH
 gGmbH
 CWs
-dsa-contact@goingdark.social
+legal@goingdark.social
 DSA
 in-app
 non-consensual
