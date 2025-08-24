@@ -1,34 +1,28 @@
-# Going Dark documentation system prompt
+## Community Overview
 
-## Who this community is
+Going Dark is a welcoming Mastodon community located in the EU, designed for adults seeking a friendly, low drama environment. The community emphasizes interests in privacy, digital rights, and technology, while being inclusive of all individuals. Our wiki serves as a resource for clear, friendly explanations of community operations.
 
-Going Dark is a small Mastodon community based in the EU for adults. The goal is a friendly, low drama space. The main selling points are the community's interest in Privacy, digital rights and tech. But everyone is welcome. The wiki explains how things work in clear, plain language.
+## Project Purpose
 
-## What this project does
+This wiki provides user guides, community rules, moderator playbooks, and legal information. The tone should be inviting and calm, ensuring newcomers feel at home.
 
-This wiki shares user guides, rules, moderator playbooks, and legal pages. It should feel welcoming and calm so new people feel at home.
+## Voice and Tone Guidelines
 
-## Voice and tone
+- Write as if you are a helpful neighbor.
+- Utilize short sentences and everyday language.
+- Target an eighth grade reading level.
+- Use contractions (don’t, isn’t, can’t).
+- Favor active voice.
+- Communicate with kindness and clarity.
+- Assume positive intentions from all users.
+- Reports should be made **in-app** only; don't suggest DMs or email for reporting issues.
+- Appeals must also be conducted **in-app**.
+- Legal pages should contain a single legal contact address; don't list emails on other pages.
+- Feature ideas and inquiries should be directed to **GitHub Discussions**: [https://github.com/goingdark-social/wiki/discussions](https://github.com/goingdark-social/wiki/discussions). Casual conversations are welcome, but decisions should occur in Discussions.
 
-Write like a helpful neighbor.
+## Documentation Standards
 
-* Use short sentences and common words.
-* Aim for an eighth grade reading level.
-* Use contractions (don’t, isn’t, can’t).
-* Prefer active voice.
-* Be kind and direct.
-* Assume good intentions and show it.
-
-## Community basics to reflect in docs
-
-* Reports happen **in-app** only. Don’t suggest DMs or email for reports.
-* Appeals happen **in-app** only.
-* Legal pages can list a single legal contact address. Don’t place any email on other pages.
-* Feature ideas and questions belong in **GitHub Discussions**: [https://github.com/goingdark-social/wiki/discussions](https://github.com/goingdark-social/wiki/discussions). Casual chat is welcome, but decisions live in Discussions.
-
-## Documentation standards
-
-Always include this front matter:
+Include the following front matter for every document:
 
 ```yaml
 ---
@@ -40,47 +34,41 @@ pager: true
 ---
 ```
 
-Write with these rules:
+Adhere to these writing rules:
 
-* Use sentence case for headings.
-* Define terms the first time they appear.
-* Avoid buzzwords and insider slang unless defined.
-* Use links that are local to the site when possible. Don’t add tracking.
-* Break long text into short sections or lists.
-* Add descriptive alt text to images.
-* Add `CW:` before sensitive examples.
-* Format handles, file paths, and commands as inline code.
-* Don’t use em dashes or Unicode dashes. Use a hyphen `-`, two hyphens `--`, or parentheses.
-* Use “Limit” for the moderation action (not “Silence”).
+- Use sentence case for all headings.
+- Define terms upon their first use.
+- Avoid jargon and slang unless those terms are defined.
+- Prefer internal links over external tracking links.
+- Break lengthy sections into shorter segments or lists.
+- Provide descriptive alt text for all images.
+- Precede sensitive examples with `CW:`.
+- Format usernames, file paths, and commands as inline code.
+- Use a hyphen `-`, two hyphens `--`, or parentheses instead of em dashes or Unicode dashes.
+- Refer to the moderation action as “Limit” instead of “Silence”.
 
-## Accuracy and scope
+## Accuracy and Scope Maintenance
 
-Keep pages up to date. When behavior changes, update the page that explains it. Don’t duplicate policy across pages - link to the source policy instead.
+Keep all pages current. When community behavior alters, ensure the relevant page is updated. Avoid duplicating policies; link to the source document instead.
 
-## Verification before merge
+## Verification Before Merging Changes
 
-* **Vale:** run on every changed file and fix issues until it reaches **0 errors and 0 warnings**.
+- **Vale:** Run on each modified file and resolve issues until achieving **0 errors and 0 warnings**.
 
   ```shell
   pre-commit run --files path/to/file.md
   ```
-* **Build:** confirm the site compiles with Hugo extended 0.134.1 or newer.
+- **Build:** Verify that the site compiles using Hugo extended version 0.134.1 or later.
 
-## Contributing flow
+## Contribution Process
 
-* Start a GitHub Discussion for ideas or larger changes.
-* Open a focused pull request that links to the Discussion.
-* Keep commit messages clear and in the imperative mood (for example: `docs: clarify appeals flow`).
+- Initiate a GitHub Discussion for suggestions or significant changes.
+- Submit a focused pull request linking to the related Discussion.
+- Maintain clarity in commit messages and use the imperative mood ( `docs: clarify appeals flow`).
 
-## Words and style checks
+## Language and Style Checks
 
-* Always write “for example” and avoid using abbreviations such as `e.g.`.
-* Use “information”, not “info”.
-* Avoid vague words like “may” and “might”. Be specific.
-* If a needed word triggers Vale (for example, a new term or hyphenation), pause and ask to add it to the allowed list. Treat current rules as correct until approved.
-
-## Hard stops
-
-* Don’t tell users to email or DM moderators for reports.
-* Don’t place any email on nonlegal pages.
-* Don’t invent policy. If unsure, link to the policy page or open a Discussion.
+- Always write out “for example” instead of abbreviations like `e.g.`.
+- Use “information” instead of “info”.
+- Avoid ambiguous terms like “may” and “might”; be precise.
+- If a necessary term causes issues with Vale ( new terminology or hyphenation), pause and request its addition to the allowed list. Current rules should be considered accurate until officially approved.
