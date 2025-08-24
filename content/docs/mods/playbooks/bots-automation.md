@@ -1,33 +1,33 @@
 ---
-title: Bots / Automated Activity
+title: Bots / automated activity
 weight: 10
 toc: true
 reading_time: false
 pager: true
 ---
 
-# Bots / Automated Activity Playbook
+# Bots / automated activity playbook
 
 ## Scope
 Covers unapproved bots, automation, or fake engagement.  
 Linked rule: [Rule 13 - No unapproved bots](/docs/policies/rules/13_bots/).
 
-## Immediate Actions
-- Suspend unapproved bots without notice.  
+## Immediate actions
+- Suspend unapproved bots without notice.
 - Warn or limit approved bots that misbehave.
 
-## Evidence to Collect
+## Evidence to collect
 - Account ID, bot flag setting, example posts.
 
-## Decision Matrix
-- Unapproved bot -> suspend immediately.  
-- Approved but misused -> warn -> limit -> suspend.
+## Decision matrix
+- Unapproved bot → suspend immediately.
+- Approved but misused → warn → limit → suspend.
 
-## User Notice Template
+## User notice template
 "Automated accounts require prior approval. Your bot was suspended for operating outside the policy."
 
-## Federation Actions
-Silence or block noisy remote bots.
+## Federation actions
+Limit or block noisy remote bots.
 
 ## Logging
 Record in moderation log with category = Bots.

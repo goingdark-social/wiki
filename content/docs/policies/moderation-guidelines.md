@@ -13,7 +13,7 @@ These guidelines cover moderation on goingdark.social. They apply to local accou
 In-app notifications are sent for all moderation actions.
 
 - **Warn**: minor issue; user notified.
-- **Limit**: account visible only to followers (formerly known as Silence).
+- **Limit**: account visible only to followers.
 - **Suspend**: account access revoked.
 - **Sensitive**: restrict visibility of specific content.
 - **Freeze**: temporarily lock account activity.
@@ -27,6 +27,7 @@ In-app notifications are sent for all moderation actions.
 - Content violating laws: suspend and report.
 - Bot misuse: restrict or suspend.
 - Malicious domains: block the domain.
+- NSFW: occasional with a Content Warning (CW) is fine. Primarily explicit accounts → warn, limit if needed, ask to move; suspend only if refused after grace period.
 
 ### Appeals
 

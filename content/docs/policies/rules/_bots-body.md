@@ -35,7 +35,7 @@ Before creating the account, send the administrator account a short proposal tha
 
 ## Enforcement
 
-The team suspends unapproved bots without notice. Approved bots that break rules receive one warning before silence or suspension. The administrator silences or blocks remote bots from other servers if they’re noisy, spam like, or harm federation health.
+The team suspends unapproved bots without notice. Approved bots that break rules receive one warning before limit or suspension. The administrator limits or blocks remote bots from other servers if they’re noisy, spam like, or harm federation health.
 
 ## Final note
 

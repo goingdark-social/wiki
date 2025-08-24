@@ -6,28 +6,28 @@ reading_time: false
 pager: true
 ---
 
-# Impersonation Playbook
+# Impersonation playbook
 
 ## Scope
 Covers accounts pretending to be someone else.  
 Linked rule: [Rule 9 - Honest identity](/docs/policies/rules/09_honest-identity/).
 
-## Immediate Actions
-- Warn or suspend depending on intent.  
+## Immediate actions
+- Warn or suspend depending on intent.
 - Require clear labeling for parody accounts.
 
-## Evidence to Collect
+## Evidence to collect
 - Account ID, profile screenshots, complaints.
 
-## Decision Matrix
-- Parody with label -> allow.  
-- Deceptive impersonation -> suspend.
+## Decision matrix
+- Parody with label → allow.
+- Deceptive impersonation → suspend.
 
-## User Notice Template
+## User notice template
 "Impersonation without clear parody labels isn't allowed. Your account was suspended."
 
-## Federation Actions
-Silence or block servers that host impersonation networks.
+## Federation actions
+Limit or block servers that host impersonation networks.
 
 ## Logging
 Record in moderation log with category = Impersonation.

@@ -1,32 +1,32 @@
 ---
-title: Non-consensual Intimate Imagery
+title: Non-consensual intimate imagery
 weight: 120
 toc: true
 reading_time: false
 pager: true
 ---
 
-# Non-consensual Intimate Imagery Playbook
+# Non-consensual intimate imagery playbook
 
 ## Scope
 Covers sharing intimate images without consent.  
 Linked rule: [Rule 4 - No illegal content](/docs/policies/rules/04_no-illegal-content/).
 
-## Immediate Actions
-- Remove content and suspend account.  
+## Immediate actions
+- Remove content and suspend account.
 - Notify administrators and law enforcement as required.
 
-## Evidence to Collect
+## Evidence to collect
 - Account ID, post URLs, hashes if available.
 
-## Decision Matrix
-- Any non-consensual intimate imagery -> delete -> suspend -> escalate.
+## Decision matrix
+- Any non-consensual intimate imagery → delete → suspend → escalate.
 
-## User Notice Template
+## User notice template
 "Sharing intimate images without consent is illegal. Your account was suspended."
 
-## Federation Actions
-Block or silence instances sharing such material.
+## Federation actions
+Block or limit instances sharing such material.
 
 ## Logging
 Record in moderation log with category = non-consensual intimate imagery.

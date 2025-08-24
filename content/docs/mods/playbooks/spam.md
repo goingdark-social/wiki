@@ -27,7 +27,7 @@ Linked rule: [Rule 5 - No spam](/docs/policies/rules/05_no-spam/).
 "Spam isn't allowed. Your account is now limited."
 
 ## Federation actions
-Silence or block servers that frequently send spam. Use 'Silence' for domain-wide blocks only.
+Limit or block servers that frequently send spam. Use 'limit' for domain-wide blocks only.
 
 ## Logging
 Record in moderation log with category = Spam.

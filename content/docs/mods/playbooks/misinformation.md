@@ -6,27 +6,27 @@ reading_time: false
 pager: true
 ---
 
-# Misinformation Playbook
+# Misinformation playbook
 
 ## Scope
 Covers false or misleading information that could cause harm.  
 Linked rule: [Rule 1 - Treat people well](/docs/policies/rules/01_treat-people-well/).
 
-## Immediate Actions
-- Label or remove harmful misinformation.  
+## Immediate actions
+- Label or remove harmful misinformation.
 - Limit reach for repeat offenders.
 
-## Evidence to Collect
+## Evidence to collect
 - Account ID, post URLs, source references.
 
-## Decision Matrix
-- Harmful misinformation -> label -> delete -> suspend for repeats.
+## Decision matrix
+- Harmful misinformation → label → delete → suspend for repeats.
 
-## User Notice Template
+## User notice template
 "Spreading false information that harms others isn't allowed. Your post was removed."
 
-## Federation Actions
-Silence or block sources of coordinated misinformation.
+## Federation actions
+Limit or block sources of coordinated misinformation.
 
 ## Logging
 Record in moderation log with category = Misinformation.

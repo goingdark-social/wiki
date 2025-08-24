@@ -52,6 +52,10 @@ Enable "require approval for followers" in your settings.
 
 Block stops all interaction. Mute hides posts.
 
+### Is NSFW allowed
+
+Yes, keep it legal, consensual, and behind a Content Warning (CW). Occasional NSFW is fine. If your account is mostly explicit sexual content, this server isn’t a fit and we may ask you to move.
+
 ## Still have questions
 
 Ask in the local timeline or contact the moderation team.
