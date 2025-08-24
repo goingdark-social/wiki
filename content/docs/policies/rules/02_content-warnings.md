@@ -6,14 +6,4 @@ reading_time: false
 pager: true
 ---
 
-**Plain rule:** put sensitive or upsetting material behind a content warning.
-
-**Examples that often need a CW:** nudity, gore, graphic violence, politics, electioneering, major news spoilers, disturbing imagery, common phobias.
-
-**Tips:**
-- Keep the CW headline short and descriptive.
-- If unsure, add a CW. People can opt in to view.
-
-**Do not:** use Content Warnings (CWs) to hide abuse or evade moderation.
-
-**Enforcement:** Posts may be limited or removed. Repeated issues can lead to account actions per the [Moderation Guidelines](/docs/policies/moderation-guidelines/). Report concerns via the **Report** button.
+Give folks a warning when sharing something shocking or unsettling. A short content warning for nudity, gore, graphic harm, politics, electioneering, major news spoilers, disturbing imagery, or common phobias lets people choose what they see. Keep the headline brief and clear, and when unsure, add one. Content warnings aren’t a hiding place for harassment; using them that way or skipping them when needed can lead to post removal or account action under the [Moderation Guidelines](/docs/policies/moderation-guidelines/). Report concerns through the in-app reporting tool.

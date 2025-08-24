@@ -24,9 +24,17 @@ The following actions violate the rules and can lead to moderation:
 - **Hate and discrimination.** Racism, sexism, homophobia, transphobia, ableism, religious bigotry, xenophobia, casteism, or any form of demeaning identity based content.  
 - **Misinformation that causes harm.** False or misleading claims that endanger health, safety, or public trust.  
 - **Explicit content.** Nudity, gore, or other graphic material must always be behind a content warning (CW). However, graphic sexual content is prohibited from public timelines, even with a CW. All explicit content is subject to [Rule 3](/docs/policies/rules/03_keep-it-clean/).  
-- **Automated posting without approval.** Bots must follow the [Bot Policy](/docs/policies/rules/bots/). Moderators remove unapproved bots.  
-- **Unlawful content.** Anything prohibited under EU or Swedish law, including CSAM, extremist materials, and incitement to harm.  
-- **Disruptive use.** Flooding timelines, excessive posting, mass unsolicited mentions, or degrading server performance.  
+- **Automated posting without approval.** Bots must follow the [Bot Policy](/docs/policies/rules/bots/). Moderators remove unapproved bots.
+- **Unlawful content.** Anything prohibited under EU or Swedish law, including CSAM, extremist materials, and incitement to harm.
+- **Disruptive use.** Flooding timelines, excessive posting, mass unsolicited mentions, or degrading server performance.
+ 
+## Adult content and NSFW
+
+People share art, body positive posts, and adult themes here. That's welcome.
+
+- Always put NSFW behind a **Content Warning (CW)**.
+- Keep it legal and consensual. Never anything involving minors.
+- Occasional NSFW is fine. If an account is mostly explicit sexual content, even with CWs, it doesn’t fit the tone of this server. We’ll nudge first. If it stays primarily explicit, we’ll ask you to move to an adult focused server.
 
 ---
 

@@ -1,39 +1,28 @@
 ---
-title: Violence / Gore
+title: Violence / gore
 weight: 180
 toc: true
 reading_time: false
 pager: true
 ---
 
-# Violence / Gore Playbook
+# Violence / gore playbook
 
 ## Scope
 Covers graphic violence or gore.  
-Linked rule: [Rule 3 - Keep it clean](/docs/policies/rules/03_keep-it-clean/).
+This connects to [Rule 3 - Keep it clean](/docs/policies/rules/03_keep-it-clean/).
 
-## Immediate Actions
-- Remove graphic content.  
-- Warn or suspend for repeated posts.
+## Why this matters
+Graphic violence can be disturbing and derail the community vibe. We want people to browse without unexpectedly seeing gore.
 
-## Evidence to Collect
-- Account ID, post URLs, screenshots if needed.
+## How we handle this
+We remove graphic content as soon as we see it. Mild violence might get a warning and a reminder to add a Content Warning (CW). Repeated or extreme posts lead to limits or suspension. We note account IDs, post links, and screenshots when needed to stay consistent.
 
-## Decision Matrix
-- Mild violence -> warn -> limit.  
-- Graphic gore -> delete -> suspend.
+## What people can expect
+Our notice says: "Graphic violence or gore isn't allowed. We've removed the post." If the issue continues, the account may be limited or suspended.
 
-## User Notice Template
-"Graphic violence or gore isn't allowed. Your post was removed."
+## Protecting the wider community
+Servers that regularly host violent media may be limited or blocked to keep that material from reaching our members.
 
-## Federation Actions
-Block or silence instances hosting violent media.
-
-## Logging
-Record in moderation log with category = Violence.
-
-## Appeals
-Appeals considered for news or educational context.
-
-## Retention
-Evidence retained for 90 days.
+## If you disagree
+Appeals are considered when content is educational or newsworthy. We keep evidence for 90 days to review these cases.

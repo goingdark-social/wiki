@@ -6,8 +6,4 @@ reading_time: false
 pager: true
 ---
 
-**Plain Rule:** No hate speech, abusive, or threatening behavior.
-
-**Examples include:** attacks based on gender, nationality, religion, race, age, sexual identity, disability, or similar. Pizza topping wars are fine. Hate on systemd all you want.
-
-**Enforcement:** Warning or immediate suspension for serious cases, as per the [Moderation Guidelines](/docs/policies/moderation-guidelines/).
+Bigotry and threats shut down conversation. Examples include attacks based on gender, nationality, religion, race, age, disability, or orientation. Argue about pizza toppings or systemd all you want, but keep people out of harm’s way. Serious cases lead to immediate suspension, and other situations earn a warning under the [Moderation Guidelines](/docs/policies/moderation-guidelines/).

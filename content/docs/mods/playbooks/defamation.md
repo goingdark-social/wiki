@@ -6,33 +6,23 @@ reading_time: false
 pager: true
 ---
 
-# Defamation Playbook
+# Defamation playbook
 
 ## Scope
 Covers false statements harming someone's reputation.  
-Linked rule: [Rule 1 - Treat people well](/docs/policies/rules/01_treat-people-well/).
+This connects to [Rule 1 - Treat people well](/docs/policies/rules/01_treat-people-well/).
 
-## Immediate Actions
-- Remove defamatory content.  
-- Warn or suspend depending on severity.
+## Why this matters
+Baseless accusations or rumors can damage someone's reputation and sense of safety. We want discussions to be honest and fair, so we step in when content crosses that line.
 
-## Evidence to Collect
-- Account ID, post URLs, context from reporter.
+## How we handle this
+When we confirm a post includes defamatory claims, we remove it. For first-time mistakes, we usually send a warning explaining why the content was removed. Repeated or severe cases lead to limits or suspension. We keep track of account details, post links, and any context from reports to stay consistent.
 
-## Decision Matrix
-- Clear defamation -> delete -> warn -> suspend for repeats.
+## What people can expect
+Our notice might say: "False statements about others violate our rules. We've removed the post and limited your account while things cool off."
 
-## User Notice Template
-"False statements about others violate our rules. Your post was removed."
+## Protecting the wider community
+If another server consistently hosts defamatory posts, we may limit or block it to keep that noise away from our members.
 
-## Federation Actions
-Limit or block instances that host persistent defamation.
-
-## Logging
-Record in moderation log with category = Defamation.
-
-## Appeals
-Users may appeal with supporting evidence.
-
-## Retention
-Evidence retained for 90 days.
+## If you disagree
+You can appeal and share supporting evidence if we misunderstood the situation. We keep records for 90 days to review these requests fairly.

@@ -6,11 +6,4 @@ reading_time: false
 pager: true
 ---
 
-**Plain Rule:** No spam accounts, link dumping, engagement bait, or using the server as an ad platform.
-
-**Examples:**
-- Mass unsolicited mentions.
-- Repetitive link posts without context.
-- Commercial promos that drown out conversation.
-
-**Enforcement:** Limit, silence, or suspension per the [Moderation Guidelines](/docs/policies/moderation-guidelines/).
+Treat timelines like a shared space, not a billboard. Spam accounts, repetitive link dumps, mass mentions, or engagement bait drown out real conversation. Friendly promotion in context is fine; relentless advertising isn’t allowed. Moderators limit or suspend offenders under the [Moderation Guidelines](/docs/policies/moderation-guidelines/).

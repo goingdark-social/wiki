@@ -6,33 +6,23 @@ reading_time: false
 pager: true
 ---
 
-# Intellectual Property Playbook
+# Intellectual property playbook
 
 ## Scope
 Covers copyright or trademark violations.  
-Linked rule: [Rule 4 - No illegal content](/docs/policies/rules/04_no-illegal-content/).
+This connects to [Rule 4 - No illegal content](/docs/policies/rules/04_no-illegal-content/).
 
-## Immediate Actions
-- Remove infringing content.  
-- Suspend repeat offenders.
+## Why this matters
+We respect creators' rights. Sharing someone’s work without permission can lead to legal issues and erode trust among members.
 
-## Evidence to Collect
-- Account ID, URLs, removal notices.
+## How we handle this
+When we receive a valid complaint, we remove the infringing content. First-time issues usually come with a warning, but repeated violations lead to suspension. We keep account IDs, URLs, and any removal notices on file.
 
-## Decision Matrix
-- Valid complaint -> delete -> warn -> suspend for repeats.
+## What people can expect
+Our notice states: "Your post was removed for violating intellectual property rights."
 
-## User Notice Template
-"Your post was removed for violating intellectual property rights."
+## Protecting the wider community
+We share relevant notices with other servers and may block persistent offenders so the infringement doesn't spread.
 
-## Federation Actions
-Share notices with affected servers and block persistent offenders.
-
-## Logging
-Record in moderation log with category = Intellectual Property.
-
-## Appeals
-Users may appeal with proof of rights.
-
-## Retention
-Evidence retained for 90 days.
+## If you disagree
+You can appeal with proof you have the rights to the material. We keep evidence for 90 days while reviewing these appeals.

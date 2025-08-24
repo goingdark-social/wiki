@@ -6,6 +6,4 @@ reading_time: false
 pager: true
 ---
 
-**Plain Rule:** Do not promote or encourage harm toward anyone or any group.
-
-**Enforcement:** Immediate removal and possible suspension per the [Moderation Guidelines](/docs/policies/moderation-guidelines/).
+Calls for violence against anyone or any group shut the door on safety and trust. Don’t promote or encourage violence, full stop. Moderators remove posts that cross this line at once and suspend the account under the [Moderation Guidelines](/docs/policies/moderation-guidelines/).

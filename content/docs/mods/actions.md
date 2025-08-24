@@ -6,14 +6,16 @@ reading_time: false
 pager: true
 ---
 
-# Available Moderator Actions
+# Available moderator actions
 
-- **Warn** - private message
-- **Limit** - restrict visibility (formerly Silence)
-- **Sensitive** - flag sensitive content
-- **Freeze** - temporarily lock an account
-- **Suspend** - temporary or permanent account lock
-- **Delete** - remove harmful content
-- **Domain block** - block or silence a remote instance
+We use a few tools to keep the space friendly:
 
-For each category, see its playbook for the correct action ladder.
+- **Warn** - sends a private message about an issue
+- **Limit** - restricts visibility while someone cools off
+- **Sensitive** - flags a post as sensitive
+- **Freeze** - temporarily locks an account
+- **Suspend** - temporarily or permanently locks an account
+- **Delete** - removes harmful content
+- **Domain block** - blocks or limits a remote instance
+
+Each playbook explains which actions fit specific situations.

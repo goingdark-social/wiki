@@ -6,8 +6,4 @@ reading_time: false
 pager: true
 ---
 
-**Plain Rule:** Do not impersonate a person or brand without a clear indication that the account is unofficial or parody.
-
-**Allowed:** parody and commentary accounts with clear labeling.
-
-**Enforcement:** Content removal or account actions per the [Moderation Guidelines](/docs/policies/moderation-guidelines/).
+Use your account with good intent. Don’t impersonate someone or a brand unless it’s plainly marked as parody or unofficial. Honest parody is welcome; misleading identity leads to removal under the [Moderation Guidelines](/docs/policies/moderation-guidelines/).

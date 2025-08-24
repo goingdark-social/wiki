@@ -1,39 +1,28 @@
 ---
-title: Inauthentic Behaviour
+title: Inauthentic behavior
 weight: 90
 toc: true
 reading_time: false
 pager: true
 ---
 
-# Inauthentic Behaviour Playbook
+# Inauthentic behavior playbook
 
 ## Scope
 Covers coordinated or deceptive actions to mislead users.  
-Linked rule: [Rule 9 - Honest identity](/docs/policies/rules/09_honest-identity/).
+This connects to [Rule 9 - Honest identity](/docs/policies/rules/09_honest-identity/).
 
-## Immediate Actions
-- Limit reach of suspected networks.  
-- Suspend accounts for clear manipulation.
+## Why this matters
+Authenticity builds trust. When accounts coordinate to mislead people, whether through fake engagement or hidden networks, it skews conversations and erodes credibility. We want real voices, not manufactured consensus.
 
-## Evidence to Collect
-- Account IDs, related domains, coordination signals.
+## How we handle this
+We limit the reach of suspected networks while we investigate. If we confirm a coordinated effort to deceive, those accounts get suspended. We note account IDs, related domains, and coordination signals so we can spot patterns.
 
-## Decision Matrix
-- Minor coordination -> warn -> limit.  
-- Clear deception -> suspend.
+## What people can expect
+Our notice reads: "Coordinated manipulation isn't allowed. We've restricted your account's reach." If deception continues, suspension follows.
 
-## User Notice Template
-"Coordinated manipulation isn't allowed. Your account was restricted."
+## Protecting the wider community
+We may limit or block entire networks or servers that exist to manipulate conversations, keeping their influence away from our members.
 
-## Federation Actions
-Silence or block networks engaging in manipulation.
-
-## Logging
-Record in moderation log with category = Inauthentic Behaviour.
-
-## Appeals
-Operators may appeal with proof of authenticity.
-
-## Retention
-Evidence retained for 90 days.
+## If you disagree
+Operators can appeal with proof of authenticity or context we missed. We keep evidence for 90 days to review these appeals fairly.
