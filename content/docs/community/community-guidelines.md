@@ -92,10 +92,10 @@ Harassment or abusive activity that happens off-platform but impacts our members
 
 ## Reporting
 
-- Use the **Report** button on any post or profile.  
-- Reports go directly to the admin/moderator team.  
-- Email [abuse@goingdark.social](mailto:abuse@goingdark.social) for urgent or complex issues.  
-- Reports are reviewed promptly. Outcomes may be communicated if appropriate.  
+- Use the **Report** button on any post or profile.
+- Reports go directly to the admin/moderator team.
+- For urgent or complex issues, send a direct message on Mastodon to `@fanfare@goingdark.social`.
+- Reports are reviewed promptly. Outcomes may be communicated if appropriate.
 
 ---
 

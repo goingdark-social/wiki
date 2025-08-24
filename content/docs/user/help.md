@@ -10,8 +10,8 @@ Need a hand? Reach the team through the channels below.
 
 ## Contact
 
-- **Email:** `support@goingdark.social` - replies in 48 hours.
-- **GitHub discussions:** <https://github.com/goingdark-social/wiki/discussions> - community replies in about a week.
+- **Mastodon:** `@fanfare@goingdark.social` - send a direct message for support or reports.
+- **Wiki discussions:** <https://github.com/goingdark-social/wiki/discussions> - feedback and questions.
 
 ## More resources
 

@@ -10,7 +10,7 @@ If your content or account has been restricted, you can ask for a review.
 
 ## How to appeal
 
-- Email **support@goingdark.social** from the address on your account.
+- Send a direct message on Mastodon to `@fanfare@goingdark.social` from the account in question.
 - Include links to the affected posts or your profile, and any context you believe is relevant.
 
 ## What happens next

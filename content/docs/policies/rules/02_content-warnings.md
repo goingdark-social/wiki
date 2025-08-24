@@ -16,4 +16,4 @@ pager: true
 
 **Do not:** use CWs to hide abuse or evade moderation.
 
-**Enforcement:** Posts may be limited or removed. Repeated issues can lead to account actions per the [Moderation Guidelines](/docs/policies/moderation-guidelines/). Report concerns via the report tool or [abuse@goingdark.social](mailto:abuse@goingdark.social).
+**Enforcement:** Posts may be limited or removed. Repeated issues can lead to account actions per the [Moderation Guidelines](/docs/policies/moderation-guidelines/). Report concerns via the report tool or by messaging `@fanfare@goingdark.social` on Mastodon.

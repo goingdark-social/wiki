@@ -18,4 +18,4 @@ pager: true
 - Insult, belittle, or bait people.
 - Dogpile or brigade.
 
-**Enforcement:** Breaches may lead to a warning, limit, or suspension per the [Moderation Guidelines](/docs/policies/moderation-guidelines/). Report issues via the in-app report or at [abuse@goingdark.social](mailto:abuse@goingdark.social). See [Reporting](/docs/user/reporting/).
+**Enforcement:** Breaches may lead to a warning, limit, or suspension per the [Moderation Guidelines](/docs/policies/moderation-guidelines/). Report issues via the in-app report or by messaging `@fanfare@goingdark.social` on Mastodon. See [Reporting](/docs/user/reporting/).

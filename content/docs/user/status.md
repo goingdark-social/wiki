@@ -17,7 +17,7 @@ https://status.goingdark.social/
 ### Workarounds
 
 - Try the web app if your mobile app fails.
-- If sign in doesn't work, email `contact@goingdark.social`.
+- If sign in doesn't work, post in the wiki discussions tab.
 
 ### Maintenance windows
 
