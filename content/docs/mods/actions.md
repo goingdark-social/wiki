@@ -9,8 +9,9 @@ pager: true
 # Available Moderator Actions
 
 - **Warn** - private message
-- **Limit** - reduce reach
-- **Silence** - visible only to followers
+- **Limit** - restrict visibility (formerly Silence)
+- **Sensitive** - flag sensitive content
+- **Freeze** - temporarily lock an account
 - **Suspend** - temporary or permanent account lock
 - **Delete** - remove harmful content
 - **Domain block** - block or silence a remote instance

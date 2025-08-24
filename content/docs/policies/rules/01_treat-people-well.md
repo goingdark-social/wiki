@@ -16,6 +16,6 @@ pager: true
 
 **Do not:**
 - Insult, belittle, or bait people.
-- Dogpile or brigade.
+- Pile on or brigade.
 
-**Enforcement:** Breaches may lead to a warning, limit, or suspension per the [Moderation Guidelines](/docs/policies/moderation-guidelines/). Report issues via the in-app report or by messaging `@fanfare@goingdark.social` on Mastodon. See [Reporting](/docs/user/reporting/).
+**Enforcement:** Breaches may lead to a warning, limit, or suspension per the [Moderation Guidelines](/docs/policies/moderation-guidelines/). Report issues via the **Report** button. See [Reporting](/docs/user/reporting/).

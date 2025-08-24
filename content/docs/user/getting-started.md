@@ -3,9 +3,9 @@ title: Getting Started Guide
 weight: 10
 ---
 
-Welcome to goingdark.social! This guide will help you get started with our Mastodon instance.
+Welcome to goingdark.social. This guide will help you get started with our Mastodon instance.
 
-## What is Mastodon?
+## what's Mastodon?
 
 Mastodon is a decentralized social network that's part of the broader "fediverse." Unlike traditional social media platforms, Mastodon consists of many independent servers (called instances) that can communicate with each other.
 
@@ -77,7 +77,7 @@ Use content warnings (CW) for:
 - **Mute**: Hides their posts from your timeline
 - **Hide Boosts**: Hide someone's boosts without unfollowing
 
-### Two-Factor Authentication
+### Two-factor authentication
 
 We strongly recommend enabling 2FA in your account settings for additional security.
 
@@ -111,8 +111,8 @@ While you can use Mastodon in your web browser, there are many excellent mobile 
 If you have questions not covered in this guide:
 
 1. Check our [FAQ](faq.md) for common questions
-2. Ask in the local timeline - our community is helpful!
+2. Ask in the local timeline - our community is helpful.
 3. Contact our moderation team through the report function
 4. Review our [policies](../policies/) for detailed guidelines
 
-Welcome to the community! We're glad you're here.
+Welcome to the community. It's great to have you here.

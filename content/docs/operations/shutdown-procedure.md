@@ -27,6 +27,6 @@ If the service ever shuts down:
 
 1. Close new registrations upon announcement.
 2. Enter read-only mode.
-3. Run `tootctl self-destruct`.
+3. Run `tootctl self-destruct`. This command requires interactive confirmation and broadcasts deletes to federated servers.
 4. Wait for federated deletes.
 5. Decommission hosting.

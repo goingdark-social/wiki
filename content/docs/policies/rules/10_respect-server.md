@@ -6,7 +6,7 @@ reading_time: false
 pager: true
 ---
 
-**Plain rule:** Do not try to disrupt, hack, scrape at scale, or damage goingdark.social or its community.
+**Plain Rule:** Do not try to disrupt, hack, scrape at scale, or damage goingdark.social or its community.
 
 **Examples:** DDoS, token brute forcing, bypassing rate limits, automated scraping that harms stability.
 

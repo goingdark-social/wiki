@@ -11,7 +11,7 @@ Our small server runs on home hardware and personal funds cover the bills. If yo
 ## Donation Options
 
 - [Ko-fi](https://ko-fi.com/goingdark) - one-off or recurring tips.
-- Direct bank transfer - ask via Mastodon at `@fanfare@goingdark.social` for details.
+
 
 ## How We Use Funds
 

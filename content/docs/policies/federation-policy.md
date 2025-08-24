@@ -6,17 +6,19 @@ reading_time: false
 pager: true
 ---
 
-We federate with domains that respect privacy and basic conduct.
+Federation decisions follow clear criteria. Domains that respect privacy and conduct standards meet the inclusion requirements.
 
-Defederation is considered when:
+Defederation may occur in cases of:
 
 - Persistent spam or harassment.
 - Lack of moderation.
 - Technical abuse.
 
-Domains under review are listed in a temporary block list. Each block entry notes the domain, reason, and date.
+A temporary block list is used to review domains. Each entry on the list includes the domain name, the reason for the block, and the date it was added.
 
-Blocks are reviewed monthly. A transparency log of changes is published in [Metrics](/docs/transparency/metrics/).
+Guidance comes from the Internet Foundation for Transparency and Accountability in Social Media (IFTAS). Federation policies undergo periodic review. See [Transparency Metrics](/docs/transparency/metrics/) for details.
 
-Federation blocks only affect how content appears locally; remote servers remain unaffected.
+Blocks are reviewed **monthly**, and a transparency log of changes is published in [Metrics](/docs/transparency/metrics/).
+
+It's important to note that federation blocks only impact the local appearance of content; remote servers aren't affected.
 

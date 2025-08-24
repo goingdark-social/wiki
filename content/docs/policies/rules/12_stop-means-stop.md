@@ -6,7 +6,7 @@ reading_time: false
 pager: true
 ---
 
-**Plain rule:** If someone asks you to stop engaging with them, stop.
+**Plain Rule:** If someone asks you to stop engaging with them, stop.
 
 **Examples:** stop replying, stop mentioning, stop tagging. Respect blocks and mutes.
 

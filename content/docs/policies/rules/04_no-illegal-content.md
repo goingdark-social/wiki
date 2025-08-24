@@ -6,6 +6,6 @@ reading_time: false
 pager: true
 ---
 
-**Plain rule:** Do not post anything illegal under EU or Swedish law. This includes CSAM, extremist propaganda, and incitement to violence.
+**Plain Rule:** Do not post anything illegal under EU or Swedish law. This includes CSAM, extremist propaganda, and incitement to violence.
 
 **Enforcement:** Immediate removal and suspension. We comply with valid legal orders. See [Moderation Guidelines](/docs/policies/moderation-guidelines/).

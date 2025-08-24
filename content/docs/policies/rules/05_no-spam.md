@@ -6,7 +6,7 @@ reading_time: false
 pager: true
 ---
 
-**Plain rule:** No spam accounts, link dumping, engagement bait, or using the server as an ad platform.
+**Plain Rule:** No spam accounts, link dumping, engagement bait, or using the server as an ad platform.
 
 **Examples:**
 - Mass unsolicited mentions.

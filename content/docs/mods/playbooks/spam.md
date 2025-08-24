@@ -6,28 +6,28 @@ reading_time: false
 pager: true
 ---
 
-# Spam Playbook
+# Spam playbook
 
 ## Scope
 Covers unsolicited bulk messages or repetitive content.  
 Linked rule: [Rule 5 - No spam](/docs/policies/rules/05_no-spam/).
 
-## Immediate Actions
+## Immediate actions
 - Delete spam posts.  
 - Suspend accounts for persistent spam.
 
-## Evidence to Collect
+## Evidence to collect
 - Account ID, post URLs, sample messages.
 
-## Decision Matrix
+## Decision matrix
 - First offense -> warn -> limit.  
 - Persistent spam -> suspend.
 
-## User Notice Template
-"Spam isn't allowed. Your account was limited."
+## User notice template
+"Spam isn't allowed. Your account is now limited."
 
-## Federation Actions
-Silence or block servers that send spam often servers.
+## Federation actions
+Silence or block servers that frequently send spam. Use 'Silence' for domain-wide blocks only.
 
 ## Logging
 Record in moderation log with category = Spam.

@@ -14,14 +14,14 @@ Linked rule: [Rule 1 - Treat people well](/docs/policies/rules/01_treat-people-w
 
 ## Immediate Actions
 - Warn first-time offenders.  
-- Silence or suspend for repeated behavior.
+- Limit or suspend for repeated behavior.
 
 ## Evidence to Collect
 - Account ID, post URLs, reports from victims.
 
 ## Decision Matrix
 - Single incident -> warn.  
-- Repeated or severe -> silence -> suspend.
+- Repeated or severe -> limit -> suspend.
 
 ## User Notice Template
 "Harassing other users isn't allowed. Your account may be restricted."

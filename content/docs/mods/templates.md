@@ -26,3 +26,4 @@ Required by EU law. Include:
 - Decision taken
 - Rule or law violated
 - Appeal options
+- Micro/small platform exemption applies; uploading to the EU database isn't necessary.
