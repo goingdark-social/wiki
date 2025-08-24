@@ -1,5 +1,5 @@
 ---
-title: Rule 7 - don't look for loopholes
+title: Rule 7 - Do not look for loopholes
 weight: 7
 toc: true
 reading_time: false

@@ -18,7 +18,7 @@ A temporary block list is used to review domains. Each entry on the list include
 
 Guidance comes from the Internet Foundation for Transparency and Accountability in Social Media (IFTAS). Federation policies undergo periodic review. See [Transparency Metrics](/docs/transparency/metrics/) for details.
 
-Blocks are reviewed on a regular basis, and a transparency log of changes is published in [Metrics](/docs/transparency/metrics/).
+Blocks are reviewed **monthly**, and a transparency log of changes is published in [Metrics](/docs/transparency/metrics/).
 
 It's important to note that federation blocks only impact the local appearance of content; remote servers aren't affected.
 

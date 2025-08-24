@@ -10,6 +10,8 @@ These guidelines cover moderation on goingdark.social. They apply to local accou
 
 ### Actions
 
+In-app notifications are sent for all moderation actions.
+
 - **Warn**: minor issue; user notified.
 - **Limit**: account visible only to followers (formerly known as Silence).
 - **Suspend**: account access revoked.
@@ -28,5 +30,5 @@ These guidelines cover moderation on goingdark.social. They apply to local accou
 
 ### Appeals
 
-If you received a moderation warning or restriction, use the **Appeal** option shown on the warning page in Mastodon. Submit **one appeal in 20 days** of the decision. Moderators review appeals and provide a response.
+If you received a moderation warning or restriction, use the **Appeal** option shown on the warning page in Mastodon. Submit **one appeal within 20 days** of the decision. Moderators review appeals and provide a response.
 

@@ -55,15 +55,18 @@ We enforce our rules using a mix of automated anti-spam and abuse filters, block
 
 ## Notice and action for illegal content or rights complaints
 
-* **User and authority contact**: message `@fanfare@goingdark.social` on Mastodon
+* **User and authority contact**: For legal notices, see our [Illegal Content Notices](/docs/legal/illegal-content-notices/) page.
 * **Notice form**: Use the illegal content notice page linked on our legal page to submit reports. Include the URL or ActivityPub ID, a description, your legal basis or proof of rights, and your contact details.
 * We review notices diligently and may restrict content or accounts where appropriate. When we restrict content or an account, we provide a **Statement of Reasons** identifying the decision, the basis, and the available redress routes.
 * We comply with valid orders to act against illegal content or provide information where required by law.
-* We're a micro or small online platform. We're exempt from uploading Statements of Reasons to the EU transparency database, but we still provide them directly to affected users.
+* User reports must be made via the in-app **Report** button; the Illegal Content Notices page is for legal notices (DSA Article 16) and rights-holder complaints.
+* We are a micro or small online platform. We are exempt from uploading Statements of Reasons to the EU transparency database, but we still provide them directly to affected users.
+
+As a provider of hosting services, we are subject to the EU's Digital Services Act (DSA). As a small platform, we are exempt from some obligations, but we are committed to providing a safe and transparent service. For more information, and to submit a notice under Article 16 of the DSA, please see our [Illegal Content Notices](/docs/legal/illegal-content-notices/) page.
 
 ## Appeals
 
-If your content or account is restricted, you may ask for a review through the website at goingdark.social. We handle appeals in a timely, objective, and non-discriminatory way. During review, temporary safeguards may remain in place if needed to protect the service.
+If your content or account is restricted, you may use the **Appeal** button on the warning page (one appeal **within** 20 days). We handle appeals in a timely, objective, and non-discriminatory way. During review, temporary safeguards may remain in place if needed to protect the service.
 
 ## Automated access and research
 

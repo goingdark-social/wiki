@@ -6,7 +6,7 @@ reading_time: false
 pager: true
 ---
 
-**Plain rule:** don't impersonate a person or brand without a clear indication that the account is unofficial or parody.
+**Plain Rule:** Do not impersonate a person or brand without a clear indication that the account is unofficial or parody.
 
 **Allowed:** parody and commentary accounts with clear labeling.
 

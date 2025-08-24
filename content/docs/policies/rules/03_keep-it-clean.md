@@ -6,7 +6,7 @@ reading_time: false
 pager: true
 ---
 
-**Plain rule:** Gratuitous obscenity that adds nothing to a discussion is not welcome.
+**Plain Rule:** Gratuitous obscenity that adds nothing to a discussion is not welcome.
 
 **Allowed:** normal swearing in context, adult humor with a CW, good faith discussion.
 

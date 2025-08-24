@@ -10,7 +10,7 @@ If moderators restrict your content or account, you can ask for a review.
 
 ## How to appeal
 
-If moderators restrict your content or account, use the **Appeal** option shown on the warning page in Mastodon. Submit **one appeal in 20 days** of the decision. Moderators review appeals and provide a response.
+If moderators restrict your content or account, use the **Appeal** option shown on the warning page in Mastodon. Submit **one appeal within 20 days** of the decision. Moderators review appeals and provide a response.
 
 ## What happens next
 

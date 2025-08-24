@@ -13,7 +13,7 @@ The service keeps the minimum necessary data.
 - Access logs with IP addresses are retained for up to 90 days to ensure security and compliance.
 - Moderation logs retained for one year.
 - Backups encrypted at rest.
-- Outside of your IP address and your posts no personal information is stored on our servers.
+
 
 Only administrators can access logs.
 
@@ -23,7 +23,7 @@ Only administrators can access logs.
 This privacy policy explains how **goingdark.social** ("Going Dark," "we," "us") processes personal data when you use our Mastodon service. we're an EU based, privacy first community. We don't use analytics, advertising, or unnecessary cookies. Access to the service is restricted to adults aged 18 and over.
 
 **Controller**: Administrators of goingdark.social
-**Privacy contact**: message `@fanfare@goingdark.social` on Mastodon
+**Privacy contact:** `dsa-contact@goingdark.social`
 **Supervisory authority**: You can lodge a complaint with your local authority. In Sweden this is Integritetsskyddsmyndigheten (IMY) at [https://www.imy.se](https://www.imy.se).
 
 ---
@@ -40,7 +40,7 @@ The **Terms of Service** govern use of the service. The **Community Guidelines**
 
 * **Basic account information**: username, email, password hash. Optional profile fields such as display name, biography, avatar, and header image. Your username, display name, biography, avatar, and header image are public.
 * **Content and social graph**: posts, media, polls, lists, bookmarks, boosts, favourites, follows and followers, mutes and blocks. Public and unlisted posts are public. Featuring a post on your profile makes it public.
-* **Direct and followers-only posts**: stored and processed to deliver messages to intended recipients. They may be delivered to other servers where copies are stored. Operators of this server and administrators of receiving servers can technically access such messages. Recipients can screenshot or reshare. don't share sensitive information over Mastodon.
+* **Direct and followers-only posts**: stored and processed to deliver messages to intended recipients. They may be delivered to other servers where copies are stored. Operators of this server and administrators of receiving servers can technically access such messages. Recipients can screenshot or reshare. Do not share sensitive information over Mastodon.
 * **Session and security data**: IP addresses and timestamps when you log in or perform key actions, session tokens, and login history. We don't track you across sites and we don't perform device fingerprinting.
 * **Server logs**: minimal HTTP access and error logs needed for reliability and security.
 
@@ -61,7 +61,7 @@ We apply appropriate technical and organisational measures, including encryption
 
 If a personal data breach is likely to result in a risk to your rights and freedoms, we will notify the competent supervisory authority and affected users when required by law.
 
-# what's our data retention policy?
+# What's Our Data Retention Policy?
 
 We keep data only as long as needed for the stated purposes and then delete or anonymize it.
 
@@ -99,7 +99,7 @@ Mastodon is federated. When you post or interact with accounts on other servers,
 
 Subject to conditions in the GDPR, you have the right to access, rectification, erasure, restriction, data portability, and to object to processing based on legitimate interests. You can withdraw consent at any time for processing that relies on consent. You also have the right to lodge a complaint with a supervisory authority. In Sweden, this is IMY (Integritetsskyddsmyndigheten) at [https://www.imy.se](https://www.imy.se).
 
-To exercise your rights, message `@fanfare@goingdark.social` on Mastodon. We will respond within one month or explain if an extension is needed for complex requests.
+To exercise your rights, email `dsa-contact@goingdark.social`. We will respond within one month or explain if an extension is needed for complex requests.
 
 # Site usage by children
 

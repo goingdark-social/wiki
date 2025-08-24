@@ -9,7 +9,8 @@ pager: true
 # Standard Workflow
 
 1. **Intake**
-   - Moderators receive reports via the app's Report tool. Use direct messages only as an outage fallback.
+   - Moderators receive reports via the app's Report tool.
+   - Appeals arrive via the in-app **Appeal** page.
    - Check if the issue falls under a playbook category.
 
 2. **Evidence capture**  

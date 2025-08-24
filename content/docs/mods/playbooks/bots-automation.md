@@ -21,7 +21,7 @@ Linked rule: [Rule 13 - No unapproved bots](/docs/policies/rules/13_bots/).
 
 ## Decision Matrix
 - Unapproved bot -> suspend immediately.  
-- Approved but misused -> warn -> silence -> suspend.
+- Approved but misused -> warn -> limit -> suspend.
 
 ## User Notice Template
 "Automated accounts require prior approval. Your bot was suspended for operating outside the policy."

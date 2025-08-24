@@ -9,7 +9,7 @@ pager: true
 # Appeals handling
 
 - **Intake**: Appeals arrive via the Mastodon **Appeal** page; mods shouldn’t accept new appeals over DM.
-- **Eligibility**: one appeal in 20 days from decision (Mastodon default).
+- **Eligibility**: one appeal within 20 days from decision (Mastodon default).
 - **SLA**:
   - Acknowledge in 7 days
   - Decide in 14 days

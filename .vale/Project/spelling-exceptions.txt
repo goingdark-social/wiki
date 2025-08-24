@@ -81,7 +81,7 @@ non-exclusive
 anti-spam
 royalty-free
 non-discriminatory
-Good-faith
+good-faith
 robots.txt
 domain-wide
 per-rule

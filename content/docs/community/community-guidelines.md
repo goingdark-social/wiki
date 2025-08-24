@@ -23,7 +23,7 @@ The following actions violate the rules and can lead to moderation:
 - **Harassment.** Stalking, doxing, impersonation, coordinated harassment, or targeted threats.  
 - **Hate and discrimination.** Racism, sexism, homophobia, transphobia, ableism, religious bigotry, xenophobia, casteism, or any form of demeaning identity based content.  
 - **Misinformation that causes harm.** False or misleading claims that endanger health, safety, or public trust.  
-- **Explicit content.** Nudity, gore, or graphic material must always be behind a content warning. Content involving explicit themes remains prohibited in public timelines per [Rule 3](/docs/policies/rules/03_keep-it-clean/).  
+- **Explicit content.** Nudity, gore, or other graphic material must always be behind a content warning (CW). However, graphic sexual content is prohibited from public timelines, even with a CW. All explicit content is subject to [Rule 3](/docs/policies/rules/03_keep-it-clean/).  
 - **Automated posting without approval.** Bots must follow the [Bot Policy](/docs/policies/rules/bots/). Moderators remove unapproved bots.  
 - **Unlawful content.** Anything prohibited under EU or Swedish law, including CSAM, extremist materials, and incitement to harm.  
 - **Disruptive use.** Flooding timelines, excessive posting, mass unsolicited mentions, or degrading server performance.  
@@ -46,7 +46,7 @@ For serious violations (harassment, unlawful content, explicit hate), suspension
 
 ## Appeals and transparency
 
-- Members can appeal moderation decisions through the **Appeal** option on the warning page (one appeal in 20 days).  
+- Members can appeal moderation decisions through the **Appeal** option on the warning page (one appeal within 20 days).  
 - Moderators review appeals and provide decisions.  
 - Decisions are final unless new evidence emerges.  
 - An annual [Moderation Report](/docs/policies/moderation-report/) summarizes numbers of reports, actions, and blocks.  
@@ -81,10 +81,8 @@ Harassment or abusive activity that happens off platform but impacts members (fo
 
 ## Reporting
 
-- Use the **Report** option on any post or profile.
-- Reports go directly to the administrator/moderator team.
-- For urgent or complex issues, send a direct message on Mastodon to `@fanfare@goingdark.social`.
-- Moderators review reports and share outcomes when appropriate.
+- Use the **Report** option on any post or profile. This is the only way to report content or accounts.
+- Reports go directly to the moderator team; outcomes are shared in-app when appropriate.
 
 ---
 

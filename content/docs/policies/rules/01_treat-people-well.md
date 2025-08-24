@@ -14,8 +14,8 @@ pager: true
 - Assume good faith. Ask before judging.
 - Use CWs when a topic might upset or surprise others.
 
-**don't:**
+**Do not:**
 - Insult, belittle, or bait people.
 - Pile on or brigade.
 
-**Enforcement:** Breaches may lead to a warning, limit, or suspension per the [Moderation Guidelines](/docs/policies/moderation-guidelines/). Report issues via the app's reporting feature (or clarify if this isn't the intended term) or by messaging `@fanfare@goingdark.social` on Mastodon. See [Reporting](/docs/user/reporting/).
+**Enforcement:** Breaches may lead to a warning, limit, or suspension per the [Moderation Guidelines](/docs/policies/moderation-guidelines/). Report issues via the **Report** button. See [Reporting](/docs/user/reporting/).

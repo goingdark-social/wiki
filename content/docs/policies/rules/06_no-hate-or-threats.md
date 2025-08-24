@@ -6,7 +6,7 @@ reading_time: false
 pager: true
 ---
 
-**Plain rule:** No hate speech, abusive, or threatening behavior.
+**Plain Rule:** No hate speech, abusive, or threatening behavior.
 
 **Examples include:** attacks based on gender, nationality, religion, race, age, sexual identity, disability, or similar. Pizza topping wars are fine. Hate on systemd all you want.
 

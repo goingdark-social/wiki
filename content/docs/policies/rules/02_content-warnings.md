@@ -14,6 +14,6 @@ pager: true
 - Keep the CW headline short and descriptive.
 - If unsure, add a CW. People can opt in to view.
 
-**don't:** use Content Warnings (CWs) to hide abuse or evade moderation.
+**Do not:** use Content Warnings (CWs) to hide abuse or evade moderation.
 
-**Enforcement:** Posts may be limited or removed. Repeated issues can lead to account actions per the [Moderation Guidelines](/docs/policies/moderation-guidelines/). Report concerns via the report tool or by messaging `@fanfare@goingdark.social` on Mastodon.
+**Enforcement:** Posts may be limited or removed. Repeated issues can lead to account actions per the [Moderation Guidelines](/docs/policies/moderation-guidelines/). Report concerns via the **Report** button.
