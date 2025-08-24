@@ -10,7 +10,7 @@ If your content or account has been restricted, you can ask for a review.
 
 ## How to appeal
 
-- Send a direct message on Mastodon to `@fanfare@goingdark.social` from the account in question.
+- Use the in-app Appeal button on the warning page. If the site is unavailable, send a DM to `@fanfare@goingdark.social`.
 - Include links to the affected posts or your profile, and any context you believe is relevant.
 
 ## What happens next

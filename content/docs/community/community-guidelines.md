@@ -94,7 +94,7 @@ Harassment or abusive activity that happens off-platform but impacts our members
 
 - Use the **Report** button on any post or profile.
 - Reports go directly to the admin/moderator team.
-- For urgent or complex issues, send a direct message on Mastodon to `@fanfare@goingdark.social`.
+- For urgent or complex issues, use the in-app Appeal button on the warning page. If the site is unavailable, send a DM to `@fanfare@goingdark.social`.
 - Reports are reviewed promptly. Outcomes may be communicated if appropriate.
 
 ---

@@ -29,5 +29,8 @@ In-app notifications are sent for each action.
 
 ### Appeals
 
-An appeal can be filed in 14 days through the website at goingdark.social. Responses arrive in 14 days. Decisions after the appeal are final.
+Use the in-app Appeal button on the warning page. If the site is unavailable, send a DM to `@fanfare@goingdark.social`.
+File appeals within 14 days.
+Responses arrive in 14 days.
+Decisions after the appeal are final.
 

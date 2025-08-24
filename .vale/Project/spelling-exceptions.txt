@@ -82,3 +82,6 @@ UTC
 tootctl
 signup
 signups
+in-app
+In-app
+non-discriminatory

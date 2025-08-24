@@ -8,7 +8,7 @@ pager: true
 
 # Appeals Handling
 
-- **Intake**: via Mastodon message to `@fanfare@goingdark.social` or form.
+- **Intake**: Use the in-app Appeal button on the warning page. If the site is unavailable, send a DM to `@fanfare@goingdark.social`.
 - **SLA**:
   - Acknowledge within 7 days
   - Decide within 14 days
