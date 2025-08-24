@@ -16,9 +16,9 @@ Defederation may occur in cases of:
 
 A temporary block list is used to review domains. Each entry on the list includes the domain name, the reason for the block, and the date it was added.
 
-Guidance comes from the Internet Foundation for Transparency and Accountability in Social Media (IFTAS). Federation policies undergo periodic review. See [Transparency Metrics](/docs/transparency/metrics/) for details.
+Guidance comes from the Internet Foundation for Transparency and Accountability in Social Media (IFTAS). Federation policies undergo periodic review.
 
-Blocks are reviewed **monthly**, and a transparency log of changes is published in [Metrics](/docs/transparency/metrics/).
+Blocks are reviewed **monthly**, and a transparency log of changes is published.
 
 It's important to note that federation blocks only impact the local appearance of content; remote servers aren't affected.
 
