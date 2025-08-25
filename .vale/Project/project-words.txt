@@ -63,3 +63,12 @@ break-even
 always-on
 EUR
 self-managed
+Talos
+Kubernetes
+Cilium
+Argo
+Bitwarden
+Prometheus
+Ko-fi
+autoscalers
+S3
