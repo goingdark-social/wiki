@@ -6,11 +6,11 @@ reading_time: false
 pager: true
 ---
 
-goingdark.social provides a friendly, privacy focused space for people who enjoy technology.
+goingdark.social is where homelab tinkerers, privacy advocates, and developers hang out to share what they're building.
 
-It's for developers, administrators, and curious folks who value respectful conversation.
+Whether you're setting up your first Pi-hole, managing a full rack, or just believe in digital independence, you'll find your people here.
 
-It's not a marketing platform, a data mining service, or a free pass for harassment.
+We're not just talking about taking control of our data - we're actually doing it. People here run their own infrastructure, experiment with new tools, and share what they've learned.
 
-Long term, the goal is to keep the server small, sustainable, and community funded. The server runs at home and personal resources fund it today. Covering the costs through [Ko-fi](https://ko-fi.com/goingdark) helps ensure the instance stays online.
+Long term, we want to keep this place small, sustainable, and community funded. Community donations through [Ko-fi](https://ko-fi.com/goingdark) help cover hosting costs and keep us independent.
 

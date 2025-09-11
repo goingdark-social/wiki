@@ -6,7 +6,7 @@ reading_time: false
 pager: true
 ---
 
-Our small server runs on home hardware and personal funds cover the bills. If you like what we do, you can help keep the lights on.
+We host on Hetzner to keep things reliable, and community donations help cover the costs. If you like what we do, you can help keep the lights on.
 
 ## Donation Options
 
@@ -22,6 +22,6 @@ Money goes toward:
 - Domain names and backups
 - Occasional moderation tools
 
-We publish summaries in the [Funding](/docs/overview/funding/) page.
+You can see what it actually costs to run this place in our [transparency section](/docs/transparency/current-costs/).
 
 Thank you for helping us stay online.

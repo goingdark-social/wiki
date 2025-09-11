@@ -8,10 +8,10 @@ pager: true
 
 ## Purpose
 
-goingdark.social is a privacy focused Mastodon server for people who enjoy technology, open source, and respectful conversation.  
-This server is intentionally small. It’s a space where newcomers get noticed, introductions get boosted, and discussions remain manageable.  
+goingdark.social is where homelab tinkerers, privacy advocates, and developers gather to share knowledge and take control of their digital lives.
+We keep things intentionally small so newcomers get noticed, introductions get boosted, and people can actually have conversations without getting lost in the noise.
 
-These guidelines outline expected behavior, prohibited actions, and moderation processes. They exist to protect people, not to impose unnecessary restrictions.  
+These guidelines explain how we keep this place welcoming for everyone. They're here to protect people, not create a bunch of bureaucratic rules.
 
 ---
 

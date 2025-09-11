@@ -20,10 +20,9 @@ pager: true
 ### Domain Block
 "This domain has been blocked due to repeated violations of our policies. See transparency log for details."
 
-### Statement of Reasons
-Required by EU law. Include:
-- Content affected
-- Decision taken
-- Rule or law violated
-- Appeal options
-- Micro/small platform exemption applies; uploading to the EU database isn't necessary.
+### Clear explanations
+When taking action, explain:
+- What content was affected
+- What we did about it
+- Which rule was broken
+- How to appeal if they disagree

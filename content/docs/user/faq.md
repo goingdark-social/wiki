@@ -10,11 +10,11 @@ pager: true
 
 ### What's goingdark.social
 
-goingdark.social is a Mastodon server for friendly tech chats on the Fediverse.
+goingdark.social is where homelab tinkerers, privacy advocates, and developers share what they're building and help each other take control of their digital lives.
 
 ### Who can join
 
-Anyone who accepts the [community guidelines](../community/community-guidelines.md) and [rules](../policies/rules/).
+Anyone interested in homelab setups, privacy tools, self-hosting, or building alternatives to Big Tech. You don't need to be an expert - questions and learning are totally welcome here.
 
 ### Is this a free service
 

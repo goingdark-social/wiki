@@ -3,11 +3,15 @@ title: Getting Started Guide
 weight: 10
 ---
 
-Welcome to goingdark.social. This guide will help you get started with our Mastodon instance.
+Welcome to goingdark.social! This guide will help you get started in our community of homelab tinkerers, privacy advocates, and developers.
 
 ## what's Mastodon?
 
 Mastodon is a decentralized social network that's part of the broader "fediverse." Unlike traditional social media platforms, Mastodon consists of many independent servers (called instances) that can communicate with each other.
+
+## What makes us different
+
+We run glitch-soc (a Mastodon fork) with 1000 character posts, perfect for sharing configs, setup stories, or detailed thoughts about your latest project. Our community is all about people who are actively building alternatives rather than just complaining about Big Tech.
 
 ## Creating Your Account
 
@@ -51,7 +55,7 @@ Mastodon is a decentralized social network that's part of the broader "fediverse
 
 ## Community Guidelines
 
-Before you start posting, please review our [community guidelines](../community/community-guidelines.md) and [rules](../policies/rules/) to understand what's expected on our instance.
+Before you start posting, check out our [community guidelines](../community/community-guidelines.md) and [rules](../policies/rules/). We're welcoming to newcomers and love questions about self-hosting, privacy tools, or whatever tech projects you're working on.
 
 ## Getting Help
 

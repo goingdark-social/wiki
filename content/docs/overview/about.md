@@ -6,12 +6,12 @@ reading_time: false
 pager: true
 ---
 
-goingdark.social is a privacy focused Mastodon server for friendly tech conversations.
+goingdark.social is a Mastodon server for homelab tinkerers, privacy advocates, and developers taking control of their digital lives.
 
 
-The service is run by Going Dark, a small community based in the EU. 
+The service is run by Going Dark, a small community based in the EU. All our infrastructure code is public on GitHub if you want to see how it's built.
 
-Right now the server runs at home and personal funds cover the costs. Learn how to help at [Support Us](/docs/user/support-us/)
+We host on Hetzner to keep things reliable, and community donations help cover the costs. Learn how to help at [Support Us](/docs/user/support-us/)
 
 
 

@@ -5,7 +5,7 @@ reading_time: false
 pager: false
 ---
 
-The server runs on home hardware and personal funds cover the bills. To keep the instance sustainable and make sure it doesn't vanish, the goal is to cover hosting costs through the community.
+We host on Hetzner to provide reliable service, and community donations help cover the costs. To keep things sustainable and make sure we don't vanish, we're working toward covering hosting costs through the community.
 
 If you'd like to help keep the lights on, chip in at [Ko-fi](https://ko-fi.com/goingdark).
 
