@@ -6,7 +6,7 @@ reading_time: false
 pager: true
 ---
 
-> Canonical source: the rules shown on the instance about page control. This wiki explains context. If there is any mismatch, the instance copy takes precedence.
+> The rules on the instance about page are what actually count. This wiki just explains the reasoning behind them.
 
 ## The rules
 

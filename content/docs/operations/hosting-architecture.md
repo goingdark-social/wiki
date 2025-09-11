@@ -16,5 +16,5 @@ goingdark.social runs on Talos-managed Kubernetes.
 
 Public endpoints are the web interface and API. Internal services stay on private networks.
 
-The server runs on home hardware. It works reasonably well but has tradeoffs. A move to a provider happens when donations cover at least three months of costs to avoid any shutdown risk due to lack of funds.
+We host on Hetzner Cloud to provide reliable service for the community. All our infrastructure code is public on GitHub if you want to see how we've set things up.
 

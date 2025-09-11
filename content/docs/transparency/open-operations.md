@@ -6,7 +6,7 @@ reading_time: false
 pager: true
 ---
 
-Going Dark runs in the open. The goal is to build trust and enable review.
+We run everything in the open because transparency builds trust and lets the community actually contribute to how this place works.
 
 ### What's public
 
@@ -15,13 +15,13 @@ Going Dark runs in the open. The goal is to build trust and enable review.
 - **App manifests:** Mastodon manifests and related configuration files are versioned.
 - **Issues and discussions:** Ideas, questions, and decisions live in GitHub Discussions.
 
-Everything above sits in public repositories in the goingdark-social GitHub organization.
+Everything lives in public repositories in the goingdark-social GitHub organization. Feel free to poke around, suggest changes, or learn from how we've set things up.
 
-### Why this model
+### Why we do this
 
-- **Transparency:** Anyone can read the code and suggest changes.
-- **Reproducibility:** The stack can be rebuilt from the same files.
-- **Review:** Changes get peer review in pull requests and Discussions.
+**Transparency:** Anyone can read the code and suggest changes - no black boxes here.
+**Reproducibility:** You could rebuild our entire setup from the same files if you wanted to.
+**Community input:** Changes get discussed openly in pull requests and GitHub discussions.
 
 ### How to follow along
 
@@ -29,3 +29,12 @@ Everything above sits in public repositories in the goingdark-social GitHub orga
 - Track changes in pull requests.
 - Join feature talks in GitHub Discussions.
 - Open a small, focused pull request when ready.
+
+### What's actually public
+
+- **Infrastructure code**: All our Kubernetes manifests and configuration
+- **Costs**: Real hosting costs so you know where donations go  
+- **Policies**: How we make moderation decisions
+- **This wiki**: Everything about how we operate
+
+We run glitch-soc for the 1000 character posts and other nice features. Check out the GitHub org if you want to geek out over the technical details.
