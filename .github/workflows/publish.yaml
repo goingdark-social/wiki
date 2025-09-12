@@ -41,12 +41,18 @@ jobs:
         key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.mod') }}
         restore-keys: |
           ${{ runner.os }}-hugomod-
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 20
+    - name: Install Tailwind CSS
+      run: npm install -g tailwindcss
     - name: Setup Pages
       id: pages
       uses: actions/configure-pages@v5
     - name: Build with Hugo
       env:
         HUGO_ENVIRONMENT: production
+        TAILWINDCSS_BINARY: tailwindcss
       run: |
         echo "Hugo Cache Dir: $(hugo config | grep cachedir)"
         hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
