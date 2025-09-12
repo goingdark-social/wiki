@@ -6,11 +6,11 @@ The site loads in dark mode by default, and you can switch themes from the heade
 
 ## Local development
 
-Install the extended version of Hugo, Node, and the Tailwind command line tool. The theme builds its styles with Tailwind, so the tool has to be on your path.
+Install the extended version of Hugo and Node. Install the Tailwind command line tool and typography plugin, then start the server.
 
 ```shell
-npm install -g tailwindcss
-hugo server
+npm install @tailwindcss/cli tailwindcss @tailwindcss/typography
+NODE_PATH=node_modules TAILWINDCSS_BINARY="npx tailwindcss" hugo server
 ```
 
 The site runs at `http://localhost:1313`.
