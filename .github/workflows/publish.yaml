@@ -43,7 +43,7 @@ jobs:
           ${{ runner.os }}-hugomod-
     - uses: actions/setup-node@v4
       with:
-        node-version: 20
+        node-version: 22
     - name: Install Tailwind CSS CLI
       run: npm install -g tailwindcss @tailwindcss/cli
     - name: Setup Pages
