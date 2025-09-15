@@ -1,0 +1,17 @@
+extends: substitution
+message: "Consider using '%s' for a more conversational tone."
+level: suggestion
+ignorecase: true
+swap:
+  you are: you're
+  we are: we're
+  it is: it's
+  that is: that's
+  do not: don't
+  cannot: can't
+  will not: won't
+  would not: wouldn't
+  should not: shouldn't
+  they are: they're
+  we have: we've
+  I have: I've

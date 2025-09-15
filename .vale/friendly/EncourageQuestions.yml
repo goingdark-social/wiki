@@ -1,0 +1,6 @@
+extends: existence
+message: "Great! Questions make writing more engaging and conversational."
+level: suggestion
+scope: sentence
+tokens:
+  - "\\?"
