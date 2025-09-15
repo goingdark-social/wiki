@@ -1,0 +1,21 @@
+{{/* Custom mobile navigation JavaScript for Going Dark Wiki */}}
+{{/* Test hook functionality first */}}
+<script>
+console.log('Custom hook is working!');
+</script>
+
+{{- $mobile_nav_js := resources.Get "js/mobile-nav.js" -}}
+{{- if $mobile_nav_js -}}
+  {{- $mobile_nav_js = $mobile_nav_js | js.Build | resources.Minify -}}
+  {{- if hugo.IsProduction -}}
+    {{- $mobile_nav_js = $mobile_nav_js | fingerprint "sha256" -}}
+  {{- end -}}
+  <script 
+    defer 
+    src="{{ $mobile_nav_js.RelPermalink }}"
+    {{ if hugo.IsProduction }}integrity="{{ $mobile_nav_js.Data.Integrity }}"{{ end }}>
+  </script>
+{{- else -}}
+  {{/* Debug: File not found */}}
+  <script>console.log('mobile-nav.js not found');</script>
+{{- end -}}
