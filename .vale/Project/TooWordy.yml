@@ -1,0 +1,22 @@
+---
+extends: substitution
+message: Consider using '%s' instead of '%s'.
+ignorecase: true
+level: warning
+nonword: true
+action:
+  name: replace
+swap:
+  utilize: use
+  utilization: use
+  facilitate: help
+  implement: start|use|create
+  maximum: most|top
+  minimum: least|lowest
+  multiple: many|several
+  validate: check|confirm
+  methodology: method
+  magnitude: size|scale
+  monitor: watch|track
+  modify: change|edit
+  necessitate: require|need
