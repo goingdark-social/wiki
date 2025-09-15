@@ -8,12 +8,15 @@
     "dev": "hugo server --bind 0.0.0.0 --port 1313",
     "production": "HUGO_ENVIRONMENT=production hugo --minify"
   },
-  "dependencies": {
-    "tailwindcss": "^4.1.0",
-    "@tailwindcss/typography": "^0.5.0"
-  },
   "devDependencies": {
-    "pagefind": "^1.0.0"
+    "@tailwindcss/cli": "^4.1.13",
+    "@tailwindcss/postcss": "^4.1.13",
+    "@tailwindcss/typography": "^0.5.16",
+    "autoprefixer": "^10.4.21",
+    "pagefind": "^1.0.0",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "tailwindcss": "^4.1.13"
   },
   "engines": {
     "node": ">=20.0.0"
