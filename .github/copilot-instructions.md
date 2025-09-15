@@ -130,14 +130,18 @@ PATH="$PWD:$PATH" HUGO_ENVIRONMENT=production hugo --minify
 - **Dark mode default** with theme switching capability
 
 ## Community Guidelines
-Going Dark is a welcoming Mastodon community located in the EU, designed for adults seeking a friendly, low drama environment. The community emphasizes interests in privacy, digital rights, and technology, while being inclusive of all individuals. The wiki serves as a resource for clear, friendly explanations of community operations.
+Going Dark is a Mastodon community for the homelab and self-hosting community, privacy advocates, and developers. Think r/homelab + r/selfhosted + r/privacy but on a small, friendly Mastodon server. We run glitch-soc with 1000 character posts, perfect for sharing your setup, configs, or documenting your latest project.
 
-The wiki provides user guides, community rules, moderator playbooks, and legal information. The tone should be inviting and calm, ensuring newcomers feel at home.
+We're for people who take control of their data and reject surveillance capitalism. Whether you're running your first Pi-hole or managing a full rack at home, you'll find your people here. The wiki serves as a resource for clear, friendly explanations of how our community works.
+
+The wiki provides user guides, community rules, moderator playbooks, and legal information. The tone should be conversational and relaxed, like you're explaining your cool homelab setup to a friend.
 
 ## Voice and Tone Guidelines
-Write like a community member talking to another community member. Explain the "why" behind rules and processes: how they help the community thrive. Use "we" and "us" to show shared ownership. Avoid procedural language like "Evidence to collect" or "Decision matrix." Instead, explain what happens and why it matters to everyone.
+Write like you're talking to someone who gets excited about new hardware, loves solving infrastructure problems, and believes in controlling their own data. You're speaking to people who host their own services, run homelabs of all sizes, and care about digital privacy. They range from "just got my first Pi" to "my rack draws more power than my house" but they all share the same curiosity about building and hosting things themselves.
 
-Keep sentences short, use everyday language, and aim for an eighth grade reading level. Use contractions, favor active voice, and communicate with kindness and clarity. Assume everyone means well. 
+Explain the "why" behind rules and processes. How do they help people share their setups and learn from each other? Use "we" and "us" to show this is our shared community space. Skip bureaucratic language. Instead of "Evidence to collect," say "What we keep track of." Instead of "Decision matrix," say "How we figure this out."
+
+Keep sentences short and conversational. No dashes anywhere (use commas or split sentences instead). Aim for eighth grade reading level. Use contractions, sound friendly and relaxed, not like a tech manual. Assume everyone means well and wants to learn. 
 
 Reports and appeals happen **in-app**; don't suggest DMs or email. Legal pages list a single contact address. Feature ideas belong in **GitHub Discussions**: [https://github.com/goingdark-social/wiki/discussions](https://github.com/goingdark-social/wiki/discussions). Casual chat is fine elsewhere, but decisions live in Discussions.
 
