@@ -1,0 +1,6 @@
+extends: existence
+message: "Great! Question headers make content more engaging."
+level: suggestion
+scope: heading
+tokens:
+  - "\\?"

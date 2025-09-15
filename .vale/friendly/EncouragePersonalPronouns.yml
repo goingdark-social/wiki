@@ -1,0 +1,11 @@
+extends: substitution
+message: "Consider using '%s' to sound more personal and friendly."
+level: suggestion
+ignorecase: true
+swap:
+  one should: you should
+  one can: you can
+  one might: you might
+  users can: you can
+  individuals may: you might
+  people should: you should

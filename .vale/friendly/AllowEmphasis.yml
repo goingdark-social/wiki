@@ -1,0 +1,14 @@
+extends: existence
+message: "Emphasis words like '%s' add personality to your writing."
+level: suggestion
+ignorecase: true
+tokens:
+  - really
+  - pretty
+  - quite
+  - super
+  - totally
+  - definitely
+  - absolutely
+  - honestly
+  - seriously

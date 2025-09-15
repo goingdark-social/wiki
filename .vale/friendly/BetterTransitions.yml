@@ -1,0 +1,11 @@
+extends: substitution
+message: "Try '%s' for smoother flow."
+level: suggestion
+ignorecase: true
+swap:
+  "In addition": "Also"
+  "Furthermore": "Plus"
+  "Additionally": "Also"
+  "However": "But"
+  "Nevertheless": "Still"
+  "Therefore": "So"
