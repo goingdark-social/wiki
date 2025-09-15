@@ -40,6 +40,8 @@ swap:
     \ time"
   long time no see: "I haven\u2019t seen you in a long time|it\u2019s been a long\
     \ time"
+  master: primary|hub|reference
+  masters: primaries|hubs|references
   mexican: Latinx
   natives are becoming restless: dissatisfied|frustrated
   natives are getting restless: dissatisfied|frustrated
@@ -76,10 +78,6 @@ swap:
   towel heads: Arabs|Middle Eastern People
   tribe: society|community
   white list: passlist|alrightlist|safelist|allow list
-  white space: space|blank
-  white spaces: space|blank
   whitelist: passlist|alrightlist|safelist|allow list
   whitelisted: passlisted|alrightlisted|safelisted|allow-listed
   whitelisting: passlisting|alrightlisting|safelisting|allow-listing
-  whitespace: space|blank
-  whitespaces: space|blank
