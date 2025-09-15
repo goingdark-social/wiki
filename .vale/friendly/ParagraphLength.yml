@@ -1,0 +1,6 @@
+extends: occurrence
+message: "Consider breaking this into shorter paragraphs for easier reading."
+level: suggestion
+scope: paragraph
+max: 4
+token: \.\s

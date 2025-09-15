@@ -1,0 +1,25 @@
+extends: existence
+message: "Replace '%s' with simpler, friendlier language."
+level: error
+ignorecase: true
+tokens:
+  - leverage
+  - utilize
+  - facilitate
+  - optimize
+  - strategize
+  - ideate
+  - operationalize
+  - actualize
+  - incentivize
+  - monetize
+  - prioritize
+  - maximize
+  - streamline
+  - spearhead
+  - champion
+  - drive
+  - execute
+  - deliver
+  - implement
+  - deploy
