@@ -96,3 +96,5 @@ Tusky
 Fedilab
 Hetzner
 CDNs
+Integritetsskyddsmyndigheten
+reshare

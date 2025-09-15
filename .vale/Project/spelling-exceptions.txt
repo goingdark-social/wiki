@@ -89,3 +89,5 @@ reporting.md
 migration.md
 faq.md
 confusion—Mastodon
+EU Digital Services Act
+Digital Services Act

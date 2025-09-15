@@ -19,7 +19,7 @@ Baseless accusations or rumors can damage someone's reputation and sense of safe
 When we confirm a post includes defamatory claims, we remove it. For first-time mistakes, we usually send a warning explaining why the content was removed. Repeated or severe cases lead to limits or suspension. We keep track of account details, post links, and any context from reports to stay consistent.
 
 ## What people can expect
-Our notice could say: "False statements about others violate our rules. We've removed the post and limited your account while things cool off."
+Our notice will say: "False statements about others violate our rules. We've removed the post and limited your account while things cool off."
 
 ## Protecting the wider community
 If another server consistently hosts defamatory posts, we will limit or block it to keep that noise away from our members.
