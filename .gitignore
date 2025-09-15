@@ -9,5 +9,10 @@ jsconfig.json
 !.vale/Project/**
 hugo_stats.json
 go.sum
-go.mod
 .hugo_build.lock
+
+# Build artifacts and dependencies
+hugo
+node_modules/
+package.json
+package-lock.json
