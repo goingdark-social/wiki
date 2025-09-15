@@ -1,0 +1,10 @@
+extends: existence
+message: "Consider rephrasing '%s' to clarify we run a Mastodon instance, not our own platform."
+level: warning
+ignorecase: true
+tokens:
+  - goingdark.social works
+  - goingdark.social uses
+  - goingdark.social has
+  - goingdark.social does not
+  - goingdark.social doesn't

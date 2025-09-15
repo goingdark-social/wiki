@@ -1,0 +1,16 @@
+extends: existence
+message: "Avoid '%s' - it sounds like we built our own platform. Mention this is Mastodon."
+level: warning
+ignorecase: true
+tokens:
+  - our federated network
+  - our platform
+  - our social network
+  - we do not have
+  - we don't have
+  - our network
+  - our federation
+  - our instance works
+  - we built
+  - we designed
+  - our system

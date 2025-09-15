@@ -1,0 +1,9 @@
+extends: existence
+message: "Good! Mentioning Mastodon helps users understand the platform."
+level: suggestion
+ignorecase: true
+tokens:
+  - Mastodon
+  - Fediverse
+  - federated social media
+  - ActivityPub

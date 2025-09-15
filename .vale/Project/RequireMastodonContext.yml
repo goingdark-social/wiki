@@ -1,0 +1,10 @@
+extends: existence
+message: "When explaining platform features, mention this is how Mastodon works."
+level: suggestion
+scope: paragraph
+tokens:
+  - algorithm
+  - recommendation
+  - federated
+  - discovery
+  - hashtag
