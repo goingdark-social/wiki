@@ -1,0 +1,10 @@
+extends: substitution
+message: "Use '%s' to be clearer about the platform."
+level: warning
+ignorecase: true
+swap:
+  "this platform": "Mastodon"
+  "this site": "goingdark.social (our Mastodon instance)"
+  "this network": "Mastodon and the Fediverse"
+  "here": "on Mastodon"
+  "traditional social sites": "algorithmic platforms like Twitter"
