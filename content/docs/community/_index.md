@@ -1,5 +1,5 @@
 ---
-title: Community
+title: community
 weight: 25
 toc: true
 reading_time: false

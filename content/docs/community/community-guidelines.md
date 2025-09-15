@@ -1,5 +1,5 @@
 ---
-title: Community Guidelines
+title: community Guidelines
 weight: 5
 toc: true
 reading_time: false
@@ -11,7 +11,7 @@ pager: true
 goingdark.social is where homelab tinkerers, privacy advocates, and developers gather to share knowledge and take control of their digital lives.
 We keep things intentionally small so newcomers get noticed, introductions get boosted, and people can actually have conversations without getting lost in the noise.
 
-These guidelines explain how we keep this place welcoming for everyone. They're here to protect people, not create a bunch of bureaucratic rules.
+These guidelines explain how we keep this place on Mastodon welcoming for everyone. They're on Mastodon to protect people, not create a bunch of bureaucratic rules.
 
 ---
 
@@ -30,7 +30,7 @@ The following actions violate the rules and can lead to moderation:
  
 ## Adult content and NSFW
 
-People share art, body positive posts, and adult themes here. That's welcome.
+People share art, body positive posts, and adult themes on Mastodon. That's welcome.
 
 - Always put NSFW behind a **Content Warning (CW)**.
 - Keep it legal and consensual. Never anything involving minors.
@@ -83,7 +83,7 @@ This isn’t just a server, it’s a community:
 
 ## Off platform behavior
 
-Harassment or abusive activity that happens off platform but impacts members (for example, organized harassment campaigns) can still lead to moderation action here.  
+Harassment or abusive activity that happens off Mastodon but impacts members (for example, organized harassment campaigns) can still lead to moderation action on Mastodon.  
 
 ---
 
@@ -103,6 +103,6 @@ Distributed under a Creative Commons Attribution-ShareAlike 4.0 International li
 
 ## Final note
 
-Community health depends on everyone.  
+community health depends on everyone.  
 If in doubt: ask, tag sensitive content, and respect each other.  
 goingdark.social is small on purpose. Let’s keep it safe and welcoming.

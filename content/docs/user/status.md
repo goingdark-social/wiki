@@ -12,7 +12,7 @@ https://status.goingdark.social/
 
 ### Current incidents
 
-- None reported. Known issues and fixes appear here.
+- None reported. Known issues and fixes appear here on Mastodon.
 
 ### Workarounds
 
