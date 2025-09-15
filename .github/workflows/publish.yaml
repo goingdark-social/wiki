@@ -44,17 +44,17 @@ jobs:
     - uses: actions/setup-node@v5
       with:
         node-version: 22
-    - name: Install Tailwind CSS CLI
-      run: npm install -g tailwindcss @tailwindcss/cli
+    - name: Install Node dependencies
+      run: npm ci
     - name: Setup Pages
       id: pages
       uses: actions/configure-pages@v5
     - name: Build with Hugo
       env:
         HUGO_ENVIRONMENT: production
-        TAILWINDCSS_BINARY: tailwindcss
       run: |
         echo "Hugo Cache Dir: $(hugo config | grep cachedir)"
+        export PATH="$PWD/node_modules/.bin:$PATH"
         hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
     - name: Generate Pagefind search index
       run: npx pagefind --source "public"
