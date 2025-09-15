@@ -22,7 +22,7 @@ We limit the reach of suspected networks while we investigate. If we confirm a c
 Our notice reads: "Coordinated manipulation isn't allowed. We've restricted your account's reach." If deception continues, suspension follows.
 
 ## Protecting the wider community
-We may limit or block entire networks or servers that exist to manipulate conversations, keeping their influence away from our members.
+We will limit or block entire networks or servers that exist to manipulate conversations, keeping their influence away from our members.
 
 ## If you disagree
 Operators can appeal with proof of authenticity or context we missed. We keep evidence for 90 days to review these appeals fairly.

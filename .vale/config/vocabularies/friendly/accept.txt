@@ -95,3 +95,4 @@ unfollowing
 Tusky
 Fedilab
 Hetzner
+CDNs

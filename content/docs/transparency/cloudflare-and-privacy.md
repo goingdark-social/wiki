@@ -22,7 +22,7 @@ We use Cloudflare as a shield between you and our server. It's like having a sec
 
 **Protection vs. privacy:** Cloudflare helps us stay online when someone tries to attack the server, but it means adding another company to the privacy equation. We think the protection is worth it, but we want you to know what's happening.
 
-**Their rules, not just ours:** If Cloudflare has an outage or changes their policies, it affects everyone here on Mastodon. We've set things up to minimize this risk, but we can't eliminate it entirely.
+**Their rules, not just ours:** If Cloudflare has an outage or changes their policies, it affects everyone on Mastodon. We've set things up to minimize this risk, but we can't eliminate it entirely.
 
 ## How we've configured things
 
@@ -52,7 +52,7 @@ We looked at several alternatives before choosing this setup:
 
 We've made a deliberate choice to trust Cloudflare, and there are practical reasons why: they have a strong track record on privacy, transparent policies about not selling user data, and their free tier analytics are genuinely privacy-focused (no cookies, no cross-site tracking). Using their free tier also helps keep costs manageable for a community-funded instance.
 
-**What "trust" means here on Mastodon:** We're comfortable with Cloudflare having access to web traffic and media files because they're transparent about what they do with that data (basic analytics, security protection) and what they don't do (sell it, use it for advertising, track users across sites).
+**What "trust" means on Mastodon:** We're comfortable with Cloudflare having access to web traffic and media files because they're transparent about what they do with that data (basic analytics, security protection) and what they don't do (sell it, use it for advertising, track users across sites).
 
 **If that changes, we'll change:** If Cloudflare's policies shift in ways that don't align with our values, or if we see evidence of data misuse, we'll reevaluate and move away from them. Our infrastructure can handle that transition if needed.
 
