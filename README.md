@@ -1,7 +1,7 @@
 # Going Dark Wiki
 
-Community wiki for [goingdark.social](https://goingdark.social).
-Built with [Hugo](https://gohugo.io) and the Hugo Blox documentation theme.
+community wiki for [goingdark.social](https://goingdark.social).
+We built this with [Hugo](https://gohugo.io) and the Hugo Blox theme.
 The site loads in dark mode by default, and you can switch themes from the header.
 
 ## Local development
@@ -17,7 +17,7 @@ The site runs at `http://localhost:1313`.
 
 ## Linting
 
-[Vale](https://vale.sh) checks the docs with project-specific rules in `.vale/Project` along with the Write Good, Microsoft, and Google packages. These rules cover Fediverse terms, require alt text, and prefer code formatting for handles. Docs in `content/docs/legal/` are excluded.
+[Vale](https://vale.sh) checks our writing. It has project rules in `.vale/Project`, friendly rules in `.vale/friendly`, and the Alex and Write Good packages. They cover Fediverse terms, encourage casual language, require alt text, and prefer code formatting for handles. Docs in `content/docs/legal/` are excluded.
 
 1. Run `vale sync` once to download the external packages.
 2. Install the `pre-commit` tool with `pre-commit install`.
@@ -27,7 +27,7 @@ Use `pre-commit run --files path/to/file.md` to lint a file manually. The workfl
 
 ## Deployment
 
-Commits to `main` deploy to GitHub Pages via the included workflow.
+Commits to `main` publish to GitHub Pages through the included workflow.
 
 ## Funding
 

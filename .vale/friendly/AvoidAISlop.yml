@@ -1,0 +1,17 @@
+extends: existence
+message: "Replace '%s' with simpler language."
+level: warning
+ignorecase: true
+tokens:
+  - game-changer
+  - revolutionary
+  - cutting-edge
+  - state-of-the-art
+  - innovative solution
+  - robust
+  - seamless
+  - scalable
+  - next-level
+  - world-class
+  - industry-leading
+  - best-in-class

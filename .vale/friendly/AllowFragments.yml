@@ -1,0 +1,10 @@
+extends: existence
+message: "Sentence fragments are totally fine in casual writing!"
+level: suggestion
+tokens:
+  - "^And "
+  - "^But "
+  - "^So "
+  - "^Because "
+  - "^Though "
+  - "^Although "

@@ -1,0 +1,18 @@
+extends: substitution
+message: "Try '%s' for a more relaxed tone."
+level: suggestion
+ignorecase: true
+swap:
+  regarding: about
+  concerning: about
+  in order to: to
+  with respect to: about
+  in terms of: about
+  due to the fact that: because
+  for the reason that: because
+  it is important to note: note that
+  please be advised: heads up
+  we would like to inform you: just so you know
+  at this point in time: now
+  in the near future: soon
+  at the present time: now

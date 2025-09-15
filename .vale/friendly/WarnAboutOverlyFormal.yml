@@ -1,0 +1,16 @@
+extends: existence
+message: "Consider using friendlier language instead of '%s'."
+level: warning
+ignorecase: true
+tokens:
+  - furthermore
+  - moreover
+  - nevertheless
+  - notwithstanding
+  - consequently
+  - accordingly
+  - therefore
+  - hence
+  - thus
+  - henceforth
+  - heretofore
