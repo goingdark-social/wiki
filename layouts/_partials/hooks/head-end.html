@@ -1,0 +1,12 @@
+{{/* Custom mobile navigation JavaScript for Going Dark Wiki */}}
+{{/* Load after the main Hugo Blox JavaScript to ensure DOM is ready */}}
+
+{{- $mobile_nav_js := resources.Get "js/mobile-nav.js" | js.Build | resources.Minify -}}
+{{- if hugo.IsProduction -}}
+  {{- $mobile_nav_js = $mobile_nav_js | fingerprint "sha256" -}}
+{{- end -}}
+<script 
+  defer 
+  src="{{ $mobile_nav_js.RelPermalink }}"
+  {{ if hugo.IsProduction }}integrity="{{ $mobile_nav_js.Data.Integrity }}"{{ end }}>
+</script>

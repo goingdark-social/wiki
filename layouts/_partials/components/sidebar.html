@@ -1,0 +1,199 @@
+{{- $context := .context -}}
+
+{{- $no_sidebar := .no_sidebar | default true -}}
+{{- $pad_sidebar := true -}}
+{{- $sidebar_dynamic_class := cond $no_sidebar (cond $pad_sidebar "lg:hidden xl:block" "lg:hidden") "lg:sticky" -}}
+
+{{- $root_section := cond (eq site.Home.Type "docs") site.Home $context.FirstSection -}}
+{{- $page_url := $context.RelPermalink -}}
+
+{{/* Only replace explicit mobile menu links with automated links for Docs pages */}}
+{{ if not $no_sidebar }}
+  {{/* Mobile overlay backdrop with proper styling */}}
+  <div class="hb-sidebar-mobile-menu fixed inset-0 z-40 bg-black/50 backdrop-blur-sm hidden" 
+       style="background-color: rgba(0, 0, 0, 0.8); backdrop-filter: blur(4px);"></div>
+{{ end }}
+
+<!-- Sidebar container with proper mobile behavior -->
+<aside class="hb-sidebar-container 
+  {{ $sidebar_dynamic_class }}
+  fixed top-0 left-0 z-50 h-full w-80 max-w-[80vw] 
+  bg-white dark:bg-gray-900 
+  transform -translate-x-full transition-transform duration-300 ease-in-out
+  lg:static lg:transform-none lg:w-64 lg:bg-transparent lg:dark:bg-transparent lg:z-auto
+  border-r border-gray-200 dark:border-gray-700 lg:border-none
+  overflow-y-auto lg:overflow-visible
+  safe-area-inset-left"
+  style="padding-top: max(env(safe-area-inset-top), var(--navbar-height, 80px)); padding-bottom: env(safe-area-inset-bottom);">
+  
+  <!-- Mobile header in sidebar -->
+  <div class="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700 lg:hidden">
+    <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Navigation</h2>
+    <button class="mobile-sidebar-close p-2 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
+            style="min-height: 44px; min-width: 44px; display: flex; align-items: center; justify-content: center;">
+      <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Search bar on small screen -->
+  <div class="px-4 pt-4 lg:hidden">
+    <!-- Currently, use the navbar search button instead -->
+    {{/* partial "search.html" */}}
+  </div>
+  
+  <div class="hb-scrollbar lg:h-[calc(100vh-var(--navbar-height))] px-4 py-4">
+    <!-- Mobile main navigation -->
+    <ul class="flex flex-col gap-1 lg:hidden mb-6">
+      {{ $currentPage := $context }}
+      {{ range site.Menus.main }}
+      {{ $menuURL := .URL | absLangURL }}
+      {{ $pageURL:= $currentPage.Permalink | absLangURL }}
+      {{ $active := eq $menuURL $pageURL }}
+      <li>
+        <a href="{{ .URL | relLangURL }}" 
+           class="block px-3 py-2 text-base font-medium rounded-md transition-colors {{ if $active }}bg-primary-100 text-primary-800 dark:bg-primary-800 dark:text-primary-100{{ else }}text-gray-700 hover:text-gray-900 hover:bg-gray-50 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-800{{ end }}"
+           style="min-height: 44px; display: flex; align-items: center;">
+          {{ .Name }}
+        </a>
+      </li>
+      {{ end }}
+      
+      <!-- Add divider between main nav and page TOC -->
+      <li class="my-2">
+        <hr class="border-gray-200 dark:border-gray-700">
+      </li>
+    </ul>
+
+    <!-- Page-specific navigation/TOC -->
+    <ul class="flex flex-col gap-1 lg:hidden">
+      {{ template "menu-links" (dict "context" site.Home "pageURL" $page_url "page" $context "toc" true) -}}
+      {{ template "custom-menu-links" }}
+    </ul>
+
+    <!-- Sidebar on large screen -->
+    {{- if $no_sidebar -}}
+      <div class="max-xl:hidden h-0 w-64 shrink-0"></div>
+    {{- else -}}
+      <ul class="flex flex-col gap-1 max-lg:hidden">
+        {{ template "menu-links" (dict "context" $root_section "page" $context  "pageURL" $page_url) }}
+        {{ template "custom-menu-links" }}
+      </ul>
+    {{ end -}}
+  </div>
+
+</aside>
+
+{{- define "menu-links" -}}
+  {{ template "link-tree" (dict "context" .context "level" 0 "page" .page "pageURL" .pageURL "toc" (.toc | default false)) }}
+{{- end -}}
+
+{{- define "link-tree" -}}
+  {{- if ge .level 4 -}}
+    {{- return -}}
+  {{- end -}}
+
+  {{- $context := .context -}}
+  {{- $page := .page }}
+  {{- $page_url := .page.RelPermalink -}}
+  {{- $level := .level -}}
+  {{- $toc := .toc | default false -}}
+
+  {{- with $items := union .context.RegularPages .context.Sections -}}
+    {{- $items = where $items "Params.sidebar.hidden" "!=" true -}}
+    {{- if eq $level 0 -}}
+      {{- range $items.ByWeight }}
+        {{- $active := eq $page_url .RelPermalink -}}
+        {{- $is_expanded := or (.Params.sidebar.open) (.IsAncestor $page) $active | default false }}
+        <li class="hb-sidebar-item {{ if $is_expanded }}open{{ end }}">
+          {{- template "custom-menu-link" dict "context" . "active" $active "title" .LinkTitle "link" .RelPermalink -}}
+          {{- if and $toc $active -}}
+            {{- template "mobile-toc" dict "page" . -}}
+          {{- end -}}
+          {{- template "link-tree" dict "context" . "page" $page "pageURL" $page_url "level" (add $level 1) "toc" $toc -}}
+        </li>
+      {{- end -}}
+    {{- else -}}
+      <div class="ltr:pr-0 overflow-hidden">
+        <ul class="hb-sidebar-list">
+          {{- range $items.ByWeight }}
+            {{- $active := eq $page_url .RelPermalink -}}
+            {{- $is_expanded := or (.Params.sidebar.open) (.IsAncestor $page) $active | default false }}
+            {{- $title := .LinkTitle | default .File.BaseFileName -}}
+            <li class="flex flex-col hb-sidebar-item {{ if $is_expanded }}open{{ end }}">
+              {{- template "custom-menu-link" dict "context" . "active" $active "title" $title "link" .RelPermalink -}}
+              {{- if and $toc $active -}}
+                {{ template "mobile-toc" dict "page" . }}
+              {{- end }}
+              {{ template "link-tree" dict "context" . "page" $page "pageURL" $page_url "level" (add $level 1) "toc" $toc }}
+            </li>
+          {{- end -}}
+        </ul>
+      </div>
+    {{- end -}}
+  {{- end }}
+{{- end -}}
+
+{{- define "mobile-toc" -}}
+  {{ $page := .page }}
+  {{ with $page.Fragments.Headings }}
+    <ul class="hb-sidebar-mobile-toc">
+      {{- range . }}
+        {{- with .Headings }}
+          {{- range . -}}
+            <li>
+              <a
+                href="#{{ anchorize .ID }}"
+                class="hb-docs-link"
+                style="min-height: 44px; display: flex; align-items: center; padding: 8px 12px;"
+              >
+                {{- .Title -}}
+              </a>
+            </li>
+          {{ end -}}
+        {{ end -}}
+      {{ end -}}
+    </ul>
+  {{ end }}
+{{- end -}}
+
+{{- define "custom-menu-links" -}}
+  {{- range site.Menus.sidebar -}}
+    {{- $name := .Name -}}
+    {{ if eq .Params.type "separator" }}
+      <li class="[word-break:break-word] mt-5 mb-2 px-2 py-1.5 text-sm font-semibold text-gray-900 first:mt-0 dark:text-gray-100 cursor-default">
+        <span>{{ $name }}</span>
+      </li>
+    {{ else }}
+      <li>{{ template "custom-menu-link" dict "active" false "title" $name "link" (.URL | relLangURL) }}</li>
+    {{ end }}
+  {{- end -}}
+{{- end -}}
+
+{{- define "custom-menu-link" -}}
+  {{- $is_external := strings.HasPrefix .link "http" -}}
+  {{- $open := .open | default false -}}
+  <a
+    class="hb-sidebar-custom-link
+    {{- if .active }}
+      sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900
+    {{- else }}
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50
+    {{- end -}}"
+    href="{{ .link }}"
+    {{ if $is_external }}target="_blank" rel="noreferer"{{ end }}
+    style="min-height: 44px; display: flex; align-items: center; padding: 8px 12px; text-decoration: none;"
+  >
+    <span class="flex-1">{{- .title -}}</span>
+    {{- with .context }}
+      {{- if or .RegularPages .Sections }}
+        <span data-hb-sidebar-toggle class="flex-shrink-0 ml-2">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path>
+            </svg>
+        </span>
+      {{- end }}
+    {{ end -}}
+  </a>
+{{- end -}}

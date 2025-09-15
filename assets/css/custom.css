@@ -1,0 +1,390 @@
+/* Going Dark Wiki Custom Styles */
+/* Import mobile navigation improvements */
+
+/* Mobile Navigation Improvements */
+/* Fixes for mobile UI/UX issues */
+
+/* Root variables for safe area support */
+:root {
+  --safe-area-top: env(safe-area-inset-top, 0px);
+  --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-area-left: env(safe-area-inset-left, 0px);
+  --safe-area-right: env(safe-area-inset-right, 0px);
+}
+
+/* Mobile header improvements */
+.header {
+  position: relative;
+  z-index: 1000;
+}
+
+/* Header control spacing and z-index fixes */
+.navbar {
+  position: relative;
+  z-index: 100;
+}
+
+/* Ensure proper button spacing and touch targets */
+.navbar button,
+.navbar a {
+  min-height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile menu toggle button fixes */
+label[for="nav-toggle"] {
+  position: relative;
+  z-index: 1001;
+  min-height: 44px;
+  min-width: 44px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hide default mobile menu behavior */
+#nav-menu {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  #nav-menu {
+    display: flex;
+  }
+}
+
+/* Mobile sidebar overlay improvements */
+.hb-sidebar-mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 900;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: opacity 0.3s ease-in-out;
+}
+
+.hb-sidebar-mobile-menu.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hb-sidebar-mobile-menu:not(.hidden) {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Mobile sidebar container improvements */
+.hb-sidebar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 320px;
+  max-width: 80vw;
+  z-index: 950;
+  background: white;
+  border-right: 1px solid #e5e7eb;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  padding-top: var(--safe-area-top);
+  padding-bottom: var(--safe-area-bottom);
+  padding-left: var(--safe-area-left);
+}
+
+.dark .hb-sidebar-container {
+  background: #111827;
+  border-right-color: #374151;
+}
+
+.hb-sidebar-container.translate-x-0 {
+  transform: translateX(0);
+}
+
+/* Large screen sidebar (docs pages) */
+@media (min-width: 1024px) {
+  .hb-sidebar-container {
+    position: static;
+    transform: none;
+    width: 16rem;
+    background: transparent;
+    border: none;
+    z-index: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+  }
+}
+
+/* Mobile sidebar header */
+.hb-sidebar-container .mobile-sidebar-close {
+  min-height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.hb-sidebar-container .mobile-sidebar-close:hover {
+  background-color: #f3f4f6;
+}
+
+.dark .hb-sidebar-container .mobile-sidebar-close:hover {
+  background-color: #374151;
+}
+
+/* Sidebar navigation improvements */
+.hb-sidebar-custom-link {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 8px 12px;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  word-break: break-word;
+}
+
+.hb-sidebar-custom-link:hover {
+  text-decoration: none;
+}
+
+/* Accordion behavior for sidebar sections */
+.hb-sidebar-item > ul,
+.hb-sidebar-item > div {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.hb-sidebar-item.open > ul,
+.hb-sidebar-item.open > div {
+  max-height: 2000px; /* Large enough for content */
+}
+
+/* Sidebar toggle arrow animation */
+[data-hb-sidebar-toggle] svg {
+  transition: transform 0.2s ease;
+}
+
+.open [data-hb-sidebar-toggle] svg {
+  transform: rotate(90deg);
+}
+
+/* Mobile TOC styling */
+.hb-sidebar-mobile-toc {
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  border-left: 2px solid #e5e7eb;
+  padding-left: 1rem;
+}
+
+.dark .hb-sidebar-mobile-toc {
+  border-left-color: #374151;
+}
+
+.hb-sidebar-mobile-toc a {
+  display: flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 4px 8px;
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 0.875rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.hb-sidebar-mobile-toc a:hover {
+  color: #111827;
+  background-color: #f3f4f6;
+  text-decoration: none;
+}
+
+.dark .hb-sidebar-mobile-toc a {
+  color: #9ca3af;
+}
+
+.dark .hb-sidebar-mobile-toc a:hover {
+  color: #f9fafb;
+  background-color: #374151;
+}
+
+/* Active page indication */
+.sidebar-active-item {
+  background-color: #dbeafe !important;
+  color: #1e40af !important;
+  font-weight: 600;
+}
+
+.dark .sidebar-active-item {
+  background-color: #1e3a8a !important;
+  color: #bfdbfe !important;
+}
+
+/* Improved scrollbar styling */
+.hb-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #d1d5db transparent;
+}
+
+.hb-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.hb-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.hb-scrollbar::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 3px;
+}
+
+.hb-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+.dark .hb-scrollbar {
+  scrollbar-color: #4b5563 transparent;
+}
+
+.dark .hb-scrollbar::-webkit-scrollbar-thumb {
+  background: #4b5563;
+}
+
+.dark .hb-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+/* Body scroll prevention when menu is open */
+body.overflow-hidden {
+  overflow: hidden;
+}
+
+/* Header control improvements */
+.navbar .order-1 {
+  gap: 0.5rem;
+}
+
+.navbar .order-1 > * {
+  min-height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CTA button improvements */
+.navbar a[href*="sponsor"],
+.navbar a[href*="ko-fi"] {
+  position: relative;
+  z-index: 30;
+  min-height: 44px;
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 1023px) {
+  /* Ensure proper spacing on mobile */
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+  
+  /* Hide desktop sidebar */
+  .hb-sidebar-container.lg\\:sticky {
+    display: none;
+  }
+  
+  /* Content area adjustments */
+  .mx-auto.flex.max-w-screen-xl {
+    flex-direction: column;
+  }
+  
+  /* Ensure content doesn't overflow under mobile navigation */
+  main {
+    padding-bottom: calc(2rem + var(--safe-area-bottom));
+  }
+}
+
+/* Focus styles for accessibility */
+.hb-sidebar-custom-link:focus,
+.mobile-sidebar-close:focus,
+label[for="nav-toggle"]:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Animation improvements */
+.hb-sidebar-container {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hb-sidebar-mobile-menu {
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Ensure proper stacking context */
+.page-header,
+.header {
+  position: relative;
+  z-index: 1000;
+}
+
+/* Fix for cards extending off-screen */
+.prose img,
+.prose figure {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Safe area improvements for notched devices */
+@supports (padding: env(safe-area-inset-top)) {
+  .hb-sidebar-container {
+    padding-top: max(env(safe-area-inset-top), var(--navbar-height, 80px));
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  
+  .header {
+    padding-top: env(safe-area-inset-top);
+  }
+  
+  .navbar {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+}
+
+/* Ensure text remains readable */
+.hb-sidebar-container {
+  color: #111827;
+}
+
+.dark .hb-sidebar-container {
+  color: #f9fafb;
+}
+
+/* Prevent horizontal scroll on mobile */
+@media (max-width: 768px) {
+  html {
+    overflow-x: hidden;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+}
