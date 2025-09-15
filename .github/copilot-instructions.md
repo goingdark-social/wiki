@@ -1,11 +1,11 @@
 # Going Dark Wiki
 Going Dark Wiki is a Hugo-based documentation website for the goingdark.social Mastodon community. Built with Hugo extended and the HugoBlox documentation theme, using Tailwind CSS for styling.
 
-Always reference these instructions first and fallback to search or bash commands only when you encounter unexpected information that does not match the info here.
+Always reference these instructions first and fallback to search or bash commands only when you encounter unexpected information that doesn't match the info here.
 
 ## Working Effectively
 - Bootstrap, build, and test the repository:
-  - Download Hugo extended: `curl -L https://github.com/gohugoio/hugo/releases/download/v0.150.0/hugo_extended_0.150.0_linux-amd64.tar.gz | tar -xz hugo && chmod +x hugo`
+  - Download Hugo extended: `curl -L "https://github.com/gohugoio/hugo/releases/download/v0.150.0/hugo_extended_0.150.0_linux-amd64.tar.gz" | tar -xz hugo && chmod +x hugo`
   - Install Node.js dependencies: `npm init -y && npm install tailwindcss @tailwindcss/cli @tailwindcss/typography`
   - Install Vale for linting: `go install github.com/errata-ai/vale/v3/cmd/vale@latest`
   - Install pre-commit: `pip install pre-commit && pre-commit install`
@@ -50,7 +50,7 @@ Always reference these instructions first and fallback to search or bash command
 - **Tailwind CSS dependencies MUST be installed locally** in project root: `npm install tailwindcss @tailwindcss/cli @tailwindcss/typography`
 - **Hugo binary MUST be in PATH** or use `PATH="$PWD:$PATH"` prefix
 - **Vale MUST be in PATH** for linting: `export PATH="$HOME/go/bin:$PATH"`
-- Build will fail without these dependencies - they are NOT optional
+- Build will fail without these dependencies - they're NOT optional
 
 ## Linting Requirements  
 - Vale configuration in `.vale.ini` with custom Project rules
@@ -94,14 +94,14 @@ The following are outputs from frequently run commands. Reference them instead o
 - Moderation: `content/docs/mods/*.md`
 
 ### Vale linting results (typical)
-```bash
+```shell
 vale content/docs/user/getting-started.md
 # Output shows errors for spelling, style, and formatting issues
 # Always resolve to 0 errors, 0 warnings before committing
 ```
 
 ### Development server output
-```bash
+```shell
 PATH="$PWD:$PATH" hugo server --bind 0.0.0.0 --port 1313
 # Server starts at http://localhost:1313
 # Watch mode enabled for live reloading
@@ -109,7 +109,7 @@ PATH="$PWD:$PATH" hugo server --bind 0.0.0.0 --port 1313
 ```
 
 ### Production build output  
-```bash
+```shell
 PATH="$PWD:$PATH" HUGO_ENVIRONMENT=production hugo --minify
 # Downloads Hugo modules on first run (~5 seconds)
 # Builds and minifies site (~2 seconds)
@@ -126,5 +126,47 @@ PATH="$PWD:$PATH" HUGO_ENVIRONMENT=production hugo --minify
 - **Community wiki** for goingdark.social Mastodon instance
 - **Target audience**: Community members, moderators, new users
 - **Content types**: Rules, guides, policies, moderation playbooks, FAQs
-- **Writing style**: Conversational, welcoming, clear (see `.github/copilot_conventions.md`)
+- **Writing style**: Conversational, welcoming, clear (see guidelines below)
 - **Dark mode default** with theme switching capability
+
+## Community Guidelines
+Going Dark is a welcoming Mastodon community located in the EU, designed for adults seeking a friendly, low drama environment. The community emphasizes interests in privacy, digital rights, and technology, while being inclusive of all individuals. The wiki serves as a resource for clear, friendly explanations of community operations.
+
+The wiki provides user guides, community rules, moderator playbooks, and legal information. The tone should be inviting and calm, ensuring newcomers feel at home.
+
+## Voice and Tone Guidelines
+Write like a community member talking to another community member. Explain the "why" behind rules and processes: how they help the community thrive. Use "we" and "us" to show shared ownership. Avoid procedural language like "Evidence to collect" or "Decision matrix." Instead, explain what happens and why it matters to everyone.
+
+Keep sentences short, use everyday language, and aim for an eighth grade reading level. Use contractions, favor active voice, and communicate with kindness and clarity. Assume everyone means well. 
+
+Reports and appeals happen **in-app**; don't suggest DMs or email. Legal pages list a single contact address. Feature ideas belong in **GitHub Discussions**: [https://github.com/goingdark-social/wiki/discussions](https://github.com/goingdark-social/wiki/discussions). Casual chat is fine elsewhere, but decisions live in Discussions.
+
+## Documentation Standards
+Include the following front matter for every document:
+
+```yaml
+---
+title: "Title"
+weight: 10
+toc: true
+reading_time: false
+pager: true
+---
+```
+
+Use sentence case for headings and define terms the first time they appear. Write headings that sound conversational: "How we handle this" instead of "Decision matrix," or "What to expect" instead of "Enforcement procedures."
+
+Avoid jargon or slang unless you explain it. Prefer internal links over external tracking links. Break long stretches into shorter segments, and add descriptive alt text to images. Precede sensitive examples with `CW:`. Format usernames, file paths, and commands as inline code. Use a hyphen `-`, two hyphens `--`, or parentheses instead of em dashes or Unicode dashes. Refer to the moderation action as "Limit" instead of "Silence."
+
+Frame rules and policies as community agreements rather than restrictions. Focus on the positive outcomes for everyone rather than just listing what's prohibited.
+
+## Language and Style Guidelines
+- Always write out "for example." Use "information" instead of the word `info`
+- Choose precise terms over ambiguous ones like `may` or `might`
+- If a necessary term triggers Vale because it's new terminology or an unusual hyphenation, pause and request its addition to the allowed list
+- Treat current rules as accurate until they're officially updated
+- Keep pages current. When community behavior changes, update the relevant page
+- Link to the source document instead of duplicating policies
+
+## Contribution Process
+Start a GitHub Discussion for suggestions or significant changes. Submit a focused pull request that links to the related discussion. Keep commit messages clear and use the imperative mood (`docs: clarify appeals flow`).

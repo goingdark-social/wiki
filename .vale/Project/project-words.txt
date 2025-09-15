@@ -72,3 +72,16 @@ Prometheus
 Ko-fi
 autoscalers
 S3
+Hugo-based
+HugoBlox
+Node.js
+npm
+pre-commit
+Pre-commit
+CI
+CLI
+Pagefind
+chmod
+-xz
+hugo
++x
