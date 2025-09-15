@@ -1,0 +1,21 @@
+{
+  "name": "goingdark-wiki",
+  "version": "1.0.0",
+  "description": "Going Dark Wiki - Hugo-based documentation website for the goingdark.social Mastodon community",
+  "private": true,
+  "scripts": {
+    "build": "hugo --minify",
+    "dev": "hugo server --bind 0.0.0.0 --port 1313",
+    "production": "HUGO_ENVIRONMENT=production hugo --minify"
+  },
+  "dependencies": {
+    "tailwindcss": "^4.1.0",
+    "@tailwindcss/typography": "^0.5.0"
+  },
+  "devDependencies": {
+    "pagefind": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
