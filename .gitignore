@@ -14,5 +14,4 @@ go.sum
 # Build artifacts and dependencies
 hugo
 node_modules/
-package.json
 package-lock.json
