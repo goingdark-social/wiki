@@ -1,3 +1,8 @@
+/* Sidebar container padding for safe area and navbar height */
+.hb-sidebar-container {
+  padding-top: max(env(safe-area-inset-top), var(--navbar-height, 80px));
+  padding-bottom: env(safe-area-inset-bottom);
+}
 /* Going Dark Wiki Custom Styles */
 /* Import mobile navigation improvements */
 
@@ -180,7 +185,7 @@ label[for="nav-toggle"] {
   transition: transform 0.2s ease;
 }
 
-.open [data-hb-sidebar-toggle] svg {
+[data-hb-sidebar-toggle][aria-expanded="true"] svg {
   transform: rotate(90deg);
 }
 
@@ -306,9 +311,12 @@ body.overflow-hidden {
   }
   
   /* Hide desktop sidebar */
-  .hb-sidebar-container.lg\\:sticky {
-    display: none;
-  }
+    /* Hide desktop sidebar on mobile using media query */
+    @media (max-width: 1023px) {
+      .hb-sidebar-container {
+        display: none;
+      }
+    }
   
   /* Content area adjustments */
   .mx-auto.flex.max-w-screen-xl {
@@ -336,6 +344,12 @@ label[for="nav-toggle"]:focus {
 
 .hb-sidebar-mobile-menu {
   transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hb-sidebar-container, .hb-sidebar-mobile-menu {
+    transition: none !important;
+  }
 }
 
 /* Ensure proper stacking context */
