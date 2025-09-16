@@ -112,15 +112,12 @@ document.addEventListener('DOMContentLoaded', function () {
   let lastFocusableElement = null;
 
   function trapFocus(container) {
-    focusableElements = container.querySelectorAll(
-      'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select'
-    );
+    focusableElements = Array.from(
+      container.querySelectorAll('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex], [contenteditable]')
+    ).filter(el => el.offsetParent !== null);
     firstFocusableElement = focusableElements[0];
     lastFocusableElement = focusableElements[focusableElements.length - 1];
-    
-    if (firstFocusableElement) {
-      firstFocusableElement.focus();
-    }
+    if (firstFocusableElement) firstFocusableElement.focus();
   }
 
   function removeFocusTrap() {
@@ -157,6 +154,19 @@ document.addEventListener('DOMContentLoaded', function () {
     btn.addEventListener('click', function() {
       navToggle.checked = false;
       closeMobileMenu();
+    });
+  });
+
+  // Close mobile menu when navigating to a new page (mobile only)
+  const sidebarLinks = sidebarContainer?.querySelectorAll('a[href]');
+  sidebarLinks?.forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href') || '';
+      // Only for internal links that navigate away
+      if (window.innerWidth < 1024 && !href.startsWith('http') && !href.startsWith('#')) {
+        navToggle.checked = false;
+        closeMobileMenu();
+      }
     });
   });
 
@@ -201,79 +211,40 @@ document.addEventListener('DOMContentLoaded', function () {
     button.addEventListener('click', function (e) {
       e.preventDefault();
       e.stopPropagation(); // Prevent navigation
-      
+
+      const ctrlId = button.getAttribute('aria-controls');
+      const panel = document.getElementById(ctrlId);
+      const isOpen = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', String(!isOpen));
+      if (panel) {
+        panel.classList.toggle('hidden', isOpen);
+        panel.classList.toggle('open', !isOpen);
+      }
+
       const listItem = button.closest('li');
       if (listItem) {
-        const isOpen = listItem.classList.contains('open');
-        
-        // Close all other sections at the same level for accordion behavior
+        // Accordion: close siblings
         const parentList = listItem.parentElement;
         if (parentList) {
           const siblings = parentList.querySelectorAll(':scope > li.open');
           siblings.forEach(sibling => {
             if (sibling !== listItem) {
               sibling.classList.remove('open');
+              // Also collapse their panels
+              const sibBtn = sibling.querySelector('[data-hb-sidebar-toggle]');
+              const sibCtrlId = sibBtn?.getAttribute('aria-controls');
+              const sibPanel = sibCtrlId ? document.getElementById(sibCtrlId) : null;
+              if (sibBtn) sibBtn.setAttribute('aria-expanded', 'false');
+              if (sibPanel) {
+                sibPanel.classList.add('hidden');
+                sibPanel.classList.remove('open');
+              }
             }
           });
         }
-        
         // Toggle current section
         listItem.classList.toggle('open', !isOpen);
       }
     });
   });
-
-  // Close mobile menu when navigating to a new page
-  const sidebarLinks = sidebarContainer?.querySelectorAll('a[href]');
-  sidebarLinks?.forEach(link => {
-    link.addEventListener('click', function() {
-      // Only close if it's an internal link and we're on mobile
-      if (window.innerWidth < 1024 && !this.getAttribute('href').startsWith('http')) {
-        setTimeout(() => {
-          navToggle.checked = false;
-          closeMobileMenu();
-        }, 100);
-      }
-    });
-  });
-});
-
-// Improved mobile touch targets and spacing
-document.addEventListener('DOMContentLoaded', function() {
-  // Add proper touch targets to all interactive elements
-  const interactiveElements = document.querySelectorAll('button, a, input[type="checkbox"], input[type="radio"]');
-  
-  interactiveElements.forEach(element => {
-    const style = window.getComputedStyle(element);
-    const minHeight = parseInt(style.minHeight) || 0;
-    const minWidth = parseInt(style.minWidth) || 0;
-    
-    // Ensure minimum 44px touch targets on mobile
-    if (window.innerWidth < 768) {
-      if (minHeight < 44) {
-        element.style.minHeight = '44px';
-      }
-      if (minWidth < 44) {
-        element.style.minWidth = '44px';
-      }
-    }
-  });
-});
-
-// Handle safe area insets for mobile devices
-document.addEventListener('DOMContentLoaded', function() {
-  // Add CSS custom properties for safe area handling
-  const root = document.documentElement;
-  
-  if (CSS.supports('padding: env(safe-area-inset-top)')) {
-    root.style.setProperty('--safe-area-top', 'env(safe-area-inset-top)');
-    root.style.setProperty('--safe-area-bottom', 'env(safe-area-inset-bottom)');
-    root.style.setProperty('--safe-area-left', 'env(safe-area-inset-left)');
-    root.style.setProperty('--safe-area-right', 'env(safe-area-inset-right)');
-  } else {
-    root.style.setProperty('--safe-area-top', '0px');
-    root.style.setProperty('--safe-area-bottom', '0px');
-    root.style.setProperty('--safe-area-left', '0px');
-    root.style.setProperty('--safe-area-right', '0px');
-  }
 });

@@ -24,7 +24,7 @@
   border-r border-gray-200 dark:border-gray-700 lg:border-none
   overflow-y-auto lg:overflow-visible
 "
-  style="padding-top: max(env(safe-area-inset-top), var(--navbar-height, 80px)); padding-bottom: env(safe-area-inset-bottom);">
+  >
   
   <!-- Mobile header in sidebar -->
   <div class="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700 lg:hidden">
@@ -71,49 +71,49 @@
   {{ template "link-tree" (dict "context" .context "level" 0 "page" .page "pageURL" .pageURL "toc" (.toc | default false)) }}
 {{- end -}}
 
-{{- define "link-tree" -}}
-  {{- if ge .level 4 -}}
-    {{- return -}}
-  {{- end -}}
-
-  {{- $context := .context -}}
-  {{- $page := .page }}
-  {{- $page_url := .page.RelPermalink -}}
-  {{- $level := .level -}}
-  {{- $toc := .toc | default false -}}
-
-  {{- with $items := union .context.RegularPages .context.Sections -}}
-    {{- $items = where $items "Params.sidebar.hidden" "!=" true -}}
-    {{- if eq $level 0 -}}
-      {{- range $items.ByWeight }}
-        {{- $active := eq $page_url .RelPermalink -}}
-        {{- $is_expanded := or (.Params.sidebar.open) (.IsAncestor $page) $active | default false }}
-        <li class="hb-sidebar-item {{ if $is_expanded }}open{{ end }}">
-          {{- template "custom-menu-link" dict "context" . "active" $active "title" .LinkTitle "link" .RelPermalink -}}
-          {{- if and $toc $active -}}
-            {{- template "mobile-toc" dict "page" . -}}
-          {{- end -}}
-          {{- template "link-tree" dict "context" . "page" $page "pageURL" $page_url "level" (add $level 1) "toc" $toc -}}
-        </li>
-      {{- end -}}
+{{- define "custom-menu-links" -}}
+  {{- $currentPage := .page | default . -}}
+  {{- range site.Menus.sidebar -}}
+    {{- $name := .Name -}}
+    {{- $menuURL := .URL | absLangURL -}}
+    {{- $pageURL := $currentPage.Permalink | absLangURL -}}
+    {{- $active := eq $menuURL $pageURL -}}
+    {{- if eq .Params.type "separator" -}}
+      <li role="separator" aria-orientation="horizontal" class="my-4">
+        <hr class="border-gray-300 dark:border-gray-700" />
+      </li>
     {{- else -}}
-      <div class="ltr:pr-0 overflow-hidden">
-        <ul class="hb-sidebar-list">
-          {{- range $items.ByWeight }}
-            {{- $active := eq $page_url .RelPermalink -}}
-            {{- $is_expanded := or (.Params.sidebar.open) (.IsAncestor $page) $active | default false }}
-            {{- $title := .LinkTitle | default .File.BaseFileName -}}
-            <li class="flex flex-col hb-sidebar-item {{ if $is_expanded }}open{{ end }}">
-              {{- template "custom-menu-link" dict "context" . "active" $active "title" $title "link" .RelPermalink -}}
-              {{- if and $toc $active -}}
-                {{ template "mobile-toc" dict "page" . }}
-              {{- end }}
-              {{ template "link-tree" dict "context" . "page" $page "pageURL" $page_url "level" (add $level 1) "toc" $toc }}
-            </li>
-          {{- end -}}
-        </ul>
-      </div>
+      <li>{{ template "custom-menu-link" dict "active" $active "title" $name "link" (.URL | relLangURL) }}</li>
     {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- define "link-tree" -}}
+  {{- $level := .level | default 0 -}}
+  {{- if ge $level 4 -}} {{- return -}} {{- end -}}
+  {{- $ctx := .context -}}
+  {{- $page := .page -}}
+  {{- $pageURL := .pageURL -}}
+  {{- $toc := .toc | default false -}}
+  {{- with $items := union $ctx.RegularPages $ctx.Sections -}}
+    {{- $items = where $items "Params.sidebar.hidden" "!=" true -}}
+    {{- range $items.ByWeight }}
+      {{- $active := eq $pageURL .RelPermalink -}}
+      {{- $is_expanded := or (.Params.sidebar.open) (.IsAncestor $page) $active | default false }}
+      {{- $title := .LinkTitle | default .File.BaseFileName -}}
+      <li class="flex flex-col hb-sidebar-item {{ if $is_expanded }}open{{ end }}">
+        {{- template "custom-menu-link" dict "context" . "active" $active "title" $title "link" .RelPermalink -}}
+        {{- if or .RegularPages .Sections }}
+          {{- $childPanelID := printf "hb-sb-%s" (.RelPermalink | urlize) -}}
+          <ul id="{{ $childPanelID }}" class="hb-sidebar-list {{ if $is_expanded }}open{{ else }}hidden{{ end }}" aria-labelledby="{{ $childPanelID }}-btn">
+            {{- template "link-tree" (dict "context" . "page" $page "pageURL" $pageURL "level" (add $level 1) "toc" $toc) -}}
+          </ul>
+        {{- end }}
+        {{- if and $toc $active -}}
+          {{ template "mobile-toc" dict "page" . -}}
+        {{- end }}
+      </li>
+    {{- end }}
   {{- end }}
 {{- end -}}
 
@@ -133,46 +133,40 @@
                 {{- .Title -}}
               </a>
             </li>
-          {{ end -}}
-        {{ end -}}
-      {{ end -}}
+          {{- end }}
+        {{- end }}
+      {{- end }}
     </ul>
-  {{ end }}
-{{- end -}}
-
-{{- define "custom-menu-links" -}}
-  {{- $currentPage := .page | default . -}}
-  {{- range site.Menus.sidebar -}}
-    {{- $name := .Name -}}
-    {{- $active := or ( .IsMenuCurrent "sidebar" $currentPage ) ( .HasMenuCurrent "sidebar" $currentPage ) -}}
-    {{ if eq .Params.type "separator" }}
-      <li role="separator" aria-orientation="horizontal" class="my-4">
-        <hr class="border-gray-300 dark:border-gray-700" />
-      </li>
-    {{ else }}
-      <li>{{ template "custom-menu-link" dict "active" $active "title" $name "link" (.URL | relLangURL) }}</li>
-    {{ end }}
-  {{- end -}}
-{{- end -}}
+  {{- end }}
+{{- end }}
 
 {{- define "custom-menu-link" -}}
-  {{- $is_external := .link | absURL | (partial "is-abs-url" .) -}}
+  {{- $is_external := (partial "is-abs-url" (dict "url" .link)) -}}
   {{- $open := .open | default false -}}
+  {{- $controlID := printf "hb-sb-%s" (.link | urlize) -}}
   <a
     class="hb-sidebar-custom-link
     {{- if .active }}
       sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900
     {{- else }}
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50
-    {{- end -}}"
+    {{- end }}"
     href="{{ .link }}"
-  {{ if $is_external }}target="_blank" rel="noopener noreferrer"{{ end }}
+    {{ if eq $is_external "true" }}target="_blank" rel="noopener noreferrer"{{ end }}
     style="min-height: 44px; display: flex; align-items: center; padding: 8px 12px; text-decoration: none;"
   >
     <span class="flex-1">{{- .title -}}</span>
     {{- with .context }}
       {{- if or .RegularPages .Sections }}
-        <button type="button" aria-expanded="false" data-hb-sidebar-toggle class="flex-shrink-0 ml-2 bg-transparent border-none p-0" style="min-width: 18px; min-height: 18px;">
+        <button
+          id="{{ $controlID }}-btn"
+          type="button"
+          aria-controls="{{ $controlID }}"
+          aria-expanded="false"
+          data-hb-sidebar-toggle
+          class="flex-shrink-0 ml-2 bg-transparent border-none p-0"
+          style="min-width: 18px; min-height: 18px;"
+        >
           <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path>
           </svg>
