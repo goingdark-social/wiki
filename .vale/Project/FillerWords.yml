@@ -1,0 +1,15 @@
+---
+extends: existence
+message: "'%s' is a filler word that adds no value. Remove it or rewrite the sentence."
+ignorecase: true
+level: error
+tokens:
+  - real
+  - core
+  - actual
+  - basically
+  - essentially
+  - literally
+  - totally
+  - simply
+  - just

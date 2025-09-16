@@ -6,13 +6,13 @@ reading_time: false
 pager: true
 ---
 
-Hashtags help people discover your posts on Mastodon. Unlike Twitter or Instagram, Mastodon doesn't use algorithms to show you content. Instead, hashtags connect your posts with people interested in those topics. goingdark.social runs on Mastodon, so these tips match how our instance behaves.
+Hashtags help people discover your posts on Mastodon. Unlike Twitter or Instagram, it doesn't use algorithms to show you content. Instead, hashtags connect your posts with people interested in those topics. These tips match how our instance behaves.
 
 ## Why posts don't get seen
 
 Mastodon works differently than algorithm driven social media. There's no recommendation engine pushing content to people. If you skip hashtags, only your followers will see your posts.
 
-## How people find posts on Mastodon
+## How people find posts
 
 When someone searches for a hashtag or follows one, your posts with that tag appear in their results. That's usually how people outside your follower network discover what you share.
 
@@ -20,7 +20,7 @@ When someone searches for a hashtag or follows one, your posts with that tag app
 
 Add the `#` symbol before relevant words. Sharing cat photos? Use `#Cats` or `#CatsOfMastodon`.
 
-For multiple words, combine them and capitalize each word: `#CatsOfMastodon`. That format helps screen readers pronounce hashtags well for people who rely on them.
+For several words, combine them and capitalize each word: `#CatsOfMastodon`. That format helps screen readers pronounce hashtags well for people who rely on them.
 
 ## Choosing the right tags
 
@@ -38,7 +38,7 @@ Search hashtags to find posts and communities. Follow hashtags to see related po
 
 - Posting without hashtags
 - Using tags nobody else uses
-- Relying only on extremely popular tags where posts get buried
+- Relying only on popular tags where posts get buried
 - Adding irrelevant hashtags
 
 ## Numbers and dates

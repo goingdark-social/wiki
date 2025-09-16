@@ -11,7 +11,7 @@ pager: true
 goingdark.social is where homelab tinkerers, privacy advocates, and developers gather to share knowledge and take control of their digital lives.
 We keep things intentionally small so newcomers get noticed, introductions get boosted, and people can actually have conversations without getting lost in the noise.
 
-These guidelines explain how we keep this place on Mastodon welcoming for everyone. They're on Mastodon to protect people, not create a bunch of bureaucratic rules.
+These guidelines explain how we keep this place welcoming for everyone. They're here to protect people, not create a bunch of bureaucratic rules.
 
 ---
 
@@ -72,7 +72,7 @@ For serious violations (harassment, unlawful content, explicit hate), suspension
 
 ## Participation
 
-This isn’t just a server, it’s a community:  
+This isn’t a server, it’s a community:  
 
 - Boost newcomers’ #introduction posts to help them connect.  
 - Share self-hosting setups, open source tools, and privacy tips.  

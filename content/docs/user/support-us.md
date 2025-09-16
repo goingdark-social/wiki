@@ -8,12 +8,12 @@ pager: true
 
 We host on Hetzner to keep things reliable, and community donations help cover the costs. If you like what we do, you can help keep the lights on.
 
-## Donation Options
+## Donation options
 
 - [Ko-fi](https://ko-fi.com/goingdark) - one-off or recurring tips.
 
 
-## How We Use Funds
+## How we use funds
 
 Money goes toward:
 
