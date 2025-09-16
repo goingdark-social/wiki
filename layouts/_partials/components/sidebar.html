@@ -11,7 +11,7 @@
 {{ if not $no_sidebar }}
   {{/* Mobile overlay backdrop with proper styling */}}
   <div class="hb-sidebar-mobile-menu fixed inset-0 z-40 bg-black/50 backdrop-blur-sm hidden" 
-       style="background-color: rgba(0, 0, 0, 0.8); backdrop-filter: blur(4px);"></div>
+  ></div>
 {{ end }}
 
 <!-- Sidebar container with proper mobile behavior -->
@@ -19,11 +19,11 @@
   {{ $sidebar_dynamic_class }}
   fixed top-0 left-0 z-50 h-full w-80 max-w-[80vw] 
   bg-white dark:bg-gray-900 
-  transform -translate-x-full transition-transform duration-300 ease-in-out
+  transition-transform duration-300 ease-in-out
   lg:static lg:transform-none lg:w-64 lg:bg-transparent lg:dark:bg-transparent lg:z-auto
   border-r border-gray-200 dark:border-gray-700 lg:border-none
   overflow-y-auto lg:overflow-visible
-  safe-area-inset-left"
+"
   style="padding-top: max(env(safe-area-inset-top), var(--navbar-height, 80px)); padding-bottom: env(safe-area-inset-bottom);">
   
   <!-- Mobile header in sidebar -->
@@ -43,32 +43,11 @@
     {{/* partial "search.html" */}}
   </div>
   
-  <div class="hb-scrollbar lg:h-[calc(100vh-var(--navbar-height))] px-4 py-4">
-    <!-- Mobile main navigation -->
-    <ul class="flex flex-col gap-1 lg:hidden mb-6">
-      {{ $currentPage := $context }}
-      {{ range site.Menus.main }}
-      {{ $menuURL := .URL | absLangURL }}
-      {{ $pageURL:= $currentPage.Permalink | absLangURL }}
-      {{ $active := eq $menuURL $pageURL }}
-      <li>
-        <a href="{{ .URL | relLangURL }}" 
-           class="block px-3 py-2 text-base font-medium rounded-md transition-colors {{ if $active }}bg-primary-100 text-primary-800 dark:bg-primary-800 dark:text-primary-100{{ else }}text-gray-700 hover:text-gray-900 hover:bg-gray-50 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-800{{ end }}"
-           style="min-height: 44px; display: flex; align-items: center;">
-          {{ .Name }}
-        </a>
-      </li>
-      {{ end }}
-      
-      <!-- Add divider between main nav and page TOC -->
-      <li class="my-2">
-        <hr class="border-gray-200 dark:border-gray-700">
-      </li>
-    </ul>
+<!-- Mobile main navigation is handled in header; nothing rendered here. -->
 
     <!-- Page-specific navigation/TOC -->
     <ul class="flex flex-col gap-1 lg:hidden">
-      {{ template "menu-links" (dict "context" site.Home "pageURL" $page_url "page" $context "toc" true) -}}
+      {{ template "menu-links" (dict "context" $root_section "pageURL" $page_url "page" $context "toc" true) -}}
       {{ template "custom-menu-links" }}
     </ul>
 
@@ -78,7 +57,10 @@
     {{- else -}}
       <ul class="flex flex-col gap-1 max-lg:hidden">
         {{ template "menu-links" (dict "context" $root_section "page" $context  "pageURL" $page_url) }}
-        {{ template "custom-menu-links" }}
+        {{/* Only render custom-menu-links if not in docs section */}}
+        {{ if not (eq $root_section.Type "docs") }}
+          {{ template "custom-menu-links" }}
+        {{ end }}
       </ul>
     {{ end -}}
   </div>
@@ -144,7 +126,7 @@
           {{- range . -}}
             <li>
               <a
-                href="#{{ anchorize .ID }}"
+                href="#{{ .ID }}"
                 class="hb-docs-link"
                 style="min-height: 44px; display: flex; align-items: center; padding: 8px 12px;"
               >
@@ -159,20 +141,22 @@
 {{- end -}}
 
 {{- define "custom-menu-links" -}}
+  {{- $currentPage := .page | default . -}}
   {{- range site.Menus.sidebar -}}
     {{- $name := .Name -}}
+    {{- $active := or ( .IsMenuCurrent "sidebar" $currentPage ) ( .HasMenuCurrent "sidebar" $currentPage ) -}}
     {{ if eq .Params.type "separator" }}
-      <li class="[word-break:break-word] mt-5 mb-2 px-2 py-1.5 text-sm font-semibold text-gray-900 first:mt-0 dark:text-gray-100 cursor-default">
-        <span>{{ $name }}</span>
+      <li role="separator" aria-orientation="horizontal" class="my-4">
+        <hr class="border-gray-300 dark:border-gray-700" />
       </li>
     {{ else }}
-      <li>{{ template "custom-menu-link" dict "active" false "title" $name "link" (.URL | relLangURL) }}</li>
+      <li>{{ template "custom-menu-link" dict "active" $active "title" $name "link" (.URL | relLangURL) }}</li>
     {{ end }}
   {{- end -}}
 {{- end -}}
 
 {{- define "custom-menu-link" -}}
-  {{- $is_external := strings.HasPrefix .link "http" -}}
+  {{- $is_external := .link | absURL | (partial "is-abs-url" .) -}}
   {{- $open := .open | default false -}}
   <a
     class="hb-sidebar-custom-link
@@ -182,17 +166,17 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50
     {{- end -}}"
     href="{{ .link }}"
-    {{ if $is_external }}target="_blank" rel="noreferer"{{ end }}
+  {{ if $is_external }}target="_blank" rel="noopener noreferrer"{{ end }}
     style="min-height: 44px; display: flex; align-items: center; padding: 8px 12px; text-decoration: none;"
   >
     <span class="flex-1">{{- .title -}}</span>
     {{- with .context }}
       {{- if or .RegularPages .Sections }}
-        <span data-hb-sidebar-toggle class="flex-shrink-0 ml-2">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path>
-            </svg>
-        </span>
+        <button type="button" aria-expanded="false" data-hb-sidebar-toggle class="flex-shrink-0 ml-2 bg-transparent border-none p-0" style="min-width: 18px; min-height: 18px;">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path>
+          </svg>
+        </button>
       {{- end }}
     {{ end -}}
   </a>
