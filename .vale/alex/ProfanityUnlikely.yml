@@ -1,5 +1,5 @@
 extends: existence
-message: Be careful with '%s', it’s profane in some cases.
+message: Be careful with '%s', it's profane in some cases.
 level: warning
 ignorecase: true
 tokens:
@@ -66,6 +66,7 @@ tokens:
   - cocktail
   - coconut
   - coconuts
+  - color
   - colored
   - coloured
   - communist
@@ -104,6 +105,8 @@ tokens:
   - execution
   - executioner
   - explosion
+  - failed
+  - failure
   - fairies
   - fairy
   - faith
@@ -200,6 +203,7 @@ tokens:
   - redlight
   - refugee
   - reject
+  - remains
   - republican
   - roach
   - robber

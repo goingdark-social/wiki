@@ -22,7 +22,7 @@ When we receive a valid complaint, we remove the infringing content. First-time 
 Our notice states: "Your post was removed for violating intellectual property rights."
 
 ## Protecting the wider community
-We share relevant notices with other servers and may block persistent offenders so the infringement doesn't spread.
+We share relevant notices with other servers and will block persistent offenders so the infringement doesn't spread.
 
 ## If you disagree
 You can appeal with proof you have the rights to the material. We keep evidence for 90 days while reviewing these appeals.

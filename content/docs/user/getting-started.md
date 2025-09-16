@@ -53,7 +53,7 @@ We run glitch-soc (a Mastodon fork) with 1000 character posts, perfect for shari
 - Look at who others are following and interacting with
 - Browse hashtags that interest you
 
-## Community Guidelines
+## community Guidelines
 
 Before you start posting, check out our [community guidelines](../community/community-guidelines.md) and [rules](../policies/rules/). We're welcoming to newcomers and love questions about self-hosting, privacy tools, or whatever tech projects you're working on.
 
@@ -101,7 +101,7 @@ Create lists to organize the people you follow into different categories.
 
 Set up filters to hide posts containing specific words or phrases.
 
-## Mobile Apps
+## Mobile apps
 
 While you can use Mastodon in your web browser, there are many excellent mobile apps available:
 
@@ -115,7 +115,7 @@ While you can use Mastodon in your web browser, there are many excellent mobile 
 If you have questions not covered in this guide:
 
 1. Check our [FAQ](faq.md) for common questions
-2. Ask in the local timeline - our community is helpful.
+2. Ask in the local timeline on Mastodon - our community is helpful.
 3. Contact our moderation team through the report function
 4. Review our [policies](../policies/) for detailed guidelines
 

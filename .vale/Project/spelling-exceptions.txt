@@ -85,3 +85,9 @@ good-faith
 robots.txt
 domain-wide
 per-rule
+reporting.md
+migration.md
+faq.md
+confusion—Mastodon
+EU Digital Services Act
+Digital Services Act

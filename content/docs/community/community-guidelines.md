@@ -1,5 +1,5 @@
 ---
-title: Community Guidelines
+title: community Guidelines
 weight: 5
 toc: true
 reading_time: false
@@ -30,7 +30,7 @@ The following actions violate the rules and can lead to moderation:
  
 ## Adult content and NSFW
 
-People share art, body positive posts, and adult themes here. That's welcome.
+People share art, body positive posts, and adult themes on Mastodon. That's welcome.
 
 - Always put NSFW behind a **Content Warning (CW)**.
 - Keep it legal and consensual. Never anything involving minors.
@@ -72,7 +72,7 @@ For serious violations (harassment, unlawful content, explicit hate), suspension
 
 ## Participation
 
-This isn’t just a server, it’s a community:  
+This isn’t a server, it’s a community:  
 
 - Boost newcomers’ #introduction posts to help them connect.  
 - Share self-hosting setups, open source tools, and privacy tips.  
@@ -83,7 +83,7 @@ This isn’t just a server, it’s a community:
 
 ## Off platform behavior
 
-Harassment or abusive activity that happens off platform but impacts members (for example, organized harassment campaigns) can still lead to moderation action here.  
+Harassment or abusive activity that happens off Mastodon but impacts members (for example, organized harassment campaigns) can still lead to moderation action on Mastodon.  
 
 ---
 
@@ -103,6 +103,6 @@ Distributed under a Creative Commons Attribution-ShareAlike 4.0 International li
 
 ## Final note
 
-Community health depends on everyone.  
+community health depends on everyone.  
 If in doubt: ask, tag sensitive content, and respect each other.  
 goingdark.social is small on purpose. Let’s keep it safe and welcoming.

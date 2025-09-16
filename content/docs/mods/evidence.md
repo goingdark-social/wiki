@@ -12,7 +12,7 @@ pager: true
   - Account handle and ID
   - Post URLs or ActivityPub IDs
   - Timestamps
-- **Screenshots**: take only if content may disappear.
+- **Screenshots**: take only if content will likely disappear.
 - **Logs**: note actions taken and reasoning.
 - **Retention**:
   - Standard: 90 days

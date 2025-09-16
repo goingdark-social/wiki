@@ -1,0 +1,26 @@
+---
+extends: existence
+message: "'%s' is a weasel word!"
+ignorecase: true
+level: warning
+tokens:
+  - clearly
+  - completely
+  - extremely
+  - obviously
+  - very
+  - quite
+  - rather
+  - really
+  - truly
+  - utterly
+  - absolutely
+  - definitely
+  - certainly
+  - surely
+  - undoubtedly
+  - particularly
+  - especially
+  - incredibly
+  - remarkably
+  - exceptionally

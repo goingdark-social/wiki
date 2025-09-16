@@ -22,7 +22,7 @@ We look at intent. Parody accounts are fine as long as the profile makes it clea
 Our notice says: "Impersonation without clear parody labels isn't allowed. We've suspended the account until it's corrected."
 
 ## Protecting the wider community
-If another server hosts a network of impersonators, we may limit or block that server to keep our members from being misled.
+If another server hosts a network of impersonators, we will limit or block that server to keep our members from being misled.
 
 ## If you disagree
 Appeals should include proof you're authorized to run the account or details we missed. We keep records for 90 days to review these situations fairly.

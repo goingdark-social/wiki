@@ -40,7 +40,7 @@ The **Terms of Service** govern use of the service. The **Community Guidelines**
 
 * **Basic account information**: username, email, password hash. Optional profile fields such as display name, biography, avatar, and header image. Your username, display name, biography, avatar, and header image are public.
 * **Content and social graph**: posts, media, polls, lists, bookmarks, boosts, favourites, follows and followers, mutes and blocks. Public and unlisted posts are public. Featuring a post on your profile makes it public.
-* **Direct and followers-only posts**: stored and processed to deliver messages to intended recipients. They may be delivered to other servers where copies are stored. Operators of this server and administrators of receiving servers can technically access such messages. Recipients can screenshot or reshare. Do not share sensitive information over Mastodon.
+* **Direct and followers-only posts**: stored and processed to send messages to intended recipients. They may be sent to other servers where copies are stored. Operators of this server and administrators of receiving servers can technically access such messages. Recipients can screenshot or reshare. Do not share sensitive information over Mastodon.
 * **Session and security data**: IP addresses and timestamps when you log in or perform key actions, session tokens, and login history. We don't track you across sites and we don't perform device fingerprinting.
 * **Server logs**: minimal HTTP access and error logs needed for reliability and security.
 
@@ -50,7 +50,7 @@ You can export your data and media via Settings - Export. You can irreversibly d
 
 We process only what's necessary to run a Mastodon server. Each purpose has a lawful basis under EU law:
 
-* **Operate your account and deliver the service**: account creation, timelines, delivery of posts and direct messages, necessary service emails such as verification and password resets.
+* **Operate your account and provide the service**: account creation, timelines, delivery of posts and direct messages, necessary service emails such as verification and password resets.
   **Legal basis**: contract necessity, Article `6(1)(b)` GDPR.
 * **Community safety, moderation, and network security**: prevent spam and ban evasion, investigate abuse reports, protect accounts, maintain service integrity. This includes limited IP logging and review of server logs when needed.
   **Legal basis**: legitimate interests, `Article 6(1)(f) GDPR`, supported by Recital 49 on network and information security. You may object to this processing as described in **Your rights**.
@@ -79,16 +79,16 @@ We only use strictly necessary session cookies required for login and to keep yo
 
 We don't sell or trade personal data. We disclose data only to:
 
-* **Our service providers** that act as processors under our instructions to host or deliver the service. We use EU providers where possible. If processing requires transfers outside the EU, we apply appropriate safeguards such as Standard Contractual Clauses or rely on an adequacy decision.
+* **Our service providers** that act as processors under our instructions to host or provide the service. We use EU providers where possible. If processing requires transfers outside the EU, we apply appropriate safeguards such as Standard Contractual Clauses or rely on an adequacy decision.
 * **Other Mastodon servers** that receive your content so your followers and recipients can see it. These servers are independent controllers and apply their own rules.
 * **Law enforcement or authorities** when required by EU or Member State law. We don't disclose personal data directly to non-EU authorities unless required under an international agreement or another lawful transfer mechanism under Chapter V GDPR. Where permitted, we will notify affected users.
 
 # Federation and recipients
 
-Mastodon is federated. When you post or interact with accounts on other servers, your content and profile data are delivered to those servers so that people there can see it.
+Mastodon is federated. When you post or interact with accounts on other servers, your content and profile data are sent to those servers so that people there can see it.
 
 * **Independent controllers**: remote servers determine their own purposes and means of processing. We can't force them to delete or modify data they store.
-* **International transfers**: federation can deliver content to servers outside the EU. This is inherent to ActivityPub. You can manage federation through your own posting choices and follower approvals.
+* **International transfers**: federation can send content to servers outside the EU. This is inherent to ActivityPub. You can manage federation through your own posting choices and follower approvals.
 
 # Deletions and limits in a federated network
 

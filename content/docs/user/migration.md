@@ -8,7 +8,7 @@ pager: true
 
 You can move to or from goingdark.social at any time.
 
-### Moving here
+### Moving here on Mastodon
 
 1. Create an account on goingdark.social.
 2. In your old account's settings, set this server as your new home.

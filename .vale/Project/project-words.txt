@@ -85,3 +85,17 @@ chmod
 -xz
 hugo
 +x
+glitch-soc
+doxing
+transphobia
+casteism
+gatekeeping
+WhatsApp
+WebSocket
+long-lived
+privacy-focused
+cross-site
+CDNs
+trade-offs
+Real-time
+Digital Services Act
