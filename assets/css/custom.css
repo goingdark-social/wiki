@@ -63,16 +63,10 @@ label[for="nav-toggle"] {
 
 /* Mobile sidebar overlay improvements */
 .hb-sidebar-mobile-menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 900;
-  background-color: rgba(0, 0, 0, 0.75);
+  /* Base properties handled by Tailwind classes in HTML */
+  /* Only specify unique properties here */
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-  transition: opacity 0.3s ease-in-out;
 }
 
 .hb-sidebar-mobile-menu.hidden {
@@ -87,42 +81,17 @@ label[for="nav-toggle"] {
 
 /* Mobile sidebar container improvements */
 .hb-sidebar-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 320px;
-  max-width: 80vw;
-  z-index: 950;
-  background: white;
-  border-right: 1px solid #e5e7eb;
-  overflow-y: auto;
+  /* Base properties handled by Tailwind classes in HTML */
+  /* Only specify unique properties here */
   -webkit-overflow-scrolling: touch;
-  transform: translateX(-100%);
-  transition: transform 0.3s ease-in-out;
   padding-top: var(--safe-area-top);
   padding-bottom: var(--safe-area-bottom);
   padding-left: var(--safe-area-left);
 }
 
-.dark .hb-sidebar-container {
-  background: #111827;
-  border-right-color: #374151;
-}
-
-.hb-sidebar-container.translate-x-0 {
-  transform: translateX(0);
-}
-
 /* Large screen sidebar (docs pages) */
 @media (min-width: 1024px) {
   .hb-sidebar-container {
-    position: static;
-    transform: none;
-    width: 16rem;
-    background: transparent;
-    border: none;
-    z-index: auto;
     padding-top: 0;
     padding-bottom: 0;
     padding-left: 0;
