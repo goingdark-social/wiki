@@ -1,5 +1,6 @@
 ---
 title: Funding
+weight: 30
 toc: true
 reading_time: false
 pager: false
