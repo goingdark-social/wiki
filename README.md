@@ -4,6 +4,10 @@ community wiki for [goingdark.social](https://goingdark.social).
 We built this with [Hugo](https://gohugo.io) and the Hugo Blox theme.
 The site loads in dark mode by default, and you can switch themes from the header.
 
+## Navigation
+
+The HugoBlox documentation sidebar handles all navigation for us. We keep it focused on section-level pages by setting `docs.sidebar.depth` to `1` in `config/_default/params.yaml`, and we rely on the theme for the responsive menu.
+
 ## Local development
 
 Install the extended version of Hugo and Node. Run `npm install` to grab the local build tools like Tailwind and Pagefind so everything stays inside this repository. The commands below add `node_modules/.bin` to your path so Hugo and Pagefind work the same way as the workflow.
