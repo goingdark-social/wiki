@@ -9,8 +9,8 @@
 
 {{/* Only replace explicit mobile menu links with automated links for Docs pages */}}
 {{ if not $no_sidebar }}
-  {{/* Mobile overlay backdrop with proper styling */}}
-  <div class="hb-sidebar-mobile-menu fixed inset-0 z-40 bg-black/50 backdrop-blur-sm hidden" 
+  {{/* Mobile overlay backdrop with proper styling - starts hidden */}}
+  <div class="hb-sidebar-mobile-menu fixed inset-0 z-40 bg-black/50 backdrop-blur-sm hidden opacity-0 pointer-events-none transition-opacity duration-300" 
   ></div>
 {{ end }}
 
@@ -23,6 +23,7 @@
   lg:static lg:transform-none lg:w-64 lg:bg-transparent lg:dark:bg-transparent lg:z-auto
   border-r border-gray-200 dark:border-gray-700 lg:border-none
   overflow-y-auto lg:overflow-visible
+  -translate-x-full lg:translate-x-0
 "
   >
   
