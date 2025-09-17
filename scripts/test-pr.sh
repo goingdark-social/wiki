@@ -10,7 +10,7 @@ echo ""
 
 # Test 1: Verify Hugo can build the site
 echo "Test 1: Hugo Development Build"
-if PATH="$PWD:$PWD/node_modules/.bin:$PATH" ./hugo > /dev/null 2>&1; then
+if PATH="$PWD/node_modules/.bin:$PATH" hugo > /dev/null 2>&1; then
     echo "✅ PASS: Hugo development build successful"
 else
     echo "❌ FAIL: Hugo development build failed"
@@ -20,7 +20,7 @@ fi
 # Test 2: Verify production build works
 echo "Test 2: Hugo Production Build"
 rm -rf public
-if PATH="$PWD:$PWD/node_modules/.bin:$PATH" HUGO_ENVIRONMENT=production ./hugo --minify > /dev/null 2>&1; then
+if PATH="$PWD/node_modules/.bin:$PATH" HUGO_ENVIRONMENT=production hugo --minify > /dev/null 2>&1; then
     echo "✅ PASS: Hugo production build successful"
 else
     echo "❌ FAIL: Hugo production build failed"
@@ -88,7 +88,7 @@ fi
 
 # Test 6: Verify server can start (quick test)
 echo "Test 6: Server Startup Test"
-if timeout 3s ./hugo server --renderToMemory --bind 0.0.0.0 --port 1313 > /dev/null 2>&1 || [ $? -eq 124 ]; then
+if timeout 3s hugo server --renderToMemory --bind 0.0.0.0 --port 1313 > /dev/null 2>&1 || [ $? -eq 124 ]; then
     echo "✅ PASS: Server startup test successful"
 else
     echo "❌ FAIL: Server startup test failed"

@@ -30,11 +30,6 @@ jobs:
         with:
           node-version: 22
 
-      - name: Setup Go
-        uses: actions/setup-go@v5
-        with:
-          go-version: '1.21'
-
       - name: Cache Hugo modules
         uses: actions/cache@v4
         with:
@@ -46,47 +41,36 @@ jobs:
       - name: Install Node dependencies
         run: npm ci
 
-      - name: Install Vale
-        run: go install github.com/errata-ai/vale/v3/cmd/vale@latest
-
-      - name: Sync Vale packages
-        run: |
-          export PATH="$HOME/go/bin:$PATH"
-          vale sync
-
       - name: Run comprehensive validation tests
         run: |
           chmod +x scripts/test-pr.sh
           ./scripts/test-pr.sh
 
-      - name: Run Vale linting
-        run: |
-          export PATH="$HOME/go/bin:$PATH"
-          echo "Linting README.md..."
-          vale README.md && echo "✅ README.md linting passed" || echo "⚠️ README.md has linting issues (expected)"
-          
-          echo "Linting content files..."
-          if find content -name "*.md" -exec vale {} + > vale_output.txt 2>&1; then
-            echo "✅ All content files passed Vale linting"
-          else
-            echo "⚠️ Some content files have linting issues:"
-            cat vale_output.txt
-            # Don't fail the build for linting issues in this initial implementation
-            echo "Continuing despite linting issues..."
-          fi
-
       - name: Summary
-        if: always()
+        if: success()
         run: |
           echo "🎉 PR Validation Complete!"
           echo ""
-          echo "The following validations were performed:"
-          echo "- Hugo development build"
-          echo "- Hugo production build with minification"
-          echo "- Search index generation with Pagefind"
-          echo "- Hugo server startup test"
-          echo "- Site structure validation" 
-          echo "- Basic content validation"
-          echo "- Vale linting (informational)"
+          echo "All validations passed successfully:"
+          echo "- ✅ Hugo development build"
+          echo "- ✅ Hugo production build with minification"
+          echo "- ✅ Search index generation with Pagefind"
+          echo "- ✅ Site structure validation" 
+          echo "- ✅ Content quality validation"
+          echo "- ✅ Hugo server startup test"
           echo ""
-          echo "All critical validations passed! ✅"
+          echo "The PR is ready for review! 🚀"
+
+      - name: Failure Summary
+        if: failure()
+        run: |
+          echo "❌ PR Validation Failed!"
+          echo ""
+          echo "One or more validation steps failed. Please check the logs above for details."
+          echo ""
+          echo "Common issues and solutions:"
+          echo "- Hugo build failures: Check content syntax and configuration"
+          echo "- Missing dependencies: Ensure npm install completed successfully"
+          echo "- Site structure issues: Verify essential pages are generated"
+          echo ""
+          echo "Run 'npm test' locally to reproduce and debug the issue."

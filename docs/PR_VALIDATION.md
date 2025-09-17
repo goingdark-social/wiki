@@ -18,8 +18,7 @@ The PR validation workflow performs the following checks:
 - **Content Quality Check**: Validates that key content (branding, CTAs) appears correctly
 
 ### Code Quality Tests
-- **Vale Linting**: Runs writing style and spelling checks on all markdown content
-- **Pre-commit Hooks**: Validates formatting and style consistency
+- **Vale Linting**: Runs writing style and spelling checks on all markdown content (handled by separate workflow)
 
 ## Running Tests Locally
 
@@ -32,13 +31,6 @@ curl -L "https://github.com/gohugoio/hugo/releases/download/v0.150.0/hugo_extend
 
 # Install Node.js dependencies
 npm install
-
-# Install Vale for linting
-go install github.com/errata-ai/vale/v3/cmd/vale@latest
-
-# Sync Vale packages
-export PATH="$HOME/go/bin:$PATH"
-vale sync
 ```
 
 ### Running the Full Test Suite
@@ -52,21 +44,19 @@ vale sync
 
 ```bash
 # Test development build
-PATH="$PWD:$PWD/node_modules/.bin:$PATH" ./hugo
+PATH="$PWD/node_modules/.bin:$PATH" hugo
 
 # Test production build
-PATH="$PWD:$PWD/node_modules/.bin:$PATH" HUGO_ENVIRONMENT=production ./hugo --minify
+PATH="$PWD/node_modules/.bin:$PATH" HUGO_ENVIRONMENT=production hugo --minify
 
 # Generate search index
 npx pagefind --site "public"
 
 # Test server startup
-timeout 3s ./hugo server --renderToMemory --bind 0.0.0.0 --port 1313
+timeout 3s hugo server --renderToMemory --bind 0.0.0.0 --port 1313
 
-# Run linting
-export PATH="$HOME/go/bin:$PATH"
-vale README.md
-find content -name "*.md" -exec vale {} +
+# Run linting (separate workflow)
+# Vale linting is handled by the dedicated Vale workflow
 ```
 
 ## Workflow Files
