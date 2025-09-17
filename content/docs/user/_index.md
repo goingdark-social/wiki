@@ -1,6 +1,6 @@
 ---
 title: User guides
-weight: 20
+weight: 50
 ---
 {{< cards >}}
   {{< card url="getting-started/" title="Getting Started" icon="sparkles" subtitle="Step-by-step onboarding for new users" >}}

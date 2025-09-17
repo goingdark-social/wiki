@@ -1,6 +1,6 @@
 ---
-title: community
-weight: 25
+title: Community
+weight: 70
 toc: true
 reading_time: false
 pager: false

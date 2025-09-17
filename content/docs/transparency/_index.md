@@ -1,6 +1,6 @@
 ---
 title: "Transparency"
-weight: 5
+weight: 40
 toc: true
 reading_time: false
 pager: true
