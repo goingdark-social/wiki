@@ -1,6 +1,6 @@
 ---
 title: Moderation Handbook
-weight: 5
+weight: 80
 toc: true
 reading_time: false
 pager: true
