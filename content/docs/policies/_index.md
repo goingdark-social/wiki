@@ -1,6 +1,6 @@
 ---
 title: Policies
-weight: 30
+weight: 20
 ---
 {{< cards >}}
   {{< card url="rules/bots/" title="Bots and automation" icon="bug-ant" subtitle="Rules for automated accounts" >}}
