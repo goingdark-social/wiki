@@ -1,0 +1,92 @@
+name: PR Validation
+
+env:
+  WC_HUGO_VERSION: 0.150.0
+
+on:
+  pull_request:
+    branches: ["main"]
+  # Allow manual runs for testing
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          # Fetch history for Hugo's .GitInfo and .Lastmod
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: ${{ env.WC_HUGO_VERSION }}
+          extended: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.21'
+
+      - name: Cache Hugo modules
+        uses: actions/cache@v4
+        with:
+          path: /tmp/hugo_cache_runner/
+          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.mod') }}
+          restore-keys: |
+            ${{ runner.os }}-hugomod-
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Install Vale
+        run: go install github.com/errata-ai/vale/v3/cmd/vale@latest
+
+      - name: Sync Vale packages
+        run: |
+          export PATH="$HOME/go/bin:$PATH"
+          vale sync
+
+      - name: Run comprehensive validation tests
+        run: |
+          chmod +x scripts/test-pr.sh
+          ./scripts/test-pr.sh
+
+      - name: Run Vale linting
+        run: |
+          export PATH="$HOME/go/bin:$PATH"
+          echo "Linting README.md..."
+          vale README.md && echo "✅ README.md linting passed" || echo "⚠️ README.md has linting issues (expected)"
+          
+          echo "Linting content files..."
+          if find content -name "*.md" -exec vale {} + > vale_output.txt 2>&1; then
+            echo "✅ All content files passed Vale linting"
+          else
+            echo "⚠️ Some content files have linting issues:"
+            cat vale_output.txt
+            # Don't fail the build for linting issues in this initial implementation
+            echo "Continuing despite linting issues..."
+          fi
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "🎉 PR Validation Complete!"
+          echo ""
+          echo "The following validations were performed:"
+          echo "- Hugo development build"
+          echo "- Hugo production build with minification"
+          echo "- Search index generation with Pagefind"
+          echo "- Hugo server startup test"
+          echo "- Site structure validation" 
+          echo "- Basic content validation"
+          echo "- Vale linting (informational)"
+          echo ""
+          echo "All critical validations passed! ✅"

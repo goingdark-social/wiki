@@ -6,7 +6,9 @@
   "scripts": {
     "build": "hugo --minify",
     "dev": "hugo server --bind 0.0.0.0 --port 1313",
-    "production": "HUGO_ENVIRONMENT=production hugo --minify"
+    "production": "HUGO_ENVIRONMENT=production hugo --minify",
+    "test": "./scripts/test-pr.sh",
+    "test:pr": "./scripts/test-pr.sh"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.13",
