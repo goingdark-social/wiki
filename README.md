@@ -27,7 +27,7 @@ npm run test
 ./scripts/test-pr.sh
 ```
 
-This validates Hugo builds, search index generation, site structure, and content quality. See [docs/PR_VALIDATION.md](docs/PR_VALIDATION.md) for details.
+This validates Hugo builds, search index generation, site structure, and content quality.
 
 ## Linting
 
