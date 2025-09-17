@@ -15,6 +15,20 @@ PATH="$PWD/node_modules/.bin:$PATH" hugo server
 
 The site runs at `http://localhost:1313`. Keeping the local `node_modules/.bin` directory on your path lets Hugo find the Tailwind binary while it watches for changes.
 
+## Testing
+
+All pull requests are automatically validated through comprehensive testing. You can run the same tests locally:
+
+```shell
+# Run all validation tests
+npm run test
+
+# Or run the test script directly
+./scripts/test-pr.sh
+```
+
+This validates Hugo builds, search index generation, site structure, and content quality.
+
 ## Linting
 
 [Vale](https://vale.sh) checks our writing. It has project rules in `.vale/Project`, friendly rules in `.vale/friendly`, and the Alex and Write Good packages. They cover Fediverse terms, encourage casual language, require alt text, and prefer code formatting for handles. Docs in `content/docs/legal/` are excluded.

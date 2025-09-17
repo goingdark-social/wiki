@@ -1,0 +1,47 @@
+name: PR Validation
+
+env:
+  WC_HUGO_VERSION: 0.150.0
+
+on:
+  pull_request:
+    branches: ["main"]
+  # Allow manual runs for testing
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          # Fetch history for Hugo's .GitInfo and .Lastmod
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: ${{ env.WC_HUGO_VERSION }}
+          extended: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+
+      - name: Cache Hugo modules
+        uses: actions/cache@v4
+        with:
+          path: /tmp/hugo_cache_runner/
+          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.mod') }}
+          restore-keys: |
+            ${{ runner.os }}-hugomod-
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Run comprehensive validation tests
+        run: |
+          chmod +x scripts/test-pr.sh
+          ./scripts/test-pr.sh
