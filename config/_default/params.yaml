@@ -48,6 +48,12 @@ header:
     show_search: true
     show_theme_chooser: true
 
+# Documentation navigation
+docs:
+  sidebar:
+    collapsed: true
+    depth: 1
+
 # Site footer
 footer:
   text: '[Status](https://status.goingdark.social/)'
