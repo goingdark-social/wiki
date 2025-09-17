@@ -278,15 +278,7 @@ body.overflow-hidden {
   .navbar {
     padding: 0.5rem 1rem;
   }
-  
-  /* Hide desktop sidebar */
-    /* Hide desktop sidebar on mobile using media query */
-    @media (max-width: 1023px) {
-      .hb-sidebar-container {
-        display: none;
-      }
-    }
-  
+
   /* Content area adjustments */
   .mx-auto.flex.max-w-screen-xl {
     flex-direction: column;

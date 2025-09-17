@@ -7,10 +7,11 @@ document.addEventListener('DOMContentLoaded', function () {
   const overlay = document.querySelector('.hb-sidebar-mobile-menu');
   const sidebarContainer = document.querySelector('.hb-sidebar-container');
   const closeBtns = document.querySelectorAll('.mobile-sidebar-close');
+  const hamburgerLabel = document.querySelector('label[for="nav-toggle"]');
   const body = document.body;
 
   // Check if we're on a page that has a sidebar
-  const hasSidebar = overlay && sidebarContainer;
+  const hasSidebar = overlay && sidebarContainer && navToggle && hamburgerLabel;
 
   if (!hasSidebar) {
     return; // Exit early if no sidebar functionality needed
@@ -67,10 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
     updateHamburgerButton(false);
     
     // Return focus to hamburger button
-    const hamburgerLabel = document.querySelector('label[for="nav-toggle"]');
-    if (hamburgerLabel) {
-      hamburgerLabel.focus();
-    }
+    hamburgerLabel.focus();
   }
 
   function updateHamburgerButton(isOpen) {
@@ -135,6 +133,21 @@ document.addEventListener('DOMContentLoaded', function () {
         openMobileMenu();
       } else {
         closeMobileMenu();
+      }
+    });
+  }
+
+  if (hamburgerLabel) {
+    const toggleFromHamburger = event => {
+      event.preventDefault();
+      navToggle.checked = !isMenuOpen;
+      navToggle.dispatchEvent(new Event('change'));
+    };
+
+    hamburgerLabel.addEventListener('click', toggleFromHamburger);
+    hamburgerLabel.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        toggleFromHamburger(event);
       }
     });
   }

@@ -53,7 +53,6 @@ label[for="nav-toggle"] {
   }
 }
 
-
 /* Mobile sidebar header */
 .hb-sidebar-container .mobile-sidebar-close {
   min-height: 44px;
@@ -235,10 +234,6 @@ body.overflow-hidden {
     padding: 0.5rem 1rem;
   }
   
-  /* Hide desktop sidebar */
-  .hb-sidebar-container.lg\\:sticky {
-    display: none;
-  }
   
   /* Content area adjustments */
   .mx-auto.flex.max-w-screen-xl {
