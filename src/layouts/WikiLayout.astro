@@ -168,7 +168,7 @@ if (currentSlug) {
       ]}>
         <!-- Docs Sidebar (Desktop Only) - Fixed width, sticky -->
         {isDocsPage && (
-          <aside class="hidden lg:block w-64 shrink-0 sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto border-r border-surface-700 py-8 pr-6 pl-6 pattern-noise">
+          <aside class="docs-sidebar pattern-noise">
             <Sidebar />
           </aside>
         )}
@@ -225,14 +225,14 @@ if (currentSlug) {
               {prevPage ? (
                 <a
                   href={`/docs/${prevPage.slug}`}
-                  class="flex items-start gap-3 p-5 bg-surface-800 rounded-xl hover:bg-surface-750 transition-all group col-span-1"
+                  class="pager-link group"
                 >
-                  <svg class="w-5 h-5 text-text-muted group-hover:text-primary transition-colors mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <svg class="pager-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                   </svg>
-                  <div class="flex-1 min-w-0">
-                    <div class="text-xs text-text-subtle mb-1 uppercase tracking-wider font-semibold">Previous</div>
-                    <div class="font-semibold text-white group-hover:text-primary transition-colors truncate">{prevPage.title}</div>
+                  <div class="pager-link-content">
+                    <div class="pager-link-label">Previous</div>
+                    <div class="pager-link-title pager-link-title-truncate">{prevPage.title}</div>
                   </div>
                 </a>
               ) : (
@@ -241,13 +241,13 @@ if (currentSlug) {
               {nextPage ? (
                 <a
                   href={`/docs/${nextPage.slug}`}
-                  class="flex items-start gap-3 p-5 bg-surface-800 rounded-xl hover:bg-surface-750 transition-all group text-right col-span-1"
+                  class="pager-link pager-link-next group"
                 >
-                  <div class="flex-1 min-w-0">
-                    <div class="text-xs text-text-subtle mb-1 uppercase tracking-wider font-semibold">Next</div>
-                    <div class="font-semibold text-white group-hover:text-primary transition-colors truncate">{nextPage.title}</div>
+                  <div class="pager-link-content">
+                    <div class="pager-link-label">Next</div>
+                    <div class="pager-link-title pager-link-title-truncate">{nextPage.title}</div>
                   </div>
-                  <svg class="w-5 h-5 text-text-muted group-hover:text-primary transition-colors mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <svg class="pager-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                   </svg>
                 </a>
@@ -283,11 +283,11 @@ if (currentSlug) {
 
         <!-- Table of Contents Sidebar (Desktop Only) - Right rail -->
         {isDocsPage && headings.length > 0 && Astro.url.pathname !== '/' && (
-        <aside class="hidden xl:block w-56 shrink-0 sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto py-8 pl-8 border-l border-surface-700 pr-6">
+        <aside class="toc-sidebar">
           <div class="space-y-6">
             <div>
-              <h3 class="text-xs font-bold text-text-subtle uppercase tracking-wider mb-4 flex items-center gap-2">
-                <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <h3 class="toc-title">
+                <svg class="toc-title-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
                 </svg>
                 On this page

@@ -1745,3 +1745,125 @@ textarea:focus-visible {
 .mobile-nav-link:hover .mobile-nav-icon {
   transform: scale(1.1);
 }
+
+.docs-sidebar {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .docs-sidebar {
+    display: block;
+    width: 16rem;
+    flex-shrink: 0;
+    position: sticky;
+    top: 4rem;
+    height: calc(100vh - 4rem);
+    overflow-y: auto;
+    border-right: 1px solid var(--color-surface-700);
+    padding-top: 2rem;
+    padding-right: 1.5rem;
+    padding-bottom: 2rem;
+    padding-left: 1.5rem;
+  }
+}
+
+/* Pager Components */
+.pager-link {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  background-color: var(--color-surface-800);
+  border-radius: 0.75rem;
+  transition: all var(--transition-base);
+}
+
+.pager-link:hover {
+  background-color: var(--color-surface-750);
+}
+
+.pager-link-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--color-text-muted);
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+  transition: color var(--transition-base);
+}
+
+.pager-link:hover .pager-link-icon {
+  color: var(--color-primary);
+}
+
+.pager-link-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.pager-link-label {
+  font-size: 0.75rem;
+  color: var(--color-text-subtle);
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.pager-link-title {
+  font-weight: 600;
+  color: var(--color-text-white);
+  transition: color var(--transition-base);
+}
+
+.pager-link:hover .pager-link-title {
+  color: var(--color-primary);
+}
+
+.pager-link-title-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pager-link-next {
+  text-align: right;
+}
+
+/* Table of Contents Sidebar */
+.toc-sidebar {
+  display: none;
+}
+
+@media (min-width: 1280px) {
+  .toc-sidebar {
+    display: block;
+    width: 14rem;
+    flex-shrink: 0;
+    position: sticky;
+    top: 4rem;
+    height: calc(100vh - 4rem);
+    overflow-y: auto;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    border-left: 1px solid var(--color-surface-700);
+    padding-right: 1.5rem;
+  }
+}
+
+.toc-title {
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: var(--color-text-subtle);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.toc-title-icon {
+  width: 1rem;
+  height: 1rem;
+  color: var(--color-primary);
+}
