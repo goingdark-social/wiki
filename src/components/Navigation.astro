@@ -110,13 +110,7 @@ const docsForSearch = allDocs.map((doc: DocEntry) => ({
     }
   }
   // Listen for changes
-  if (desktopQuery) {
-    if (typeof desktopQuery.addEventListener === 'function') {
-      desktopQuery.addEventListener('change', handleViewportChange);
-    } else if (typeof desktopQuery.addListener === 'function') {
-      // Fallback for older browsers (deprecated API)
-      // eslint-disable-next-line deprecation/deprecation
-      desktopQuery.addListener(handleViewportChange as any);
-    }
+  if (desktopQuery && typeof desktopQuery.addEventListener === 'function') {
+    desktopQuery.addEventListener('change', handleViewportChange);
   }
 </script>
