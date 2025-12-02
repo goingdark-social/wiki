@@ -1,0 +1,33 @@
+---
+import { getCollection } from 'astro:content';
+import WikiLayout from '../../layouts/WikiLayout.astro';
+import { buildNavigationTree, findAdjacentPages } from '../../utils/navigation';
+
+export async function getStaticPaths() {
+  const docsPages = await getCollection('docs');
+
+  return docsPages.map(page => ({
+    params: { slug: page.slug },
+    props: { page },
+  }));
+}
+
+const { page } = Astro.props;
+const { Content, headings } = await page.render();
+
+// Build navigation tree to find prev/next pages
+const allDocs = await getCollection('docs');
+const navigation = buildNavigationTree(allDocs);
+const { prev, next } = findAdjacentPages(navigation, page.slug);
+---
+
+<WikiLayout
+  title={page.data.title}
+  description={page.data.description}
+  headings={headings}
+  currentSlug={page.slug}
+  prevPage={prev}
+  nextPage={next}
+>
+  <Content />
+</WikiLayout>

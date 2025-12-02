@@ -1,0 +1,173 @@
+---
+title: Server Rules
+weight: 40
+---
+
+import RuleCard from '../../../../components/mdx/RuleCard.tsx';
+import RuleGrid from '../../../../components/mdx/RuleGrid.astro';
+
+> **The Spirit of the Law:** These rules exist to keep the community healthy. We moderate based on the *intent* and *impact* of behavior, not just technicalities.
+
+## Interactive Rules Dashboard
+
+Click any rule card below to read the full details in an instant modal—no page loads required.
+
+<RuleGrid>
+  <RuleCard title="Treat People Well" iconName="shield" severity="high" number={1} client:load>
+    **The Golden Rule applies.** Speak to others the way you'd like them to speak to you.
+
+    Because we keep this community intentionally small, tone matters. It shapes the vibe for everyone.
+    
+    * Ask questions before jumping to conclusions.
+    * Avoid personal insults, baiting, or "dog-piling."
+    * If a conversation turns toxic, disengage and use the Report tool.
+
+    We aren't asking for toxic positivity—you can disagree—but we are asking for basic professional respect.
+  </RuleCard>
+
+  <RuleCard title="Use Content Warnings" iconName="alert" severity="medium" number={2} client:load>
+    **Label sensitive content appropriately.** Content Warnings (CW) help people decide what they want to see.
+
+    Use CWs for:
+    
+    * **Spoilers** for movies, shows, books, or games
+    * **Politics** or controversial current events
+    * **Mental health** topics (depression, suicide, etc.)
+    * **Violence, gore, or disturbing imagery**
+    * **Food** (some users have eating disorders)
+    * **Flashing lights or eye strain** (accessibility)
+
+    If you're not sure whether something needs a CW, it probably does. Better safe than sorry.
+  </RuleCard>
+
+  <RuleCard title="No Spam" iconName="ban" severity="medium" number={3} client:load>
+    **We are here for conversation, not advertising.** Spam ruins communities.
+
+    What counts as spam:
+    
+    * Posting the same content repeatedly
+    * Unsolicited advertisements or promotions
+    * Link farming or SEO schemes
+    * Mass-following people just to get followers back
+    * Automated posting without disclosure
+
+    Sharing interesting links or your own work occasionally is fine. Just don't be pushy about it.
+  </RuleCard>
+
+  <RuleCard title="No Hate or Threats" iconName="shield-alert" severity="high" number={4} client:load>
+    **Zero tolerance for bigotry or violence.** This is non-negotiable.
+
+    Prohibited content includes:
+    
+    * Racism, sexism, homophobia, transphobia, or other bigotry
+    * Hate speech or slurs
+    * Threats of violence against individuals or groups
+    * Encouraging self-harm or suicide
+    * Holocaust denial or genocide justification
+
+    This includes "just joking" or "ironic" hate. We don't care about your intent—if it harms people, it's not allowed.
+
+    **Violations result in immediate suspension.**
+  </RuleCard>
+
+  <RuleCard title="Keep it Clean" iconName="sparkles" severity="medium" number={5} client:load>
+    **No gratuitous gore or violence.** NSFW content is allowed *only* with proper content warnings and tags.
+
+    * Use content warnings and mark posts as sensitive
+    * No shock content or extreme violence
+    * Adult content must be clearly labeled
+  </RuleCard>
+
+  <RuleCard title="No Illegal Content" iconName="scale" severity="high" number={6} client:load>
+    **If it's illegal in the EU/Sweden, it's not allowed here.** This includes:
+
+    * Piracy links or copyrighted material
+    * Child exploitation of any kind
+    * Malware or phishing attempts
+    * Illegal drugs or weapons sales
+  </RuleCard>
+
+  <RuleCard title="Don't Look for Loopholes" iconName="search-x" severity="medium" number={7} client:load>
+    **Trying to "game" the rules is a violation of the rules.** We moderate based on intent and impact, not technicalities.
+
+    If you find yourself thinking "technically this isn't against the rules," you're probably about to break them.
+  </RuleCard>
+
+  <RuleCard title="Consequences" iconName="zap" severity="low" number={8} client:load>
+    **We warn, limit, or suspend based on severity.** Our moderation approach:
+
+    1. **First offense (minor):** Warning with explanation
+    2. **Repeat offense:** Temporary silence or limited reach
+    3. **Severe violation:** Immediate suspension
+    4. **Egregious content:** Permanent ban
+
+    We believe in second chances for honest mistakes, but not for bad faith actors.
+  </RuleCard>
+
+  <RuleCard title="Be Honest About Identity" iconName="user-check" severity="medium" number={9} client:load>
+    **Parody is fine if labeled; impersonation is not.**
+
+    * Parody accounts must clearly indicate they're parody
+    * Don't impersonate real people, organizations, or brands
+    * Satire should be obvious
+  </RuleCard>
+
+  <RuleCard title="Respect the Server" iconName="server" severity="high" number={10} client:load>
+    **Don't attack our infrastructure.**
+
+    * No DDoS attacks or attempts
+    * No unauthorized scraping or data harvesting
+    * No attempts to exploit vulnerabilities
+    * No excessive API usage
+
+    Security researchers: please report vulnerabilities responsibly.
+  </RuleCard>
+
+  <RuleCard title="No Doxing" iconName="lock" severity="high" number={11} client:load>
+    **Respect privacy.** Don't post other people's personal information.
+
+    This includes:
+    
+    * Home addresses, phone numbers, or email addresses
+    * Financial information
+    * Private messages without consent
+    * "Public" information compiled to harass someone
+  </RuleCard>
+
+  <RuleCard title="Stop Means Stop" iconName="hand" severity="high" number={12} client:load>
+    **If someone blocks you or asks you to leave them alone, do it.**
+
+    * Don't create alt accounts to evade blocks
+    * Don't contact them on other platforms
+    * Don't send your friends to message them
+    * Don't subpost about them constantly
+
+    Take the hint and move on.
+  </RuleCard>
+
+  <RuleCard title="No Unapproved Bots" iconName="bot" severity="medium" number={13} client:load>
+    **All bots must be approved before joining.**
+
+    Read our [Bot Policy](/docs/policies/bots-and-automation/) for the application process.
+
+    * Bots must be clearly marked as bots
+    * Bots must have a clear purpose
+    * Bots must not spam or annoy users
+  </RuleCard>
+
+  <RuleCard title="No Calls for Violence" iconName="alert-octagon" severity="high" number={14} client:load>
+    **Advocating for harm gets you banned immediately.**
+
+    * No inciting violence against people or groups
+    * No organizing harassment campaigns
+    * No encouraging dangerous or illegal activities
+
+    This rule has zero tolerance. First violation = permanent ban.
+  </RuleCard>
+</RuleGrid>
+
+---
+
+## Questions About the Rules?
+
+If you're unsure whether something violates the rules, **ask first**. Contact the moderation team at **@admin@goingdark.social** or use the report feature.

@@ -1,0 +1,43 @@
+---
+title: Incident Response
+weight: 40
+---
+
+Things break. When they do, here's how we handle it.
+
+## Monitoring
+
+We use:
+*   **Uptime monitoring:** External service checks every 60 seconds.
+*   **Log aggregation:** Centralized logging for debugging.
+*   **Alerts:** Admins get notified via email and push notifications.
+
+## Incident Levels
+
+### Level 1: Minor (Degraded Performance)
+*   Some users experience slowness.
+*   Non-critical features are impacted.
+*   **Response:** Investigate within 4 hours.
+
+### Level 2: Major (Service Disruption)
+*   Many users cannot access the service.
+*   Core features are broken.
+*   **Response:** Investigate immediately. Post status update within 30 minutes.
+
+### Level 3: Critical (Complete Outage)
+*   The service is completely down.
+*   **Response:** All hands on deck. Status updates every 15 minutes.
+
+## Status Updates
+
+During incidents, we post updates on:
+*   The Mastodon instance (if accessible)
+*   [GitHub Status Page](https://github.com/goingdark-social/status)
+*   Community Matrix channel
+
+## Post-Incident Reports
+
+After major incidents, we publish a public report including:
+*   What happened
+*   Why it happened
+*   What we're doing to prevent it from happening again

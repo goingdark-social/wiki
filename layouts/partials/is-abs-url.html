@@ -1,7 +1,0 @@
-{{- /* partial: is-abs-url - expects dict "url" */ -}}
-{{- $u := .url | default "" -}}
-{{- if or (strings.HasPrefix $u "http://") (strings.HasPrefix $u "https://") -}}
-  true
-{{- else -}}
-  false
-{{- end -}}

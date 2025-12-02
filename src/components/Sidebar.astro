@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+import PagefindSearch from './PagefindSearch.astro';
+import { SidebarTree } from './SidebarTree';
+import { buildNavigationTree } from '../utils/navigation';
+
+// Get all docs pages
+const allDocs = await getCollection('docs');
+const navigation = buildNavigationTree(allDocs);
+
+// Get current page
+const currentPath = Astro.url.pathname.replace('/docs/', '').replace(/\/$/, '');
+const isHome = Astro.url.pathname === '/';
+---
+
+<!-- Search Bar -->
+<div class="mb-6">
+  <PagefindSearch />
+</div>
+
+<!-- React Interactive Sidebar Tree with collapsible folders -->
+<SidebarTree 
+  client:load 
+  navigation={navigation} 
+  currentPath={currentPath}
+  isHome={isHome}
+/>

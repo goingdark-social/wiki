@@ -1,0 +1,22 @@
+---
+/**
+ * Homepage - Renders docs/index.mdx content
+ * Follows the same pattern as [...slug].astro for consistency
+ */
+import { getCollection } from 'astro:content';
+import WikiLayout from '../layouts/WikiLayout.astro';
+
+// Get the index page from docs collection
+const allDocs = await getCollection('docs');
+const indexPage = allDocs.find(doc => doc.slug === 'index');
+
+if (!indexPage) {
+  throw new Error('Could not find docs/index.mdx');
+}
+
+const { Content } = await indexPage.render();
+---
+
+<WikiLayout title="Knowledge Base">
+  <Content />
+</WikiLayout>

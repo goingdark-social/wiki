@@ -1,0 +1,27 @@
+---
+title: Cloudflare and Privacy
+weight: 20
+---
+
+We use **Cloudflare** as a shield for our server. It acts like a bouncer at the door—it protects us from attacks, but it also means Cloudflare handles the traffic before it hits our machine.
+
+## The Trade-Off
+
+**Why we do it:**
+*   **DDoS Protection:** Keeps the site online if someone tries to flood us with traffic.
+*   **Speed:** Storing images in Cloudflare R2 makes the site load much faster for you.
+*   **Cost:** It is significantly cheaper than hosting media directly on our own limited disk space.
+
+**The Privacy Impact:**
+Technically, Cloudflare sits in the middle. They process your IP address and web traffic. However, we have configured it to be as private as possible:
+*   We **do not** use their intrusive analytics or tracking features.
+*   We use their privacy-focused free tier.
+*   We trust them because their business model is selling security, not selling user data.
+
+## Direct Messages
+
+Just a reminder: **Mastodon Direct Messages (DMs) are not end-to-end encrypted.**
+
+Think of a DM like a postcard or a private forum message. Admins on the server *can* technically read them (though we don't look without a report), and because the traffic flows through Cloudflare, they technically process that text too.
+
+If you need to send sensitive info (passwords, addresses), please use **Signal** or **Matrix**.

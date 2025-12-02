@@ -1,0 +1,487 @@
+---
+import { getCollection } from 'astro:content';
+import Navigation from '../components/Navigation.astro';
+import Sidebar from '../components/Sidebar.astro';
+import Icon from '../components/Icon.astro';
+import '../styles/global.css';
+
+import type { NavItem } from '../utils/navigation';
+
+interface Props {
+  title?: string;
+  description?: string;
+  headings?: Array<{ depth: number; text: string; slug: string }>;
+  currentSlug?: string;
+  prevPage?: NavItem | null;
+  nextPage?: NavItem | null;
+}
+
+const {
+  title = 'goingdark.social Wiki',
+  description = 'Documentation and wiki for goingdark.social - a privacy-focused Mastodon instance',
+  headings = [],
+  currentSlug = '',
+  prevPage = null,
+  nextPage = null
+} = Astro.props;
+
+const fullTitle = title === 'goingdark.social Wiki' ? title : `${title} | goingdark.social Wiki`;
+const isDocsPage = Astro.url.pathname.startsWith('/docs');
+
+// Build breadcrumb path with actual titles
+let breadcrumbPath: Array<{ title: string; href: string }> = [];
+if (currentSlug) {
+  const allDocs = await getCollection('docs');
+  const slugParts = currentSlug.split('/');
+  
+  for (let i = 0; i < slugParts.length; i++) {
+    const partialSlug = slugParts.slice(0, i + 1).join('/');
+    // Try to find the index page for this path
+    const doc = allDocs.find(d => d.slug === partialSlug || d.slug === `${partialSlug}/index`);
+    
+    if (doc) {
+      breadcrumbPath.push({
+        title: doc.data.title,
+        href: `/docs/${partialSlug}`
+      });
+    } else if (i === slugParts.length - 1) {
+      // Last part, use the current title
+      breadcrumbPath.push({
+        title: title,
+        href: `/docs/${partialSlug}`
+      });
+    }
+  }
+}
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  </head>
+  <body class="min-h-screen flex flex-col bg-surface-900 antialiased">
+    <Navigation />
+
+    <!-- Mobile Sidebar (Drawer) - Available on all pages -->
+      <div id="mobile-sidebar-overlay" class="fixed inset-0 z-60 hidden md:hidden">
+        <!-- Backdrop with glassmorphism -->
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-md transition-opacity duration-300" aria-hidden="true"></div>
+
+        <!-- Drawer with improved styling -->
+        <div class="absolute top-0 left-0 h-full w-80 max-w-[85vw] bg-surface-900/98 backdrop-blur-xl border-r border-surface-700 shadow-2xl overflow-y-auto transform transition-transform duration-300">
+          <!-- Header - Kept visible with blur -->
+          <div class="sticky top-0 z-10 bg-surface-900/95 backdrop-blur-lg border-b border-surface-700/50 px-5 py-5">
+            <div class="flex items-center justify-between mb-4">
+              <h2 class="text-lg font-bold text-white font-display">
+                Navigation
+              </h2>
+              <button
+                id="mobile-sidebar-close"
+                class="w-10 h-10 flex items-center justify-center rounded hover:bg-surface-800 transition-colors text-text-muted hover:text-white"
+                aria-label="Close menu"
+              >
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            
+            <!-- Search inside mobile menu -->
+            <div class="relative">
+              <input
+                type="text"
+                placeholder="Search wiki..."
+                class="w-full px-4 py-3 pl-11 bg-surface-800 border border-surface-700 text-sm text-white placeholder-text-muted focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all"
+                aria-label="Quick search"
+              />
+              <svg
+                class="absolute left-3.5 top-1/2 -translate-y-1/2 w-5 h-5 text-text-muted"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="p-5">
+            {isDocsPage ? (
+              <Sidebar />
+            ) : (
+              <nav aria-label="Main navigation">
+                <ul class="space-y-2">
+                  <li>
+                    <a href="/" class="block px-4 py-3.5 text-sm font-semibold bg-primary text-white hover:bg-primary-hover transition-all rounded-lg flex items-center gap-2">
+                      <Icon name="home" size={16} />
+                      Wiki Home
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/docs/user/getting-started" class="block px-4 py-3 text-sm font-medium text-text-muted hover:text-white hover:bg-surface-800 transition-all rounded-lg flex items-center gap-2 group">
+                      <Icon name="arrow-right" size={16} class="text-primary group-hover:scale-110 transition-transform" />
+                      Getting Started
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/docs/policies/rules" class="block px-4 py-3 text-sm font-medium text-text-muted hover:text-white hover:bg-surface-800 transition-all rounded-lg flex items-center gap-2 group">
+                      <Icon name="arrow-right" size={16} class="text-primary group-hover:scale-110 transition-transform" />
+                      Community Rules
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/docs/legal/privacy" class="block px-4 py-3 text-sm font-medium text-text-muted hover:text-white hover:bg-surface-800 transition-all rounded-lg flex items-center gap-2 group">
+                      <Icon name="arrow-right" size={16} class="text-primary group-hover:scale-110 transition-transform" />
+                      Privacy Policy
+                    </a>
+                  </li>
+                  <li class="pt-4 border-t border-surface-700">
+                    <a href="https://goingdark.social" target="_blank" rel="noopener noreferrer" class="btn btn-primary w-full text-sm group/btn">
+                      <span>Join Our Instance</span>
+                      <svg class="w-4 h-4 group-hover/btn:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            )}
+          </div>
+        </div>
+      </div>
+
+    <!-- Three Column Layout Container -->
+    <div class="flex-1 w-full">
+      <div class:list={[
+        "mx-auto flex items-start relative",
+        isDocsPage ? "max-w-[1600px]" : "max-w-7xl"
+      ]}>
+        <!-- Docs Sidebar (Desktop Only) - Fixed width, sticky -->
+        {isDocsPage && (
+          <aside class="hidden lg:block w-64 shrink-0 sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto border-r border-surface-700 py-8 pr-6 pl-6 pattern-noise">
+            <Sidebar />
+          </aside>
+        )}
+
+        <!-- Main Content - Centered reading column -->
+        <main class:list={[
+          "flex-1 min-w-0 py-10",
+          isDocsPage ? "px-4 lg:px-8 xl:px-12" : "px-4 sm:px-6 lg:px-8"
+        ]}>
+          <div class:list={[
+            isDocsPage ? "mx-auto max-w-3xl xl:max-w-4xl" : "w-full"
+          ]}>
+          <!-- Breadcrumbs (only on docs pages) - Now showing actual titles -->
+          {Astro.url.pathname !== '/' && breadcrumbPath.length > 0 && (
+            <nav class="mb-6" aria-label="Breadcrumb">
+              <ol class="flex items-center gap-2 text-sm">
+                <li>
+                  <a href="/" class="text-text-muted hover:text-primary transition-colors flex items-center gap-1">
+                    <Icon name="home" size={14} />
+                    <span>Home</span>
+                  </a>
+                </li>
+                {breadcrumbPath.map((crumb, i) => {
+                  const isLast = i === breadcrumbPath.length - 1;
+                  return (
+                    <>
+                      <li class="flex items-center">
+                        <Icon name="chevron-right" size={14} class="text-surface-600" />
+                      </li>
+                      <li>
+                        {isLast ? (
+                          <span class="text-primary font-medium">{crumb.title}</span>
+                        ) : (
+                          <a href={crumb.href} class="text-text-muted hover:text-primary transition-colors">
+                            {crumb.title}
+                          </a>
+                        )}
+                      </li>
+                    </>
+                  );
+                })}
+              </ol>
+            </nav>
+          )}
+
+          <!-- Article Content Card -->
+          <article class="wiki-content">
+            <slot />
+          </article>
+
+          <!-- Next/Previous Navigation (Fixed Layout) -->
+          {(prevPage || nextPage) && (
+            <div class="mt-8 grid grid-cols-2 gap-4">
+              {prevPage ? (
+                <a
+                  href={`/docs/${prevPage.slug}`}
+                  class="flex items-start gap-3 p-5 bg-surface-800 rounded-xl hover:bg-surface-750 transition-all group col-span-1"
+                >
+                  <svg class="w-5 h-5 text-text-muted group-hover:text-primary transition-colors mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                  </svg>
+                  <div class="flex-1 min-w-0">
+                    <div class="text-xs text-text-subtle mb-1 uppercase tracking-wider font-semibold">Previous</div>
+                    <div class="font-semibold text-white group-hover:text-primary transition-colors truncate">{prevPage.title}</div>
+                  </div>
+                </a>
+              ) : (
+                <div class="col-span-1"></div>
+              )}
+              {nextPage ? (
+                <a
+                  href={`/docs/${nextPage.slug}`}
+                  class="flex items-start gap-3 p-5 bg-surface-800 rounded-xl hover:bg-surface-750 transition-all group text-right col-span-1"
+                >
+                  <div class="flex-1 min-w-0">
+                    <div class="text-xs text-text-subtle mb-1 uppercase tracking-wider font-semibold">Next</div>
+                    <div class="font-semibold text-white group-hover:text-primary transition-colors truncate">{nextPage.title}</div>
+                  </div>
+                  <svg class="w-5 h-5 text-text-muted group-hover:text-primary transition-colors mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              ) : (
+                <div class="col-span-1"></div>
+              )}
+            </div>
+          )}
+
+          <!-- Article Footer (Simplified) -->
+          <div class="mt-8 pt-6 border-t border-surface-700">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+              {currentSlug && (
+                <a
+                  href={`https://github.com/theepicsaxguy/wiki/blob/main/src/content/docs/${currentSlug}.mdx`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-sm text-text-muted hover:text-primary transition-colors inline-flex items-center gap-2"
+                >
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                  </svg>
+                  Edit this page
+                </a>
+              )}
+              <span class="text-sm text-text-muted">
+                Questions? <a href="mailto:admin@goingdark.social" class="text-primary hover:underline font-medium">Contact us</a>
+              </span>
+            </div>
+          </div>
+          </div>
+        </main>
+
+        <!-- Table of Contents Sidebar (Desktop Only) - Right rail -->
+        {isDocsPage && headings.length > 0 && Astro.url.pathname !== '/' && (
+        <aside class="hidden xl:block w-56 shrink-0 sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto py-8 pl-8 border-l border-surface-700 pr-6">
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-xs font-bold text-text-subtle uppercase tracking-wider mb-4 flex items-center gap-2">
+                <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                </svg>
+                On this page
+              </h3>
+              <nav id="table-of-contents" class="space-y-1 text-sm" aria-label="Table of contents">
+                {headings.map((heading) => (
+                  <a
+                    href={`#${heading.slug}`}
+                    class:list={[
+                      "block py-2 px-3 rounded-lg text-text-muted hover:text-white hover:bg-surface-800 transition-all border-l-2 border-transparent hover:border-primary",
+                      heading.depth === 3 ? "pl-6 text-xs" : "pl-3"
+                    ]}
+                    data-heading-link
+                  >
+                    {heading.text}
+                  </a>
+                ))}
+              </nav>
+            </div>
+          </div>
+        </aside>
+        )}
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-surface-900 border-t border-surface-700/50 mt-auto pattern-lines">
+      <div class="container-content py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="md:col-span-2">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-white font-bold font-display">goingdark.social</h3>
+                <p class="text-xs text-text-muted font-medium">Privacy-focused Mastodon</p>
+              </div>
+            </div>
+            <p class="text-text-muted text-sm max-w-md leading-relaxed">
+              A community-driven, privacy-focused Mastodon instance. Part of the decentralized Fediverse. Join us in building a better social network.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-white font-bold mb-4 text-sm font-display">Resources</h3>
+            <ul class="space-y-3">
+              <li><a href="/" class="text-text-muted hover:text-primary transition-colors text-sm flex items-center gap-2 group">
+                <Icon name="arrow-right" size={14} class="text-primary group-hover:translate-x-1 transition-transform" />
+                Home
+              </a></li>
+              <li><a href="/docs/policies/rules" class="text-text-muted hover:text-primary transition-colors text-sm flex items-center gap-2 group">
+                <Icon name="arrow-right" size={14} class="text-primary group-hover:translate-x-1 transition-transform" />
+                Server Rules
+              </a></li>
+              <li><a href="/docs/legal/privacy" class="text-text-muted hover:text-primary transition-colors text-sm flex items-center gap-2 group">
+                <Icon name="arrow-right" size={14} class="text-primary group-hover:translate-x-1 transition-transform" />
+                Privacy Policy
+              </a></li>
+              <li><a href="https://joinmastodon.org/" target="_blank" rel="noopener noreferrer" class="text-text-muted hover:text-primary transition-colors text-sm flex items-center gap-2 group">
+                <Icon name="arrow-right" size={14} class="text-primary group-hover:translate-x-1 transition-transform" />
+                About Mastodon
+              </a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-white font-bold mb-4 text-sm font-display">Get in Touch</h3>
+            <ul class="space-y-3 text-sm">
+              <li class="flex items-center gap-2 text-text-muted">
+                <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                admin@goingdark.social
+              </li>
+              <li class="flex items-center gap-2 text-text-muted">
+                <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+                @admin@goingdark.social
+              </li>
+              <li class="mt-4">
+                <a href="https://goingdark.social" target="_blank" rel="noopener noreferrer" class="btn btn-secondary w-full group/btn">
+                  <span>Join Now</span>
+                  <svg class="w-4 h-4 group-hover/btn:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-12 pt-8 border-t border-surface-700 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <p class="text-sm text-text-muted text-center sm:text-left">
+            &copy; {new Date().getFullYear()} goingdark.social. Powered by <a href="https://joinmastodon.org/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Mastodon</a>.
+          </p>
+          <p class="text-xs text-text-muted text-center sm:text-right">
+            Built with <a href="https://astro.build" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Astro</a> • Part of the Fediverse
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile Sidebar Toggle
+      const mobileOverlay = document.getElementById('mobile-sidebar-overlay');
+      const mobileClose = document.getElementById('mobile-sidebar-close');
+
+      if (mobileOverlay) {
+        const closeSidebar = () => {
+          console.log('Closing sidebar');
+          mobileOverlay.classList.add('hidden');
+          document.body.style.overflow = '';
+        };
+
+        const openSidebar = () => {
+          console.log('Opening sidebar');
+          mobileOverlay.classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+        };
+
+        // Listen for custom event from Navigation component
+        window.addEventListener('open-sidebar', (e) => {
+          console.log('open-sidebar event received', e);
+          openSidebar();
+        });
+
+        mobileClose?.addEventListener('click', closeSidebar);
+        mobileOverlay.addEventListener('click', (e) => {
+          if (e.target === mobileOverlay || (e.target instanceof HTMLElement && e.target.classList.contains('bg-black/60'))) {
+            closeSidebar();
+          }
+        });
+
+        // Close on ESC
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && !mobileOverlay.classList.contains('hidden')) {
+            closeSidebar();
+          }
+        });
+      }
+
+      // Table of Contents Active State (IntersectionObserver)
+      document.addEventListener('DOMContentLoaded', () => {
+        const headingLinks = document.querySelectorAll('[data-heading-link]');
+
+        if (headingLinks.length === 0) return;
+
+        const headings = Array.from(headingLinks).map(link => {
+          const href = link.getAttribute('href');
+          if (!href) return null;
+          return document.querySelector(href);
+        }).filter((el): el is Element => el !== null);
+
+        if (headings.length === 0) return;
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const id = entry.target.id;
+                headingLinks.forEach((link) => {
+                  const href = link.getAttribute('href');
+                  if (href === `#${id}`) {
+                    link.classList.remove('text-text-muted', 'border-transparent', 'hover:bg-surface-800');
+                    link.classList.add('text-white', 'border-primary', 'bg-surface-800', 'font-semibold');
+                  } else {
+                    link.classList.remove('text-white', 'border-primary', 'bg-surface-800', 'font-semibold');
+                    link.classList.add('text-text-muted', 'border-transparent', 'hover:bg-surface-800');
+                  }
+                });
+              }
+            });
+          },
+          { rootMargin: '-100px 0px -66%' }
+        );
+
+        headings.forEach((heading) => observer.observe(heading));
+      });
+
+      // Smooth scroll for anchor links
+      document.querySelectorAll<HTMLAnchorElement>('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const href = this.getAttribute('href');
+          const target = href ? document.querySelector(href) : null;
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
