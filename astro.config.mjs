@@ -5,9 +5,9 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  // GitHub Pages configuration
-  site: 'https://goingdark-social.github.io',
-  base: '/wiki',
+  // Custom domain configuration for GitHub Pages
+  site: 'https://wiki.goingdark.social',
+  // No base path needed with custom domain
   
   integrations: [react(), mdx()],
   
