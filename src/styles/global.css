@@ -1700,3 +1700,48 @@ textarea:focus-visible {
   box-shadow: 0 0 0 2px rgba(99, 100, 255, 0.3);
   border-color: rgba(99, 100, 255, 0.3);
 }
+
+.mobile-nav-home {
+  display: block;
+  padding: 0.875rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  background-color: var(--color-primary);
+  color: var(--color-text-white);
+  transition: all var(--transition-base);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mobile-nav-home:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.mobile-nav-link {
+  display: block;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  transition: all var(--transition-base);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mobile-nav-link:hover {
+  color: var(--color-text-white);
+  background-color: var(--color-surface-800);
+}
+
+.mobile-nav-icon {
+  color: var(--color-primary);
+  transition: transform var(--transition-base);
+}
+
+.mobile-nav-link:hover .mobile-nav-icon {
+  transform: scale(1.1);
+}

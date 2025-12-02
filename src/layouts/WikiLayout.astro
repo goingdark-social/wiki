@@ -99,7 +99,7 @@ if (currentSlug) {
               <input
                 type="text"
                 placeholder="Search wiki..."
-                class="w-full px-4 py-3 pl-11 bg-surface-800 border border-surface-700 text-sm text-white placeholder-text-muted focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all"
+                class="mobile-search-input"
                 aria-label="Quick search"
               />
               <svg
@@ -122,26 +122,26 @@ if (currentSlug) {
               <nav aria-label="Main navigation">
                 <ul class="space-y-2">
                   <li>
-                    <a href="/" class="block px-4 py-3.5 text-sm font-semibold bg-primary text-white hover:bg-primary-hover transition-all rounded-lg flex items-center gap-2">
+                    <a href="/" class="mobile-nav-home">
                       <Icon name="home" size={16} />
                       Wiki Home
                     </a>
                   </li>
                   <li>
-                    <a href="/docs/user/getting-started" class="block px-4 py-3 text-sm font-medium text-text-muted hover:text-white hover:bg-surface-800 transition-all rounded-lg flex items-center gap-2 group">
-                      <Icon name="arrow-right" size={16} class="text-primary group-hover:scale-110 transition-transform" />
+                    <a href="/docs/user/getting-started" class="mobile-nav-link group">
+                      <Icon name="arrow-right" size={16} class="mobile-nav-icon" />
                       Getting Started
                     </a>
                   </li>
                   <li>
-                    <a href="/docs/policies/rules" class="block px-4 py-3 text-sm font-medium text-text-muted hover:text-white hover:bg-surface-800 transition-all rounded-lg flex items-center gap-2 group">
-                      <Icon name="arrow-right" size={16} class="text-primary group-hover:scale-110 transition-transform" />
+                    <a href="/docs/policies/rules" class="mobile-nav-link group">
+                      <Icon name="arrow-right" size={16} class="mobile-nav-icon" />
                       Community Rules
                     </a>
                   </li>
                   <li>
-                    <a href="/docs/legal/privacy" class="block px-4 py-3 text-sm font-medium text-text-muted hover:text-white hover:bg-surface-800 transition-all rounded-lg flex items-center gap-2 group">
-                      <Icon name="arrow-right" size={16} class="text-primary group-hover:scale-110 transition-transform" />
+                    <a href="/docs/legal/privacy" class="mobile-nav-link group">
+                      <Icon name="arrow-right" size={16} class="mobile-nav-icon" />
                       Privacy Policy
                     </a>
                   </li>
