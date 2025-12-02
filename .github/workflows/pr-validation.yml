@@ -1,12 +1,8 @@
 name: PR Validation
 
-env:
-  WC_astro_VERSION: 0.150.0
-
 on:
   pull_request:
     branches: ["main"]
-  # Allow manual runs for testing
   workflow_dispatch:
 
 jobs:
@@ -16,32 +12,27 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
         with:
-          # Fetch history for astro's .GitInfo and .Lastmod
           fetch-depth: 0
-
-      - name: Setup astro
-        uses: peaceiris/actions-astro@v3
-        with:
-          astro-version: ${{ env.WC_astro_VERSION }}
-          extended: true
 
       - name: Setup Node.js
         uses: actions/setup-node@v5
         with:
           node-version: 22
+          cache: "npm"
 
-      - name: Cache astro modules
-        uses: actions/cache@v4
-        with:
-          path: /tmp/astro_cache_runner/
-          key: ${{ runner.os }}-astromod-${{ hashFiles('**/go.mod') }}
-          restore-keys: |
-            ${{ runner.os }}-astromod-
-
-      - name: Install Node dependencies
+      - name: Install dependencies
         run: npm ci
 
-      - name: Run comprehensive validation tests
+      - name: Type & build checks (Astro + TS)
         run: |
-          chmod +x scripts/test-pr.sh
-          ./scripts/test-pr.sh
+          npx astro check
+          npm run build
+
+      - name: Lint (ESLint)
+        run: npm run lint
+
+      - name: Vale (prose)
+        uses: errata-ai/vale-action@v2.1.1
+        with:
+          files: .
+          fail_on_error: true
