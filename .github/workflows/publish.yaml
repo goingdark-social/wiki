@@ -38,9 +38,9 @@ jobs:
 
       - name: Build (Astro production)
         env:
-          astro_ENVIRONMENT: production
+          NODE_ENV: production
         run: |
-          npx astro build --minify --base "${{ steps.pages.outputs.base_url }}/"
+          npm run build
 
       - name: Generate Pagefind search index
         run: npx pagefind --site "dist"
