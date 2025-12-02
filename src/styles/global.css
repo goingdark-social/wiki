@@ -2424,6 +2424,47 @@ textarea:focus-visible {
   /* Pager link with group */
 }
 
+/* Additional Components */
+.card-full-styled {
+  /* Card full with group */
+}
+
+.nav-join-link-styled {
+  /* Nav join link with group/btn */
+}
+
+.mobile-menu-btn {
+  display: inline-flex;
+  /* md:hidden */
+}
+
+@media (min-width: 768px) {
+  .mobile-menu-btn {
+    display: none;
+  }
+}
+
+.mobile-menu-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.btn-ghost-styled {
+  /* Button ghost styles */
+}
+
+.btn-primary-styled {
+  /* Button primary styles */
+}
+
+.hero-accent-top-styled {
+  /* Hero accent top */
+}
+
+.hero-accent-bottom-styled {
+  /* Hero accent bottom */
+}
+
 .pager-link-next-styled {
   /* Pager link next with group */
   text-align: right;
