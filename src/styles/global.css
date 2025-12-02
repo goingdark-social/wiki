@@ -114,6 +114,9 @@
   --gradient-warm: linear-gradient(135deg, #ffc954 0%, #ff8c42 100%);
   --gradient-sunset: linear-gradient(135deg, #6364ff 0%, #ffc954 100%);
 
+  /* Text gradient preset (use via .text-gradient) */
+  --text-gradient-primary: linear-gradient(135deg, var(--color-text-white) 0%, rgba(224, 213, 255, 1) 100%);
+
 }
 
 /* Base Styles */
@@ -316,6 +319,31 @@ body {
     radial-gradient(at 10% 29%, rgba(99, 100, 255, 0.07) 0px, transparent 50%);
 }
 
+/* Reusable hero gradient accents using theme colors */
+.hero-gradient-top {
+  background: linear-gradient(to bottom right, var(--color-primary-subtle), var(--color-secondary-subtle));
+}
+
+.hero-gradient-bottom {
+  background: linear-gradient(to top right, var(--color-secondary-subtle), var(--color-primary-subtle));
+}
+
+/* Utility for applying gradient text from theme */
+.text-gradient {
+  background: var(--text-gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hero-specific title gradient (convenience alias) */
+.hero-title-gradient {
+  background: var(--text-gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .pattern-circuit {
   background-image:
     linear-gradient(rgba(99, 100, 255, 0.03) 1px, transparent 1px),
@@ -360,7 +388,7 @@ body {
   letter-spacing: -0.035em;
   margin-bottom: 1.5rem;
   line-height: 1.1;
-  background: linear-gradient(135deg, #ffffff 0%, #e0d5ff 100%);
+  background: var(--text-gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -698,6 +726,11 @@ textarea:focus-visible {
   outline-offset: 2px;
   border-radius: var(--radius-base);
   box-shadow: 0 0 0 4px var(--color-primary-glow);
+}
+
+/* Primary glow utility for small soft glows used on active navigation */
+.primary-glow {
+  box-shadow: 0 0 20px var(--color-primary-glow);
 }
 
 /* Modern Button System - Mastodon Style */

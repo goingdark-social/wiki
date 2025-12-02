@@ -21,10 +21,9 @@ export function SidebarTree({ navigation, currentPath, isHome }: SidebarTreeProp
         href="/"
         className={`flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-all ${
           isHome
-            ? 'bg-primary text-white shadow-lg'
+            ? 'bg-primary text-white shadow-lg primary-glow'
             : 'text-text-muted hover:text-white hover:bg-surface-800'
         }`}
-        style={isHome ? { boxShadow: '0 0 20px var(--color-primary-glow)' } : undefined}
       >
         <Home size={18} />
         <span>Wiki Home</span>
@@ -75,10 +74,9 @@ function FolderGroup({ node, currentPath, level }: FolderGroupProps) {
         href={`/docs/${node.slug}`}
         className={`flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium transition-all ${
           isActive
-            ? 'bg-primary text-white shadow-lg'
+            ? 'bg-primary text-white shadow-lg primary-glow'
             : 'text-text-muted hover:text-white hover:bg-surface-800'
         }`}
-        style={isActive ? { boxShadow: '0 0 20px var(--color-primary-glow)' } : undefined}
       >
         <FileText size={16} />
         <span className="flex-1">{node.title}</span>
@@ -94,12 +92,11 @@ function FolderGroup({ node, currentPath, level }: FolderGroupProps) {
         onClick={() => setIsManuallyToggled(!isOpen)}
         className={`flex items-center w-full gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all ${
           isActive
-            ? 'bg-primary text-white shadow-lg'
+            ? 'bg-primary text-white shadow-lg primary-glow'
             : isParent
             ? 'text-white bg-surface-800'
             : 'text-text-muted hover:text-white hover:bg-surface-800'
         }`}
-        style={isActive ? { boxShadow: '0 0 20px var(--color-primary-glow)' } : undefined}
       >
         <ChevronRight
           size={16}

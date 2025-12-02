@@ -67,14 +67,29 @@ const docsForSearch = allDocs.map(doc => ({
 </nav>
 
 <script>
+  // Only keep the mobile button in the DOM on small viewports.
   const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const desktopQuery = window.matchMedia('(min-width: 768px)');
 
-  if (mobileMenuButton) {
-    mobileMenuButton.addEventListener('click', (e) => {
-      e.preventDefault();
-      console.log('Mobile menu button clicked');
-      // Dispatch custom event to open sidebar drawer
-      window.dispatchEvent(new CustomEvent('open-sidebar'));
-    });
+  function handleViewportChange(e) {
+    if (!mobileMenuButton) return;
+    if (e.matches) {
+      // Desktop: remove button from DOM to avoid duplicate controls
+      mobileMenuButton.remove();
+    } else {
+      // Mobile: ensure listener is attached
+      if (!mobileMenuButton.__listenerAttached) {
+        mobileMenuButton.addEventListener('click', (ev) => {
+          ev.preventDefault();
+          window.dispatchEvent(new CustomEvent('open-sidebar'));
+        });
+        mobileMenuButton.__listenerAttached = true;
+      }
+    }
   }
+
+  // Initial check
+  handleViewportChange(desktopQuery);
+  // Listen for changes
+  desktopQuery.addEventListener('change', handleViewportChange);
 </script>
