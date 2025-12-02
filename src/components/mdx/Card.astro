@@ -11,7 +11,7 @@ const linkProps = href ? { href, target: href.startsWith('http') ? '_blank' : un
 ---
 
 <Tag
-  class="card-interactive group pattern-noise"
+  class="card-full group"
   {...linkProps}
 >
   {icon && (
@@ -27,7 +27,7 @@ const linkProps = href ? { href, target: href.startsWith('http') ? '_blank' : un
       </svg>
     )}
   </h3>
-  <div class="text-text-muted text-base leading-relaxed">
+  <div class="card-description">
     <slot />
   </div>
 </Tag>
