@@ -43,12 +43,12 @@ jobs:
           npx astro build --minify --base "${{ steps.pages.outputs.base_url }}/"
 
       - name: Generate Pagefind search index
-        run: npx pagefind --source "public"
+        run: npx pagefind --site "dist"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: ./public
+          path: ./dist
 
   deploy:
     environment:
