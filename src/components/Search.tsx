@@ -77,7 +77,7 @@ export default function Search({ docs }: SearchProps) {
           value={query}
           onInput={(e) => setQuery((e.target as HTMLInputElement).value)}
           placeholder="Search wiki... (Ctrl+K)"
-          className="w-full px-4 py-3 pl-11 pr-20 bg-surface-800 border-2 border-surface-700 rounded-xl text-sm text-white placeholder-text-muted focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all hover:border-primary/30"
+          className="search-input"
           aria-label="Search wiki documentation"
           aria-autocomplete="list"
           aria-expanded={isOpen}

@@ -1,51 +1,52 @@
 ---
 import { getCollection } from 'astro:content';
 import Search from './Search.tsx';
+import type { DocEntry } from '@/types/content';
 
 // Get all docs for search
 const allDocs = await getCollection('docs');
-const docsForSearch = allDocs.map(doc => ({
+const docsForSearch = allDocs.map((doc: DocEntry) => ({
   slug: doc.slug,
-  title: doc.data.title,
-  description: doc.data.description,
+  title: doc.data?.title,
+  description: doc.data?.description,
 }));
 ---
 
-<nav class="sticky top-0 z-50 bg-surface-850/95 backdrop-blur-lg border-b border-surface-700/50 pattern-lines">
+<nav class="nav-main">
   <div class="container-content">
-    <div class="flex items-center justify-between h-16">
+    <div class="nav-header">
       <!-- Logo and Brand -->
-      <div class="flex items-center shrink-0">
-        <a href="/" class="flex items-center gap-3 group transition-all">
-          <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center transition-all">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <div class="nav-left">
+        <a href="/" class="nav-logo-link-styled">
+          <div class="nav-logo-icon">
+            <svg class="nav-logo-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
             </svg>
           </div>
-          <div class="hidden sm:block">
-            <h1 class="text-base font-bold text-white tracking-tight">goingdark.social</h1>
-            <p class="text-xs text-text-muted font-medium">Community Wiki</p>
+          <div class="nav-brand">
+            <h1 class="nav-brand-title">goingdark.social</h1>
+            <p class="nav-brand-subtitle">Community Wiki</p>
           </div>
         </a>
       </div>
 
       <!-- Desktop Navigation -->
-      <div class="hidden md:flex items-center gap-3 flex-1 justify-center">
+      <div class="nav-desktop">
         <!-- Search Bar -->
-        <div class="w-full max-w-md">
+        <div class="nav-search-container">
           <Search docs={docsForSearch} client:idle />
         </div>
 
-        <div class="w-px h-6 bg-surface-700"></div>
+        <div class="nav-divider"></div>
 
         <a
           href="https://goingdark.social"
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex btn btn-secondary shrink-0 group/btn whitespace-nowrap"
+          class="nav-join-link-styled"
         >
           <span>Join Instance</span>
-          <svg class="w-4 h-4 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <svg class="nav-join-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
           </svg>
         </a>
@@ -54,10 +55,10 @@ const docsForSearch = allDocs.map(doc => ({
       <!-- Mobile Menu Button -->
       <button
         id="mobile-menu-button"
-        class="inline-flex md:hidden btn btn-ghost btn-icon"
+        class="mobile-menu-btn"
         aria-label="Open navigation menu"
       >
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <svg class="mobile-menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
@@ -67,14 +68,49 @@ const docsForSearch = allDocs.map(doc => ({
 </nav>
 
 <script>
-  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  // Only keep the mobile button in the DOM on small viewports.
+  const mobileMenuButton = typeof document !== 'undefined' ? document.getElementById('mobile-menu-button') : null;
+  const desktopQuery = typeof window !== 'undefined' && typeof window.matchMedia === 'function'
+    ? window.matchMedia('(min-width: 768px)')
+    : null;
 
-  if (mobileMenuButton) {
-    mobileMenuButton.addEventListener('click', (e) => {
-      e.preventDefault();
-      console.log('Mobile menu button clicked');
-      // Dispatch custom event to open sidebar drawer
-      window.dispatchEvent(new CustomEvent('open-sidebar'));
-    });
+  /**
+   * e can be a MediaQueryListEvent in modern browsers or a simple object
+   * with a `matches` boolean in some environments; union covers both.
+   */
+  function handleViewportChange(e: MediaQueryListEvent | { matches?: boolean }) {
+    if (!mobileMenuButton) return;
+    if (e && e.matches) {
+      // Desktop: remove button from DOM to avoid duplicate controls
+      mobileMenuButton.remove();
+    } else {
+      // Mobile: ensure listener is attached
+      if (!(mobileMenuButton).__listenerAttached) {
+        mobileMenuButton.addEventListener('click', (ev) => {
+          ev.preventDefault();
+          window.dispatchEvent(new CustomEvent('open-sidebar'));
+        });
+        mobileMenuButton.__listenerAttached = true;
+      }
+    }
+  }
+
+  // Initial check
+  if (desktopQuery && desktopQuery.matches) {
+    // Desktop: remove button from DOM to avoid duplicate controls
+    mobileMenuButton?.remove();
+  } else {
+    // Mobile: ensure listener is attached
+    if (mobileMenuButton && !mobileMenuButton.__listenerAttached) {
+      mobileMenuButton.addEventListener('click', (ev) => {
+        ev.preventDefault();
+        window.dispatchEvent(new CustomEvent('open-sidebar'));
+      });
+      mobileMenuButton.__listenerAttached = true;
+    }
+  }
+  // Listen for changes
+  if (desktopQuery && typeof desktopQuery.addEventListener === 'function') {
+    desktopQuery.addEventListener('change', handleViewportChange);
   }
 </script>
