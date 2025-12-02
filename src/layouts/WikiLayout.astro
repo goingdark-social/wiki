@@ -73,16 +73,22 @@ if (currentSlug) {
     <Navigation />
 
     <!-- Mobile Sidebar (Drawer) - Available on all pages -->
-      <div id="mobile-sidebar-overlay" class="mobile-sidebar-overlay">
+      <div 
+        id="mobile-sidebar-overlay" 
+        class="mobile-sidebar-overlay hidden"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="mobile-sidebar-title"
+      >
         <!-- Backdrop with glassmorphism -->
         <div class="mobile-sidebar-backdrop" aria-hidden="true"></div>
 
         <!-- Drawer with improved styling -->
-        <div class="mobile-sidebar-drawer">
+        <nav id="mobile-sidebar" class="mobile-sidebar-drawer" aria-label="Mobile navigation">
           <!-- Header - Kept visible with blur -->
           <div class="mobile-sidebar-header">
             <div class="mobile-header">
-              <h2 class="mobile-title">
+              <h2 id="mobile-sidebar-title" class="mobile-title">
                 Navigation
               </h2>
               <button
@@ -397,40 +403,78 @@ if (currentSlug) {
     </footer>
 
     <script>
-      // Mobile Sidebar Toggle
+      // Mobile Sidebar Toggle with improved accessibility
       const mobileOverlay = document.getElementById('mobile-sidebar-overlay');
       const mobileClose = document.getElementById('mobile-sidebar-close');
+      const mobileSidebar = document.getElementById('mobile-sidebar');
+      let previousFocus = null;
 
       if (mobileOverlay) {
         const closeSidebar = () => {
-          console.log('Closing sidebar');
           mobileOverlay.classList.add('hidden');
           document.body.style.overflow = '';
+          
+          // Dispatch close event for navigation button
+          window.dispatchEvent(new CustomEvent('close-sidebar'));
+          
+          // Restore focus to the element that opened the sidebar
+          if (previousFocus) {
+            previousFocus.focus();
+            previousFocus = null;
+          }
         };
 
         const openSidebar = () => {
-          console.log('Opening sidebar');
+          // Store the currently focused element
+          previousFocus = document.activeElement;
+          
           mobileOverlay.classList.remove('hidden');
           document.body.style.overflow = 'hidden';
+          
+          // Focus the close button for keyboard navigation
+          setTimeout(() => {
+            mobileClose?.focus();
+          }, 100);
         };
 
         // Listen for custom event from Navigation component
         window.addEventListener('open-sidebar', (e) => {
-          console.log('open-sidebar event received', e);
           openSidebar();
         });
 
         mobileClose?.addEventListener('click', closeSidebar);
+        
+        // Close when clicking backdrop
         mobileOverlay.addEventListener('click', (e) => {
-          if (e.target === mobileOverlay || (e.target instanceof HTMLElement && e.target.classList.contains('bg-black/60'))) {
+          if (e.target === mobileOverlay || (e.target instanceof HTMLElement && e.target.classList.contains('mobile-sidebar-backdrop'))) {
             closeSidebar();
           }
         });
 
-        // Close on ESC
+        // Enhanced keyboard navigation
         document.addEventListener('keydown', (e) => {
-          if (e.key === 'Escape' && !mobileOverlay.classList.contains('hidden')) {
+          if (mobileOverlay.classList.contains('hidden')) return;
+          
+          if (e.key === 'Escape') {
             closeSidebar();
+          } else if (e.key === 'Tab') {
+            // Trap focus within the sidebar
+            const focusableElements = mobileSidebar?.querySelectorAll(
+              'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+            );
+            
+            if (focusableElements && focusableElements.length > 0) {
+              const firstElement = focusableElements[0];
+              const lastElement = focusableElements[focusableElements.length - 1];
+              
+              if (e.shiftKey && document.activeElement === firstElement) {
+                e.preventDefault();
+                lastElement.focus();
+              } else if (!e.shiftKey && document.activeElement === lastElement) {
+                e.preventDefault();
+                firstElement.focus();
+              }
+            }
           }
         });
       }

@@ -57,6 +57,9 @@ const docsForSearch = allDocs.map((doc: DocEntry) => ({
         id="mobile-menu-button"
         class="mobile-menu-btn"
         aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-sidebar"
+        type="button"
       >
         <svg class="mobile-menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -68,49 +71,24 @@ const docsForSearch = allDocs.map((doc: DocEntry) => ({
 </nav>
 
 <script>
-  // Only keep the mobile button in the DOM on small viewports.
+  // Mobile menu button functionality with proper responsive handling
   const mobileMenuButton = typeof document !== 'undefined' ? document.getElementById('mobile-menu-button') : null;
-  const desktopQuery = typeof window !== 'undefined' && typeof window.matchMedia === 'function'
-    ? window.matchMedia('(min-width: 768px)')
-    : null;
+  
+  if (mobileMenuButton) {
+    // Always attach the click listener - CSS handles visibility
+    mobileMenuButton.addEventListener('click', (ev) => {
+      ev.preventDefault();
+      mobileMenuButton.setAttribute('aria-expanded', 'true');
+      window.dispatchEvent(new CustomEvent('open-sidebar'));
+    });
+  }
 
-  /**
-   * e can be a MediaQueryListEvent in modern browsers or a simple object
-   * with a `matches` boolean in some environments; union covers both.
-   */
-  function handleViewportChange(e: MediaQueryListEvent | { matches?: boolean }) {
-    if (!mobileMenuButton) return;
-    if (e && e.matches) {
-      // Desktop: remove button from DOM to avoid duplicate controls
-      mobileMenuButton.remove();
-    } else {
-      // Mobile: ensure listener is attached
-      if (!(mobileMenuButton).__listenerAttached) {
-        mobileMenuButton.addEventListener('click', (ev) => {
-          ev.preventDefault();
-          window.dispatchEvent(new CustomEvent('open-sidebar'));
-        });
-        mobileMenuButton.__listenerAttached = true;
+  // Listen for sidebar close events to update aria-expanded
+  if (typeof window !== 'undefined') {
+    window.addEventListener('close-sidebar', () => {
+      if (mobileMenuButton) {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
       }
-    }
-  }
-
-  // Initial check
-  if (desktopQuery && desktopQuery.matches) {
-    // Desktop: remove button from DOM to avoid duplicate controls
-    mobileMenuButton?.remove();
-  } else {
-    // Mobile: ensure listener is attached
-    if (mobileMenuButton && !mobileMenuButton.__listenerAttached) {
-      mobileMenuButton.addEventListener('click', (ev) => {
-        ev.preventDefault();
-        window.dispatchEvent(new CustomEvent('open-sidebar'));
-      });
-      mobileMenuButton.__listenerAttached = true;
-    }
-  }
-  // Listen for changes
-  if (desktopQuery && typeof desktopQuery.addEventListener === 'function') {
-    desktopQuery.addEventListener('change', handleViewportChange);
+    });
   }
 </script>
