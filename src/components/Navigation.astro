@@ -1,13 +1,14 @@
 ---
 import { getCollection } from 'astro:content';
 import Search from './Search.tsx';
+import type { DocEntry } from '@/types/content';
 
 // Get all docs for search
 const allDocs = await getCollection('docs');
-const docsForSearch = allDocs.map(doc => ({
+const docsForSearch = allDocs.map((doc: DocEntry) => ({
   slug: doc.slug,
-  title: doc.data.title,
-  description: doc.data.description,
+  title: doc.data?.title,
+  description: doc.data?.description,
 }));
 ---
 
@@ -68,40 +69,54 @@ const docsForSearch = allDocs.map(doc => ({
 
 <script>
   // Only keep the mobile button in the DOM on small viewports.
-  const mobileMenuButton = document.getElementById('mobile-menu-button');
-  const desktopQuery = window.matchMedia('(min-width: 768px)');
+  const mobileMenuButton = typeof document !== 'undefined' ? document.getElementById('mobile-menu-button') : null;
+  const desktopQuery = typeof window !== 'undefined' && typeof window.matchMedia === 'function'
+    ? window.matchMedia('(min-width: 768px)')
+    : null;
 
-  function handleViewportChange(e: MediaQueryListEvent) {
+  /**
+   * e can be a MediaQueryListEvent in modern browsers or a simple object
+   * with a `matches` boolean in some environments; union covers both.
+   */
+  function handleViewportChange(e: MediaQueryListEvent | { matches?: boolean }) {
     if (!mobileMenuButton) return;
-    if (e.matches) {
+    if (e && e.matches) {
       // Desktop: remove button from DOM to avoid duplicate controls
       mobileMenuButton.remove();
     } else {
       // Mobile: ensure listener is attached
-      if (!(mobileMenuButton as any).__listenerAttached) {
+      if (!(mobileMenuButton).__listenerAttached) {
         mobileMenuButton.addEventListener('click', (ev) => {
           ev.preventDefault();
           window.dispatchEvent(new CustomEvent('open-sidebar'));
         });
-        (mobileMenuButton as any).__listenerAttached = true;
+        mobileMenuButton.__listenerAttached = true;
       }
     }
   }
 
   // Initial check
-  if (desktopQuery.matches) {
+  if (desktopQuery && desktopQuery.matches) {
     // Desktop: remove button from DOM to avoid duplicate controls
     mobileMenuButton?.remove();
   } else {
     // Mobile: ensure listener is attached
-    if (mobileMenuButton && !(mobileMenuButton as any).__listenerAttached) {
+    if (mobileMenuButton && !mobileMenuButton.__listenerAttached) {
       mobileMenuButton.addEventListener('click', (ev) => {
         ev.preventDefault();
         window.dispatchEvent(new CustomEvent('open-sidebar'));
       });
-      (mobileMenuButton as any).__listenerAttached = true;
+      mobileMenuButton.__listenerAttached = true;
     }
   }
   // Listen for changes
-  desktopQuery.addEventListener('change', handleViewportChange);
+  if (desktopQuery) {
+    if (typeof desktopQuery.addEventListener === 'function') {
+      desktopQuery.addEventListener('change', handleViewportChange);
+    } else if (typeof desktopQuery.addListener === 'function') {
+      // Fallback for older browsers (deprecated API)
+      // eslint-disable-next-line deprecation/deprecation
+      desktopQuery.addListener(handleViewportChange as any);
+    }
+  }
 </script>

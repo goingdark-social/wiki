@@ -5,6 +5,7 @@
  */
 import { getCollection } from 'astro:content';
 import Icon from './Icon.astro';
+import type { DocEntry } from '@/types/content';
 
 // Get all docs
 // Note: Astro's content layer caches this data, so multiple getCollection calls
@@ -15,15 +16,16 @@ const allDocs = await getCollection('docs');
 interface Section {
   title: string;
   folder: string;
-  pages: typeof allDocs;
-  indexPage?: typeof allDocs[0];
+  pages: DocEntry[];
+  indexPage?: DocEntry;
 }
 
 const sections: Section[] = [];
 const folderMap = new Map<string, Section>();
 
-allDocs.forEach(doc => {
-  const [folder] = doc.slug.split('/');
+allDocs.forEach((doc: DocEntry) => {
+  const slug = typeof doc.slug === 'string' ? doc.slug : '';
+  const [folder] = slug.split('/');
   if (folder === 'index') return; // Skip root index
 
   if (!folderMap.has(folder)) {
@@ -41,8 +43,8 @@ allDocs.forEach(doc => {
   if (section) {
     // Check if this is the index page for the folder
     if (doc.slug === folder || doc.slug === `${folder}/index`) {
-      section.indexPage = doc;
-      section.title = doc.data.title; // Use actual title from index
+    section.indexPage = doc;
+    section.title = (doc.data && typeof doc.data.title === 'string') ? doc.data.title : section.title; // Use actual title from index
     } else {
       section.pages.push(doc);
     }
@@ -95,7 +97,7 @@ allDocs.forEach(doc => {
 
         {/* Top Pages Preview (shows 3-4 pages) */}
         <ul class="directory-pages">
-          {section.pages.slice(0, 4).map(page => (
+          {section.pages.slice(0, 4).map((page: DocEntry) => (
             <li>
               <a
                 href={`/docs/${page.slug}`}
@@ -103,7 +105,7 @@ allDocs.forEach(doc => {
               >
                 <span class="directory-page-link-arrow">→</span>
                 <span class="directory-page-link-text">
-                  {page.data.title}
+                  {page.data && page.data.title ? page.data.title : page.slug}
                 </span>
               </a>
             </li>

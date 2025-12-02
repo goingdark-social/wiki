@@ -6,13 +6,14 @@
 import Search from './Search';
 import Icon from './Icon.astro';
 import { getCollection } from 'astro:content';
+import type { DocEntry } from '@/types/content';
 
 // Get docs for search
 const allDocs = await getCollection('docs');
-const searchDocs = allDocs.map(doc => ({
+const searchDocs = allDocs.map((doc: DocEntry) => ({
   slug: doc.slug,
-  title: doc.data.title,
-  description: doc.data.description
+  title: doc.data?.title,
+  description: doc.data?.description
 }));
 ---
 

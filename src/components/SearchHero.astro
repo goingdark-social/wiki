@@ -5,6 +5,7 @@
  */
 import { getCollection } from 'astro:content';
 import Search from './Search';
+import type { DocEntry } from '@/types/content';
 
 // Get all docs for search functionality
 // Note: Astro's content layer caches this data, so multiple getCollection calls
@@ -12,10 +13,10 @@ import Search from './Search';
 const allDocs = await getCollection('docs');
 
 // Prepare search data
-const searchDocs = allDocs.map(doc => ({
+const searchDocs = allDocs.map((doc: DocEntry) => ({
   slug: doc.slug,
-  title: doc.data.title,
-  description: doc.data.description
+  title: doc.data?.title,
+  description: doc.data?.description
 }));
 ---
 

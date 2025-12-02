@@ -30,14 +30,16 @@ const isDocsPage = Astro.url.pathname.startsWith('/docs');
 
 // Build breadcrumb path with actual titles
 let breadcrumbPath: Array<{ title: string; href: string }> = [];
+import type { DocEntry } from '@/types/content';
+
 if (currentSlug) {
   const allDocs = await getCollection('docs');
   const slugParts = currentSlug.split('/');
   
   for (let i = 0; i < slugParts.length; i++) {
-    const partialSlug = slugParts.slice(0, i + 1).join('/');
-    // Try to find the index page for this path
-    const doc = allDocs.find(d => d.slug === partialSlug || d.slug === `${partialSlug}/index`);
+  const partialSlug = slugParts.slice(0, i + 1).join('/');
+  // Try to find the index page for this path
+  const doc = allDocs.find((d: DocEntry) => d.slug === partialSlug || d.slug === `${partialSlug}/index`);
     
     if (doc) {
       breadcrumbPath.push({

@@ -5,10 +5,11 @@
  */
 import { getCollection } from 'astro:content';
 import WikiLayout from '../layouts/WikiLayout.astro';
+import type { DocEntry } from '@/types/content';
 
 // Get the index page from docs collection
 const allDocs = await getCollection('docs');
-const indexPage = allDocs.find(doc => doc.slug === 'index');
+const indexPage = allDocs.find((doc: DocEntry) => doc.slug === 'index');
 
 if (!indexPage) {
   throw new Error('Could not find docs/index.mdx');
