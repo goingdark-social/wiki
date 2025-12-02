@@ -71,19 +71,19 @@ const docsForSearch = allDocs.map(doc => ({
   const mobileMenuButton = document.getElementById('mobile-menu-button');
   const desktopQuery = window.matchMedia('(min-width: 768px)');
 
-  function handleViewportChange(e) {
+  function handleViewportChange(e: MediaQueryListEvent) {
     if (!mobileMenuButton) return;
     if (e.matches) {
       // Desktop: remove button from DOM to avoid duplicate controls
       mobileMenuButton.remove();
     } else {
       // Mobile: ensure listener is attached
-      if (!mobileMenuButton.__listenerAttached) {
+      if (!(mobileMenuButton as any).__listenerAttached) {
         mobileMenuButton.addEventListener('click', (ev) => {
           ev.preventDefault();
           window.dispatchEvent(new CustomEvent('open-sidebar'));
         });
-        mobileMenuButton.__listenerAttached = true;
+        (mobileMenuButton as any).__listenerAttached = true;
       }
     }
   }
