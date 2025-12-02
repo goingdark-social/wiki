@@ -19,26 +19,22 @@ export function SidebarTree({ navigation, currentPath, isHome }: SidebarTreeProp
       {/* Wiki Home Link */}
       <a
         href="/"
-        className={`flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-all ${
-          isHome
-            ? 'bg-primary text-white shadow-lg primary-glow'
-            : 'text-text-muted hover:text-white hover:bg-surface-800'
-        }`}
+        className={`sidebar-home-link ${isHome ? 'sidebar-home-link-active' : 'sidebar-home-link-inactive'}`}
       >
         <Home size={18} />
         <span>Wiki Home</span>
       </a>
 
       {/* Documentation Label */}
-      <div className="flex items-center gap-2 px-3 mt-6 mb-4">
-        <FileText size={16} className="text-primary" />
-        <span className="text-xs font-bold text-text-subtle uppercase tracking-wider">
+      <div className="sidebar-docs-label">
+        <FileText size={16} className="sidebar-docs-icon" />
+        <span className="sidebar-docs-title">
           Documentation
         </span>
       </div>
 
       {/* Navigation Tree */}
-      <nav className="space-y-1">
+      <nav className="sidebar-nav">
         {navigation.map((node) => (
           <FolderGroup
             key={node.slug}

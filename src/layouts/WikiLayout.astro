@@ -73,19 +73,19 @@ if (currentSlug) {
     <!-- Mobile Sidebar (Drawer) - Available on all pages -->
       <div id="mobile-sidebar-overlay" class="fixed inset-0 z-60 hidden md:hidden">
         <!-- Backdrop with glassmorphism -->
-        <div class="absolute inset-0 bg-black/80 backdrop-blur-md transition-opacity duration-300" aria-hidden="true"></div>
+        <div class="mobile-sidebar-backdrop" aria-hidden="true"></div>
 
         <!-- Drawer with improved styling -->
-        <div class="absolute top-0 left-0 h-full w-80 max-w-[85vw] bg-surface-900/98 backdrop-blur-xl border-r border-surface-700 shadow-2xl overflow-y-auto transform transition-transform duration-300">
+        <div class="mobile-sidebar-drawer">
           <!-- Header - Kept visible with blur -->
-          <div class="sticky top-0 z-10 bg-surface-900/95 backdrop-blur-lg border-b border-surface-700/50 px-5 py-5">
+          <div class="mobile-sidebar-header">
             <div class="flex items-center justify-between mb-4">
               <h2 class="text-lg font-bold text-white font-display">
                 Navigation
               </h2>
               <button
                 id="mobile-sidebar-close"
-                class="w-10 h-10 flex items-center justify-center rounded hover:bg-surface-800 transition-colors text-text-muted hover:text-white"
+                class="mobile-sidebar-close"
                 aria-label="Close menu"
               >
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">

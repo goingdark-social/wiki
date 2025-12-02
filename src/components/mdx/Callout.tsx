@@ -66,7 +66,7 @@ export const Callout = ({ type = 'info', title, children }: CalloutProps) => {
 
   return (
     <div className={clsx(
-      "rounded-xl border p-6 my-6 flex gap-4",
+      "callout-base",
       style.container
     )}>
       <div className="shrink-0 mt-0.5">

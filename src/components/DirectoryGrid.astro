@@ -52,41 +52,41 @@ allDocs.forEach(doc => {
 
 <section aria-label="Documentation categories" class="container-content fade-in-up">
   <div class="mb-10 relative pattern-dots py-8 px-6 rounded-2xl">
-    <h2 class="text-3xl md:text-4xl font-bold text-white mb-3 flex items-center gap-3 font-display">
-      <div class="w-12 h-12 bg-primary rounded-2xl flex items-center justify-center">
+    <h2 class="directory-title">
+      <div class="directory-icon">
         <Icon name="folder" size={24} class="text-white" />
       </div>
       <span>Explore Our Wiki</span>
     </h2>
-    <p class="text-text-muted text-lg ml-16 max-w-2xl">Find everything you need to know about our community, policies, and how to get started.</p>
+    <p class="directory-description">Find everything you need to know about our community, policies, and how to get started.</p>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+  <div class="directory-grid">
     {sections.map((section, index) => (
-      <article class={`card-interactive group relative overflow-hidden ${index % 2 === 0 ? 'pattern-noise' : ''}`}>
+      <article class={`directory-card ${index % 2 === 0 ? 'pattern-noise' : ''}`}>
         {/* Category Header */}
-        <div class="mb-5 pb-4 border-b border-surface-700/30">
+        <div class="directory-card-header">
           {section.indexPage ? (
-            <a href={`/docs/${section.folder}`} class="flex items-center justify-between group/header">
-              <h3 class="text-xl font-bold text-white group-hover/header:text-primary transition-all flex items-center gap-3 font-display">
-                <div class="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center group-hover/header:bg-primary/20 transition-all border border-primary/20">
-                  <Icon name="folder" size={20} class="text-primary" />
+            <a href={`/docs/${section.folder}`} class="directory-link group">
+              <h3 class="directory-link-title">
+                <div class="directory-link-icon">
+                  <Icon name="folder" size={20} class="directory-link-icon-inner" />
                 </div>
-                <span class="group-hover/header:translate-x-1 transition-transform">{section.title}</span>
+                <span>{section.title}</span>
               </h3>
-              <span class="text-xs font-semibold text-secondary bg-secondary-subtle px-3 py-1.5 rounded-full border border-secondary-border">
+              <span class="directory-badge">
                 {section.pages.length} {section.pages.length === 1 ? 'page' : 'pages'}
               </span>
             </a>
           ) : (
-            <div class="flex items-center justify-between">
-              <h3 class="text-xl font-bold text-white flex items-center gap-3 font-display">
-                <div class="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center border border-primary/20">
-                  <Icon name="folder" size={20} class="text-primary" />
+            <div class="directory-header">
+              <h3 class="directory-title">
+                <div class="directory-link-icon">
+                  <Icon name="folder" size={20} class="directory-link-icon-inner" />
                 </div>
                 {section.title}
               </h3>
-              <span class="text-xs font-semibold text-secondary bg-secondary-subtle px-3 py-1.5 rounded-full border border-secondary-border">
+              <span class="directory-badge">
                 {section.pages.length} {section.pages.length === 1 ? 'page' : 'pages'}
               </span>
             </div>
@@ -94,15 +94,15 @@ allDocs.forEach(doc => {
         </div>
 
         {/* Top Pages Preview (shows 3-4 pages) */}
-        <ul class="space-y-2.5">
+        <ul class="directory-pages">
           {section.pages.slice(0, 4).map(page => (
             <li>
               <a
                 href={`/docs/${page.slug}`}
-                class="flex items-start gap-3 px-3 py-2 rounded-lg text-sm text-text-muted hover:text-white hover:bg-surface-750/50 transition-all group/link"
+                class="directory-page-link group"
               >
-                <span class="text-primary shrink-0 text-lg leading-none mt-0.5 group-hover/link:scale-125 transition-transform">→</span>
-                <span class="leading-relaxed group-hover/link:translate-x-0.5 transition-transform">
+                <span class="directory-page-link-arrow">→</span>
+                <span class="directory-page-link-text">
                   {page.data.title}
                 </span>
               </a>
@@ -112,10 +112,10 @@ allDocs.forEach(doc => {
             <li class="pt-3">
               <a
                 href={`/docs/${section.folder}`}
-                class="text-sm text-primary hover:text-primary-hover font-semibold flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-primary/5 transition-all group/more"
+                class="directory-view-all group"
               >
                 <span>View all {section.pages.length} pages</span>
-                <Icon name="arrow-right" size={16} class="group-hover/more:translate-x-1 transition-transform" />
+                <Icon name="arrow-right" size={16} class="directory-view-all-icon" />
               </a>
             </li>
           )}

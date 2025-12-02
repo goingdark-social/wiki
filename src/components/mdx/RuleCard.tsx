@@ -34,7 +34,7 @@ export default function RuleCard({ title, iconName = 'shield', severity = 'mediu
 
   // Design System: Using semantic tokens mapped to Electric Violet accent system
   const severityBadge = {
-    high: 'bg-red-500/10 text-red-400 border-red-500/20',
+    high: 'bg-error-subtle text-error border-error/20',
     medium: 'bg-primary/10 text-primary border-primary/20',
     low: 'bg-primary/10 text-primary border-primary/20',
   };
@@ -50,14 +50,14 @@ export default function RuleCard({ title, iconName = 'shield', severity = 'mediu
       >
         {/* Rule Number Badge */}
         {number && (
-          <div className="absolute top-5 right-5 w-10 h-10 rounded-xl bg-primary/20 text-primary font-bold text-base flex items-center justify-center">
+          <div className="rule-number-badge">
             {number}
           </div>
         )}
 
         {/* Icon in elevated container */}
         <div className="mb-5">
-          <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary/20 group-hover:scale-110 transition-all">
+          <div className="rule-icon-container">
             <IconComponent size={28} />
           </div>
         </div>
