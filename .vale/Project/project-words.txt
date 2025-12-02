@@ -72,8 +72,8 @@ Prometheus
 Ko-fi
 autoscalers
 S3
-Hugo-based
-HugoBlox
+astro-based
+astroBlox
 Node.js
 npm
 pre-commit
@@ -83,7 +83,7 @@ CLI
 Pagefind
 chmod
 -xz
-hugo
+astro
 +x
 glitch-soc
 doxing

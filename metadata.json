@@ -1,0 +1,5 @@
+{
+  "name": "goingdark.social Wiki",
+  "description": "A documentation and wiki site for the goingdark.social Mastodon instance, featuring server rules, privacy policy, and about pages.",
+  "requestFramePermissions": []
+}

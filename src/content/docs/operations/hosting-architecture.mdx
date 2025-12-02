@@ -1,0 +1,24 @@
+---
+title: Hosting Architecture
+weight: 20
+---
+
+**goingdark.social** runs on **Talos Linux** and **Kubernetes**. We treat our infrastructure as code.
+
+### The Stack
+
+*   **Cloud Provider:** Hetzner Cloud (EU / Germany).
+*   **Storage:**
+    *   Media: Cloudflare R2 (Public bucket for access, private for backups).
+    *   Database: Local NVMe storage with automated snapshots.
+*   **Database:** PostgreSQL with PgBouncer for connection pooling.
+*   **Caching:** Redis.
+*   **Search:** Elasticsearch.
+
+### Security
+
+*   Public endpoints (Web/API) are proxied via Cloudflare Tunnel.
+*   Internal services run on a private network and are not exposed to the internet.
+*   All code configurations are audit-logged and versioned on GitHub.
+
+Want to see the code? [Check our GitHub](https://github.com/goingdark-social).

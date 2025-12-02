@@ -1,0 +1,80 @@
+---
+import { getCollection } from 'astro:content';
+import Search from './Search.tsx';
+
+// Get all docs for search
+const allDocs = await getCollection('docs');
+const docsForSearch = allDocs.map(doc => ({
+  slug: doc.slug,
+  title: doc.data.title,
+  description: doc.data.description,
+}));
+---
+
+<nav class="sticky top-0 z-50 bg-surface-850/95 backdrop-blur-lg border-b border-surface-700/50 pattern-lines">
+  <div class="container-content">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo and Brand -->
+      <div class="flex items-center shrink-0">
+        <a href="/" class="flex items-center gap-3 group transition-all">
+          <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center transition-all">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+          </div>
+          <div class="hidden sm:block">
+            <h1 class="text-base font-bold text-white tracking-tight">goingdark.social</h1>
+            <p class="text-xs text-text-muted font-medium">Community Wiki</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center gap-3 flex-1 justify-center">
+        <!-- Search Bar -->
+        <div class="w-full max-w-md">
+          <Search docs={docsForSearch} client:idle />
+        </div>
+
+        <div class="w-px h-6 bg-surface-700"></div>
+
+        <a
+          href="https://goingdark.social"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex btn btn-secondary shrink-0 group/btn whitespace-nowrap"
+        >
+          <span>Join Instance</span>
+          <svg class="w-4 h-4 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="mobile-menu-button"
+        class="inline-flex md:hidden btn btn-ghost btn-icon"
+        aria-label="Open navigation menu"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+</nav>
+
+<script>
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+
+  if (mobileMenuButton) {
+    mobileMenuButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      console.log('Mobile menu button clicked');
+      // Dispatch custom event to open sidebar drawer
+      window.dispatchEvent(new CustomEvent('open-sidebar'));
+    });
+  }
+</script>

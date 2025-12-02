@@ -1,0 +1,31 @@
+---
+title: Backup and Restore
+weight: 30
+---
+
+We take backups seriously. Your data is too valuable to lose.
+
+## What We Backup
+
+*   **PostgreSQL Database:** Full daily backups + incremental every 6 hours.
+*   **Media Files:** Snapshots of Cloudflare R2 storage weekly.
+*   **Configuration:** All Kubernetes configs are versioned in Git.
+
+## Where Backups Are Stored
+
+*   **Primary:** Hetzner Storage Boxes (encrypted at rest).
+*   **Off-site:** Encrypted backups replicated to a separate data center.
+
+## Retention Policy
+
+*   **Daily backups:** Kept for 7 days.
+*   **Weekly backups:** Kept for 30 days.
+*   **Monthly backups:** Kept for 1 year.
+
+## Recovery Time
+
+In the event of a disaster:
+*   **Database restore:** ~15 minutes (automated).
+*   **Full system restore:** ~2 hours (manual intervention required).
+
+We test our backups quarterly to ensure they actually work.

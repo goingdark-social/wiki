@@ -75,5 +75,5 @@ Glitch
 Relays
 Firefish
 Cloudflare
-Hugo
+astro
 tootctl

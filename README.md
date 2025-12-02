@@ -1,53 +1,135 @@
-# Going Dark Wiki
+# goingdark.social Wiki
 
-community wiki for [goingdark.social](https://goingdark.social).
-We built this with [Hugo](https://gohugo.io) and the Hugo Blox theme.
-The site loads in dark mode by default, and you can switch themes from the header.
+Documentation and wiki site for **goingdark.social** - a privacy-focused Mastodon instance.
 
-## Navigation
+## About
 
-The HugoBlox documentation sidebar handles all navigation for us. We keep it focused on section-level pages by setting `docs.sidebar.depth` to `1` in `config/_default/params.yaml`, and we rely on the theme for the responsive menu.
+This wiki provides essential information about our Mastodon instance, including:
 
-## Local development
+- Server rules and community guidelines
+- Privacy policy and data handling
+- Getting started guides
+- Community resources
 
-Install the extended version of Hugo and Node. Run `npm install` to grab the local build tools like Tailwind and Pagefind so everything stays inside this repository. The commands below add `node_modules/.bin` to your path so Hugo and Pagefind work the same way as the workflow.
+## Tech Stack
 
-```shell
+- **Astro** - Static site generator
+- **MDX** - Markdown with JSX components
+- **react** - Lightweight React alternative for interactive components
+- **Tailwind CSS** - Utility-first CSS framework
+
+## Development
+
+### Prerequisites
+
+- Node.js 18+
+- npm or pnpm
+
+### Installation
+
+```bash
 npm install
-PATH="$PWD/node_modules/.bin:$PATH" hugo server
 ```
 
-The site runs at `http://localhost:1313`. Keeping the local `node_modules/.bin` directory on your path lets Hugo find the Tailwind binary while it watches for changes.
+### Development Server
 
-## Testing
-
-All pull requests are automatically validated through comprehensive testing. You can run the same tests locally:
-
-```shell
-# Run all validation tests
-npm run test
-
-# Or run the test script directly
-./scripts/test-pr.sh
+```bash
+npm run dev
 ```
 
-This validates Hugo builds, search index generation, site structure, and content quality.
+The site will be available at `http://localhost:4321`
 
-## Linting
+### Build for Production
 
-[Vale](https://vale.sh) checks our writing. It has project rules in `.vale/Project`, friendly rules in `.vale/friendly`, and the Alex and Write Good packages. They cover Fediverse terms, encourage casual language, require alt text, and prefer code formatting for handles. Docs in `content/docs/legal/` are excluded.
+```bash
+npm run build
+```
 
-1. Run `vale sync` once to download the external packages.
-2. Install the `pre-commit` tool with `pre-commit install`.
-3. It runs `vale` on staged Markdown files.
+### Preview Production Build
 
-Use `pre-commit run --files path/to/file.md` to lint a file manually. The workflow still lints all Markdown files in `content/` and the root README on each push and pull request.
+```bash
+npm run preview
+```
+
+## Project Structure
+
+```
+/
+├── public/              # Static assets
+├── src/
+│   ├── components/      # Reusable components
+│   │   ├── Navigation.astro
+│   │   └── mdx/         # MDX components (Card, Callout)
+│   ├── layouts/         # Page layouts
+│   │   └── WikiLayout.astro
+│   ├── pages/           # Wiki pages (MDX)
+│   │   ├── index.mdx    # Home page
+│   │   ├── rules.mdx    # Server rules
+│   │   └── privacy.mdx  # Privacy policy
+│   └── styles/          # Global styles
+│       └── global.css
+├── astro.config.mjs     # Astro configuration
+├── tailwind.config.mjs  # Tailwind configuration
+└── package.json
+```
+
+## Adding Content
+
+### Creating a New Page
+
+1. Create a new `.mdx` file in `src/pages/`
+2. Add frontmatter with layout and title:
+
+```mdx
+---
+layout: ../layouts/WikiLayout.astro
+title: Your Page Title
+---
+
+# Your Page Title
+
+Your content here...
+```
+
+3. Add navigation link in `src/components/Navigation.astro` if needed
+
+### Using MDX Components
+
+Import and use custom components in your MDX files:
+
+```mdx
+import { Callout } from '../components/mdx/Callout';
+import Card from '../components/mdx/Card.astro';
+
+<Callout type="info">
+  This is an info callout
+</Callout>
+
+<Card title="Card Title" icon="🎯">
+  Card content
+</Card>
+```
 
 ## Deployment
 
-Commits to `main` publish to GitHub Pages through the included workflow.
+This site can be deployed to:
 
-## Funding
+- Netlify
+- Vercel
+- Cloudflare Pages
+- GitHub Pages
+- Any static hosting service
 
-The server runs at home, and personal funds pay the hosting costs. Help keep it running at <https://ko-fi.com/goingdark>.
+Configure your deployment to:
+- Build command: `npm run build`
+- Output directory: `dist`
 
+## License
+
+This wiki is maintained by the goingdark.social admin team.
+
+## Contact
+
+- **Instance**: https://goingdark.social
+- **Email**: admin@goingdark.social
+- **Mastodon**: @admin@goingdark.social

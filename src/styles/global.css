@@ -1,0 +1,850 @@
+@import "tailwindcss";
+
+@theme {
+  /* Modern Dark Design System - 2025 Edition */
+  /* Philosophy: Elevation over Strokes, Subtle Blooms, Typographic Confidence */
+  
+  /* Surface Elevation Hierarchy - Mastodon Official Colors */
+  --color-surface-950: #181821;      /* Level 0 - Deepest background (grey-950) */
+  --color-surface-900: #181821;      /* Level 1 - Page background (grey-950) */
+  --color-surface-850: #292938;      /* Level 1.5 - Sidebar (grey-800) */
+  --color-surface-800: #292938;      /* Level 2 - Cards, elevated surfaces (grey-800) */
+  --color-surface-750: #444664;      /* Level 2.5 - Card hover (grey-700) */
+  --color-surface-700: #444664;      /* Level 3 - Inputs, borders (grey-700) */
+  --color-surface-600: #545778;      /* Level 4 - Disabled states (grey-600) */
+  
+  /* Legacy aliases (backward compatibility - map to new elevation) */
+  --color-bg-main: #16181d;
+  --color-background: #16181d;
+  --color-surface: #23262f;
+  --color-surface-card: #23262f;
+  --color-surface-hover: #2a2e38;
+  --color-border: #33374a;
+  --color-border-subtle: #33374a;
+  
+  /* Primary Accent - Mastodon Official Purple */
+  --color-primary: #6364ff;           /* Primary actions, links (Mastodon official) */
+  --color-primary-hover: #858afa;     /* Hover state (Mastodon light purple) */
+  --color-primary-active: #563acc;    /* Active/pressed state (Mastodon dark purple) */
+  --color-primary-subtle: rgba(99, 100, 255, 0.1);  /* Subtle backgrounds */
+  --color-primary-border: rgba(99, 100, 255, 0.18);  /* Hairline borders */
+  --color-primary-glow: rgba(99, 100, 255, 0.25);  /* Glow/bloom effects */
+
+  /* Secondary Goldenrod Palette - Warm Accents */
+  --color-secondary: #ffc954;              /* Badges, highlights, warm CTAs */
+  --color-secondary-hover: #ffd77a;        /* Hover state (lighter) */
+  --color-secondary-active: #f0b636;       /* Active state (darker) */
+  --color-secondary-subtle: rgba(255, 201, 84, 0.1);  /* 10% opacity backgrounds */
+  --color-secondary-border: rgba(255, 201, 84, 0.2);  /* Border highlights */
+  --color-secondary-glow: rgba(255, 201, 84, 0.25);   /* Warm glow effect */
+  --color-secondary-dark: #d89e2f;         /* Dark mode text on secondary */
+
+  /* Semantic Colors - Mastodon Official with subtle variants */
+  --color-success: #05df72;             /* Success/Green (Mastodon official) */
+  --color-success-subtle: rgba(5, 223, 114, 0.1);
+
+  --color-warning: #ffb900;             /* Warning/Yellow (Mastodon official) */
+  --color-warning-subtle: rgba(255, 185, 0, 0.1);
+
+  --color-error: #ff637e;               /* Error/Red (Mastodon official) */
+  --color-error-subtle: rgba(255, 99, 126, 0.1);
+
+  --color-info: #858afa;                /* Info/Light purple (Mastodon) */
+  --color-info-subtle: rgba(133, 138, 250, 0.1);
+
+  /* Legacy aliases (backward compatibility) */
+  --color-accent: #6364ff;
+  --color-highlight: #6364ff;
+  --color-accent-error: #ff637e;
+  --color-accent-warning: #ffb900;
+  --color-accent-success: #05df72;
+  --color-danger: #ff637e;
+  
+  /* Text Hierarchy - Mastodon Official */
+  --color-text-white: #ffffff;        /* Pure white - Headings only */
+  --color-text-primary: #f0f0f5;      /* Primary text - Body (grey-100) */
+  --color-text-main: #f0f0f5;         /* Alias for primary */
+  --color-text-muted: #8b8dac;        /* Secondary text - Descriptions (grey-400) */
+  --color-text-subtle: #696d91;       /* Tertiary text - Captions, labels (grey-500) */
+  --color-text-disabled: #545778;     /* Disabled state (grey-600) */
+  
+  /* Typography Scale (Modern, generous sizing) */
+  --font-display: 'Raleway', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Source Sans 3', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+  
+  --font-size-xs: 0.75rem;      /* 12px */
+  --font-size-sm: 0.875rem;     /* 14px */
+  --font-size-base: 1rem;       /* 16px */
+  --font-size-lg: 1.125rem;     /* 18px */
+  --font-size-xl: 1.25rem;      /* 20px */
+  --font-size-2xl: 1.5rem;      /* 24px */
+  --font-size-3xl: 1.875rem;    /* 30px */
+  --font-size-4xl: 2.25rem;     /* 36px */
+  
+  /* Border Radius (Larger, friendlier) */
+  --radius-sm: 0.5rem;          /* 8px - Small elements */
+  --radius-base: 0.75rem;       /* 12px - Standard */
+  --radius-lg: 1rem;            /* 16px - Cards */
+  --radius-xl: 1.25rem;         /* 20px - Large cards */
+  --radius-2xl: 1.5rem;         /* 24px - Hero sections */
+  --radius-full: 9999px;        /* Pills, badges */
+  
+  /* Legacy radius aliases */
+  --radius-card: 1rem;
+  
+  /* Shadows (Minimal, realistic) */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-base: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.4);
+  
+  /* Transitions (Smooth, professional) */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Layout - Consistent Max Widths */
+  --max-width-content: 1280px;      /* Main content container (same as Mastodon) */
+  --max-width-reading: 720px;       /* Reading column for wiki pages */
+  --max-width-hero: 1280px;         /* Hero section (matches content) */
+
+  /* Gradient System */
+  --gradient-primary: linear-gradient(135deg, #6364ff 0%, #858afa 100%);
+  --gradient-warm: linear-gradient(135deg, #ffc954 0%, #ff8c42 100%);
+  --gradient-sunset: linear-gradient(135deg, #6364ff 0%, #ffc954 100%);
+
+}
+
+/* Base Styles */
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-surface-900);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Layout Utilities - Consistent Container Widths */
+.container-content {
+  width: 100%;
+  max-width: var(--max-width-content);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container-content {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-content {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.container-reading {
+  width: 100%;
+  max-width: var(--max-width-reading);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Typography Utilities */
+.font-display { font-family: var(--font-display) !important; }
+.font-sans { font-family: var(--font-sans) !important; }
+.font-mono { font-family: var(--font-mono) !important; }
+
+/* Tailwind Custom Utilities - Design System Integration */
+.bg-surface-950 { background-color: var(--color-surface-950) !important; }
+.bg-surface-900 { background-color: var(--color-surface-900) !important; }
+.bg-surface-850 { background-color: var(--color-surface-850) !important; }
+.bg-surface-800 { background-color: var(--color-surface-800) !important; }
+.bg-surface-750 { background-color: var(--color-surface-750) !important; }
+.bg-surface-700 { background-color: var(--color-surface-700) !important; }
+.bg-surface { background-color: var(--color-surface) !important; }
+
+.text-white { color: var(--color-text-white) !important; }
+.text-text-white { color: var(--color-text-white) !important; }
+.text-text-primary { color: var(--color-text-primary) !important; }
+.text-text-main { color: var(--color-text-main) !important; }
+.text-text-muted { color: var(--color-text-muted) !important; }
+.text-text-subtle { color: var(--color-text-subtle) !important; }
+
+.bg-primary { background-color: var(--color-primary) !important; }
+.bg-primary\/10 { background-color: var(--color-primary-subtle) !important; }
+.bg-primary\/15 { background-color: rgba(124, 125, 255, 0.15) !important; }
+.bg-primary\/20 { background-color: rgba(124, 125, 255, 0.2) !important; }
+.text-primary { color: var(--color-primary) !important; }
+.text-primary-hover { color: var(--color-primary-hover) !important; }
+
+.border-border { border-color: var(--color-surface-700) !important; }
+.border-surface-700 { border-color: var(--color-surface-700) !important; }
+.border-primary { border-color: var(--color-primary) !important; }
+.border-primary\/50 { border-color: var(--color-primary-border) !important; }
+
+/* Secondary Color Utilities */
+.bg-secondary { background-color: var(--color-secondary) !important; }
+.bg-secondary-subtle { background-color: var(--color-secondary-subtle) !important; }
+.text-secondary { color: var(--color-secondary) !important; }
+.text-secondary-dark { color: var(--color-secondary-dark) !important; }
+.border-secondary { border-color: var(--color-secondary) !important; }
+.border-secondary-border { border-color: var(--color-secondary-border) !important; }
+
+/* Semantic Color Utilities */
+.bg-info-subtle { background-color: var(--color-info-subtle) !important; }
+.bg-warning-subtle { background-color: var(--color-warning-subtle) !important; }
+.bg-error-subtle { background-color: var(--color-error-subtle) !important; }
+.bg-success-subtle { background-color: var(--color-success-subtle) !important; }
+
+.text-info { color: var(--color-info) !important; }
+.text-warning { color: var(--color-warning) !important; }
+.text-error { color: var(--color-error) !important; }
+.text-success { color: var(--color-success) !important; }
+
+.border-info { border-color: var(--color-info) !important; }
+.border-warning { border-color: var(--color-warning) !important; }
+.border-error { border-color: var(--color-error) !important; }
+.border-success { border-color: var(--color-success) !important; }
+
+/* Enhanced Selection - Electric Violet Pulse */
+::selection {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+::-moz-selection {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-surface-900);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-surface-700);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-surface-600);
+}
+
+/* Design System Utilities - Modern Elevation-Based */
+
+/* Surface Elevation (NO BORDERS - Use background contrast) */
+.surface-elevated {
+  background: var(--color-surface-800);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+}
+
+.surface-elevated:hover {
+  background: var(--color-surface-750);
+  transform: translateY(-1px);
+}
+
+/* Interactive Card - Mastodon Style (No Glow) */
+.card-interactive {
+  background: var(--color-surface-800);
+  border-radius: var(--radius-base);
+  padding: 1.5rem;
+  transition: all var(--transition-base);
+  border: 1px solid var(--color-surface-700);
+}
+
+.card-interactive:hover {
+  background: var(--color-surface-750);
+  border-color: var(--color-primary);
+}
+
+/* Minimal Border Utility (Use sparingly - only for inputs) */
+.border-hairline {
+  border: 1px solid var(--color-surface-700);
+}
+
+/* Focus State (Accessibility) */
+.focus-ring {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Background Pattern Utilities */
+.pattern-dots {
+  background-image: radial-gradient(circle, rgba(99, 100, 255, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+  position: relative;
+}
+
+.pattern-lines {
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 20px,
+    rgba(99, 100, 255, 0.03) 20px,
+    rgba(99, 100, 255, 0.03) 21px
+  );
+}
+
+.pattern-noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+}
+
+.pattern-glow-mesh {
+  background-image:
+    radial-gradient(at 27% 37%, rgba(99, 100, 255, 0.12) 0px, transparent 50%),
+    radial-gradient(at 97% 21%, rgba(255, 201, 84, 0.08) 0px, transparent 50%),
+    radial-gradient(at 52% 99%, rgba(133, 138, 250, 0.08) 0px, transparent 50%),
+    radial-gradient(at 10% 29%, rgba(99, 100, 255, 0.07) 0px, transparent 50%);
+}
+
+.pattern-circuit {
+  background-image:
+    linear-gradient(rgba(99, 100, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99, 100, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  position: relative;
+}
+
+.pattern-circuit::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 25% 25%, rgba(99, 100, 255, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Reduce motion support - disable patterns for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .pattern-dots,
+  .pattern-lines,
+  .pattern-noise,
+  .pattern-glow-mesh,
+  .pattern-circuit {
+    background-image: none !important;
+  }
+  .pattern-circuit::after {
+    display: none;
+  }
+}
+
+/* Wiki Content Styles */
+.wiki-content {
+  color: var(--color-text-main);
+  line-height: 1.7;
+}
+
+.wiki-content h1 {
+  font-size: var(--font-size-4xl);
+  font-weight: 800;
+  font-family: var(--font-display);
+  color: var(--color-text-white);
+  letter-spacing: -0.035em;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  background: linear-gradient(135deg, #ffffff 0%, #e0d5ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.wiki-content h2 {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  font-family: var(--font-display);
+  color: var(--color-text-white);
+  letter-spacing: -0.025em;
+  margin-top: 3rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--color-surface-700);
+  line-height: 1.2;
+  position: relative;
+}
+
+.wiki-content h2::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: var(--color-primary);
+  border-radius: 2px;
+}
+
+.wiki-content h3 {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  font-family: var(--font-display);
+  color: var(--color-text-white);
+  margin-top: 2rem;
+  margin-bottom: 0.875rem;
+  line-height: 1.3;
+}
+
+.wiki-content h4 {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-text-white);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.wiki-content p {
+  margin-bottom: 1.25rem;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-base);
+  line-height: 1.7;
+}
+
+.wiki-content strong {
+  color: var(--color-text-white);
+  font-weight: 600;
+}
+
+.wiki-content em {
+  font-style: italic;
+  color: var(--color-text-primary);
+}
+
+.wiki-content a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s;
+  position: relative;
+  text-shadow: 0 0 20px var(--color-primary-glow);
+}
+
+.wiki-content a:hover {
+  color: var(--color-primary-hover);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  text-shadow: 0 0 30px var(--color-primary-glow);
+}
+
+/* Lists */
+.wiki-content ul,
+.wiki-content ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.75rem;
+  color: var(--color-text-main);
+}
+
+.wiki-content ul {
+  list-style-type: none;
+}
+
+.wiki-content ul li {
+  position: relative;
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+}
+
+.wiki-content ul li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: bold;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.wiki-content ol {
+  list-style-type: decimal;
+  list-style-position: outside;
+}
+
+.wiki-content ol li {
+  margin-bottom: 0.75rem;
+  padding-left: 0.5rem;
+}
+
+.wiki-content ol li::marker {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* Code Blocks */
+.wiki-content code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  color: var(--color-primary);
+  background: var(--color-surface-800);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  border: 1px solid var(--color-surface-700);
+  font-weight: 500;
+}
+
+.wiki-content pre {
+  background: var(--color-surface-900);
+  border: 1px solid var(--color-surface-700);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  line-height: 1.7;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.wiki-content pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--color-text-main);
+  font-size: inherit;
+}
+
+/* Blockquotes */
+.wiki-content blockquote {
+  border-left: 4px solid var(--color-primary);
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+  color: var(--color-text-muted);
+  font-style: italic;
+  background: var(--color-surface-900);
+  padding: 1.25rem 1.5rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.wiki-content blockquote p {
+  margin-bottom: 0.5rem;
+}
+
+.wiki-content blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* Horizontal Rules */
+.wiki-content hr {
+  border: none;
+  border-top: 2px solid var(--color-surface-700);
+  margin: 3rem 0;
+  position: relative;
+}
+
+.wiki-content hr::after {
+  content: "⬥";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--color-background);
+  padding: 0 1rem;
+  color: var(--color-surface-600);
+}
+
+/* Tables */
+.wiki-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.wiki-content thead {
+  background: var(--color-surface-800);
+}
+
+.wiki-content th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: white;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.wiki-content td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--color-surface-700);
+  color: var(--color-text-main);
+}
+
+.wiki-content tr:last-child td {
+  border-bottom: none;
+}
+
+.wiki-content tbody tr {
+  background: var(--color-surface-900);
+  transition: background 0.2s;
+}
+
+.wiki-content tbody tr:hover {
+  background: var(--color-surface-800);
+}
+
+/* Images */
+.wiki-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  margin: 2rem 0;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--color-surface-700);
+}
+
+/* Animations - Smooth, welcoming */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes gentleBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.scale-in {
+  animation: scaleIn 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+/* Focus Styles - Enhanced Electric Violet */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-base);
+  box-shadow: 0 0 0 4px var(--color-primary-glow);
+}
+
+/* Modern Button System - Mastodon Style */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-base), border-color var(--transition-base);
+  cursor: pointer;
+  border: 1px solid transparent;
+  text-decoration: none;
+  font-family: var(--font-sans);
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-hover);
+}
+
+.btn-secondary {
+  background: var(--color-secondary);
+  color: var(--color-secondary-dark);
+  border-color: var(--color-secondary-border);
+}
+
+.btn-secondary:hover {
+  background: var(--color-secondary-hover);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--color-text-muted);
+  border-color: var(--color-surface-700);
+}
+
+.btn-ghost:hover {
+  background: var(--color-surface-800);
+  color: var(--color-text-white);
+}
+
+.btn-icon {
+  padding: 0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.btn-sm {
+  padding: 0.375rem 0.75rem;
+  font-size: var(--font-size-xs);
+}
+
+.btn-lg {
+  padding: 0.625rem 1.25rem;
+  font-size: var(--font-size-base);
+}
+
+/* Badge System - Mastodon Style */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  transition: background var(--transition-base), border-color var(--transition-base);
+  text-decoration: none;
+}
+
+.badge-primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+.badge-primary:hover {
+  background: var(--color-primary-hover);
+}
+
+.badge-secondary {
+  background: var(--color-secondary);
+  color: var(--color-secondary-dark);
+}
+
+.badge-secondary:hover {
+  background: var(--color-secondary-hover);
+}
+
+.badge-outline-secondary {
+  background: var(--color-secondary-subtle);
+  color: var(--color-secondary);
+  border: 1px solid var(--color-secondary-border);
+}
+
+.badge-outline-secondary:hover {
+  background: var(--color-secondary);
+  color: var(--color-secondary-dark);
+}
+
+/* Utility Classes - Removed gradient and glass effects for Mastodon aesthetic */
+
+/* Grid Layouts */
+.wiki-content .grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.wiki-content .grid.cols-2 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.wiki-content .grid.cols-3 {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+@media (max-width: 768px) {
+  .wiki-content h1 {
+    font-size: 2rem;
+  }
+
+  .wiki-content h2 {
+    font-size: 1.75rem;
+  }
+
+  .wiki-content h3 {
+    font-size: 1.25rem;
+  }
+
+  .wiki-content pre {
+    padding: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .wiki-content table {
+    font-size: 0.875rem;
+  }
+
+  .wiki-content th,
+  .wiki-content td {
+    padding: 0.75rem;
+  }
+}

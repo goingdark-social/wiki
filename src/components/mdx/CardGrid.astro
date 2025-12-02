@@ -1,0 +1,16 @@
+---
+interface Props {
+  cols?: 2 | 3 | 4;
+}
+
+const { cols = 2 } = Astro.props;
+const gridCols = {
+  2: 'md:grid-cols-2',
+  3: 'md:grid-cols-3',
+  4: 'md:grid-cols-4',
+};
+---
+
+<div class={`grid grid-cols-1 ${gridCols[cols]} gap-6 my-8`}>
+  <slot />
+</div>

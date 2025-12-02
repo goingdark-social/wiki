@@ -1,26 +1,51 @@
 {
   "name": "goingdark-wiki",
+  "type": "module",
   "version": "1.0.0",
-  "description": "Going Dark Wiki - Hugo-based documentation website for the goingdark.social Mastodon community",
-  "private": true,
   "scripts": {
-    "build": "hugo --minify",
-    "dev": "hugo server --bind 0.0.0.0 --port 1313",
-    "production": "HUGO_ENVIRONMENT=production hugo --minify",
-    "test": "./scripts/test-pr.sh",
-    "test:pr": "./scripts/test-pr.sh"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "prepare": "husky",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ]
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.6",
+    "@astrojs/mdx": "^4.3.1",
+    "@astrojs/react": "^4.4.2",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "astro": "^5.1.2",
+    "clsx": "^2.1.0",
+    "lucide": "^0.555.0",
+    "lucide-react": "^0.555.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tailwindcss": "^4.0.0"
   },
   "devDependencies": {
-    "@tailwindcss/cli": "^4.1.13",
-    "@tailwindcss/typography": "^0.5.16",
-    "pagefind": "^1.0.0",
-    "tailwindcss": "^4.1.13"
-  },
-  "engines": {
-    "node": ">=20.0.0"
-  },
-  "main": "index.js",
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+    "@eslint-react/eslint-plugin": "^2.3.9",
+    "@tailwindcss/vite": "^4.1.17",
+    "@typescript-eslint/eslint-plugin": "^8.48.0",
+    "@typescript-eslint/parser": "^8.48.0",
+    "eslint": "^9.39.1",
+    "eslint-plugin-astro": "^1.5.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-mdx": "^3.6.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-tailwindcss": "^4.0.0-beta.0",
+    "globals": "^16.5.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "typescript": "^5.9.3"
+  }
 }
