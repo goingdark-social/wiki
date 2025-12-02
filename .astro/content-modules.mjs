@@ -1,7 +1,7 @@
 
 export default new Map([
-["src/content/docs/index.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2Findex.mdx&astroContentModuleFlag=true")],
 ["src/content/docs/community/community-guidelines.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2Fcommunity%2Fcommunity-guidelines.mdx&astroContentModuleFlag=true")],
+["src/content/docs/index.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2Findex.mdx&astroContentModuleFlag=true")],
 ["src/content/docs/community/index.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2Fcommunity%2Findex.mdx&astroContentModuleFlag=true")],
 ["src/content/docs/legal/appeals.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2Flegal%2Fappeals.mdx&astroContentModuleFlag=true")],
 ["src/content/docs/legal/illegal-content-notices.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fdocs%2Flegal%2Fillegal-content-notices.mdx&astroContentModuleFlag=true")],

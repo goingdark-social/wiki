@@ -89,7 +89,19 @@ const docsForSearch = allDocs.map(doc => ({
   }
 
   // Initial check
-  handleViewportChange(desktopQuery);
+  if (desktopQuery.matches) {
+    // Desktop: remove button from DOM to avoid duplicate controls
+    mobileMenuButton?.remove();
+  } else {
+    // Mobile: ensure listener is attached
+    if (mobileMenuButton && !(mobileMenuButton as any).__listenerAttached) {
+      mobileMenuButton.addEventListener('click', (ev) => {
+        ev.preventDefault();
+        window.dispatchEvent(new CustomEvent('open-sidebar'));
+      });
+      (mobileMenuButton as any).__listenerAttached = true;
+    }
+  }
   // Listen for changes
   desktopQuery.addEventListener('change', handleViewportChange);
 </script>
