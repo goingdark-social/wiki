@@ -50,8 +50,8 @@ allDocs.forEach(doc => {
 });
 ---
 
-<section aria-label="Documentation categories" class="container-content fade-in-up">
-  <div class="mb-10 relative pattern-dots py-8 px-6 rounded-2xl">
+<section aria-label="Documentation categories" class="directory-section">
+  <div class="directory-pattern">
     <h2 class="directory-title">
       <div class="directory-icon">
         <Icon name="folder" size={24} class="text-white" />
@@ -67,7 +67,7 @@ allDocs.forEach(doc => {
         {/* Category Header */}
         <div class="directory-card-header">
           {section.indexPage ? (
-            <a href={`/docs/${section.folder}`} class="directory-link group">
+            <a href={`/docs/${section.folder}`} class="directory-link-styled">
               <h3 class="directory-link-title">
                 <div class="directory-link-icon">
                   <Icon name="folder" size={20} class="directory-link-icon-inner" />
@@ -99,7 +99,7 @@ allDocs.forEach(doc => {
             <li>
               <a
                 href={`/docs/${page.slug}`}
-                class="directory-page-link group"
+                class="directory-page-link-styled"
               >
                 <span class="directory-page-link-arrow">→</span>
                 <span class="directory-page-link-text">
@@ -112,7 +112,7 @@ allDocs.forEach(doc => {
             <li class="pt-3">
               <a
                 href={`/docs/${section.folder}`}
-                class="directory-view-all group"
+                class="directory-view-all-styled"
               >
                 <span>View all {section.pages.length} pages</span>
                 <Icon name="arrow-right" size={16} class="directory-view-all-icon" />
