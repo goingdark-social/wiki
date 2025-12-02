@@ -1,7 +1,7 @@
 name: Deploy website to GitHub Pages
 
 env:
-  WC_HUGO_VERSION: 0.150.0
+  WC_astro_VERSION: 0.150.0
 on:
   # Trigger the workflow every time you push to the `main` branch
   push:
@@ -22,25 +22,25 @@ concurrency:
 jobs:
   # Build website
   build:
-    if: github.repository_owner != 'HugoBlox'
+    if: github.repository_owner != 'astroBlox'
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v5
       with:
-          # Fetch history for Hugo's .GitInfo and .Lastmod
+          # Fetch history for astro's .GitInfo and .Lastmod
         fetch-depth: 0
-    - name: Setup Hugo
-      uses: peaceiris/actions-hugo@v3
+    - name: Setup astro
+      uses: peaceiris/actions-astro@v3
       with:
-        hugo-version: ${{ env.WC_HUGO_VERSION }}
+        astro-version: ${{ env.WC_astro_VERSION }}
         extended: true
     - uses: actions/cache@v4
       with:
-        path: /tmp/hugo_cache_runner/
-        key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.mod') }}
+        path: /tmp/astro_cache_runner/
+        key: ${{ runner.os }}-astromod-${{ hashFiles('**/go.mod') }}
         restore-keys: |
-          ${{ runner.os }}-hugomod-
+          ${{ runner.os }}-astromod-
     - uses: actions/setup-node@v5
       with:
         node-version: 22
@@ -49,13 +49,13 @@ jobs:
     - name: Setup Pages
       id: pages
       uses: actions/configure-pages@v5
-    - name: Build with Hugo
+    - name: Build with astro
       env:
-        HUGO_ENVIRONMENT: production
+        astro_ENVIRONMENT: production
       run: |
-        echo "Hugo Cache Dir: $(hugo config | grep cachedir)"
+        echo "astro Cache Dir: $(astro config | grep cachedir)"
         export PATH="$PWD/node_modules/.bin:$PATH"
-        hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+        astro --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
     - name: Generate Pagefind search index
       run: npx pagefind --source "public"
     - name: Upload artifact
@@ -65,7 +65,7 @@ jobs:
 
   # Deploy website to GitHub Pages hosting
   deploy:
-    if: github.repository_owner != 'HugoBlox'
+    if: github.repository_owner != 'astroBlox'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

@@ -1,7 +1,7 @@
 name: PR Validation
 
 env:
-  WC_HUGO_VERSION: 0.150.0
+  WC_astro_VERSION: 0.150.0
 
 on:
   pull_request:
@@ -16,13 +16,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
         with:
-          # Fetch history for Hugo's .GitInfo and .Lastmod
+          # Fetch history for astro's .GitInfo and .Lastmod
           fetch-depth: 0
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
+      - name: Setup astro
+        uses: peaceiris/actions-astro@v3
         with:
-          hugo-version: ${{ env.WC_HUGO_VERSION }}
+          astro-version: ${{ env.WC_astro_VERSION }}
           extended: true
 
       - name: Setup Node.js
@@ -30,13 +30,13 @@ jobs:
         with:
           node-version: 22
 
-      - name: Cache Hugo modules
+      - name: Cache astro modules
         uses: actions/cache@v4
         with:
-          path: /tmp/hugo_cache_runner/
-          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.mod') }}
+          path: /tmp/astro_cache_runner/
+          key: ${{ runner.os }}-astromod-${{ hashFiles('**/go.mod') }}
           restore-keys: |
-            ${{ runner.os }}-hugomod-
+            ${{ runner.os }}-astromod-
 
       - name: Install Node dependencies
         run: npm ci
