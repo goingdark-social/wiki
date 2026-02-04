@@ -28,6 +28,22 @@ jobs:
           npx astro check
           npm run build
 
+      - name: Link check (built site)
+        uses: lycheeverse/lychee-action@v2.7.0
+        with:
+          args: >-
+            --method get
+            --root-dir ${{ github.workspace }}/dist
+            --max-concurrency 8
+            --timeout 20
+            --max-retries 2
+            --retry-wait-time 2
+            --accept '200..=299, 429'
+            --exclude '^https://fonts\.googleapis\.com/?$'
+            --exclude '^https://fonts\.gstatic\.com/?$'
+            --exclude '^https://ko-fi\.com/goingdark/?$'
+            "dist/**/*.html"
+
       - name: Lint (ESLint)
         run: npm run lint
 
