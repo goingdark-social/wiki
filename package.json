@@ -46,6 +46,7 @@
     "globals": "^17.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
+    "mdx2vast": "^0.3.1",
     "typescript": "^5.9.3"
   }
 }
