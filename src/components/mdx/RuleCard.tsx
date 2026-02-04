@@ -34,9 +34,9 @@ export default function RuleCard({ title, iconName = 'shield', severity = 'mediu
 
   // Design System: Using semantic tokens mapped to Electric Violet accent system
   const severityBadge = {
-    high: 'bg-error-subtle text-error border-error/20',
-    medium: 'bg-primary/10 text-primary border-primary/20',
-    low: 'bg-primary/10 text-primary border-primary/20',
+    high: 'bg-error-subtle text-error border-error/30',
+    medium: 'bg-primary-subtle text-primary border-primary/30',
+    low: 'bg-primary-subtle text-primary border-primary/30',
   };
 
   return (
@@ -45,7 +45,7 @@ export default function RuleCard({ title, iconName = 'shield', severity = 'mediu
       <button
         type="button"
         onClick={() => setIsOpen(true)}
-        className="card-interactive group text-left w-full"
+        className="card-interactive group text-left w-full relative"
         aria-label={`Read rule: ${title}`}
       >
         {/* Rule Number Badge */}
@@ -63,47 +63,47 @@ export default function RuleCard({ title, iconName = 'shield', severity = 'mediu
         </div>
 
         {/* Title */}
-        <h3 className="text-xl font-bold text-white mb-4 pr-10 group-hover:text-primary transition-colors">
+        <h3 className="text-xl font-bold text-white mb-[var(--space-4)] pr-[var(--space-10)] group-hover:text-primary transition-colors">
           {title}
         </h3>
 
         {/* Severity Badge */}
-        <span className={`inline-block text-xs font-bold px-3 py-1.5 rounded-full ${severityBadge[severity]}`}>
+        <span className={`inline-block text-xs font-bold px-[var(--space-3)] py-[6px] rounded-[var(--radius-full)] ${severityBadge[severity]}`}>
           {severity.toUpperCase()}
         </span>
       </button>
 
-      {/* Modal - Simplified, using Design System */}
+      {/* Modal - z-40: Overlays/Modals layer */}
       {isOpen && (
         <div
-          className="fixed inset-0 z-100 flex items-center justify-center p-4"
+          className="fixed inset-0 z-40 flex items-center justify-center p-4"
           role="presentation"
         >
           {/* Backdrop - Simpler without glassmorphism */}
           <div
-            className="absolute inset-0 bg-black/80 cursor-default"
+            className="absolute inset-0 bg-surface-900/80 cursor-default"
             onClick={() => setIsOpen(false)}
             aria-hidden="true"
           />
 
           {/* Modal Content - Modern elevated surface */}
           <div
-            className="relative bg-surface-800 rounded-2xl max-w-2xl w-full max-h-[85vh] overflow-y-auto shadow-xl"
+            className="relative bg-surface-800 rounded-[var(--radius-xl)] max-w-2xl w-full max-h-[85vh] overflow-y-auto shadow-xl"
             role="dialog"
             aria-modal="true"
             aria-labelledby="modal-title"
           >
             {/* Header */}
-            <div className="sticky top-0 z-10 bg-surface-750 border-b border-surface-700 px-6 py-5 flex items-start justify-between">
-              <div className="flex items-start gap-4 flex-1">
+            <div className="sticky top-0 z-10 bg-surface-750 border-b border-surface-700 px-[var(--space-6)] py-[var(--space-5)] flex items-start justify-between">
+              <div className="flex items-start gap-[var(--space-4)] flex-1">
                 <div className="text-text-muted">
                   <IconComponent size={28} />
                 </div>
                 <div>
-                  <h2 id="modal-title" className="text-xl font-bold text-white mb-1">
+                  <h2 id="modal-title" className="text-xl font-bold text-white mb-[var(--space-1)]">
                     {number && <span className="text-primary">Rule {number}:</span>} {title}
                   </h2>
-                  <span className={`inline-block text-xs font-semibold px-3 py-1 rounded-full border ${severityBadge[severity]}`}>
+                  <span className={`inline-block text-xs font-semibold px-[var(--space-3)] py-[6px] rounded-[var(--radius-full)] border ${severityBadge[severity]}`}>
                     {severity.toUpperCase()}
                   </span>
                 </div>
@@ -119,7 +119,7 @@ export default function RuleCard({ title, iconName = 'shield', severity = 'mediu
             </div>
 
             {/* Body */}
-            <div className="px-6 py-6">
+            <div className="px-[var(--space-6)] py-[var(--space-6)]">
               <div className="prose prose-invert prose-slate max-w-none">
                 <div className="text-text-main leading-relaxed">
                   {children}
@@ -128,7 +128,7 @@ export default function RuleCard({ title, iconName = 'shield', severity = 'mediu
             </div>
 
             {/* Footer */}
-            <div className="sticky bottom-0 bg-surface-750 border-t border-surface-700 px-6 py-5">
+            <div className="sticky bottom-0 bg-surface-750 border-t border-surface-700 px-[var(--space-6)] py-[var(--space-5)]">
               <button
                 type="button"
                 onClick={() => setIsOpen(false)}

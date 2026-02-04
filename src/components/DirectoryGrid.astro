@@ -56,7 +56,7 @@ allDocs.forEach((doc: DocEntry) => {
   <div class="directory-pattern">
     <h2 class="directory-title">
       <div class="directory-icon">
-        <Icon name="folder" size={24} class="text-white" />
+        <Icon name="folder" size={24} class="directory-icon-inner" />
       </div>
       <span>Explore Our Wiki</span>
     </h2>
@@ -111,7 +111,7 @@ allDocs.forEach((doc: DocEntry) => {
             </li>
           ))}
           {section.pages.length > 4 && (
-            <li class="pt-3">
+            <li style="padding-top: var(--space-3);">
               <a
                 href={`/docs/${section.folder}`}
                 class="directory-view-all-styled"

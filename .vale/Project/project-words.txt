@@ -76,6 +76,7 @@ astro-based
 astroBlox
 Node.js
 npm
+pnpm
 pre-commit
 Pre-commit
 CI
@@ -86,6 +87,7 @@ chmod
 astro
 +x
 glitch-soc
+Uncomment
 doxing
 transphobia
 casteism
