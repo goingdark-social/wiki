@@ -72,7 +72,7 @@ export default function Search({ docs }: SearchProps) {
           role="combobox"
           value={query}
           onInput={(e) => setQuery((e.target as HTMLInputElement).value)}
-          placeholder="Search wiki... (Ctrl+K)"
+          placeholder="Search wiki..."
           className="search-input"
           aria-label="Search wiki documentation"
           aria-autocomplete="list"
