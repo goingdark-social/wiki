@@ -430,7 +430,7 @@ if (currentSlug) {
       const mobileOverlay = document.getElementById('mobile-sidebar-overlay');
       const mobileClose = document.getElementById('mobile-sidebar-close');
       const mobileSidebar = document.getElementById('mobile-sidebar');
-      let previousFocus = null;
+      let previousFocus: HTMLElement | null = null;
 
       if (mobileOverlay) {
         const closeSidebar = () => {
@@ -442,7 +442,7 @@ if (currentSlug) {
           window.dispatchEvent(new CustomEvent('close-sidebar'));
           
           // Restore focus to the element that opened the sidebar
-          if (previousFocus) {
+          if (previousFocus && previousFocus instanceof HTMLElement) {
             previousFocus.focus();
             previousFocus = null;
           }
@@ -450,7 +450,7 @@ if (currentSlug) {
 
         const openSidebar = () => {
           // Store the currently focused element
-          previousFocus = document.activeElement;
+          previousFocus = document.activeElement as HTMLElement | null;
           
           mobileOverlay.classList.remove('hidden');
           document.body.style.setProperty('--scroll-lock', 'hidden');
@@ -463,7 +463,7 @@ if (currentSlug) {
         };
 
         // Listen for custom event from Navigation component
-        window.addEventListener('open-sidebar', (e) => {
+        window.addEventListener('open-sidebar', () => {
           openSidebar();
         });
 
@@ -489,8 +489,8 @@ if (currentSlug) {
             );
             
             if (focusableElements && focusableElements.length > 0) {
-              const firstElement = focusableElements[0];
-              const lastElement = focusableElements[focusableElements.length - 1];
+              const firstElement = focusableElements[0] as HTMLElement;
+              const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
               
               if (e.shiftKey && document.activeElement === firstElement) {
                 e.preventDefault();
@@ -559,12 +559,11 @@ if (currentSlug) {
       const mobileTocModal = document.getElementById('mobile-toc-modal');
       const mobileTocClose = document.getElementById('mobile-toc-close');
       const mobileTocBackdrop = mobileTocModal?.querySelector('.mobile-toc-backdrop');
-      const mobileTocSheet = mobileTocModal?.querySelector('.mobile-toc-sheet');
-      let mobileTocPreviousFocus: Element | null = null;
+      let mobileTocPreviousFocus: HTMLElement | null = null;
 
       if (mobileTocTrigger && mobileTocModal) {
         const openMobileToc = () => {
-          mobileTocPreviousFocus = document.activeElement;
+          mobileTocPreviousFocus = document.activeElement as HTMLElement | null;
           mobileTocModal.classList.remove('hidden');
           document.body.style.setProperty('--scroll-lock', 'hidden');
           document.body.style.overflow = 'hidden';
