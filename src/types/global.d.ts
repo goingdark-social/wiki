@@ -11,6 +11,7 @@ declare interface MediaQueryList {
 }
 
 declare module 'pagefind.js' {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const Pagefind: any;
   export default Pagefind;
 }
