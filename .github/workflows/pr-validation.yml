@@ -33,7 +33,7 @@ jobs:
         with:
           args: >-
             --method get
-            --root-dir dist
+            --root-dir ${{ github.workspace }}/dist
             --max-concurrency 8
             --timeout 20
             --max-retries 2
