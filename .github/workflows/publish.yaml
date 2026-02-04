@@ -48,7 +48,6 @@ jobs:
           args: >-
             --method get
             --root-dir dist
-            --exclude-mail
             --max-concurrency 8
             --timeout 20
             --max-retries 2
