@@ -101,69 +101,11 @@ if (currentSlug) {
                 </svg>
               </button>
             </div>
-            
-            <!-- Search inside mobile menu -->
-            <div class="relative">
-              <input
-                type="text"
-                placeholder="Search wiki..."
-                class="mobile-search-input"
-                aria-label="Quick search"
-              />
-              <svg
-                class="search-icon-layout"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-            </div>
           </div>
 
           <!-- Content -->
           <div class="p-5">
-            {isDocsPage ? (
-              <Sidebar />
-            ) : (
-              <nav aria-label="Main navigation">
-                <ul class="space-y-2">
-                  <li>
-                    <a href="/" class="mobile-nav-home">
-                      <Icon name="home" size={16} />
-                      Wiki Home
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/docs/user/getting-started" class="mobile-nav-link-styled">
-                      <Icon name="arrow-right" size={16} class="mobile-nav-icon" />
-                      Getting Started
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/docs/policies/rules" class="mobile-nav-link-styled">
-                      <Icon name="arrow-right" size={16} class="mobile-nav-icon" />
-                      Community Rules
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/docs/legal/privacy" class="mobile-nav-link-styled">
-                      <Icon name="arrow-right" size={16} class="mobile-nav-icon" />
-                      Privacy Policy
-                    </a>
-                  </li>
-                  <li class="footer-border">
-                    <a href="https://goingdark.social" target="_blank" rel="noopener noreferrer" class="btn-primary-full">
-                      <span>Join Our Instance</span>
-                      <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            )}
+            <Sidebar />
           </div>
         </div>
       </div>
@@ -172,22 +114,25 @@ if (currentSlug) {
     <div class="main-content">
       <div class:list={[
         "mx-auto flex items-start relative",
-        isDocsPage ? "max-w-[1600px]" : "max-w-7xl"
+        isDocsPage ? "max-w-[1600px] xl:max-w-[1800px] 2xl:max-w-[1920px]" : "max-w-7xl xl:max-w-[100rem]"
       ]}>
         <!-- Docs Sidebar (Desktop Only) - Fixed width, sticky -->
         {isDocsPage && (
-          <aside class="docs-sidebar-styled">
+          <aside class="docs-sidebar">
             <Sidebar />
           </aside>
         )}
 
-        <!-- Main Content - Centered reading column -->
+        <!-- Main Content - Centered reading column with progressive padding -->
         <main class:list={[
           "flex-1 min-w-0 py-10",
-          isDocsPage ? "px-4 lg:px-8 xl:px-12" : "px-4 sm:px-6 lg:px-8"
+          isDocsPage ? "px-4 lg:px-8 xl:px-12 2xl:px-16" : "px-4 sm:px-6 lg:px-8 xl:px-12"
         ]}>
           <div class:list={[
-            isDocsPage ? "mx-auto max-w-3xl xl:max-w-4xl" : "w-full"
+            "mx-auto",
+            isDocsPage 
+              ? "max-w-full sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-4xl 2xl:max-w-5xl" 
+              : "w-full"
           ]}>
           <!-- Breadcrumbs (only on docs pages) - Now showing actual titles -->
           {Astro.url.pathname !== '/' && breadcrumbPath.length > 0 && (
@@ -233,14 +178,14 @@ if (currentSlug) {
               {prevPage ? (
                 <a
                   href={`/docs/${prevPage.slug}`}
-                  class="pager-link-styled"
+                  class="pager-link"
                 >
                   <svg class="pager-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                   </svg>
                   <div class="pager-link-content">
                     <div class="pager-link-label">Previous</div>
-                    <div class="pager-link-title-truncate-styled">{prevPage.title}</div>
+                    <div class="pager-link-title pager-link-title-truncate">{prevPage.title}</div>
                   </div>
                 </a>
               ) : (
@@ -249,11 +194,11 @@ if (currentSlug) {
               {nextPage ? (
                 <a
                   href={`/docs/${nextPage.slug}`}
-                  class="pager-link-next-styled"
+                  class="pager-link pager-link-next"
                 >
                   <div class="pager-link-content">
                     <div class="pager-link-label">Next</div>
-                    <div class="pager-link-title-truncate-styled">{nextPage.title}</div>
+                    <div class="pager-link-title pager-link-title-truncate">{nextPage.title}</div>
                   </div>
                   <svg class="pager-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -302,14 +247,14 @@ if (currentSlug) {
               </h3>
               <nav id="table-of-contents" class="toc-nav" aria-label="Table of contents">
                 {headings.map((heading) => (
-                  <a
-                    href={`#${heading.slug}`}
-                    class:list={[
-                      "block py-2 px-3 rounded-lg text-text-muted hover:text-white hover:bg-surface-800 transition-all border-l-2 border-transparent hover:border-primary",
-                      heading.depth === 3 ? "pl-6 text-xs" : "pl-3"
-                    ]}
-                    data-heading-link
-                  >
+                    <a
+                      href={`#${heading.slug}`}
+                      class:list={[
+                        "toc-link",
+                        heading.depth === 3 ? "toc-link-sub" : ""
+                      ]}
+                      data-heading-link
+                    >
                     {heading.text}
                   </a>
                 ))}
@@ -320,6 +265,84 @@ if (currentSlug) {
         )}
       </div>
     </div>
+
+    <!-- Mobile TOC Button (appears when TOC exists on mobile/tablet) -->
+    {isDocsPage && headings.length > 0 && Astro.url.pathname !== '/' && (
+      <div class="mobile-toc-container">
+        <button
+          id="mobile-toc-trigger"
+          class="mobile-toc-btn"
+          aria-label="Open table of contents"
+          aria-haspopup="dialog"
+          aria-controls="mobile-toc-modal"
+        >
+          <span class="mobile-toc-btn-content">
+            <svg class="mobile-toc-btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+            </svg>
+            <span class="mobile-toc-btn-label">Contents</span>
+          </span>
+        </button>
+
+        <!-- Mobile TOC Modal (Bottom Sheet) -->
+        <div
+          id="mobile-toc-modal"
+          class="mobile-toc-modal hidden"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="mobile-toc-title"
+        >
+          <!-- Backdrop -->
+          <div class="mobile-toc-backdrop" aria-hidden="true"></div>
+
+          <!-- Bottom Sheet -->
+          <div class="mobile-toc-sheet">
+            <!-- Handle/Drag Indicator -->
+            <div class="mobile-toc-handle">
+              <div class="mobile-toc-handle-bar"></div>
+            </div>
+
+            <!-- Header -->
+            <div class="mobile-toc-header">
+              <h2 id="mobile-toc-title" class="mobile-toc-title">
+                <svg class="mobile-toc-title-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                </svg>
+                On this page
+              </h2>
+              <button
+                id="mobile-toc-close"
+                class="mobile-toc-close"
+                aria-label="Close table of contents"
+              >
+                <svg class="mobile-toc-close-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+
+            <!-- TOC Content -->
+            <div class="mobile-toc-content">
+              <nav class="mobile-toc-nav" aria-label="Mobile table of contents">
+                {headings.map((heading) => (
+                  <a
+                    href={`#${heading.slug}`}
+                    class:list={[
+                      "mobile-toc-link",
+                      heading.depth === 3 ? "mobile-toc-link-sub" : ""
+                    ]}
+                    data-mobile-heading-link
+                    data-heading-slug={heading.slug}
+                  >
+                    <span class="mobile-toc-link-text">{heading.text}</span>
+                  </a>
+                ))}
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    )}
 
     <!-- Footer -->
     <footer class="footer-main">
@@ -412,6 +435,7 @@ if (currentSlug) {
       if (mobileOverlay) {
         const closeSidebar = () => {
           mobileOverlay.classList.add('hidden');
+          document.body.style.setProperty('--scroll-lock', '');
           document.body.style.overflow = '';
           
           // Dispatch close event for navigation button
@@ -429,6 +453,7 @@ if (currentSlug) {
           previousFocus = document.activeElement;
           
           mobileOverlay.classList.remove('hidden');
+          document.body.style.setProperty('--scroll-lock', 'hidden');
           document.body.style.overflow = 'hidden';
           
           // Focus the close button for keyboard navigation
@@ -501,11 +526,11 @@ if (currentSlug) {
                 headingLinks.forEach((link) => {
                   const href = link.getAttribute('href');
                   if (href === `#${id}`) {
-                    link.classList.remove('text-text-muted', 'border-transparent', 'hover:bg-surface-800');
-                    link.classList.add('text-white', 'border-primary', 'bg-surface-800', 'font-semibold');
+                    link.classList.remove('toc-link');
+                    link.classList.add('toc-link', 'active');
                   } else {
-                    link.classList.remove('text-white', 'border-primary', 'bg-surface-800', 'font-semibold');
-                    link.classList.add('text-text-muted', 'border-transparent', 'hover:bg-surface-800');
+                    link.classList.remove('toc-link', 'active');
+                    link.classList.add('toc-link');
                   }
                 });
               }
@@ -528,6 +553,90 @@ if (currentSlug) {
           }
         });
       });
+
+      // Mobile TOC Functionality
+      const mobileTocTrigger = document.getElementById('mobile-toc-trigger');
+      const mobileTocModal = document.getElementById('mobile-toc-modal');
+      const mobileTocClose = document.getElementById('mobile-toc-close');
+      const mobileTocBackdrop = mobileTocModal?.querySelector('.mobile-toc-backdrop');
+      const mobileTocSheet = mobileTocModal?.querySelector('.mobile-toc-sheet');
+      let mobileTocPreviousFocus: Element | null = null;
+
+      if (mobileTocTrigger && mobileTocModal) {
+        const openMobileToc = () => {
+          mobileTocPreviousFocus = document.activeElement;
+          mobileTocModal.classList.remove('hidden');
+          document.body.style.setProperty('--scroll-lock', 'hidden');
+          document.body.style.overflow = 'hidden';
+          
+          // Focus the close button for keyboard navigation
+          setTimeout(() => {
+            mobileTocClose?.focus();
+          }, 100);
+        };
+
+        const closeMobileToc = () => {
+          mobileTocModal.classList.add('hidden');
+          document.body.style.setProperty('--scroll-lock', '');
+          document.body.style.overflow = '';
+          
+          // Restore focus
+          if (mobileTocPreviousFocus && mobileTocPreviousFocus instanceof HTMLElement) {
+            mobileTocPreviousFocus.focus();
+            mobileTocPreviousFocus = null;
+          }
+        };
+
+        mobileTocTrigger.addEventListener('click', openMobileToc);
+        mobileTocClose?.addEventListener('click', closeMobileToc);
+        
+        // Close when clicking backdrop or sheet (but not content)
+        mobileTocBackdrop?.addEventListener('click', closeMobileToc);
+        
+        // Handle mobile TOC link clicks - close modal and scroll
+        mobileTocModal.querySelectorAll('[data-mobile-heading-link]').forEach((link) => {
+          link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const href = (link as HTMLAnchorElement).getAttribute('href');
+            const target = href ? document.querySelector(href) : null;
+            
+            closeMobileToc();
+            
+            if (target) {
+              setTimeout(() => {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }, 300); // Wait for modal close animation
+            }
+          });
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+          if (mobileTocModal.classList.contains('hidden')) return;
+          
+          if (e.key === 'Escape') {
+            closeMobileToc();
+          } else if (e.key === 'Tab') {
+            // Trap focus within the modal
+            const focusableElements = mobileTocModal.querySelectorAll(
+              'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+            );
+            
+            if (focusableElements.length > 0) {
+              const firstElement = focusableElements[0] as HTMLElement;
+              const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+              
+              if (e.shiftKey && document.activeElement === firstElement) {
+                e.preventDefault();
+                lastElement.focus();
+              } else if (!e.shiftKey && document.activeElement === lastElement) {
+                e.preventDefault();
+                firstElement.focus();
+              }
+            }
+          }
+        });
+      }
     </script>
   </body>
 </html>

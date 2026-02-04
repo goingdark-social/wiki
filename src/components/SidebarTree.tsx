@@ -16,16 +16,14 @@ interface SidebarTreeProps {
 export function SidebarTree({ navigation, currentPath, isHome }: SidebarTreeProps) {
   return (
     <div className="space-y-2">
-      {/* Wiki Home Link */}
       <a
         href="/"
-        className={`sidebar-home-link ${isHome ? 'sidebar-home-link-active' : 'sidebar-home-link-inactive'}`}
+        className={`sidebar-item ${isHome ? 'sidebar-item-active' : 'sidebar-item-inactive'}`}
       >
-        <Home size={18} />
+        <Home size={18} className="sidebar-item-icon" />
         <span>Wiki Home</span>
       </a>
 
-      {/* Documentation Label */}
       <div className="sidebar-docs-label">
         <FileText size={16} className="sidebar-docs-icon" />
         <span className="sidebar-docs-title">
@@ -33,7 +31,6 @@ export function SidebarTree({ navigation, currentPath, isHome }: SidebarTreeProp
         </span>
       </div>
 
-      {/* Navigation Tree */}
       <nav className="sidebar-nav">
         {navigation.map((node) => (
           <FolderGroup
@@ -59,22 +56,16 @@ function FolderGroup({ node, currentPath, level }: FolderGroupProps) {
   const isActive = currentPath === node.slug || currentPath === `${node.slug}/index`;
   const isParent = currentPath.startsWith(node.slug + '/') && !isActive;
   
-  // Auto-expand if current page is inside this folder, or allow manual toggle
   const [isManuallyToggled, setIsManuallyToggled] = useState(false);
   const isOpen = isManuallyToggled || isParent || isActive;
 
   if (!hasChildren) {
-    // Leaf node (page without children)
     return (
       <a
         href={`/docs/${node.slug}`}
-        className={`flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium transition-all ${
-          isActive
-            ? 'bg-primary text-white shadow-lg primary-glow'
-            : 'text-text-muted hover:text-white hover:bg-surface-800'
-        }`}
+        className={`sidebar-item ${isActive ? 'sidebar-item-active' : 'sidebar-item-inactive'}`}
       >
-        <FileText size={16} />
+        <FileText size={16} className="sidebar-item-icon" />
         <span className="flex-1">{node.title}</span>
       </a>
     );
@@ -82,39 +73,37 @@ function FolderGroup({ node, currentPath, level }: FolderGroupProps) {
 
   return (
     <div>
-      {/* Folder Header - Clickable to expand/collapse */}
       <button
         type="button"
         onClick={() => setIsManuallyToggled(!isOpen)}
-        className={`flex items-center w-full gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all ${
+        className={`sidebar-folder-header ${
           isActive
-            ? 'bg-primary text-white shadow-lg primary-glow'
+            ? 'sidebar-folder-header-active'
             : isParent
-            ? 'text-white bg-surface-800'
-            : 'text-text-muted hover:text-white hover:bg-surface-800'
+            ? 'sidebar-folder-header-parent'
+            : 'sidebar-folder-header-inactive'
         }`}
       >
         <ChevronRight
           size={16}
-          className={`transition-transform duration-200 ${isOpen ? 'rotate-90' : ''}`}
+          className={`sidebar-folder-arrow ${isOpen ? 'sidebar-folder-arrow-open' : ''}`}
         />
         <div
-          className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 transition-all ${
+          className={`sidebar-folder-icon ${
             isActive
-              ? 'bg-white/20'
+              ? 'sidebar-folder-icon-active'
               : isParent
-              ? 'bg-primary/10'
-              : 'bg-surface-750 group-hover:bg-primary/10'
+              ? 'sidebar-folder-icon-parent'
+              : 'sidebar-folder-icon-inactive'
           }`}
         >
-          <Folder size={16} className={isActive || isParent ? 'text-white' : 'text-text-muted'} />
+          <Folder size={16} className={isActive || isParent ? 'text-text-white' : 'text-text-muted'} />
         </div>
         <span className="flex-1 text-left">{node.title}</span>
       </button>
 
-      {/* Children - Collapsible */}
       {isOpen && (
-        <div className="ml-11 mt-2 space-y-1">
+        <div className="sidebar-folder-children">
           {node.children
             .filter((child) => !child.slug.endsWith('/index'))
             .map((child) => {
@@ -123,7 +112,6 @@ function FolderGroup({ node, currentPath, level }: FolderGroupProps) {
               const childHasChildren = child.children.length > 0;
 
               if (childHasChildren) {
-                // Recursive folder
                 return (
                   <FolderGroup
                     key={child.slug}
@@ -134,22 +122,21 @@ function FolderGroup({ node, currentPath, level }: FolderGroupProps) {
                 );
               }
 
-              // Leaf page
               return (
                 <a
                   key={child.slug}
                   href={`/docs/${child.slug}`}
-                  className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-all ${
+                  className={`sidebar-child-item ${
                     childActive
-                      ? 'text-white font-semibold bg-primary/15 border-l-2 border-primary'
+                      ? 'sidebar-child-item-active'
                       : childIsParent
-                      ? 'text-white font-medium bg-surface-850'
-                      : 'text-text-muted hover:text-white hover:bg-surface-850'
+                      ? 'sidebar-child-item-parent'
+                      : 'sidebar-child-item-inactive'
                   }`}
                 >
                   <span
-                    className={`text-lg leading-none transition-colors ${
-                      childActive ? 'text-primary' : 'text-primary/40'
+                    className={`sidebar-child-indicator ${
+                      childActive ? 'sidebar-child-indicator-active' : 'sidebar-child-indicator-inactive'
                     }`}
                   >
                     ▹

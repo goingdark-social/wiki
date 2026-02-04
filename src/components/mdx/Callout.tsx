@@ -70,13 +70,13 @@ export const Callout = ({ type = 'info', title, children }: CalloutProps) => {
       style.container
     )}>
       <div className="shrink-0 mt-0.5">
-        <div className={clsx("w-10 h-10 rounded-lg flex items-center justify-center bg-surface-900/50", style.icon)}>
+        <div className={clsx("w-10 h-10 rounded-[var(--radius-base)] flex items-center justify-center bg-surface-900/50", style.icon)}>
           <CalloutIcon type={type} className="w-5 h-5" />
         </div>
       </div>
       <div className="flex-1 min-w-0">
         {title && (
-          <h4 className={clsx("font-bold mb-2 text-lg", style.title)}>
+          <h4 className={clsx("font-bold mb-[var(--space-2)] text-lg", style.title)}>
             {title}
           </h4>
         )}
