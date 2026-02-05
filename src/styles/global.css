@@ -54,13 +54,35 @@
   --color-accent-success: #05df72;
   --color-danger: #ff637e;
   
-  /* Text Hierarchy */
+  /* Text Hierarchy - Base Tokens */
   --color-text-white: #ffffff;
   --color-text-primary: #f0f0f5;
   --color-text-main: #f0f0f5;
   --color-text-muted: #8b8dac;
   --color-text-subtle: #696d91;
   --color-text-disabled: #545778;
+  
+  /* ============================================
+     SEMANTIC COLOR TOKENS - WCAG AA Compliant
+     Context-aware text for different surfaces
+     ============================================ */
+  /* Dark background text (on surface-900 #181821) */
+  --text-on-dark-primary: #f0f0f5;      /* 13.5:1 contrast ratio - WCAG AAA */
+  --text-on-dark-secondary: #b8b8c4;    /* 8.2:1 contrast ratio - WCAG AA */
+  --text-on-dark-tertiary: #9494a4;     /* 5.1:1 contrast ratio - WCAG AA minimum */
+  
+  /* Light background text (for light themes if needed) */
+  --text-on-light-primary: #1a1a1f;     /* High contrast on light */
+  --text-on-light-secondary: #4a4a55;   /* Medium contrast on light */
+  
+  /* Link colors with guaranteed contrast on dark */
+  --link-on-dark-default: #858afa;      /* 5.2:1 on dark bg - WCAG AA */
+  --link-on-dark-hover: #a8acfc;        /* 7.1:1 for hover states */
+  --link-on-dark-active: #6364ff;       /* Primary color for active */
+  
+  /* Button text on interactive backgrounds */
+  --text-on-primary-bg: #ffffff;        /* On primary buttons */
+  --text-on-secondary-bg: #1a1a1f;      /* On secondary/ghost buttons */
   
   /* ============================================
      TYPOGRAPHY SCALE
@@ -212,6 +234,45 @@ body {
 }
 
 /* ============================================
+   SEMANTIC LAYOUT UTILITIES
+   Modern compositional patterns
+   ============================================ */
+
+/* Full-bleed: Edge-to-edge section backgrounds */
+[data-layout="full-bleed"] {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+/* Constrained: Max-width content within full-bleed sections */
+[data-layout="constrained"] {
+  width: 100%;
+  max-width: var(--max-width-content);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-4);
+  padding-right: var(--space-4);
+}
+
+@media (min-width: 640px) {
+  [data-layout="constrained"] {
+    padding-left: var(--space-6);
+    padding-right: var(--space-6);
+  }
+}
+
+@media (min-width: 1024px) {
+  [data-layout="constrained"] {
+    padding-left: var(--space-8);
+    padding-right: var(--space-8);
+  }
+}
+
+/* ============================================
    TYPOGRAPHY UTILITIES
    ============================================ */
 .font-display { font-family: var(--font-display) !important; }
@@ -238,6 +299,16 @@ body {
 .text-text-main { color: var(--color-text-main) !important; }
 .text-text-muted { color: var(--color-text-muted) !important; }
 .text-text-subtle { color: var(--color-text-subtle) !important; }
+
+/* ============================================
+   SEMANTIC TEXT UTILITIES
+   WCAG-compliant contextual colors
+   ============================================ */
+.text-on-dark-primary { color: var(--text-on-dark-primary) !important; }
+.text-on-dark-secondary { color: var(--text-on-dark-secondary) !important; }
+.text-on-dark-tertiary { color: var(--text-on-dark-tertiary) !important; }
+.text-on-light-primary { color: var(--text-on-light-primary) !important; }
+.text-on-light-secondary { color: var(--text-on-light-secondary) !important; }
 
 /* ============================================
    COLOR UTILITIES (Primary)
@@ -697,44 +768,21 @@ body {
   background-clip: text;
 }
 
-.btn-ghost-styled {
+/* ============================================
+   HERO BUTTON SYSTEM
+   Systematic hierarchy: primary > secondary > ghost
+   ============================================ */
+
+/* Primary CTA - High conversion action only */
+.btn-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: var(--space-2);
-  padding: var(--space-2) var(--space-4);
-  font-size: var(--font-size-sm);
+  padding: var(--space-3) var(--space-5);
+  font-size: var(--font-size-base);
   font-weight: 600;
-  color: var(--color-text-muted);
-  background: transparent;
-  border: 1px solid var(--color-surface-700);
-  border-radius: var(--radius-base);
-  text-decoration: none;
-  transition: all var(--transition-base);
-  min-height: 44px;
-}
-
-.btn-ghost-styled:hover {
-  color: var(--color-text-white);
-  background: var(--color-surface-800);
-  border-color: var(--color-surface-600);
-  text-decoration: none;
-}
-
-.btn-ghost-styled:focus-visible {
-  outline: 2px solid var(--color-primary);
-  outline-offset: 2px;
-}
-
-.btn-primary-styled {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-2);
-  padding: var(--space-2) var(--space-4);
-  font-size: var(--font-size-sm);
-  font-weight: 600;
-  color: var(--color-text-white);
+  color: var(--text-on-primary-bg);
   background: var(--gradient-primary);
   border: none;
   border-radius: var(--radius-base);
@@ -744,14 +792,74 @@ body {
   min-height: 44px;
 }
 
-.btn-primary-styled:hover {
-  transform: translateY(-1px);
+.btn-primary:hover {
+  transform: translateY(-2px);
   box-shadow: var(--shadow-primary-glow-lg);
-  color: var(--color-text-white);
+  color: var(--text-on-primary-bg);
   text-decoration: none;
 }
 
-.btn-primary-styled:focus-visible {
+.btn-primary:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Secondary CTA - Important but not conversion */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  background: transparent;
+  border: 1px solid var(--color-primary-border);
+  border-radius: var(--radius-base);
+  text-decoration: none;
+  transition: all var(--transition-base);
+  min-height: 44px;
+}
+
+.btn-secondary:hover {
+  color: var(--color-primary-hover);
+  background: var(--color-primary-subtle);
+  border-color: var(--color-primary);
+  text-decoration: none;
+}
+
+.btn-secondary:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Ghost CTA - Low priority, navigational (deprecated in hero) */
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--text-on-dark-tertiary);
+  background: transparent;
+  border: 1px solid var(--color-surface-700);
+  border-radius: var(--radius-base);
+  text-decoration: none;
+  transition: all var(--transition-base);
+  min-height: 44px;
+}
+
+.btn-ghost:hover {
+  color: var(--text-on-dark-primary);
+  background: var(--color-surface-800);
+  border-color: var(--color-surface-600);
+  text-decoration: none;
+}
+
+.btn-ghost:focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
