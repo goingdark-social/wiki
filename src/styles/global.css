@@ -46,9 +46,47 @@
   --color-info: #858afa;
   --color-info-subtle: rgba(133, 138, 250, 0.1);
 
-  /* Legacy aliases (backward compatibility) */
-  --color-accent: #6364ff;
-  --color-highlight: #6364ff;
+  /* Section Separators - Visual Division Between Content Areas */
+  --color-section-separator-start: transparent;
+  --color-section-separator-end: rgba(99, 100, 255, 0.08);
+  --color-section-separator-bg: rgba(99, 100, 255, 0.02);
+  --color-section-separator-glow: rgba(99, 100, 255, 0.12);
+  
+  /* Section Background - Directory Section Lighter than Hero */
+  --color-section-directory-bg: rgba(99, 100, 255, 0.03);
+  
+  /* Section Text - Optimized for Section Backgrounds */
+  --text-on-section-primary: #f0f0f5;
+  --text-on-section-secondary: #b8b8c4;
+  --text-on-section-tertiary: #9494a4;
+  --link-on-section-default: #858afa;
+  
+  /* Section Borders - Subtle for Section Contexts */
+  --border-section-default: rgba(99, 100, 255, 0.08);
+  --border-section-hover: rgba(99, 100, 255, 0.12);
+  --border-section-active: rgba(99, 100, 255, 0.18);
+  --color-section-separator-bg: rgba(99, 100, 255, 0.02);
+  --color-section-separator-glow: rgba(99, 100, 255, 0.12);
+  
+  /* Section Background - Directory Section Lighter than Hero */
+  --color-section-directory-bg: rgba(99, 100, 255, 0.03);
+  
+  /* Section Text - Optimized for Section Backgrounds */
+  --text-on-section-primary: #f0f0f5;
+  --text-on-section-secondary: #b8b8c4;
+  --text-on-section-tertiary: #9494a4;
+  --link-on-section-default: #858afa;
+  
+  /* Section Borders - Subtle for Section Contexts */
+  --border-section-default: rgba(99, 100, 255, 0.08);
+  --border-section-hover: rgba(99, 100, 255, 0.12);
+  --border-section-active: rgba(99, 100, 255, 0.18);
+  
+  /* Legacy accent colors (backward compatibility) */
+  --color-accent-error: #ff637e;
+  --color-accent-warning: #ffb900;
+  --color-accent-success: #05df72;
+  --color-danger: #ff637e;
   --color-accent-error: #ff637e;
   --color-accent-warning: #ffb900;
   --color-accent-success: #05df72;
@@ -233,7 +271,98 @@ body {
   margin-right: auto;
 }
 
-/* ============================================
+/* ============================================ 
+   SEMANTIC SECTION UTILITIES
+   Context-aware styling for different sections
+   ============================================ */
+
+/* Section Separators - Visual Division Between Content Areas */
+.section-separator {
+  height: 1px;
+  background: linear-gradient(90deg, var(--color-section-separator-start), var(--color-section-separator-end));
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-shadow: 0 1px 0 var(--color-section-separator-glow);
+}
+
+/* Section Background - Directory Section Lighter than Hero */
+.directory-section {
+  background-color: var(--color-section-directory-bg);
+}
+
+/* Section Text - Optimized for Section Backgrounds */
+.directory-title {
+  color: var(--text-on-section-primary);
+}
+
+.directory-description {
+  color: var(--text-on-section-secondary);
+}
+
+.directory-card {
+  border: 1px solid var(--border-section-default);
+  background-color: var(--color-surface-800);
+}
+
+.directory-card:hover {
+  border-color: var(--border-section-hover);
+  background-color: var(--color-surface-850);
+}
+
+.directory-card-header {
+  border-bottom: 1px solid var(--border-section-default);
+}
+
+.directory-link-styled {
+  color: var(--link-on-section-default);
+}
+
+.directory-link-styled:hover {
+  color: var(--color-primary-hover);
+}
+
+.directory-page-link-styled {
+  color: var(--link-on-section-default);
+}
+
+.directory-page-link-styled:hover {
+  color: var(--color-primary-hover);
+}
+
+.directory-view-all-styled {
+  color: var(--link-on-section-default);
+}
+
+.directory-view-all-styled:hover {
+  color: var(--color-primary-hover);
+}
+
+/* Section Container - Constrained layout for directory */
+[data-layout="constrained"] {
+  width: 100%;
+  max-width: var(--max-width-content);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-4);
+  padding-right: var(--space-4);
+}
+
+@media (min-width: 640px) {
+  [data-layout="constrained"] {
+    padding-left: var(--space-6);
+    padding-right: var(--space-6);
+  }
+}
+
+@media (min-width: 1024px) {
+  [data-layout="constrained"] {
+    padding-left: var(--space-8);
+    padding-right: var(--space-8);
+  }
+}
+
+/* ============================================ 
    SEMANTIC LAYOUT UTILITIES
    Modern compositional patterns
    ============================================ */
@@ -272,7 +401,7 @@ body {
   }
 }
 
-/* ============================================
+/* ============================================ 
    TYPOGRAPHY UTILITIES
    ============================================ */
 .font-display { font-family: var(--font-display) !important; }
@@ -516,10 +645,15 @@ body {
 /* ============================================
    HERO SECTION
    ============================================ */
+/* ============================================
+   HERO SECTION
+   Full-width background with proper compositional patterns
+   ============================================ */
+
+/* Hero section container - uses semantic layout utility */
 .hero-section {
   position: relative;
-  width: 100%;
-  margin-left: calc(50% - 50vw);
+  /* Use full-bleed layout utility instead of calc hack */
   padding-top: var(--space-16);
   padding-bottom: var(--space-16);
   background-image:
@@ -538,38 +672,62 @@ body {
   }
 }
 
+/* Hero content - uses constrained layout utility */
 .hero-content {
   position: relative;
   text-align: center;
-  max-width: min(64rem, 90vw);
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: var(--space-4);
-  padding-right: var(--space-4);
+  /* Use constrained layout utility */
+  [data-layout="constrained"] & {
+    text-align: center;
+    max-width: min(64rem, 90vw);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+  }
 }
 
 @media (min-width: 640px) {
   .hero-content {
-    padding-left: var(--space-6);
-    padding-right: var(--space-6);
+    [data-layout="constrained"] & {
+      padding-left: var(--space-6);
+      padding-right: var(--space-6);
+    }
   }
 }
 
 @media (min-width: 1024px) {
   .hero-content {
-    max-width: min(72rem, 85vw);
+    [data-layout="constrained"] & {
+      max-width: min(72rem, 85vw);
+    }
   }
 }
 
 @media (min-width: 1536px) {
   .hero-content {
-    max-width: min(80rem, 80vw);
+    [data-layout="constrained"] & {
+      max-width: min(80rem, 80vw);
+    }
   }
 }
 
+/* ============================================
+   HERO TYPOGRAPHY - WCAG-compliant
+   ============================================ */
+
+/* Badge - semantic icon choice */
 .hero-badge {
   display: inline-flex;
-  margin-bottom: var(--space-6);
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-surface-800);
+  border: 1px solid var(--color-surface-700);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--text-on-dark-primary);
   animation: scaleIn var(--transition-base) cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -577,30 +735,25 @@ body {
   color: var(--color-secondary);
 }
 
+/* Title - primary heading */
 .hero-title {
   font-size: clamp(2rem, 5vw + 0.5rem, 3.75rem);
   font-weight: 800;
   font-family: var(--font-display);
-  color: var(--color-text-white);
+  color: var(--text-on-dark-primary);
   letter-spacing: -0.035em;
   margin-bottom: var(--space-5);
   line-height: 1.1;
 }
 
-.hero-title-secondary {
+.hero-title-accent {
   color: var(--color-primary);
   font-size: clamp(1.625rem, 4vw + 0.5rem, 3rem);
 }
 
-.hero-title-gradient {
-  background: var(--text-gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
+/* Description - WCAG AA compliant text */
 .hero-description {
-  color: var(--color-text-muted);
+  color: var(--text-on-dark-secondary);
   font-size: var(--font-size-lg);
   max-width: min(42rem, 90%);
   margin: 0 auto var(--space-8);
@@ -626,7 +779,12 @@ body {
   }
 }
 
-.hero-actions {
+/* ============================================
+   HERO CTA SYSTEM - Primary > Secondary
+   ============================================ */
+
+/* CTA container */
+.hero-ctas {
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
@@ -635,32 +793,29 @@ body {
 }
 
 @media (min-width: 640px) {
-  .hero-actions {
+  .hero-ctas {
     flex-direction: row;
     justify-content: center;
   }
 }
 
 @media (max-width: 639px) {
-  .hero-actions {
+  .hero-ctas {
     width: 100%;
     align-items: stretch;
   }
 
-  .hero-actions .btn-ghost-styled,
-  .hero-actions .btn-primary-styled {
+  .hero-ctas .btn-primary,
+  .hero-ctas .btn-secondary {
     width: 100%;
   }
 }
 
-.hero-action-icon {
-  color: var(--color-text-white);
-}
+/* ============================================
+   HERO DECORATIVE ELEMENTS
+   ============================================ */
 
-.hero-action-arrow {
-  color: var(--color-text-white);
-}
-
+/* Decorative accents - optimized for performance */
 .hero-accent {
   position: absolute;
   width: 200px;
@@ -669,6 +824,7 @@ body {
   background: radial-gradient(circle, var(--color-primary-subtle), transparent);
   opacity: 0.6;
   animation: float 6s ease-in-out infinite;
+  pointer-events: none;
 }
 
 .hero-accent-top {
@@ -679,6 +835,205 @@ body {
 .hero-accent-bottom {
   bottom: -50px;
   left: -50px;
+}
+
+/* ============================================
+   HERO SEARCH SECTION
+   ============================================ */
+
+.hero-search {
+  position: relative;
+  max-width: 32rem;
+  margin: 0 auto;
+}
+
+.hero-search-hint {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+  font-size: var(--font-size-sm);
+  color: var(--text-on-dark-tertiary);
+}
+
+.hero-search-hint-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.hero-search-hint-divider {
+  color: var(--text-on-dark-tertiary);
+}
+
+.hero-search-hint-icon {
+  width: var(--space-4);
+  height: var(--space-4);
+  color: var(--color-primary);
+}
+
+/* ============================================
+   HERO KEYBOARD INDICATORS
+   ============================================ */
+
+.hero-kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--space-6);
+  height: var(--space-6);
+  padding: 0 var(--space-1);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--text-on-dark-primary);
+  background: var(--color-surface-700);
+  border: 1px solid var(--color-surface-600);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ============================================
+   HERO ANIMATIONS
+   ============================================ */
+
+/* Remove animations on reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .hero-section,
+  .hero-badge,
+  .hero-accent {
+    animation: none;
+  }
+}
+
+/* ============================================
+   HERO BREAKPOINTS - Mobile Optimization
+   ============================================ */
+
+.hero-br {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .hero-br {
+    display: inline;
+  }
+}
+
+/* ============================================
+   HERO RESPONSIVE TYPOGRAPHY
+   ============================================ */
+
+/* Mobile content typography */
+.hero-title {
+  font-size: clamp(1.75rem, 4vw + 0.5rem, 2.25rem);
+}
+
+.hero-title-accent {
+  font-size: clamp(1.375rem, 3vw + 0.5rem, 1.5rem);
+}
+
+.hero-description {
+  font-size: var(--font-size-base);
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: clamp(2rem, 5vw + 0.5rem, 3.75rem);
+  }
+
+  .hero-title-accent {
+    font-size: clamp(1.625rem, 4vw + 0.5rem, 3rem);
+  }
+
+  .hero-description {
+    font-size: 1.25rem;
+  }
+}
+
+/* ============================================
+   HERO ACCESSIBILITY
+   ============================================ */
+
+.hero-section {
+  /* Ensure proper focus indicators */
+  [data-layout="constrained"] & {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+  }
+}
+
+.hero-section:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.hero-badge {
+  /* Focus indicators for interactive elements */
+  &:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+}
+
+/* ============================================
+   HERO LEGACY SUPPORT
+   ============================================ */
+
+/* Fallback for browsers without CSS custom properties */
+@supports not (background: var(--color-primary)) {
+  .hero-section {
+    background-image: /* fallback gradient */;
+  }
+  
+  .hero-badge {
+    color: #f0f0f5;
+  }
+  
+  .hero-title {
+    color: #ffffff;
+  }
+  
+  .hero-description {
+    color: #b8b8c4;
+  }
+}
+
+/* ============================================
+   HERO PRINT STYLES
+   ============================================ */
+
+@media print {
+  .hero-section {
+    background: transparent !important;
+    color: #000 !important;
+  }
+  
+  .hero-background {
+    display: none;
+  }
+  
+  .hero-badge {
+    background: #ddd !important;
+    color: #000 !important;
+  }
+  
+  .hero-title,
+  .hero-title-accent {
+    color: #000 !important;
+  }
+  
+  .hero-description {
+    color: #333 !important;
+  }
+  
+  .hero-actions {
+    display: none;
+  }
+  
+  .hero-search {
+    display: none;
+  }
 }
 
 .hero-search {

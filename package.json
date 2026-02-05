@@ -10,7 +10,8 @@
     "astro": "astro",
     "prepare": "husky",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "check:a11y": "hint dist/"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
