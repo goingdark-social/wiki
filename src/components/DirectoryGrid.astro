@@ -52,8 +52,11 @@ allDocs.forEach((doc: DocEntry) => {
 });
 ---
 
-<section aria-label="Documentation categories" class="directory-section">
-  <div class="directory-pattern">
+<section aria-label="Documentation categories" class="directory-section" data-layout="constrained">
+  <!-- Section separator gradient line -->
+  <div class="section-separator"></div>
+  
+  <div class="directory-pattern" data-layout="constrained">
     <h2 class="directory-title">
       <div class="directory-icon">
         <Icon name="folder" size={24} class="directory-icon-inner" />
