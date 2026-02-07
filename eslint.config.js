@@ -7,7 +7,7 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import eslintReact from '@eslint-react/eslint-plugin';
 import * as astroPlugin from 'eslint-plugin-astro';
 import * as mdxPlugin from 'eslint-plugin-mdx';
-import tailwindcss from 'eslint-plugin-tailwindcss';
+// import tailwindcss from 'eslint-plugin-tailwindcss';
 import globals from 'globals';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -23,15 +23,7 @@ export default [
       react: {
         version: '19',
       },
-      tailwindcss: {
-        callees: ['clsx', 'cn'],
-        config: path.join(__dirname, './tailwind.config.mjs'),
-        whitelist: [
-          '^lucide-.*',
-          // Allow custom colors with any variant prefix (hover:, focus:, etc.)
-          '.*(bg|text|border|ring)-(surface|primary|secondary|text|border|background).*'
-        ],
-      },
+
     },
   },
 
@@ -68,7 +60,6 @@ export default [
       'react': react,
       'react-hooks': reactHooks,
       '@eslint-react': eslintReact,
-      'tailwindcss': tailwindcss,
     },
     rules: {
       ...tsPlugin.configs.recommended.rules,
@@ -187,16 +178,9 @@ export default [
       // ========================================
       '@eslint-react/no-array-index-key': 'warn',
       '@eslint-react/no-useless-fragment': 'warn',
-      
-      // ========================================
-      // Tailwind CSS Rules (Design System Enforcement)
-      // ========================================
-      'tailwindcss/classnames-order': 'off',
-      'tailwindcss/no-contradicting-classname': 'error',
-      'tailwindcss/no-custom-classname': 'off',
     },
   },
-  
+
   // ========================================
   // Astro Components (.astro files)
   // ========================================
@@ -204,15 +188,6 @@ export default [
   ...astroPlugin.configs['flat/jsx-a11y-strict'], // Apply strict a11y to Astro components
   {
     files: ['**/*.astro'],
-    plugins: {
-      tailwindcss: tailwindcss,
-    },
-    rules: {
-      // Tailwind enforcement in Astro
-      'tailwindcss/classnames-order': 'off',
-      'tailwindcss/no-contradicting-classname': 'error',
-      'tailwindcss/no-custom-classname': 'off',
-    },
   },
   // ========================================
   // MDX Files (.mdx files)
