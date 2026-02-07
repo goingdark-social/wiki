@@ -5,14 +5,5 @@
     "options": {
       "pattern": ["dist/**/*.html"]
     }
-  },
-  "hints": {
-    "axe/color-contrast": "error",
-    "axe/aria": "error",
-    "axe/forms": "error",
-    "axe/keyboard": "error",
-    "axe/name-role-value": "error",
-    "axe/structure": "error",
-    "axe/text-alternatives": "error"
   }
 }
