@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ChevronRight, Folder, FileText, Home } from 'lucide-react';
+import { ChevronRight, Folder, FolderOpen, FileText, Home } from 'lucide-react';
 
 interface Page {
   slug: string;
@@ -19,19 +19,20 @@ export function SidebarTree({ navigation, currentPath, isHome }: SidebarTreeProp
       <a
         href="/"
         className={`sidebar-item ${isHome ? 'sidebar-item-active' : 'sidebar-item-inactive'}`}
+        aria-current={isHome ? 'page' : undefined}
       >
-        <Home size={18} className="sidebar-item-icon" />
+        <Home size={18} className="sidebar-item-icon" aria-hidden="true" />
         <span>Wiki Home</span>
       </a>
 
       <div className="sidebar-docs-label">
-        <FileText size={16} className="sidebar-docs-icon" />
+        <FileText size={16} className="sidebar-docs-icon" aria-hidden="true" />
         <span className="sidebar-docs-title">
           Documentation
         </span>
       </div>
 
-      <nav className="sidebar-nav">
+      <nav className="sidebar-nav" aria-label="Documentation sections">
         {navigation.map((node) => (
           <FolderGroup
             key={node.slug}
@@ -64,8 +65,8 @@ function FolderGroup({ node, currentPath, level }: FolderGroupProps) {
       <a
         href={`/docs/${node.slug}`}
         className={`sidebar-item ${isActive ? 'sidebar-item-active' : 'sidebar-item-inactive'}`}
+        aria-current={isActive ? 'page' : undefined}
       >
-        <FileText size={16} className="sidebar-item-icon" />
         <span className="flex-1">{node.title}</span>
       </a>
     );
@@ -83,10 +84,13 @@ function FolderGroup({ node, currentPath, level }: FolderGroupProps) {
             ? 'sidebar-folder-header-parent'
             : 'sidebar-folder-header-inactive'
         }`}
+        aria-expanded={isOpen}
+        aria-controls={`folder-children-${node.slug}`}
       >
         <ChevronRight
           size={16}
           className={`sidebar-folder-arrow ${isOpen ? 'sidebar-folder-arrow-open' : ''}`}
+          aria-hidden="true"
         />
         <div
           className={`sidebar-folder-icon ${
@@ -96,14 +100,24 @@ function FolderGroup({ node, currentPath, level }: FolderGroupProps) {
               ? 'sidebar-folder-icon-parent'
               : 'sidebar-folder-icon-inactive'
           }`}
+          aria-hidden="true"
         >
-          <Folder size={16} className={isActive || isParent ? 'text-text-white' : 'text-text-muted'} />
+          {isOpen ? (
+            <FolderOpen size={16} className={isActive || isParent ? 'text-text-white' : 'text-text-muted'} />
+          ) : (
+            <Folder size={16} className={isActive || isParent ? 'text-text-white' : 'text-text-muted'} />
+          )}
         </div>
-        <span className="flex-1 text-left">{node.title}</span>
+        <span className="flex-1 text-left font-semibold">{node.title}</span>
       </button>
 
       {isOpen && (
-        <div className="sidebar-folder-children">
+        <div 
+          id={`folder-children-${node.slug}`}
+          className="sidebar-folder-children"
+          role="group"
+          aria-label={`${node.title} pages`}
+        >
           {node.children
             .filter((child) => !child.slug.endsWith('/index'))
             .map((child) => {
@@ -133,15 +147,9 @@ function FolderGroup({ node, currentPath, level }: FolderGroupProps) {
                       ? 'sidebar-child-item-parent'
                       : 'sidebar-child-item-inactive'
                   }`}
+                  aria-current={childActive ? 'page' : undefined}
                 >
-                  <span
-                    className={`sidebar-child-indicator ${
-                      childActive ? 'sidebar-child-indicator-active' : 'sidebar-child-indicator-inactive'
-                    }`}
-                  >
-                    ▹
-                  </span>
-                  <span className="flex-1">{child.title}</span>
+                  <span className="flex-1 text-sm">{child.title}</span>
                 </a>
               );
             })}
