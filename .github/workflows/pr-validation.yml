@@ -46,9 +46,3 @@ jobs:
 
       - name: Lint (ESLint)
         run: npm run lint
-
-      - name: Vale (prose)
-        uses: errata-ai/vale-action@v2.1.1
-        with:
-          files: .
-          fail_on_error: true

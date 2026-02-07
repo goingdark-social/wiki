@@ -139,32 +139,36 @@
   --font-size-4xl: 2.25rem;     /* 36px */
   
   /* ============================================
-     SPACING SCALE (rem-based for consistency)
+     SPACING SCALE (STRICT 8px GRID SYSTEM)
+     Only these 8 values allowed - enforces consistency
      ============================================ */
-  --space-1: 0.25rem;   /* 4px */
-  --space-2: 0.5rem;    /* 8px */
-  --space-3: 0.75rem;   /* 12px */
-  --space-4: 1rem;      /* 16px */
-  --space-5: 1.25rem;   /* 20px */
-  --space-6: 1.5rem;    /* 24px */
-  --space-8: 2rem;      /* 32px */
-  --space-10: 2.5rem;   /* 40px */
-  --space-12: 3rem;     /* 48px */
-  --space-16: 4rem;     /* 64px */
+  --space-1: 0.25rem;   /* 4px - micro adjustments */
+  --space-2: 0.5rem;    /* 8px - tight spacing */
+  --space-3: 0.75rem;   /* 12px - standard padding */
+  --space-4: 1rem;      /* 16px - component padding */
+  --space-6: 1.5rem;    /* 24px - section gaps */
+  --space-8: 2rem;      /* 32px - large sections */
+  --space-12: 3rem;     /* 48px - hero padding */
+  --space-16: 4rem;     /* 64px - major sections */
+  
+  /* LEGACY ALIASES - Map old values to nearest valid token */
+  --space-5: var(--space-4);   /* 20px -> 16px */
+  --space-10: var(--space-8);  /* 40px -> 32px */
   
   /* ============================================
-     BORDER RADIUS (CSS variables only)
+     BORDER RADIUS (STRICT 3-TIER SYSTEM)
+     Only these 3 values allowed - prevents inconsistency
      ============================================ */
   --radius-none: 0;
-  --radius-sm: 0.5rem;      /* 8px - Small elements, buttons */
-  --radius-base: 0.75rem;   /* 12px - Standard, inputs */
-  --radius-lg: 1rem;        /* 16px - Cards, containers */
-  --radius-xl: 1.25rem;     /* 20px - Large cards, modals */
-  --radius-2xl: 1.5rem;     /* 24px - Hero sections */
-  --radius-full: 9999px;    /* Pills, badges, circles */
+  --radius-sm: 0.5rem;      /* 8px - buttons, inputs, tags */
+  --radius-base: 0.75rem;   /* 12px - cards, containers, nav items */
+  --radius-full: 9999px;    /* pills, badges ONLY */
   
-  /* Legacy radius aliases (for backward compatibility) */
-  --radius-card: var(--radius-lg);
+  /* LEGACY ALIASES - Map old values to base for backward compatibility */
+  --radius-lg: var(--radius-base);
+  --radius-xl: var(--radius-base);
+  --radius-2xl: var(--radius-base);
+  --radius-card: var(--radius-base);
   
   /* ============================================
      SHADOWS (Standardized)
@@ -650,12 +654,11 @@ body {
    Full-width background with proper compositional patterns
    ============================================ */
 
-/* Hero section container - uses semantic layout utility */
+/* Hero section container - STRICT SPACING */
 .hero-section {
   position: relative;
-  /* Use full-bleed layout utility instead of calc hack */
-  padding-top: var(--space-16);
-  padding-bottom: var(--space-16);
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-8);
   background-image:
     radial-gradient(at 27% 37%, var(--color-primary-subtle) 0px, transparent 50%),
     radial-gradient(at 97% 21%, var(--color-secondary-subtle) 0px, transparent 50%),
@@ -667,8 +670,8 @@ body {
 
 @media (min-width: 768px) {
   .hero-section {
-    padding-top: var(--space-16);
-    padding-bottom: var(--space-16);
+    padding-top: var(--space-12);
+    padding-bottom: var(--space-12);
   }
 }
 
@@ -852,7 +855,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: var(--space-4);
-  margin-top: var(--space-6);
+  margin-top: var(--space-4);
   font-size: var(--font-size-sm);
   color: var(--text-on-dark-tertiary);
 }
@@ -2171,10 +2174,10 @@ textarea:focus-visible {
 }
 
 .directory-pattern {
-  margin-bottom: var(--space-10);
+  margin-bottom: var(--space-6);
   position: relative;
-  padding: var(--space-8) var(--space-6);
-  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  border-radius: var(--radius-base);
 }
 
 .directory-title {
@@ -2221,7 +2224,7 @@ textarea:focus-visible {
 .directory-grid {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: var(--space-5);
+  gap: var(--space-4);
 }
 
 @media (min-width: 640px) {
@@ -2238,14 +2241,14 @@ textarea:focus-visible {
 
 @media (min-width: 1536px) {
   .directory-grid {
-    gap: var(--space-8);
+    gap: var(--space-6);
   }
 }
 
 @media (min-width: 1920px) {
   .directory-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: var(--space-8);
+    gap: var(--space-6);
   }
 }
 
@@ -2706,14 +2709,14 @@ textarea:focus-visible {
   gap: var(--space-1);
 }
 
-/* Sidebar Tree Component - Standardized */
+/* Sidebar Tree Component - STRICT TOKEN ENFORCEMENT */
 .sidebar-item {
   display: flex;
   align-items: center;
   gap: var(--space-3);
   padding: var(--space-3) var(--space-4);
   min-height: 44px;
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-base);
   font-size: var(--font-size-sm);
   font-weight: 500;
   transition: all var(--transition-base);
@@ -2746,7 +2749,7 @@ textarea:focus-visible {
   gap: var(--space-3);
   padding: var(--space-3) var(--space-4);
   min-height: 44px;
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-base);
   font-size: var(--font-size-sm);
   font-weight: 600;
   transition: all var(--transition-base);
@@ -2804,8 +2807,10 @@ textarea:focus-visible {
 }
 
 .sidebar-folder-children {
-  margin-left: var(--space-11);
+  margin-left: var(--space-6);
   margin-top: var(--space-2);
+  padding-left: var(--space-4);
+  border-left: 2px solid var(--color-surface-700);
   display: flex;
   flex-direction: column;
   gap: var(--space-1);
@@ -2817,9 +2822,9 @@ textarea:focus-visible {
   gap: var(--space-2);
   padding: var(--space-2) var(--space-3);
   min-height: 44px;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-base);
   font-size: var(--font-size-sm);
-  font-weight: 500;
+  font-weight: 400;
   transition: all var(--transition-base);
   text-decoration: none;
 }
