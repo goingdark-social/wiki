@@ -15,6 +15,14 @@ dist-ssr
 # Astro generated cache and artifacts
 .astro
 
+# Accessibility reports
+hint-report/
+**/hint-report/
+a11y-results.json
+
+# Scripts directory
+scripts/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

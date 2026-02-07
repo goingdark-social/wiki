@@ -11,7 +11,8 @@
     "prepare": "husky",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "check:a11y": "hint dist/"
+    "check:a11y": "node scripts/check-a11y.js",
+    "check:a11y:report": "hint dist/ --formatters html && echo '📋 HTML report generated: hint-report/file--workspace-repos-wiki-dist.html'"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
