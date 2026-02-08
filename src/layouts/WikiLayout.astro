@@ -70,6 +70,7 @@ if (currentSlug) {
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
   </head>
   <body class="body-layout">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <Navigation />
 
     <!-- Mobile Sidebar (Drawer) - Available on all pages -->
@@ -124,7 +125,7 @@ if (currentSlug) {
         )}
 
         <!-- Main Content - Centered reading column with progressive padding -->
-        <main class:list={[
+        <main id="main-content" class:list={[
           "flex-1 min-w-0 py-10",
           isDocsPage ? "px-4 lg:px-8 xl:px-12 2xl:px-16" : "px-4 sm:px-6 lg:px-8 xl:px-12"
         ]}>

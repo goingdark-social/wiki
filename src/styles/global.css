@@ -235,6 +235,28 @@ body {
   --scroll-lock: '';
 }
 
+/* Skip link for keyboard navigation - WCAG 2.1 Requirement */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-primary);
+  color: white;
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-base);
+  font-weight: 600;
+  text-decoration: none;
+  z-index: 9999;
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+  top: var(--space-4);
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
 /* ============================================
    LAYOUT UTILITIES - Container Widths
    ============================================ */
