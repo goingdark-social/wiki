@@ -9,13 +9,12 @@
      ============================================ */
   
   /* Surface Elevation Hierarchy */
-  --color-surface-950: #181821;
-  --color-surface-900: #181821;
-  --color-surface-850: #292938;
-  --color-surface-800: #292938;
-  --color-surface-750: #444664;
-  --color-surface-700: #444664;
-  --color-surface-600: #545778;
+  --color-surface-900: #0f0f12;
+  --color-surface-850: #1e1e29;
+  --color-surface-800: #1e1e29;
+  --color-surface-750: #36364b;
+  --color-surface-700: #36364b;
+  --color-surface-600: #46466f;
 
   /* Primary Accent - Mastodon Purple */
   --color-primary: #6364ff;
@@ -105,7 +104,7 @@
      Context-aware text for different surfaces
      ============================================ */
   /* Dark background text (on surface-900 #181821) */
-  --text-on-dark-primary: #f0f0f5;      /* 13.5:1 contrast ratio - WCAG AAA */
+  --text-on-dark-primary: #ffffff;      /* 15.0:1 contrast ratio - WCAG AAA */
   --text-on-dark-secondary: #b8b8c4;    /* 8.2:1 contrast ratio - WCAG AA */
   --text-on-dark-tertiary: #9494a4;     /* 5.1:1 contrast ratio - WCAG AA minimum */
   

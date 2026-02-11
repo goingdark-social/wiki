@@ -154,7 +154,7 @@ if (currentSlug) {
                       </li>
                       <li>
                         {isLast ? (
-                          <span class="breadcrumb-current">{crumb.title}</span>
+                          <span class="breadcrumb-current" aria-current="page">{crumb.title}</span>
                         ) : (
                           <a href={crumb.href} class="breadcrumb-link">
                             {crumb.title}
