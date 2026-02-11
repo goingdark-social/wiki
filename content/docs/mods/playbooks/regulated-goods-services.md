@@ -10,7 +10,7 @@ pager: true
 
 ## Scope
 Covers trade of regulated items like drugs, weapons, or financial services.  
-This connects to [Rule 4 - No illegal content](/docs/policies/rules/04_no-illegal-content/).
+This connects to [Rule 6 - No illegal content](/docs/policies/rules/06_no-illegal-content/).
 
 ## Why this matters
 Buying or selling regulated goods without proper controls can be illegal and unsafe. We want to keep the community focused on conversation, not commerce in restricted items.

@@ -10,7 +10,7 @@ pager: true
 
 ## Scope
 Covers coordinated or deceptive actions to mislead users.  
-This connects to [Rule 9 - Honest identity](/docs/policies/rules/09_honest-identity/).
+This connects to [Rule 9 - Be honest about identity](/docs/policies/rules/09_honest-identity/).
 
 ## Why this matters
 Authenticity builds trust. When accounts coordinate to mislead people, whether through fake engagement or hidden networks, it skews conversations and erodes credibility. We want real voices, not manufactured consensus.

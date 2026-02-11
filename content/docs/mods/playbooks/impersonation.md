@@ -10,7 +10,7 @@ pager: true
 
 ## Scope
 Covers accounts pretending to be someone else.  
-This connects to [Rule 9 - Honest identity](/docs/policies/rules/09_honest-identity/).
+This connects to [Rule 9 - Be honest about identity](/docs/policies/rules/09_honest-identity/).
 
 ## Why this matters
 Impersonation confuses people and undermines trust. Whether it's a fake celebrity account or someone pretending to be your friend, it can mislead our community. We want folks to know who they're talking to.

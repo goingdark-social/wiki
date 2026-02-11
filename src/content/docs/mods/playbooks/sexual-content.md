@@ -10,7 +10,7 @@ pager: true
 
 ## Scope
 NSFW is allowed if legal, consensual, and behind a Content Warning (CW). This playbook covers explicit sexual material and accounts primarily posting such content.
-This connects to [Rule 3 - Keep it clean](/docs/policies/rules/03_keep-it-clean/).
+This connects to [Rule 5 - Keep it clean](/docs/policies/rules/05_keep-it-clean/).
 
 ## Why this matters
 We welcome body positive content and occasional NSFW posts; they're part of human expression. At the same time, this server aims to be a place where privacy and tech conversations can flourish. When an account becomes primarily focused on explicit sexual content, even with content warnings, it changes the community's character in ways that don't match what most members are here for.
