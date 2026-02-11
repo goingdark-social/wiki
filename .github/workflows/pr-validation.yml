@@ -42,6 +42,7 @@ jobs:
             --exclude '^https://fonts\.googleapis\.com/?$'
             --exclude '^https://fonts\.gstatic\.com/?$'
             --exclude '^https://ko-fi\.com/goingdark/?$'
+            --exclude '^https://github\.com/goingdark-social/wiki/blob/main/.*$'
             "dist/**/*.html"
 
       - name: Lint (ESLint)
