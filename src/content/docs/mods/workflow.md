@@ -15,16 +15,16 @@ pager: true
 
 2. **Evidence capture**  
    - Record account ID, post ID, screenshot if ephemeral.  
-   - Store securely according to [Evidence](evidence/).  
+   - Store securely according to [Evidence](/docs/mods/evidence/).  
 
 3. **Apply playbook**  
    - Follow the decision matrix for the relevant category.  
 
 4. **Action**  
-   - Choose proportionate action (see [Actions](actions/)).  
+   - Choose proportionate action (see [Actions](/docs/mods/actions/)).  
 
 5. **Notification**  
-   - Send appropriate template from [Templates](templates/).  
+   - Send appropriate template from [Templates](/docs/mods/templates/).  
 
 6. **Logging**  
    - Record action for transparency and metrics.  

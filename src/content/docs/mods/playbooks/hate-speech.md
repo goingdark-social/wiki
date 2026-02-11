@@ -10,7 +10,7 @@ pager: true
 
 ## Scope
 Covers attacks on protected groups.  
-This connects to [Rule 6 - No hate or threats](/docs/policies/rules/06_no-hate-or-threats/).
+This connects to [Rule 4 - No hate or threats](/docs/policies/rules/04_no-hate/).
 
 ## Why this matters
 Our community thrives when everyone feels welcome regardless of who they are. Attacks based on identity, whether gender, race, religion, orientation, or other characteristics, poison the atmosphere for everyone. We act quickly to remove this content and protect our members.

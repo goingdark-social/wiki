@@ -10,7 +10,7 @@ pager: true
 
 ## Scope
 Covers graphic violence or gore.  
-This connects to [Rule 3 - Keep it clean](/docs/policies/rules/03_keep-it-clean/).
+This connects to [Rule 5 - Keep it clean](/docs/policies/rules/05_keep-it-clean/).
 
 ## Why this matters
 Graphic violence can be disturbing and derail the community vibe. We want people to browse without unexpectedly seeing gore.
