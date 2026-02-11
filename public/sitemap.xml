@@ -201,7 +201,17 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://wiki.goingdark.social/docs/policies/federation-policy</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://wiki.goingdark.social/docs/policies</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wiki.goingdark.social/docs/policies/moderation-guidelines</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -222,6 +232,21 @@
   </url>
   <url>
     <loc>https://wiki.goingdark.social/docs/policies/rules/04_no-hate</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wiki.goingdark.social/docs/policies/rules/05_keep-it-clean</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wiki.goingdark.social/docs/policies/rules/06_no-illegal-content</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wiki.goingdark.social/docs/policies/rules/09_honest-identity</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -261,7 +286,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://wiki.goingdark.social/docs/user/hashtags</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://wiki.goingdark.social/docs/user</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wiki.goingdark.social/docs/user/migration</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wiki.goingdark.social/docs/user/reporting</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

@@ -214,9 +214,9 @@ if (currentSlug) {
           <!-- Article Footer (Simplified) -->
           <div class="footer-section">
             <div class="footer-flex">
-              {currentSlug && (
+              {currentSlug && currentSlug !== 'index' && (
                 <a
-                  href={`https://github.com/theepicsaxguy/wiki/blob/main/src/content/docs/${currentSlug}.mdx`}
+                  href={`https://github.com/goingdark-social/wiki/blob/main/src/content/docs/${currentSlug}.mdx`}
                   target="_blank"
                   rel="noopener noreferrer"
                   class="footer-link"

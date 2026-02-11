@@ -10,7 +10,7 @@ pager: true
 
 ## Scope
 Covers unsolicited bulk messages or repetitive content.  
-This connects to [Rule 5 - No spam](/docs/policies/rules/05_no-spam/).
+This connects to [Rule 3 - No spam](/docs/policies/rules/03_no-spam/).
 
 ## Why this matters
 Nobody joined this community to see their timeline flooded with ads or repetitive content. Spam drowns out real conversations and makes it harder for people to connect with each other. We keep timelines clean so everyone can focus on the discussions that matter to them.

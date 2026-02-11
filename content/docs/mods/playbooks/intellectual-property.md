@@ -10,7 +10,7 @@ pager: true
 
 ## Scope
 Covers copyright or trademark violations.  
-This connects to [Rule 4 - No illegal content](/docs/policies/rules/04_no-illegal-content/).
+This connects to [Rule 6 - No illegal content](/docs/policies/rules/06_no-illegal-content/).
 
 ## Why this matters
 We respect creators' rights. Sharing someone’s work without permission can lead to legal issues and erode trust among members.

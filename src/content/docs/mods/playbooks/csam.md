@@ -10,7 +10,7 @@ pager: true
 
 ## Scope
 Covers images or posts exploiting minors.  
-This connects to [Rule 4 - No illegal content](/docs/policies/rules/04_no-illegal-content/).
+This connects to [Rule 6 - No illegal content](/docs/policies/rules/06_no-illegal-content/).
 
 ## Why this matters
 Material that exploits minors is illegal and deeply harmful. We don't tolerate it. Protecting children and keeping this content off our server is essential.

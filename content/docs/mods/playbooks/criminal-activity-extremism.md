@@ -10,7 +10,7 @@ pager: true
 
 ## Scope
 Covers promotion of terrorism or criminal activity.  
-This connects to [Rule 4 - No illegal content](/docs/policies/rules/04_no-illegal-content/).
+This connects to [Rule 6 - No illegal content](/docs/policies/rules/06_no-illegal-content/).
 
 ## Why this matters
 Encouraging crime or extremist acts puts people at risk and violates laws. We want a space where folks can discuss tough topics without fear that someone is trying to recruit or incite harm. Removing this content quickly keeps the community safe and keeps us in good standing legally.

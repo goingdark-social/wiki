@@ -10,7 +10,7 @@ pager: true
 
 ## Scope
 Covers sharing intimate images without consent.  
-This connects to [Rule 4 - No illegal content](/docs/policies/rules/04_no-illegal-content/).
+This connects to [Rule 6 - No illegal content](/docs/policies/rules/06_no-illegal-content/).
 
 ## Why this matters
 Posting someone's intimate images without their permission violates their privacy and often breaks the law. We remove it immediately to protect victims and uphold their dignity.

@@ -10,7 +10,7 @@ pager: true
 
 ## Scope
 Covers unapproved bots, automation, or fake engagement.  
-This connects to [Rule 13 - No unapproved bots](/docs/policies/rules/13_bots/).
+This connects to [Rule 13 - No unapproved bots](/docs/policies/bots-and-automation/).
 
 ## Why this matters
 Our community runs on real conversations. When automated accounts flood timelines or fake engagement, it drowns out the human voices people come on Mastodon to hear. We only allow bots that have been approved and marked so people know who they're talking to.
