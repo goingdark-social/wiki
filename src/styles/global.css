@@ -96,7 +96,7 @@
   --color-text-primary: #f0f0f5;
   --color-text-main: #f0f0f5;
   --color-text-muted: #8b8dac;
-  --color-text-subtle: #696d91;
+  --color-text-subtle: #7a7da6;
   --color-text-disabled: #545778;
   
   /* ============================================
@@ -120,6 +120,7 @@
   /* Button text on interactive backgrounds */
   --text-on-primary-bg: #ffffff;        /* On primary buttons */
   --text-on-secondary-bg: #1a1a1f;      /* On secondary/ghost buttons */
+  --text-on-cta-bg: #1a1a1f;            /* On CTA buttons (yellow, orange, etc) */
   
   /* ============================================
      TYPOGRAPHY SCALE
@@ -2613,7 +2614,7 @@ textarea:focus-visible {
   white-space: nowrap;
   padding: var(--space-2) var(--space-4);
   background-color: var(--color-secondary);
-  color: var(--color-text-white);
+  color: var(--text-on-cta-bg);
   border-radius: var(--radius-sm);
   font-weight: 500;
   transition: all var(--transition-base);

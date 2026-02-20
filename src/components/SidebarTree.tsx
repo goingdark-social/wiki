@@ -11,9 +11,10 @@ interface SidebarTreeProps {
   navigation: Page[];
   currentPath: string;
   isHome: boolean;
+  prefix?: string;
 }
 
-export function SidebarTree({ navigation, currentPath, isHome }: SidebarTreeProps) {
+export function SidebarTree({ navigation, currentPath, isHome, prefix = '' }: SidebarTreeProps) {
   return (
     <div className="space-y-2">
       <a
@@ -39,6 +40,7 @@ export function SidebarTree({ navigation, currentPath, isHome }: SidebarTreeProp
             node={node}
             currentPath={currentPath}
             level={0}
+            prefix={prefix}
           />
         ))}
       </nav>
@@ -50,9 +52,10 @@ interface FolderGroupProps {
   node: Page;
   currentPath: string;
   level: number;
+  prefix: string;
 }
 
-function FolderGroup({ node, currentPath, level }: FolderGroupProps) {
+function FolderGroup({ node, currentPath, level, prefix }: FolderGroupProps) {
   const hasChildren = node.children.length > 0;
   const isActive = currentPath === node.slug || currentPath === `${node.slug}/index`;
   const isParent = currentPath.startsWith(node.slug + '/') && !isActive;
@@ -85,7 +88,7 @@ function FolderGroup({ node, currentPath, level }: FolderGroupProps) {
             : 'sidebar-folder-header-inactive'
         }`}
         aria-expanded={isOpen}
-        aria-controls={`folder-children-${node.slug}`}
+        aria-controls={`${prefix}folder-children-${node.slug}`}
       >
         <ChevronRight
           size={16}
@@ -113,7 +116,7 @@ function FolderGroup({ node, currentPath, level }: FolderGroupProps) {
 
       {isOpen && (
         <div 
-          id={`folder-children-${node.slug}`}
+          id={`${prefix}folder-children-${node.slug}`}
           className="sidebar-folder-children"
           role="group"
           aria-label={`${node.title} pages`}
@@ -132,6 +135,7 @@ function FolderGroup({ node, currentPath, level }: FolderGroupProps) {
                     node={child}
                     currentPath={currentPath}
                     level={level + 1}
+                    prefix={prefix}
                   />
                 );
               }
