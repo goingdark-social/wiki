@@ -106,7 +106,7 @@ if (currentSlug) {
 
           <!-- Content -->
           <div class="p-5">
-            <Sidebar />
+            <Sidebar prefix="mobile-" />
           </div>
         </div>
       </div>
@@ -120,7 +120,7 @@ if (currentSlug) {
         <!-- Docs Sidebar (Desktop Only) - Fixed width, sticky -->
         {isDocsPage && (
           <aside class="docs-sidebar">
-            <Sidebar />
+            <Sidebar prefix="desktop-" />
           </aside>
         )}
 

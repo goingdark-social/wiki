@@ -64,7 +64,7 @@ const searchDocs = allDocs.map((doc: DocEntry) => ({
 
       <!-- Search -->
       <div class="hero-search">
-        <Search client:load docs={searchDocs} />
+        <Search client:load docs={searchDocs} prefix="hero-" />
       </div>
 
       <!-- Search hint -->

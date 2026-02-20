@@ -1,28 +1,29 @@
 ---
+const { prefix = '' } = Astro.props;
 ---
 
-<div id="pagefind-search" class="pagefind-container">
-  <div id="search-input-container" class="pagefind-input-wrapper">
+<div id={`${prefix}pagefind-search`} class="pagefind-container">
+  <div id={`${prefix}search-input-container`} class="pagefind-input-wrapper">
     <div class="pagefind-search-icon-wrapper">
       <svg class="pagefind-search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
       </svg>
     </div>
     <input
-      id="pagefind-search-input-1"
+      id={`${prefix}pagefind-search-input`}
       type="search"
       placeholder="Search documentation..."
       aria-label="Search documentation"
       class="pagefind-input-field"
     />
   </div>
-  <div id="pagefind-results-1" class="pagefind-results-container" role="listbox" aria-label="Search results"></div>
+  <div id={`${prefix}pagefind-results`} class="pagefind-results-container" role="listbox" aria-label="Search results"></div>
 </div>
 
-<script is:inline>
+<script is:inline define:vars={{ prefix }}>
   document.addEventListener('DOMContentLoaded', () => {
-    const searchInput = document.getElementById('pagefind-search-input');
-    const resultsContainer = document.getElementById('pagefind-results');
+    const searchInput = document.getElementById(`${prefix}pagefind-search-input`);
+    const resultsContainer = document.getElementById(`${prefix}pagefind-results`);
 
     if (!searchInput || !resultsContainer) return;
 
@@ -91,7 +92,7 @@
     });
 
     document.addEventListener('click', (e) => {
-      if (!document.getElementById('pagefind-search')?.contains(e.target)) {
+      if (!document.getElementById(`${prefix}pagefind-search`)?.contains(e.target)) {
         resultsContainer.classList.add('pagefind-hidden');
       }
     });
@@ -218,16 +219,16 @@
     line-height: 1.5;
   }
 
-  #pagefind-results::-webkit-scrollbar {
+  .pagefind-results-container::-webkit-scrollbar {
     width: var(--space-1);
   }
 
-  #pagefind-results::-webkit-scrollbar-thumb {
+  .pagefind-results-container::-webkit-scrollbar-thumb {
     background: var(--color-surface-700);
     border-radius: 3px;
   }
 
-  #pagefind-results::-webkit-scrollbar-thumb:hover {
+  .pagefind-results-container::-webkit-scrollbar-thumb:hover {
     background: var(--color-surface-600);
   }
 </style>
