@@ -6,9 +6,10 @@ interface SearchProps {
     title: string;
     description?: string;
   }>;
+  prefix?: string;
 }
 
-export default function Search({ docs }: SearchProps) {
+export default function Search({ docs, prefix = '' }: SearchProps) {
   const [query, setQuery] = useState('');
   const [isOpen, setIsOpen] = useState(false);
   const [results, setResults] = useState<typeof docs>([]);
@@ -55,19 +56,19 @@ export default function Search({ docs }: SearchProps) {
     function handleKeyDown(e: KeyboardEvent) {
       if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
         e.preventDefault();
-        document.getElementById('wiki-search-input')?.focus();
+        document.getElementById(`${prefix}wiki-search-input`)?.focus();
       }
     }
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
+  }, [prefix]);
 
   return (
     <div className="relative" ref={searchRef}>
-      <label htmlFor="wiki-search-input" className="sr-only">Search wiki documentation</label>
+      <label htmlFor={`${prefix}wiki-search-input`} className="sr-only">Search wiki documentation</label>
       <div className="relative group">
         <input
-          id="wiki-search-input"
+          id={`${prefix}wiki-search-input`}
           type="text"
           role="combobox"
           value={query}
@@ -77,7 +78,7 @@ export default function Search({ docs }: SearchProps) {
           aria-label="Search wiki documentation"
           aria-autocomplete="list"
           aria-expanded={isOpen}
-          aria-controls="search-results"
+          aria-controls={`${prefix}search-results`}
           aria-haspopup="listbox"
         />
         <svg
@@ -101,7 +102,7 @@ export default function Search({ docs }: SearchProps) {
 
       {isOpen && results.length > 0 && (
         <div
-          id="search-results"
+          id={`${prefix}search-results`}
           role="listbox"
           className="absolute z-30 w-full mt-2 bg-surface-800/95 backdrop-blur-lg border border-surface-700 rounded-lg shadow-lg overflow-hidden pattern-noise"
         >

@@ -34,7 +34,7 @@ const docsForSearch = allDocs.map((doc: DocEntry) => ({
       <div class="nav-desktop">
         <!-- Search Bar -->
         <div class="nav-search-container">
-          <Search docs={docsForSearch} client:idle />
+          <Search docs={docsForSearch} client:idle prefix="nav-" />
         </div>
 
         <div class="nav-divider"></div>

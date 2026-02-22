@@ -4,6 +4,12 @@ import PagefindSearch from './PagefindSearch.astro';
 import { SidebarTree } from './SidebarTree';
 import { buildNavigationTree } from '../utils/navigation';
 
+interface Props {
+  prefix?: string;
+}
+
+const { prefix = '' } = Astro.props;
+
 // Get all docs pages
 const allDocs = await getCollection('docs');
 const navigation = buildNavigationTree(allDocs);
@@ -15,7 +21,7 @@ const isHome = Astro.url.pathname === '/';
 
 <!-- Search Bar -->
 <div class="mb-6">
-  <PagefindSearch />
+  <PagefindSearch prefix={prefix} />
 </div>
 
 <!-- React Interactive Sidebar Tree with collapsible folders -->
@@ -24,4 +30,5 @@ const isHome = Astro.url.pathname === '/';
   navigation={navigation} 
   currentPath={currentPath}
   isHome={isHome}
+  prefix={prefix}
 />
